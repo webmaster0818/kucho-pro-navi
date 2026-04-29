@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/jiro.hasegawa/.openclaw/workspace/projects/kucho-pro-navi/site/app/layout":["static/media/24f6ebe2756575bd-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
