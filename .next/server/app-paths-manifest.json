@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/guide/horsepower/page": "app/guide/horsepower/page.js",
+  "/company/[slug]/page": "app/company/[slug]/page.js",
+  "/guide/cost/page": "app/guide/cost/page.js",
+  "/guide/type/page": "app/guide/type/page.js",
+  "/ranking/cheap/page": "app/ranking/cheap/page.js",
+  "/industry/[slug]/page": "app/industry/[slug]/page.js",
+  "/ranking/lease/page": "app/ranking/lease/page.js",
+  "/ranking/page": "app/ranking/page.js"
+}

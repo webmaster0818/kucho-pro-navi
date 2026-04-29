@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/guide/horsepower/page": "/guide/horsepower",
+  "/company/[slug]/page": "/company/[slug]",
+  "/guide/cost/page": "/guide/cost",
+  "/guide/type/page": "/guide/type",
+  "/ranking/cheap/page": "/ranking/cheap",
+  "/industry/[slug]/page": "/industry/[slug]",
+  "/ranking/lease/page": "/ranking/lease",
+  "/ranking/page": "/ranking"
+}
