@@ -4,12 +4,12 @@ import SiteFooter from "@/components/SiteFooter";
 import companies from "@/data/companies.json";
 
 const industryNav = [
-  { slug: "restaurant", label: "飲食店", icon: "🍽️", color: "bg-orange-50 border-orange-200 hover:border-orange-400 hover:bg-orange-100", iconBg: "bg-orange-100" },
-  { slug: "office", label: "オフィス", icon: "🏢", color: "bg-blue-50 border-blue-200 hover:border-blue-400 hover:bg-blue-100", iconBg: "bg-blue-100" },
-  { slug: "factory", label: "工場・倉庫", icon: "🏭", color: "bg-gray-50 border-gray-200 hover:border-gray-400 hover:bg-gray-100", iconBg: "bg-gray-100" },
-  { slug: "clinic", label: "クリニック", icon: "🏥", color: "bg-green-50 border-green-200 hover:border-green-400 hover:bg-green-100", iconBg: "bg-green-100" },
-  { slug: "shop", label: "小売店舗", icon: "🛍️", color: "bg-purple-50 border-purple-200 hover:border-purple-400 hover:bg-purple-100", iconBg: "bg-purple-100" },
-  { slug: "school", label: "学校", icon: "🏫", color: "bg-yellow-50 border-yellow-200 hover:border-yellow-400 hover:bg-yellow-100", iconBg: "bg-yellow-100" },
+  { slug: "restaurant", label: "飲食店", icon: "️", color: "bg-orange-50 border-orange-200 hover:border-orange-400 hover:bg-orange-100", iconBg: "bg-orange-100" },
+  { slug: "office", label: "オフィス", icon: "", color: "bg-blue-50 border-blue-200 hover:border-blue-400 hover:bg-blue-100", iconBg: "bg-blue-100" },
+  { slug: "factory", label: "工場・倉庫", icon: "", color: "bg-gray-50 border-gray-200 hover:border-gray-400 hover:bg-gray-100", iconBg: "bg-gray-100" },
+  { slug: "clinic", label: "クリニック", icon: "", color: "bg-green-50 border-green-200 hover:border-green-400 hover:bg-green-100", iconBg: "bg-green-100" },
+  { slug: "shop", label: "小売店舗", icon: "️", color: "bg-purple-50 border-purple-200 hover:border-purple-400 hover:bg-purple-100", iconBg: "bg-purple-100" },
+  { slug: "school", label: "学校", icon: "", color: "bg-yellow-50 border-yellow-200 hover:border-yellow-400 hover:bg-yellow-100", iconBg: "bg-yellow-100" },
 ];
 
 const rankBadge = [
@@ -182,7 +182,7 @@ export default function HomePage() {
                   <ul className="space-y-2 mb-5">
                     {company.features.slice(0, 3).map((f) => (
                       <li key={f} className="text-xs text-gray-700 flex items-start gap-2 bg-gray-50 rounded-lg px-3 py-2">
-                        <span className="text-emerald-500 font-bold mt-0.5 shrink-0">✓</span>
+                        <span className="text-emerald-500 font-bold mt-0.5 shrink-0"></span>
                         <span>{f}</span>
                       </li>
                     ))}

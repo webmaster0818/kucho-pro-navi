@@ -119,9 +119,9 @@ export default function HorsepowerGuidePage() {
         <section className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
           <h2 className="text-xl font-bold text-green-800 mb-4">計算例：30坪の飲食店の場合</h2>
           <div className="space-y-2 text-sm text-green-700">
-            <p>①基本計算: 30坪 × 0.4馬力 = 12馬力</p>
-            <p>②厨房ありの補正: 12馬力 × 1.5 = 18馬力</p>
-            <p>③南向き大窓: 18馬力 × 1.2 = 21.6馬力</p>
+            <p>基本計算: 30坪 × 0.4馬力 = 12馬力</p>
+            <p>厨房ありの補正: 12馬力 × 1.5 = 18馬力</p>
+            <p>南向き大窓: 18馬力 × 1.2 = 21.6馬力</p>
             <p className="font-bold text-green-800 text-base border-t border-green-200 pt-2">
               → 22馬力程度の空調能力が必要。10馬力×2台 or 12馬力+10馬力の組み合わせを検討
             </p>
@@ -132,9 +132,9 @@ export default function HorsepowerGuidePage() {
         <section className="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-red-700 mb-3">馬力選びの注意点</h2>
           <ul className="text-sm text-red-600 space-y-2">
-            <li>⚠ <strong>小さすぎる馬力：</strong>冷暖房が追いつかず、フル稼働で電気代が高くなる。機器寿命も縮む</li>
-            <li>⚠ <strong>大きすぎる馬力：</strong>頻繁なオン・オフで効率が悪く、機器代・電気代ともに無駄になる</li>
-            <li>⚠ <strong>自己判断は禁物：</strong>実際には建物の断熱性・気密性・窓の方角なども考慮が必要。専門業者による熱負荷計算を依頼することを強く推奨</li>
+            <li> <strong>小さすぎる馬力：</strong>冷暖房が追いつかず、フル稼働で電気代が高くなる。機器寿命も縮む</li>
+            <li> <strong>大きすぎる馬力：</strong>頻繁なオン・オフで効率が悪く、機器代・電気代ともに無駄になる</li>
+            <li> <strong>自己判断は禁物：</strong>実際には建物の断熱性・気密性・窓の方角なども考慮が必要。専門業者による熱負荷計算を依頼することを強く推奨</li>
           </ul>
         </section>
 

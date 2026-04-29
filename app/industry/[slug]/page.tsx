@@ -79,7 +79,7 @@ export default async function IndustryPage(props: {
         {/* Challenges */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-            <span className="text-[#F59E0B]">⚠</span> この業種特有の空調課題
+            <span className="text-[#F59E0B]"></span> この業種特有の空調課題
           </h2>
           <ul className="space-y-2">
             {industry.challenges.map((c) => (
@@ -94,7 +94,7 @@ export default async function IndustryPage(props: {
         {/* Recommendations */}
         <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-            <span className="text-[#059669]">✓</span> 推奨される空調対策
+            <span className="text-[#059669]"></span> 推奨される空調対策
           </h2>
           <ul className="space-y-2">
             {industry.recommendations.map((r) => (

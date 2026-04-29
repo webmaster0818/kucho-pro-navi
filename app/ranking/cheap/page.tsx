@@ -37,10 +37,10 @@ export default function CheapRankingPage() {
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
           <h2 className="font-bold text-amber-800 mb-2">費用を抑えるポイント</h2>
           <ul className="text-sm text-amber-700 space-y-1">
-            <li>✓ 複数業者に一括見積もりを依頼して相見積もり</li>
-            <li>✓ 繁忙期（夏・冬直前）を避けて閑散期に依頼</li>
-            <li>✓ 省エネ補助金・税制優遇を活用</li>
-            <li>✓ 中古・リファービッシュ機器の活用を検討</li>
+            <li> 複数業者に一括見積もりを依頼して相見積もり</li>
+            <li> 繁忙期（夏・冬直前）を避けて閑散期に依頼</li>
+            <li> 省エネ補助金・税制優遇を活用</li>
+            <li> 中古・リファービッシュ機器の活用を検討</li>
           </ul>
         </div>
 
@@ -73,7 +73,7 @@ export default function CheapRankingPage() {
                   <ul className="text-sm text-gray-600 space-y-1 mb-4">
                     {company.pros.slice(0, 2).map((p) => (
                       <li key={p} className="flex items-center gap-1">
-                        <span className="text-[#059669]">✓</span> {p}
+                        <span className="text-[#059669]"></span> {p}
                       </li>
                     ))}
                   </ul>

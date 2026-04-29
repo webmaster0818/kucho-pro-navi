@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const types = [
   {
     name: "天井カセット型（4方向）",
-    image: "🔲",
+    image: "",
     description: "天井に埋め込み、4方向均等に風を送るタイプ。業務用の主流モデル。",
     pros: [
       "部屋全体を均一に冷暖房できる",
@@ -32,7 +32,7 @@ const types = [
   },
   {
     name: "天井カセット型（2方向）",
-    image: "➡️",
+    image: "️",
     description: "2方向に風を送るコンパクトなカセット型。廊下や細長い空間に最適。",
     pros: [
       "細長い空間に最適な気流設計",
@@ -49,7 +49,7 @@ const types = [
   },
   {
     name: "壁掛け型",
-    image: "🧱",
+    image: "",
     description: "壁に取り付けるスタンダードなタイプ。家庭用の大型版。",
     pros: [
       "設置工事が簡単で低コスト",
@@ -68,7 +68,7 @@ const types = [
   },
   {
     name: "床置き型",
-    image: "📦",
+    image: "",
     description: "床置きまたは低位置に設置するタイプ。床面から直接暖気・冷気を送る。",
     pros: [
       "暖房時に足元から暖かくできる",
@@ -138,11 +138,11 @@ export default function TypeGuidePage() {
             </thead>
             <tbody>
               {[
-                ["天井カセット（4方向）", "高", "◎", "普通", "オフィス・店舗"],
-                ["天井カセット（2方向）", "中", "○", "普通", "廊下・個室"],
-                ["壁掛け型", "低", "△", "簡単", "小規模・学校"],
-                ["床置き型", "中", "△", "簡単", "工場・倉庫"],
-                ["天井吊り型", "高", "◎", "難しい", "大型施設"],
+                ["天井カセット（4方向）", "高", "", "普通", "オフィス・店舗"],
+                ["天井カセット（2方向）", "中", "", "普通", "廊下・個室"],
+                ["壁掛け型", "低", "", "簡単", "小規模・学校"],
+                ["床置き型", "中", "", "簡単", "工場・倉庫"],
+                ["天井吊り型", "高", "", "難しい", "大型施設"],
               ].map(([type, cost, space, maint, use], i) => (
                 <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                   <td className="p-3 font-medium text-gray-800">{type}</td>
@@ -174,7 +174,7 @@ export default function TypeGuidePage() {
                   <ul className="space-y-1 text-xs text-gray-700">
                     {type.pros.map((p) => (
                       <li key={p} className="flex items-start gap-1">
-                        <span className="text-[#059669]">✓</span> {p}
+                        <span className="text-[#059669]"></span> {p}
                       </li>
                     ))}
                   </ul>
@@ -184,7 +184,7 @@ export default function TypeGuidePage() {
                   <ul className="space-y-1 text-xs text-gray-700">
                     {type.cons.map((c) => (
                       <li key={c} className="flex items-start gap-1">
-                        <span className="text-red-400">✗</span> {c}
+                        <span className="text-red-400"></span> {c}
                       </li>
                     ))}
                   </ul>

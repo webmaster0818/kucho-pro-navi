@@ -17,22 +17,22 @@ const leaseFeatures = [
   {
     title: "初期費用ゼロ",
     desc: "機器代・工事費をリース料として月額払いに分散。まとまった資金が不要。",
-    icon: "💴",
+    icon: "",
   },
   {
     title: "経費計上が簡単",
     desc: "リース料は全額経費計上可能。購入と異なり減価償却の手間が不要。",
-    icon: "📊",
+    icon: "",
   },
   {
     title: "メンテナンス込みプランあり",
     desc: "月額料金にメンテナンス費用を含めることができ、管理が楽。",
-    icon: "🔧",
+    icon: "",
   },
   {
     title: "最新機器への乗り換えが容易",
     desc: "リース期間終了後に最新モデルへ更新しやすく、常に効率的な運転が可能。",
-    icon: "🔄",
+    icon: "",
   },
 ];
 
@@ -127,7 +127,7 @@ export default function LeaseRankingPage() {
                     ))}
                   </div>
                   <div className="text-sm text-gray-600 mb-4">
-                    📍 対応エリア: {company.coverage}
+                     対応エリア: {company.coverage}
                   </div>
                   <Link
                     href={`/company/${company.slug}/`}

@@ -148,7 +148,7 @@ export default async function CompanyPage(props: {
             <ul className="space-y-2">
               {company.pros.map((p) => (
                 <li key={p} className="flex items-start gap-2 text-sm text-gray-700">
-                  <span className="text-[#059669] font-bold mt-0.5">✓</span>
+                  <span className="text-[#059669] font-bold mt-0.5"></span>
                   {p}
                 </li>
               ))}
@@ -159,7 +159,7 @@ export default async function CompanyPage(props: {
             <ul className="space-y-2">
               {company.cons.map((c) => (
                 <li key={c} className="flex items-start gap-2 text-sm text-gray-700">
-                  <span className="text-red-500 font-bold mt-0.5">✗</span>
+                  <span className="text-red-500 font-bold mt-0.5"></span>
                   {c}
                 </li>
               ))}

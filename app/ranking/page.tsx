@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "業務用エアコン設置・工事業者の総合ランキング。価格・品質・対応スピード・保証を徹底比較しておすすめ10社をランキング形式で紹介。",
 };
 
-const rankMedals = ["🥇", "🥈", "🥉"];
+const rankMedals = ["", "", ""];
 
 export default function RankingPage() {
   return (
@@ -77,8 +77,8 @@ export default function RankingPage() {
                     ))}
                   </div>
                   <div className="flex flex-col sm:flex-row gap-2 text-sm text-gray-500 mb-4">
-                    <span>💰 平均費用: ¥{company.avgCost.toLocaleString()}〜</span>
-                    <span>📍 対応: {company.coverage}</span>
+                    <span> 平均費用: ¥{company.avgCost.toLocaleString()}〜</span>
+                    <span> 対応: {company.coverage}</span>
                   </div>
                   <Link
                     href={`/company/${company.slug}/`}
