@@ -10,10 +10,18 @@ export const metadata: Metadata = {
     "業務用エアコンの種類（天井カセット型・壁掛け型・床置き型・天井吊り型）の特徴・メリット・デメリットを徹底比較。用途・空間に合った選び方を解説。",
 };
 
+const TypeIcon = ({ name }: { name: string }) => {
+  if (name.includes("4方向")) return <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg>;
+  if (name.includes("2方向")) return <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/></svg>;
+  if (name.includes("壁掛け")) return <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><rect x="2" y="7" width="20" height="8" rx="2"/><line x1="8" y1="15" x2="8" y2="19"/><line x1="16" y1="15" x2="16" y2="19"/></svg>;
+  if (name.includes("床置き")) return <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><rect x="7" y="2" width="10" height="16" rx="2"/><line x1="4" y1="20" x2="20" y2="20"/></svg>;
+  if (name.includes("天井吊り")) return <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><line x1="12" y1="2" x2="12" y2="6"/><rect x="4" y="6" width="16" height="8" rx="2"/><line x1="8" y1="14" x2="6" y2="20"/><line x1="16" y1="14" x2="18" y2="20"/></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><rect x="2" y="7" width="20" height="8" rx="2"/></svg>;
+};
+
 const types = [
   {
     name: "天井カセット型（4方向）",
-    image: "",
     description: "天井に埋め込み、4方向均等に風を送るタイプ。業務用の主流モデル。",
     pros: [
       "部屋全体を均一に冷暖房できる",
@@ -32,7 +40,6 @@ const types = [
   },
   {
     name: "天井カセット型（2方向）",
-    image: "️",
     description: "2方向に風を送るコンパクトなカセット型。廊下や細長い空間に最適。",
     pros: [
       "細長い空間に最適な気流設計",
@@ -49,7 +56,6 @@ const types = [
   },
   {
     name: "壁掛け型",
-    image: "",
     description: "壁に取り付けるスタンダードなタイプ。家庭用の大型版。",
     pros: [
       "設置工事が簡単で低コスト",
@@ -68,7 +74,6 @@ const types = [
   },
   {
     name: "床置き型",
-    image: "",
     description: "床置きまたは低位置に設置するタイプ。床面から直接暖気・冷気を送る。",
     pros: [
       "暖房時に足元から暖かくできる",
@@ -87,7 +92,6 @@ const types = [
   },
   {
     name: "天井吊り型",
-    image: "⬆️",
     description: "天井から吊り下げて設置するタイプ。高天井の大空間向け。",
     pros: [
       "高天井の大空間に対応",
@@ -161,7 +165,7 @@ export default function TypeGuidePage() {
           {types.map((type) => (
             <div key={type.name} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-4xl">{type.image}</span>
+                <TypeIcon name={type.name} />
                 <div>
                   <h2 className="text-xl font-bold text-gray-900">{type.name}</h2>
                   <p className="text-gray-600 text-sm">{type.description}</p>
