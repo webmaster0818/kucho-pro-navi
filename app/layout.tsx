@@ -9,6 +9,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kucho-pro-navi.com"),
   title: {
     default: "空調プロナビ｜業務用エアコン比較・業者ランキング",
     template: "%s | 空調プロナビ",
