@@ -40,6 +40,11 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="border-t border-gray-700 pt-6 text-sm text-gray-500">
+          <div className="flex flex-wrap gap-4 mb-3">
+            <Link href="/terms/" className="hover:text-[#F59E0B] transition-colors text-xs">利用規約</Link>
+            <Link href="/privacy/" className="hover:text-[#F59E0B] transition-colors text-xs">プライバシーポリシー</Link>
+            <Link href="/content-policy/" className="hover:text-[#F59E0B] transition-colors text-xs">記事の制作ポリシー</Link>
+          </div>
           <p className="mb-2">
             ※当サイトは一部広告収益により運営されています。掲載情報は調査時点のものであり、最新情報は各業者公式サイトをご確認ください。
           </p>
