@@ -22,8 +22,9 @@ interface Company {
 
 const companies: Company[] = companiesData;
 
+// aircon-frontier は専用の口コミ・評判記事ページ（app/company/aircon-frontier/page.tsx）で生成するため除外
 export async function generateStaticParams() {
-  return companies.map((c) => ({ slug: c.slug }));
+  return companies.filter((c) => c.slug !== "aircon-frontier").map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata(props: {
