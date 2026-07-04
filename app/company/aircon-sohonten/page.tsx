@@ -157,6 +157,17 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 結論即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
+            <p className="font-bold text-teal-800 mb-2">結論：エアコン総本店の評判は？</p>
+            <p className="text-[0.95rem] leading-7 text-slate-700">
+              エアコン総本店は<strong className="font-semibold">創業40年以上の老舗</strong>業務用エアコン業者（運営：東洋電興株式会社）です。公開されている口コミでは<strong className="font-semibold">担当者の一貫対応・急な故障への対応スピード・夜間工事や清掃まで含めた丁寧さ</strong>を評価する声が中心です。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金</a>をご覧ください。
+            </p>
+          </div>
+        </div>
+
         {/* TOC */}
         <nav aria-label="目次" className="max-w-3xl mx-auto px-5 mt-8">
           <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
