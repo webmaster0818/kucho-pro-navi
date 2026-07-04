@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "業務用エアコン費用相場ガイド【2026年最新版】",
+  title: "業務用エアコンの費用相場はいくら？本体価格・工事費の内訳【2026年最新】",
   description:
     "業務用エアコンの設置・交換・修理にかかる費用相場を徹底解説。規模・業種・機種タイプ別の費用目安から、費用を抑えるコツまで詳しく紹介。",
 };
