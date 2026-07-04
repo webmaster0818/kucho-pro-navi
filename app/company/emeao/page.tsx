@@ -157,6 +157,17 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 結論即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
+            <p className="font-bold text-teal-800 mb-2">結論：EMEAO!（エミーオ）の評判は？</p>
+            <p className="text-[0.95rem] leading-7 text-slate-700">
+              EMEAO!は<strong className="font-semibold">コンシェルジュ型の業者マッチング（一括見積もり）サービス</strong>（運営：株式会社eclore）です。口コミでは業者探しの時間短縮・紹介スピードを評価する声が中心ですが、<strong className="font-semibold">最大8社から連絡が来るため電話対応の負担</strong>と、紹介後の各社対応は自分で行う点は把握しておきましょう。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金の仕組み</a>をご覧ください。
+            </p>
+          </div>
+        </div>
+
         {/* TOC */}
         <nav aria-label="目次" className="max-w-3xl mx-auto px-5 mt-8">
           <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
