@@ -177,6 +177,17 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 結論即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
+            <p className="font-bold text-teal-800 mb-2">結論：ミツモアの評判は？業務用エアコンで使える？</p>
+            <p className="text-[0.95rem] leading-7 text-slate-700">
+              ミツモアは<strong className="font-semibold">AIマッチング型の相見積もりサービス</strong>（運営：株式会社ミツモア）で、業務用エアコンの入れ替えにも利用できます。公開されている口コミでは<strong className="font-semibold">複数見積もりの手軽さ・チャットで依頼前に業者の対応を確認できる点・相場感の掴みやすさ</strong>を評価する声が中心です。一方、複数業者から連絡が来るため対応数が多く感じるという声もあり、早めに候補を絞るのがコツです。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金・手数料の仕組み</a>をご覧ください。
+            </p>
+          </div>
+        </div>
+
         {/* TOC */}
         <nav aria-label="目次" className="max-w-3xl mx-auto px-5 mt-8">
           <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
