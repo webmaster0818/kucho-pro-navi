@@ -178,6 +178,17 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 結論即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
+            <p className="font-bold text-teal-800 mb-2">結論：エアコンフロンティアの評判は？</p>
+            <p className="text-[0.95rem] leading-7 text-slate-700">
+              エアコンフロンティアは<strong className="font-semibold">業務用エアコンの専門店</strong>（運営：アトム冷熱工業株式会社）で、公開されている口コミでは対応の速さ・説明の丁寧さを評価する声が多い一方、繁忙期の連絡スピードや在庫切れ時の納期を指摘する声もあります。<strong className="font-semibold">リース・購入の両方に対応</strong>しており、導入形態で総費用が変わるため、見積もり時にリース総額と購入額の比較を出してもらうのがポイントです。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金・リースの仕組み</a>をご覧ください。
+            </p>
+          </div>
+        </div>
+
         {/* TOC */}
         <nav aria-label="目次" className="max-w-3xl mx-auto px-5 mt-8">
           <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">

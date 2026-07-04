@@ -177,6 +177,17 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 結論即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
+            <p className="font-bold text-teal-800 mb-2">結論：生活110番は業務用エアコンの依頼に使える？</p>
+            <p className="text-[0.95rem] leading-7 text-slate-700">
+              生活110番は<strong className="font-semibold">業務用エアコンの設置・修理にも対応する加盟店紹介型の総合窓口</strong>（運営：シェアリングテクノロジー株式会社・24時間365日受付）です。一つの窓口で空調以外のトラブルもまとめて相談できるのが強みですが、<strong className="font-semibold">実際の施工は紹介された加盟店が行うため、料金・品質は加盟店により変わります</strong>。紹介後の見積もり内容の確認が重要で、空調専門性を最優先するなら専門業者との相見積もりがおすすめです。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金の仕組み</a>をご覧ください。
+            </p>
+          </div>
+        </div>
+
         {/* TOC */}
         <nav aria-label="目次" className="max-w-3xl mx-auto px-5 mt-8">
           <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
