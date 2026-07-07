@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "ACNエアコンの口コミ・評判は？リース料金・対応内容を徹底調査【2026年最新】｜空調プロナビ",
+    "ACNエアコンの口コミ・評判は？リース料金・対応内容を徹底調査【2026年7月】｜空調プロナビ",
   description:
     "業務用エアコンのリース専門「ACNエアコン」（運営：株式会社ACN）の口コミ・評判をまとめました。初期費用0円リースやあんしん保証ECOプラン、対応内容、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/acn-aircon" },

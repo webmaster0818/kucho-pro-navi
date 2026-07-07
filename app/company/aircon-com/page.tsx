@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンコムの口コミ・評判は？業務用エアコンの料金・リース・対応エリアを徹底調査【2026年最新】｜空調プロナビ",
+    "エアコンコムの口コミ・評判は？業務用エアコンの料金・リース・対応エリアを徹底調査【2026年7月】｜空調プロナビ",
   description:
     "業務用エアコン専門通販「エアコンコム」（千葉の空調工事会社が運営）の特徴・料金・対応エリアをまとめました。3,000機種超の取り扱い、自社一貫施工、リース、選ぶ際の一般的な注意点まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-com" },

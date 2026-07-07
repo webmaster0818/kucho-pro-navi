@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンの森の口コミ・評判は？料金・対応エリア・工事の流れを徹底調査【2026年最新】｜空調プロナビ",
+    "エアコンの森の口コミ・評判は？料金・対応エリア・工事の流れを徹底調査【2026年7月】｜空調プロナビ",
   description:
     "激安エアコン通販「エアコンの森」（運営：株式会社サンゲート）の口コミ・評判をまとめました。実際の利用者の声、価格・配送スピード、工事手配の仕組み、対応エリア、メリット・デメリットまで中立的に解説します。",
   alternates: { canonical: "/company/aircon-no-mori" },

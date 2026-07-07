@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
-  title: "業務用エアコン業者ランキング【2026年最新版】",
+  title: "業務用エアコン業者ランキング【2026年7月】",
   description:
     "業務用エアコン設置・工事業者の総合ランキング。価格・品質・対応スピード・保証を徹底比較しておすすめ10社をランキング形式で紹介。",
 };
@@ -21,7 +21,7 @@ export default function RankingPage() {
         <Breadcrumb items={[{ label: "総合ランキング" }]} />
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-          業務用エアコン業者ランキング【2026年最新版】
+          業務用エアコン業者ランキング【2026年7月】
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
           全国の業務用エアコン設置・工事業者を価格・品質・対応スピード・保証内容などを総合的に評価し、ランキング形式で紹介します。費用・エリア・用途に合った業者選びの参考にしてください。

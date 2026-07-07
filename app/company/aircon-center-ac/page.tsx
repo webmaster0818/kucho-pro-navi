@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンセンターACの口コミ・評判は？料金・対応エリアを徹底調査【2026年最新】｜空調プロナビ",
+    "エアコンセンターACの口コミ・評判は？料金・対応エリアを徹底調査【2026年7月】｜空調プロナビ",
   description:
     "業務用エアコン専門店「エアコンセンターAC」（運営：株式会社ミタデン）の口コミ・評判をまとめました。Googleマップの評価、本体＋工事一括やリースの仕組み、対応エリア、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-center-ac" },

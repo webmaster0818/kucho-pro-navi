@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エコトピアの口コミ・評判は？中古エアコンの販売・買取・料金を徹底調査【2026年最新】｜空調プロナビ",
+    "エコトピアの口コミ・評判は？中古エアコンの販売・買取・料金を徹底調査【2026年7月】｜空調プロナビ",
   description:
     "新品・中古エアコンの販売／買取で知られる「エコトピア」（運営：株式会社エコトピア）の特徴・料金・対応エリアをまとめました。関東最大級のショールーム、買取の仕組み、選ぶ際の一般的な注意点まで中立的に解説します。",
   alternates: { canonical: "/company/eco-topia" },

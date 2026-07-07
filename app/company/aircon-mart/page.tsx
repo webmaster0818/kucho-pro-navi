@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンマートの口コミ・評判は？料金・対応エリアを徹底調査【2026年最新】｜空調プロナビ",
+    "エアコンマートの口コミ・評判は？料金・対応エリアを徹底調査【2026年7月】｜空調プロナビ",
   description:
     "業務用エアコンの通販＋工事「エアコンマート」の口コミ・評判をまとめました。Yahoo!ショッピング・楽天のショップレビュー、新品・中古の取り扱い、料金や対応エリア、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-mart" },
