@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-no-mori" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年7月12日";
 
 const toc = [
   { id: "summary", label: "エアコンの森とは" },
@@ -148,7 +148,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
           </div>
         </header>
 
