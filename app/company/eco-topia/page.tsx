@@ -398,6 +398,7 @@ export default function Page() {
                 { href: "/ranking/lease", label: "リースで選ぶ業務用エアコン" },
                 { href: "/guide/cost", label: "業務用エアコンの費用相場" },
                 { href: "/cost-index/", label: "坪数×馬力×費用 早見インデックス" },
+                { href: "/guide/timing/", label: "発注タイミングと2026年の補助金カレンダー" },
                 { href: "/guide/type", label: "業務用エアコンの種類と選び方" },
               ].map((l) => (
                 <Link
