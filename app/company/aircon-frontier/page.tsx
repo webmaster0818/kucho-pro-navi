@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを徹底解説",
+    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを徹底解説【2026年7月】",
   description:
     "業務用エアコン専門店「エアコンフロンティア」（運営：アトム冷熱工業）の口コミ・評判をまとめました。実際の利用者の声、料金やリースの仕組み、対応エリア、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-frontier" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年7月12日";
 
 const toc = [
   { id: "summary", label: "エアコンフロンティアとは" },
@@ -95,7 +95,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを徹底解説",
+    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを徹底解説【2026年7月】",
   datePublished: "2026-06-10",
   dateModified: "2026-06-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
@@ -148,7 +148,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
           </div>
         </header>
 

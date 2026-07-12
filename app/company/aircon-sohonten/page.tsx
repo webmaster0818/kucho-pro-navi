@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説",
+    "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
   description:
     "業務用エアコン専門店「エアコン総本店」（運営：東洋電興株式会社）の口コミ・評判をまとめました。創業40年以上の実績、対応エリア、料金や保証、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-sohonten" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年7月12日";
 
 const toc = [
   { id: "summary", label: "エアコン総本店とは" },
@@ -74,7 +74,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説",
+    "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
   datePublished: "2026-06-10",
   dateModified: "2026-06-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
@@ -127,7 +127,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
           </div>
         </header>
 

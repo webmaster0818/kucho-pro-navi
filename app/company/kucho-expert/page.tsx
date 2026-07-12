@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説",
+    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
   description:
     "業務用エアコン専門サイト「空調エキスパート」の口コミ・評判をまとめました。運営会社や対応エリア、リースの仕組み、メリット・デメリット、向いている事業者まで、良い点・気になる点の両面から中立的に解説します。",
   alternates: { canonical: "/company/kucho-expert" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年7月12日";
 
 const toc = [
   { id: "summary", label: "空調エキスパートとは" },
@@ -74,7 +74,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説",
+    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
   datePublished: "2026-06-10",
   dateModified: "2026-06-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
@@ -127,7 +127,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
           </div>
         </header>
 
