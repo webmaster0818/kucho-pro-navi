@@ -47,9 +47,29 @@ const heatLoadFactors = [
   { factor: "断熱性が低い古い建物", multiplier: "×1.2〜1.5", reason: "熱損失が大きい" },
 ];
 
+// kW→馬力の個別即答FAQ（「◯kWは何馬力？」の検索に1問1答で対応）
+const kwFaqs = [
+  { q: "10kWは何馬力ですか？", a: "10kWは約3.6馬力です（1馬力≒2.8kWで換算）。業務用エアコンの機種クラスでは、4馬力（P112形・11.2kW）が目安になります。" },
+  { q: "6.3kWは何馬力ですか？", a: "6.3kWは約2.3馬力です。機種クラスでは2.5馬力（P63形）＝6.3kWそのものにあたります。" },
+  { q: "12.5kWは何馬力ですか？", a: "12.5kWは約4.5馬力です。機種クラスでは5馬力（P140形・14.0kW）が目安になります。" },
+  { q: "14kWは何馬力ですか？", a: "14kWは5馬力です。機種クラスの5馬力（P140形）＝14.0kWそのものにあたります。" },
+  { q: "20kWは何馬力ですか？", a: "20kWは約7.1馬力です。機種クラスでは8馬力（P224形・22.4kW）が目安になります。" },
+  { q: "22.4kWは何馬力ですか？", a: "22.4kWは8馬力です。機種クラスの8馬力（P224形）＝22.4kWそのものにあたります。" },
+  { q: "25kWは何馬力ですか？", a: "25kWは約8.9馬力です。機種クラスでは10馬力（P280形・28.0kW）が目安になります。" },
+  { q: "28kWは何馬力ですか？", a: "28kWは10馬力です。機種クラスの10馬力（P280形）＝28.0kWそのものにあたります。" },
+  { q: "1馬力は何kWですか？", a: "業務用エアコンでは1馬力≒2.8kW（メーカー公式の換算値）です。ただし機種の「馬力クラス」は冷房能力kW×10のP形規則で表され（例：4馬力＝P112形＝11.2kW）、単純な2.8kW換算とはややずれます。" },
+];
+
+const kwFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: kwFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
+
 export default function HorsepowerGuidePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(kwFaqSchema) }} />
       <SiteHeader />
       <main className="max-w-4xl mx-auto px-4 py-8">
         <Breadcrumb
@@ -189,6 +209,18 @@ export default function HorsepowerGuidePage() {
             <li> <strong>大きすぎる馬力：</strong>頻繁なオン・オフで効率が悪く、機器代・電気代ともに無駄になる</li>
             <li> <strong>自己判断は禁物：</strong>実際には建物の断熱性・気密性・窓の方角なども考慮が必要。専門業者による熱負荷計算を依頼することを強く推奨</li>
           </ul>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-slate-900 mb-4 border-l-4 border-[#1E40AF] pl-3">kW・馬力の換算 よくある質問</h2>
+          <div className="space-y-2">
+            {kwFaqs.map((f, i) => (
+              <details key={i} className="bg-white border border-slate-200 rounded-lg p-4">
+                <summary className="font-bold cursor-pointer text-sm text-slate-800">{f.q}</summary>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
         </section>
 
         <div className="text-center">
