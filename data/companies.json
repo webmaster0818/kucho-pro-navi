@@ -24,7 +24,7 @@
     "avgCost": 350000,
     "warranty": "工事保証3年・機器メーカー保証5年",
     "coverage": "全国47都道府県",
-    "officialUrl": "https://example.com/aircon-frontier"
+    "officialUrl": "https://aircon-f.co.jp/"
   },
   {
     "name": "空調エキスパート",
@@ -51,7 +51,7 @@
     "avgCost": 420000,
     "warranty": "工事保証5年・メンテナンス契約あり",
     "coverage": "関東・関西・中部",
-    "officialUrl": "https://example.com/kucho-expert"
+    "officialUrl": "https://kucho-ex.com/"
   },
   {
     "name": "エアコン総本舗",
@@ -78,7 +78,7 @@
     "avgCost": 220000,
     "warranty": "工事保証1年・機器メーカー保証準拠",
     "coverage": "関東・関西",
-    "officialUrl": "https://example.com/aircon-sohonpo"
+    "officialUrl": "https://ac.fj-tec.co.jp/"
   },
   {
     "name": "エアコン総本店",
@@ -105,7 +105,7 @@
     "avgCost": 380000,
     "warranty": "工事保証3年・機器保証5年",
     "coverage": "東京・神奈川・埼玉・千葉",
-    "officialUrl": "https://example.com/aircon-sohonten"
+    "officialUrl": "https://www.1981airconsohonten.jp/"
   },
   {
     "name": "新空調",
@@ -132,7 +132,7 @@
     "avgCost": 580000,
     "warranty": "工事保証5年・システム保証3年",
     "coverage": "全国主要都市",
-    "officialUrl": "https://example.com/shin-kucho"
+    "officialUrl": "https://www.ecoaircon.jp/"
   },
   {
     "name": "EMEAO!",
@@ -187,7 +187,7 @@
     "avgCost": 280000,
     "warranty": "工事保証1年",
     "coverage": "全国（加盟店ネットワーク）",
-    "officialUrl": "https://example.com/denki-110"
+    "officialUrl": "https://www.sharing-tech.co.jp/denki/"
   },
   {
     "name": "生活110番",
@@ -214,7 +214,7 @@
     "avgCost": 260000,
     "warranty": "各加盟店による",
     "coverage": "全国",
-    "officialUrl": "https://example.com/seikatsu-110"
+    "officialUrl": "https://www.seikatsu110.jp/"
   },
   {
     "name": "くらしのマーケット",
