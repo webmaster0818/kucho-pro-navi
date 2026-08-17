@@ -42,6 +42,7 @@ export async function generateMetadata(props: {
   const industry = industries.find((i) => i.slug === slug);
   if (!industry) return {};
   return {
+    alternates: { canonical: `/industry/${slug}/` },
     title: industry.title,
     description: industry.description,
   };

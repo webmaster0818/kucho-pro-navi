@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/content-policy/" },
   title: "記事の制作ポリシー",
   description: "空調プロナビの記事制作ポリシーです。編集方針・情報の正確性への取り組み・広告との関係について説明しています。",
 };

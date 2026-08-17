@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/" },
   title: "業務用エアコン業者ランキング【2026年7月】",
   description:
     "業務用エアコン設置・工事業者の総合ランキング。価格・品質・対応スピード・保証を徹底比較しておすすめ10社をランキング形式で紹介。",

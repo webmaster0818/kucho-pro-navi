@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/cheap/" },
   title: "業務用エアコン格安業者ランキング【最安値比較2026】",
   description:
     "業務用エアコン工事の費用を抑えたい方向け。格安・低価格で高品質な工事業者をランキング形式で紹介。初期費用を最小限に抑える方法も解説。",

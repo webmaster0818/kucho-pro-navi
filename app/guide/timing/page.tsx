@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/guide/timing/" },
   title: "業務用エアコンの入れ替え・設置はいつ発注すべき？工事が混む時期と2026年の補助金カレンダー【2026年7月】",
   description:
     "業務用エアコンの発注ベストタイミングを解説。夏本番前・故障多発期に工事枠が逼迫する仕組み、発注から設置までのリードタイム、2026年（令和8年度）に業務用空調で使える補助金の公募状況を、実施機関の公式情報をもとにカレンダー化しました。",

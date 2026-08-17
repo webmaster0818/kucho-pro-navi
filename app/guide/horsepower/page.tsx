@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/guide/horsepower/" },
   title: "業務用エアコンのkW・馬力換算早見表｜10kWは何馬力？【一覧表・計算方法付き】",
   description:
     "業務用エアコンのkW⇔馬力換算を早見表で即答。1馬力≒2.8kW（メーカー公式の換算値）で、10kWは約3.6馬力（機種クラスは4馬力/P112形）。P形の機種クラス対応表と、坪数・用途から最適な馬力を計算する方法も解説。",

@@ -10,7 +10,6 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kucho-pro-navi.com"),
-  alternates: { canonical: "/" },
   twitter: {
     card: "summary_large_image",
   },

@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/lease/" },
   title: "業務用エアコンリース対応業者ランキング【2026年7月】",
   description:
     "業務用エアコンのリース・レンタル対応業者を徹底比較。初期費用ゼロで導入できるリースプランの仕組みやメリット・デメリットも詳しく解説。",

@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/guide/type/" },
   title: "業務用エアコンの種類比較｜天井カセット・壁掛け・床置きの違い",
   description:
     "業務用エアコンの種類（天井カセット型・壁掛け型・床置き型・天井吊り型）の特徴・メリット・デメリットを徹底比較。用途・空間に合った選び方を解説。",

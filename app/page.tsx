@@ -3,6 +3,13 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import companies from "@/data/companies.json";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+
 const industryNav = [
   { slug: "restaurant", label: "飲食店", iconSrc: "/images/icon-restaurant.png", color: "bg-orange-50 border-orange-200 hover:border-orange-400 hover:bg-orange-100", iconBg: "bg-orange-100" },
   { slug: "office", label: "オフィス", iconSrc: "/images/icon-office.png", color: "bg-blue-50 border-blue-200 hover:border-blue-400 hover:bg-blue-100", iconBg: "bg-blue-100" },
