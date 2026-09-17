@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
+import { HP_CLASSES } from "@/data/horsepower-classes";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guide/horsepower/" },
@@ -86,6 +87,21 @@ export default function HorsepowerGuidePage() {
         <p className="text-gray-600 mb-8 leading-relaxed">
           <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。たとえば10kWは約3.6馬力で、機種クラスでは4馬力（P112形・11.2kW）が目安です。まず下の早見表で換算し、そのあと坪数・用途からの選び方を確認してください。
         </p>
+
+        {/* 馬力クラス別ページへの導線 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-gray-800 mb-4">馬力クラスから調べる</h2>
+          <p className="text-gray-600 text-sm mb-4">
+            「◯馬力は何kWか」を先に知りたい場合は、クラス別のページに冷房能力・機種クラス（P形）・適用面積をまとめています。
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {HP_CLASSES.map((h) => (
+              <Link key={h.slug} href={`/guide/horsepower/${h.slug}/`} className="px-4 py-2 rounded-lg text-sm border border-gray-200 text-gray-700 hover:border-[#1E40AF] transition">
+                {h.hp}は何kW？
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* kW→馬力 換算早見表 */}
         <section id="conversion" className="mb-10">
