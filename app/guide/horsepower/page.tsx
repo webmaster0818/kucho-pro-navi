@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import { HP_CLASSES } from "@/data/horsepower-classes";
+import { KW_CLASSES } from "@/data/kw-classes";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guide/horsepower/" },
@@ -98,6 +99,21 @@ export default function HorsepowerGuidePage() {
             {HP_CLASSES.map((h) => (
               <Link key={h.slug} href={`/guide/horsepower/${h.slug}/`} className="px-4 py-2 rounded-lg text-sm border border-gray-200 text-gray-700 hover:border-[#1E40AF] transition">
                 {h.hp}は何kW？
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* kW→馬力 逆引きページへの導線 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-gray-800 mb-4">kW（冷房能力）から調べる</h2>
+          <p className="text-gray-600 text-sm mb-4">
+            「◯kWは何馬力か」を先に知りたい場合は、kW別のページに換算馬力・選ぶ機種クラス（P形）・適用面積をまとめています。
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {KW_CLASSES.map((k) => (
+              <Link key={k.slug} href={`/guide/horsepower/${k.slug}/`} className="px-4 py-2 rounded-lg text-sm border border-gray-200 text-gray-700 hover:border-[#1E40AF] transition">
+                {k.kw}は何馬力？
               </Link>
             ))}
           </div>

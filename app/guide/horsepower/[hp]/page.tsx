@@ -5,15 +5,36 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import { HP_CLASSES, getHpClass, neighbors } from "@/data/horsepower-classes";
+import { KW_CLASSES, getKwClass } from "@/data/kw-classes";
+import KwClassArticle from "@/components/KwClassArticle";
 
 type Props = { params: Promise<{ hp: string }> };
 
 export function generateStaticParams() {
-  return HP_CLASSES.map((h) => ({ hp: h.slug }));
+  return [
+    ...HP_CLASSES.map((h) => ({ hp: h.slug })),
+    ...KW_CLASSES.map((k) => ({ hp: k.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { hp } = await params;
+
+  // kW→馬力の逆引きページ
+  const kw = getKwClass(hp);
+  if (kw) {
+    const exact = kw.kw === kw.classKw;
+    return {
+      alternates: { canonical: `/guide/horsepower/${kw.slug}/` },
+      title: `${kw.kw}は何馬力？業務用エアコンの換算は${kw.calcHp}・機種クラスは${kw.classHp}（${kw.classModel}）`,
+      description: `業務用エアコンの${kw.kw}は、1馬力≒2.8kWで換算すると${kw.calcHp}です。${
+        exact
+          ? `機種クラスでは${kw.classHp}（${kw.classModel}）が${kw.kw}そのものにあたります。`
+          : `実際に選ぶ機種クラスは${kw.classHp}（${kw.classModel}・${kw.classKw}）が目安で、換算値とずれる理由も説明します。`
+      }${kw.area ? `適用面積の目安は${kw.area}、主な用途は${kw.usage}。` : ""}メーカー公式の換算値をもとに解説します。`,
+    };
+  }
+
   const c = getHpClass(hp);
   if (!c) return {};
   return {
@@ -25,6 +46,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function HpClassPage({ params }: Props) {
   const { hp } = await params;
+
+  const kw = getKwClass(hp);
+  if (kw) return <KwClassArticle c={kw} />;
+
   const c = getHpClass(hp);
   if (!c) notFound();
   const { prev, next } = neighbors(c.slug);

@@ -22,7 +22,15 @@
   </url>
   <url>
     <loc>https://kucho-pro-navi.com/guide/cost/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kucho-pro-navi.com/guide/timing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kucho-pro-navi.com/cost-index/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -77,6 +85,42 @@
   <url>
     <loc>https://kucho-pro-navi.com/guide/horsepower/10-bariki/</loc>
     <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/guide/horsepower/4-5-kw/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/guide/horsepower/5-6-kw/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/guide/horsepower/10-kw/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/guide/horsepower/12-5-kw/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/guide/horsepower/20-kw/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/guide/horsepower/25-kw/</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
