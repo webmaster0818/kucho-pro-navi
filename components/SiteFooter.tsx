@@ -44,6 +44,7 @@ export default function SiteFooter() {
             <Link href="/terms/" className="hover:text-[#F59E0B] transition-colors text-xs">利用規約</Link>
             <Link href="/privacy/" className="hover:text-[#F59E0B] transition-colors text-xs">プライバシーポリシー</Link>
             <Link href="/content-policy/" className="hover:text-[#F59E0B] transition-colors text-xs">記事の制作ポリシー</Link>
+            <Link href="/about/" className="hover:text-[#F59E0B] transition-colors text-xs">運営者情報</Link>
           </div>
           <p className="mb-2">
             ※当サイトは一部広告収益により運営されています。掲載情報は調査時点のものであり、最新情報は各業者公式サイトをご確認ください。

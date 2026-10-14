@@ -10,6 +10,7 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kucho-pro-navi.com"),
+  icons: { icon: "/favicon.ico" },
   twitter: {
     card: "summary_large_image",
   },
@@ -36,7 +37,7 @@ export default function RootLayout({
 {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"空調プロナビ\",\"url\":\"https://kucho-pro-navi-deploy.pages.dev/\",\"logo\":\"https://kucho-pro-navi-deploy.pages.dev/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://kucho-pro-navi-deploy.pages.dev/about/\"]}" }}
+          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"空調プロナビ\",\"url\":\"https://kucho-pro-navi.com/\",\"logo\":\"https://kucho-pro-navi.com/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://kucho-pro-navi.com/about/\"]}" }}
         />
         </body>
     </html>

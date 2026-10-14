@@ -220,6 +220,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://kucho-pro-navi.com/about/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://kucho-pro-navi.com/content-policy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
