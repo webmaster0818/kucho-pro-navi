@@ -56,14 +56,16 @@ const goodReviews = [
 const badReviews = [
   {
     body:
-      "見積もり依頼を出すと複数の業者から連絡が来るので、対応する数が多く感じました。早めに候補を絞ると進めやすいです。",
-    who: "連絡量について指摘した方（要約）",
+      "駅探PICKS に掲載の口コミでは、見積もりを依頼すると複数の業者から連絡が届くため、対応の数が多く感じられたとの声があります。早い段階で候補を絞ることで、やり取りを進めやすくなるとされています。",
+    who: "連絡量に関する指摘（当サイトによる要約）",
+    summary: true,
     source: "駅探PICKS（ミツモアのリアルな口コミ）",
   },
   {
     body:
-      "業者とのやり取りは基本的に当事者間で進める形なので、契約条件や作業範囲は自分でしっかり確認する必要があると感じました。",
-    who: "やり取りの進め方を指摘した方（要約）",
+      "オヨビー に掲載の口コミでは、業者とのやり取りは基本的に当事者間で進める形のため、契約条件や作業範囲を利用者自身で確認する必要があるとの声があります。",
+    who: "やり取りの進め方に関する指摘（当サイトによる要約）",
+    summary: true,
     source: "オヨビー（ミツモア 正直レビュー）",
   },
 ];
@@ -306,8 +308,14 @@ export default function Page() {
             <div className="grid gap-4">
               {badReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                  <Stars n={2} />
-                  <blockquote className="mt-3 text-slate-700 leading-7">「{r.body}」</blockquote>
+                  {r.summary ? (
+                    <p className="text-slate-700 leading-7">{r.body}</p>
+                  ) : (
+                    <>
+                      <Stars n={2} />
+                      <blockquote className="mt-3 text-slate-700 leading-7">「{r.body}」</blockquote>
+                    </>
+                  )}
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
                     <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
