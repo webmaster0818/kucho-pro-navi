@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "テンポスドットコムの口コミ・評判は？飲食店向け業務用エアコンの料金・特徴を徹底調査【2026年7月】｜空調プロナビ",
+    "テンポスドットコムの口コミ・評判は？飲食店向け業務用エアコンの料金・特徴を徹底調査【2026年7月】",
   description:
     "飲食店の開業・運営を支援するテンポスドットコム（テンポスホールディングス系）の業務用エアコン販売について、サービスの特徴、料金の考え方、向いている事業者、注意点を中立的にまとめました。飲食店向けの強みと選び方のポイントを2026年7月時点の情報で解説します。",
   alternates: { canonical: "/company/tenpos-dotcom" },

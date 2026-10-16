@@ -4,7 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "運営者情報・サイトについて｜空調プロナビ",
+  title: "運営者情報・サイトについて",
   description:
     "空調プロナビの運営者情報、運営方針、編集ポリシー、お問い合わせ先を掲載しています。",
   alternates: { canonical: "/about" },
