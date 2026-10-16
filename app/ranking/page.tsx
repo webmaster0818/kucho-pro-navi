@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/ranking/" },
   title: "業務用エアコン業者ランキング【2026年7月】",
   description:
-    "業務用エアコンの設置・工事業者の総合ランキングです。価格・品質・対応スピード・保証を比較し、おすすめ10社をランキング形式でご紹介します。",
+    `業務用エアコンの設置・工事業者の総合ランキングです。価格・品質・対応スピード・保証を比較し、掲載している${companies.length}社をランキング形式でご紹介します。`,
 };
 
 const rankMedals = ["", "", ""];

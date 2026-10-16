@@ -104,7 +104,7 @@ export default function HomePage() {
             {/* Stats bar */}
             <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-10 text-white/80 text-sm">
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-black text-white">150<span className="text-base font-bold">社+</span></span>
+                <span className="text-2xl font-black text-white">{companies.length}<span className="text-base font-bold">社</span></span>
                 <span>掲載業者数</span>
               </div>
               <div className="w-px bg-white/20 hidden md:block"></div>
