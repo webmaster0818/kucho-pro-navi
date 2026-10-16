@@ -8,7 +8,7 @@ export default function SiteFooter() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">空調プロナビ</h3>
             <p className="text-sm leading-relaxed">
-              業務用エアコンの設置・交換・修理業者を徹底比較。最適な空調業者選びをサポートします。
+              業務用エアコンの設置・交換・修理業者を比較・掲載し、空調業者選びを支援します。
             </p>
           </div>
           <div>
@@ -47,7 +47,7 @@ export default function SiteFooter() {
             <Link href="/about/" className="hover:text-[#F59E0B] transition-colors text-xs">運営者情報</Link>
           </div>
           <p className="mb-2">
-            ※当サイトは一部広告収益により運営されています。掲載情報は調査時点のものであり、最新情報は各業者公式サイトをご確認ください。
+            ※当サイトは一部広告収益により運営しています。掲載情報は調査時点のものです。ご利用前に、各業者の公式サイトにて最新情報をご確認ください。
           </p>
           <p>© 2026 空調プロナビ All Rights Reserved.</p>
         </div>

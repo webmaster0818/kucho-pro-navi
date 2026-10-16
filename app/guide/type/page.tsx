@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guide/type/" },
   title: "業務用エアコンの種類比較｜天井カセット・壁掛け・床置きの違い",
   description:
-    "業務用エアコンの種類（天井カセット型・壁掛け型・床置き型・天井吊り型）の特徴・メリット・デメリットを徹底比較。用途・空間に合った選び方を解説。",
+    "業務用エアコンの種類（天井カセット型・壁掛け型・床置き型・天井吊り型）の特徴・メリット・デメリットを比較し、用途・空間に応じた選び方をご説明します。",
 };
 
 const TypeIcon = ({ name }: { name: string }) => {
@@ -23,11 +23,11 @@ const TypeIcon = ({ name }: { name: string }) => {
 const types = [
   {
     name: "天井カセット型（4方向）",
-    description: "天井に埋め込み、4方向均等に風を送るタイプ。業務用の主流モデル。",
+    description: "天井に埋め込み、4方向に均等に風を送るタイプです。業務用の主流となっています。",
     pros: [
       "部屋全体を均一に冷暖房できる",
       "天井埋め込みでスペースを有効活用",
-      "見た目がスッキリしておしゃれ",
+      "天井面に収まり、外観がすっきりする",
       "大風量で広い空間に対応",
     ],
     cons: [
@@ -41,11 +41,11 @@ const types = [
   },
   {
     name: "天井カセット型（2方向）",
-    description: "2方向に風を送るコンパクトなカセット型。廊下や細長い空間に最適。",
+    description: "2方向に風を送るコンパクトなカセット型です。廊下や細長い空間に適しています。",
     pros: [
-      "細長い空間に最適な気流設計",
+      "細長い空間に適した気流設計",
       "4方向より設置コストが低め",
-      "コンパクトで天井開口が小さくて済む",
+      "本体が小さく、天井開口も小さく抑えられる",
     ],
     cons: [
       "広い空間では温度むらが出やすい",
@@ -57,7 +57,7 @@ const types = [
   },
   {
     name: "壁掛け型",
-    description: "壁に取り付けるスタンダードなタイプ。家庭用の大型版。",
+    description: "壁に取り付ける標準的なタイプです。家庭用エアコンを大型化した形状です。",
     pros: [
       "設置工事が簡単で低コスト",
       "天井工事が不要",
@@ -75,7 +75,7 @@ const types = [
   },
   {
     name: "床置き型",
-    description: "床置きまたは低位置に設置するタイプ。床面から直接暖気・冷気を送る。",
+    description: "床置きまたは低い位置に設置するタイプです。床面から直接暖気・冷気を送ります。",
     pros: [
       "暖房時に足元から暖かくできる",
       "天井・壁工事が不要",
@@ -93,11 +93,11 @@ const types = [
   },
   {
     name: "天井吊り型",
-    description: "天井から吊り下げて設置するタイプ。高天井の大空間向け。",
+    description: "天井から吊り下げて設置するタイプです。高天井の大空間に適しています。",
     pros: [
       "高天井の大空間に対応",
       "床面を占有しない",
-      "大容量モデルが揃っている",
+      "大容量モデルの選択肢が多い",
     ],
     cons: [
       "設置に専門的な工事が必要",
@@ -126,7 +126,7 @@ export default function TypeGuidePage() {
           業務用エアコンの種類比較ガイド
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          業務用エアコンには大きく分けて「天井カセット型」「壁掛け型」「床置き型」「天井吊り型」があります。それぞれの特徴・メリット・デメリットを詳しく比較し、用途に合った選び方を解説します。
+          業務用エアコンには大きく分けて「天井カセット型」「壁掛け型」「床置き型」「天井吊り型」があります。それぞれの特徴・メリット・デメリットを比較し、用途に応じた選び方をご説明します。
         </p>
 
         {/* Quick Comparison */}
@@ -137,7 +137,7 @@ export default function TypeGuidePage() {
                 <th className="p-3 text-left">種類</th>
                 <th className="p-3 text-center">設置費用</th>
                 <th className="p-3 text-center">スペース効率</th>
-                <th className="p-3 text-center">メンテ</th>
+                <th className="p-3 text-center">メンテナンス</th>
                 <th className="p-3 text-center">おすすめ用途</th>
               </tr>
             </thead>
@@ -212,7 +212,7 @@ export default function TypeGuidePage() {
 
         <div className="mt-10 text-center">
           <p className="text-gray-600 mb-4 text-sm">
-            どの機種タイプが適切か迷ったら、専門業者に相談しましょう
+            機種タイプの選定に迷う場合は、専門業者へのご相談をおすすめします
           </p>
           <Link
             href="/ranking/"

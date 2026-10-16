@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guide/cost/" },
   title: "業務用エアコンの費用相場はいくら？本体価格・工事費の内訳【2026年7月】",
   description:
-    "業務用エアコンの設置・交換・修理にかかる費用相場を徹底解説。規模・業種・機種タイプ別の費用目安から、費用を抑えるコツまで詳しく紹介。",
+    "業務用エアコンの設置・交換・修理にかかる費用相場をご説明します。規模・業種・機種タイプ別の費用目安と、費用を抑えるためのポイントを掲載しています。",
 };
 
 const costTable = [
@@ -32,22 +32,22 @@ const repairCosts = [
 const subsidyInfo = [
   {
     name: "省エネ・非化石転換補助金（経産省／SII）",
-    desc: "業務用の高効率空調（電気式パッケージ・GHP等）の更新が中心対象。空調更新の本命。2026年は複数回公募のため公募時期の確認を",
+    desc: "業務用の高効率空調（電気式パッケージ・GHP等）の更新が主な対象で、空調更新で中心となる制度です。2026年は複数回の公募が予定されているため、公募時期をご確認ください",
     amount: "補助率1/3〜（トップ性能枠1/2）",
   },
   {
     name: "脱炭素ビルリノベ事業（環境省／SII）",
-    desc: "既存建築物の断熱化とあわせた高効率空調の導入。2026年は公募中（〜11/30・要公式確認）",
+    desc: "既存建築物の断熱化とあわせた高効率空調の導入が対象です。2026年は公募中です（〜11/30・公式サイトでの確認が必要）",
     amount: "補助率は要公式確認",
   },
   {
     name: "東京都・各自治体の省エネ設備補助",
-    desc: "東京都クールネット東京は高効率空調に最大3/4。神奈川県・横浜市・京都市等でも公募中（自治体・年度で異なる）",
+    desc: "クール・ネット東京では高効率空調に最大3/4を補助しています。神奈川県・横浜市・京都市等でも公募中です（自治体・年度で異なります）",
     amount: "上限 100万〜4,500万円",
   },
   {
     name: "中小企業経営強化税制（設備投資減税）",
-    desc: "中小企業等経営強化法に基づく即時償却・税額控除。補助金とは別枠",
+    desc: "中小企業等経営強化法に基づく即時償却・税額控除です。補助金とは別枠の制度です",
     amount: "即時償却／税額控除",
   },
 ];
@@ -68,7 +68,7 @@ export default function CostGuidePage() {
           業務用エアコン費用相場ガイド【2026年7月】
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          業務用エアコンの設置・工事費用は、機器のサイズ・機種タイプ・設置環境・業者によって大きく異なります。このページでは費用の内訳や相場、費用を抑えるためのポイントを詳しく解説します。
+          業務用エアコンの設置・工事費用は、機器のサイズ・機種タイプ・設置環境・業者によって大きく異なります。当ページでは、費用の内訳と相場、費用を抑えるためのポイントをご説明します。
         </p>
 
         {/* Installation Cost */}
@@ -106,9 +106,9 @@ export default function CostGuidePage() {
           <h2 className="text-xl font-bold text-gray-800 mb-4">費用の内訳</h2>
           <div className="space-y-4">
             {[
-              { item: "機器本体代", ratio: "50〜60%", desc: "室内機・室外機の機器代。馬力・グレードで大きく変わる" },
+              { item: "機器本体代", ratio: "50〜60%", desc: "室内機・室外機の機器代。馬力・グレードにより大きく変わります" },
               { item: "基本工事費", ratio: "20〜30%", desc: "取り付け・配管・電気接続などの標準工事費" },
-              { item: "配管・電気工事", ratio: "10〜20%", desc: "配管延長、電気幹線工事が必要な場合に加算" },
+              { item: "配管・電気工事", ratio: "10〜20%", desc: "配管延長・電気幹線工事が必要な場合に加算されます" },
               { item: "既設機撤去費", ratio: "5〜10%", desc: "古い機器の取り外し・廃棄費用" },
               { item: "その他（足場・養生等）", ratio: "5%前後", desc: "高所作業や特殊環境での追加費用" },
             ].map((item) => (
@@ -166,7 +166,7 @@ export default function CostGuidePage() {
           </div>
           <p className="text-xs text-gray-500 mt-3">
             ※補助金の条件・金額・公募状況は年度ごとに変更され、予算到達で早期終了します。対象要件（空調単体が対象か）と最新情報は各省庁・自治体公式サイトでご確認ください。
-            <Link href="/guide/timing/" className="text-[#059669] font-bold hover:underline">2026年の補助金カレンダーと発注タイミングはこちら →</Link>
+            <Link href="/guide/timing/" className="text-[#059669] font-bold hover:underline">2026年の補助金カレンダーと発注タイミング →</Link>
           </p>
         </section>
 
@@ -176,23 +176,23 @@ export default function CostGuidePage() {
           <ol className="space-y-3 text-sm text-amber-700">
             <li className="flex gap-2">
               <span className="font-black">1.</span>
-              <span><strong>相見積もりを3社以上取る</strong> — 同じ工事内容でも20〜40%の価格差が生じることがある</span>
+              <span><strong>相見積もりを3社以上取る</strong> — 同じ工事内容でも20〜40%の価格差が生じることがあります</span>
             </li>
             <li className="flex gap-2">
               <span className="font-black">2.</span>
-              <span><strong>閑散期（春・秋）に依頼する</strong> — 夏・冬直前は繁忙期で割高になりやすい</span>
+              <span><strong>閑散期（春・秋）に依頼する</strong> — 夏・冬の直前は繁忙期のため、割高になりやすい傾向があります</span>
             </li>
             <li className="flex gap-2">
               <span className="font-black">3.</span>
-              <span><strong>補助金・税制優遇を活用する</strong> — 省エネ設備補助金で費用の1/3〜1/2を補助できる場合も</span>
+              <span><strong>補助金・税制優遇を活用する</strong> — 省エネ設備補助金により、費用の1/3〜1/2が補助される場合があります</span>
             </li>
             <li className="flex gap-2">
               <span className="font-black">4.</span>
-              <span><strong>必要台数・馬力を正確に計算する</strong> — 過剰スペックにならないよう専門家のアドバイスを受ける</span>
+              <span><strong>必要台数・馬力を正確に計算する</strong> — 過剰な能力にならないよう、専門家の助言を受けることをおすすめします</span>
             </li>
             <li className="flex gap-2">
               <span className="font-black">5.</span>
-              <span><strong>リースや分割払いを活用する</strong> — 初期費用を分散させてキャッシュフローを改善</span>
+              <span><strong>リースや分割払いを活用する</strong> — 初期費用を分散し、資金繰りの負担を軽減できます</span>
             </li>
           </ol>
         </section>

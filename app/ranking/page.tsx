@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/ranking/" },
   title: "業務用エアコン業者ランキング【2026年7月】",
   description:
-    "業務用エアコン設置・工事業者の総合ランキング。価格・品質・対応スピード・保証を徹底比較しておすすめ10社をランキング形式で紹介。",
+    "業務用エアコンの設置・工事業者の総合ランキングです。価格・品質・対応スピード・保証を比較し、おすすめ10社をランキング形式でご紹介します。",
 };
 
 const rankMedals = ["", "", ""];
@@ -25,7 +25,7 @@ export default function RankingPage() {
           業務用エアコン業者ランキング【2026年7月】
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          全国の業務用エアコン設置・工事業者を価格・品質・対応スピード・保証内容などを総合的に評価し、ランキング形式で紹介します。費用・エリア・用途に合った業者選びの参考にしてください。
+          当サイトでは、全国の業務用エアコンの設置・工事業者を、価格・品質・対応スピード・保証内容などから総合的に評価し、ランキング形式で掲載しています。費用・エリア・用途に応じた業者選びの参考としてご活用ください。
         </p>
 
         <div className="flex gap-4 mb-8">
@@ -79,7 +79,7 @@ export default function RankingPage() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-2 text-sm text-gray-500 mb-4">
                     <span> 平均費用: ¥{company.avgCost.toLocaleString()}〜</span>
-                    <span> 対応: {company.coverage}</span>
+                    <span> 対応エリア: {company.coverage}</span>
                   </div>
                   <Link
                     href={`/company/${company.slug}/`}

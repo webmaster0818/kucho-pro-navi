@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guide/horsepower/" },
   title: "業務用エアコンのkW・馬力換算早見表｜10kWは何馬力？【一覧表・計算方法付き】",
   description:
-    "業務用エアコンのkW⇔馬力換算を早見表で即答。1馬力≒2.8kW（メーカー公式の換算値）で、10kWは約3.6馬力（機種クラスは4馬力/P112形）。P形の機種クラス対応表と、坪数・用途から最適な馬力を計算する方法も解説。",
+    "業務用エアコンのkW⇔馬力換算を早見表で掲載しています。1馬力≒2.8kW（メーカー公式の換算値）で換算すると、10kWは約3.6馬力（機種クラスは4馬力/P112形）です。P形の機種クラス対応表と、坪数・用途から必要な馬力を計算する方法もご説明します。",
 };
 
 // kW→馬力 換算早見表（1馬力≒2.8kW・ダイキン公式の換算値。機種クラスはP形=冷房能力kW×10の公式規則）
@@ -86,14 +86,14 @@ export default function HorsepowerGuidePage() {
           業務用エアコンのkW・馬力換算早見表と選び方ガイド
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。たとえば10kWは約3.6馬力で、機種クラスでは4馬力（P112形・11.2kW）が目安です。まず下の早見表で換算し、そのあと坪数・用途からの選び方を確認してください。
+          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。たとえば10kWは約3.6馬力で、機種クラスでは4馬力（P112形・11.2kW）が目安です。下の早見表で換算したうえで、坪数・用途に応じた選び方をご確認ください。
         </p>
 
         {/* 馬力クラス別ページへの導線 */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 mb-4">馬力クラスから調べる</h2>
           <p className="text-gray-600 text-sm mb-4">
-            「◯馬力は何kWか」を先に知りたい場合は、クラス別のページに冷房能力・機種クラス（P形）・適用面積をまとめています。
+            「◯馬力は何kWか」を調べる場合は、クラス別のページをご覧ください。冷房能力・機種クラス（P形）・適用面積を掲載しています。
           </p>
           <div className="flex flex-wrap gap-2">
             {HP_CLASSES.map((h) => (
@@ -108,7 +108,7 @@ export default function HorsepowerGuidePage() {
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 mb-4">kW（冷房能力）から調べる</h2>
           <p className="text-gray-600 text-sm mb-4">
-            「◯kWは何馬力か」を先に知りたい場合は、kW別のページに換算馬力・選ぶ機種クラス（P形）・適用面積をまとめています。
+            「◯kWは何馬力か」を調べる場合は、kW別のページをご覧ください。換算馬力・対応する機種クラス（P形）・適用面積を掲載しています。
           </p>
           <div className="flex flex-wrap gap-2">
             {KW_CLASSES.map((k) => (
@@ -123,7 +123,7 @@ export default function HorsepowerGuidePage() {
         <section id="conversion" className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 mb-4">kW→馬力 換算早見表</h2>
           <p className="text-gray-600 text-sm mb-4">
-            換算式: <strong>馬力 = 冷房能力kW ÷ 2.8</strong>。機種は連続的なkW値ではなくクラス（P形＝冷房能力kW×10の型番）で展開されるため、「換算した馬力」と「実際に選ぶ機種クラス」をあわせて掲載しています。
+            換算式は <strong>馬力 = 冷房能力kW ÷ 2.8</strong> です。機種は連続的なkW値ではなくクラス（P形＝冷房能力kW×10の型番）で展開されるため、「換算した馬力」と「実際に選ぶ機種クラス」をあわせて掲載しています。
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -229,7 +229,7 @@ export default function HorsepowerGuidePage() {
             <p>厨房ありの補正: 12馬力 × 1.5 = 18馬力</p>
             <p>南向き大窓: 18馬力 × 1.2 = 21.6馬力</p>
             <p className="font-bold text-green-800 text-base border-t border-green-200 pt-2">
-              → 22馬力程度の空調能力が必要。10馬力×2台 or 12馬力+10馬力の組み合わせを検討
+              → 22馬力程度の空調能力が必要です。10馬力×2台、または12馬力＋10馬力の組み合わせが検討対象になります。
             </p>
           </div>
         </section>
@@ -238,9 +238,9 @@ export default function HorsepowerGuidePage() {
         <section className="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
           <h2 className="font-bold text-red-700 mb-3">馬力選びの注意点</h2>
           <ul className="text-sm text-red-600 space-y-2">
-            <li> <strong>小さすぎる馬力：</strong>冷暖房が追いつかず、フル稼働で電気代が高くなる。機器寿命も縮む</li>
-            <li> <strong>大きすぎる馬力：</strong>頻繁なオン・オフで効率が悪く、機器代・電気代ともに無駄になる</li>
-            <li> <strong>自己判断は禁物：</strong>実際には建物の断熱性・気密性・窓の方角なども考慮が必要。専門業者による熱負荷計算を依頼することを強く推奨</li>
+            <li> <strong>小さすぎる馬力：</strong>冷暖房が追いつかず、フル稼働により電気代が高くなります。機器の寿命も短くなります。</li>
+            <li> <strong>大きすぎる馬力：</strong>オン・オフが頻繁になり効率が低下するため、機器代・電気代ともに過大になります。</li>
+            <li> <strong>専門業者による確認：</strong>実際には建物の断熱性・気密性・窓の方角なども考慮する必要があります。専門業者に熱負荷計算を依頼することをおすすめします。</li>
           </ul>
         </section>
 

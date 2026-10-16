@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/ranking/lease/" },
   title: "業務用エアコンリース対応業者ランキング【2026年7月】",
   description:
-    "業務用エアコンのリース・レンタル対応業者を徹底比較。初期費用ゼロで導入できるリースプランの仕組みやメリット・デメリットも詳しく解説。",
+    "業務用エアコンのリース・レンタルに対応する業者を比較・掲載しています。初期費用なしで導入できるリースプランの仕組みと、メリット・デメリットもご説明します。",
 };
 
 const leaseCompanies = companies.filter((_, i) => i !== 2);
@@ -23,20 +23,20 @@ const leaseFeatureIcons = [
 
 const leaseFeatures = [
   {
-    title: "初期費用ゼロ",
-    desc: "機器代・工事費をリース料として月額払いに分散。まとまった資金が不要。",
+    title: "初期費用を抑えられる",
+    desc: "機器代・工事費をリース料として月額払いに分散できるため、まとまった資金を必要としません。",
   },
   {
-    title: "経費計上が簡単",
-    desc: "リース料は全額経費計上可能。購入と異なり減価償却の手間が不要。",
+    title: "経費処理を簡素化できる",
+    desc: "リース料は全額を経費として計上できます。購入と異なり、減価償却の手続きが不要です。",
   },
   {
     title: "メンテナンス込みプランあり",
-    desc: "月額料金にメンテナンス費用を含めることができ、管理が楽。",
+    desc: "月額料金にメンテナンス費用を含めることができ、管理の負担を軽減できます。",
   },
   {
     title: "最新機器への乗り換えが容易",
-    desc: "リース期間終了後に最新モデルへ更新しやすく、常に効率的な運転が可能。",
+    desc: "リース期間終了後に最新モデルへ更新しやすく、効率的な運転を維持できます。",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function LeaseRankingPage() {
           業務用エアコンリース対応業者ランキング【2026年7月】
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          初期費用を抑えて業務用エアコンを導入したい場合、リース契約が有力な選択肢です。リース対応の優良業者をランキング形式で紹介し、リース導入のメリット・デメリットも詳しく解説します。
+          初期費用を抑えて業務用エアコンを導入したい場合、リース契約が有力な選択肢です。当ページでは、リースに対応する業者をランキング形式で掲載し、リース導入のメリット・デメリットをご説明します。
         </p>
 
         {/* Lease Features */}
@@ -77,7 +77,7 @@ export default function LeaseRankingPage() {
 
         {/* Comparison: Lease vs Purchase */}
         <div className="bg-[#F1F5F9] rounded-xl p-6 mb-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">リース vs 購入 比較</h2>
+          <h2 className="text-xl font-bold text-gray-800 mb-4">リースと購入の比較</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>

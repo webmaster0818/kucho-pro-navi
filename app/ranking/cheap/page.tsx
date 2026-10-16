@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/ranking/cheap/" },
   title: "業務用エアコン格安業者ランキング【最安値比較2026】",
   description:
-    "業務用エアコン工事の費用を抑えたい方向け。格安・低価格で高品質な工事業者をランキング形式で紹介。初期費用を最小限に抑える方法も解説。",
+    "業務用エアコン工事の費用を抑えたい方に向けて、低価格で工事を依頼できる業者をランキング形式でご紹介します。初期費用を抑える方法もご説明します。",
 };
 
 const cheapRanking = [...companies]
@@ -32,16 +32,16 @@ export default function CheapRankingPage() {
           業務用エアコン格安業者ランキング【最安値比較2026】
         </h1>
         <p className="text-gray-600 mb-6 leading-relaxed">
-          初期費用を抑えて業務用エアコンを導入したい方向けに、コストパフォーマンスに優れた業者を厳選してランキング。平均費用が低い順に並べています。
+          初期費用を抑えて業務用エアコンを導入したい方に向けて、費用対効果の高い業者をランキング形式で掲載しています。掲載順は平均費用の低い順です。
         </p>
 
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
           <h2 className="font-bold text-amber-800 mb-2">費用を抑えるポイント</h2>
           <ul className="text-sm text-amber-700 space-y-1">
-            <li> 複数業者に一括見積もりを依頼して相見積もり</li>
-            <li> 繁忙期（夏・冬直前）を避けて閑散期に依頼</li>
-            <li> 省エネ補助金・税制優遇を活用</li>
-            <li> 中古・リファービッシュ機器の活用を検討</li>
+            <li> 複数業者に見積もりを依頼し、相見積もりで比較する</li>
+            <li> 繁忙期（夏・冬の直前）を避け、閑散期に依頼する</li>
+            <li> 省エネ補助金・税制優遇を活用する</li>
+            <li> 中古・整備済み機器の活用を検討する</li>
           </ul>
         </div>
 

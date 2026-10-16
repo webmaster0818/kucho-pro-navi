@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         exact
           ? `機種クラスでは${kw.classHp}（${kw.classModel}）が${kw.kw}そのものにあたります。`
           : `実際に選ぶ機種クラスは${kw.classHp}（${kw.classModel}・${kw.classKw}）が目安で、換算値とずれる理由も説明します。`
-      }${kw.area ? `適用面積の目安は${kw.area}、主な用途は${kw.usage}。` : ""}メーカー公式の換算値をもとに解説します。`,
+      }${kw.area ? `適用面積の目安は${kw.area}、主な用途は${kw.usage}です。` : ""}メーカー公式の換算値をもとに解説します。`,
     };
   }
 
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     alternates: { canonical: `/guide/horsepower/${c.slug}/` },
     title: `業務用エアコン${c.hp}は何kW？｜${c.classKw}（${c.model}）・適用${c.area}の目安`,
-    description: `業務用エアコンの${c.hp}は、機種クラスで${c.classKw}（${c.model}）です。1馬力≒2.8kWの単純換算では${c.calcKw}で、実際に選ぶ機種クラスとの違いも説明します。適用面積は${c.area}、主な用途は${c.usage}。必要馬力が上振れする条件もまとめました。`,
+    description: `業務用エアコンの${c.hp}は、機種クラスで${c.classKw}（${c.model}）です。1馬力≒2.8kWの単純換算では${c.calcKw}で、実際に選ぶ機種クラスとの違いも説明します。適用面積は${c.area}、主な用途は${c.usage}です。必要馬力が上振れする条件もご説明します。`,
   };
 }
 
@@ -61,8 +61,8 @@ export default async function HpClassPage({ params }: Props) {
         ? `${c.hp}の機種クラスは${c.classKw}（${c.model}）です。1馬力≒2.8kWで単純換算しても${c.calcKw}となり、機種クラスの冷房能力と一致します。`
         : `${c.hp}の機種クラスは${c.classKw}（${c.model}）です。1馬力≒2.8kWで単純に計算すると${c.calcKw}になりますが、機種は連続した能力ではなくクラスで展開されるため、実際に選ぶのは${c.classKw}の${c.model}になります。`,
     },
-    { q: `${c.hp}は何坪まで対応できますか？`, a: `目安は${c.area}です。ただし坪数だけでは決まらず、厨房の有無・窓の向き・天井高・人の多さ・機器の発熱・建物の断熱性で必要能力は変わります。下の「必要な馬力が上振れする条件」を確認してください。` },
-    { q: `${c.hp}はどんな場所で使われますか？`, a: `${c.usage}などで使われることが多いクラスです。同じ面積でも用途によって熱負荷が変わるため、実際の選定は現地調査のうえで決めてください。` },
+    { q: `${c.hp}は何坪まで対応できますか？`, a: `目安は${c.area}です。ただし坪数だけでは決まらず、厨房の有無・窓の向き・天井高・人の多さ・機器の発熱・建物の断熱性で必要能力は変わります。下記の「必要な馬力が上振れする条件」をご確認ください。` },
+    { q: `${c.hp}はどんな場所で使われますか？`, a: `${c.usage}などで使われることが多いクラスです。同じ面積でも用途によって熱負荷が変わるため、実際の選定は現地調査のうえでご判断ください。` },
   ];
   const faqSchema = {
     "@context": "https://schema.org",
@@ -82,7 +82,7 @@ export default async function HpClassPage({ params }: Props) {
         </h1>
 
         <div className="bg-[#1E40AF] text-white rounded-xl p-6 mb-8">
-          <p className="text-sm opacity-90 mb-2">結論</p>
+          <p className="text-sm opacity-90 mb-2">冷房能力と機種クラスの要点</p>
           <p className="text-xl font-bold mb-3">
             {c.hp} ＝ 機種クラス {c.classKw}（{c.model}）
           </p>
@@ -97,7 +97,7 @@ export default async function HpClassPage({ params }: Props) {
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 mb-4">2つの「{c.hp}」の違い</h2>
           <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-            業務用エアコンで馬力を調べると、数値が2種類出てきて混乱しやすい部分です。分けて考えると整理できます。
+            業務用エアコンの馬力を調べると、2種類の数値が示されます。それぞれ用途が異なるため、以下のとおり分けてご説明します。
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -123,7 +123,7 @@ export default async function HpClassPage({ params }: Props) {
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3 leading-relaxed">
-            P形の型番は「冷房能力kW×10」の規則です（{c.model} ＝ {c.classKw}）。見積書や仕様書ではこの型番で書かれることが多いため、業者とやり取りするときは型番で確認すると行き違いがありません。
+            P形の型番は「冷房能力kW×10」の規則です（{c.model} ＝ {c.classKw}）。見積書や仕様書ではこの型番で記載されることが多いため、業者とのやり取りでは型番で確認することをおすすめします。
           </p>
         </section>
 
@@ -134,7 +134,7 @@ export default async function HpClassPage({ params }: Props) {
             <p><span className="font-semibold text-[#1E40AF]">主な用途：</span>{c.usage}</p>
           </div>
           <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-            この面積はあくまで標準的な条件での目安です。同じ坪数でも、次の条件に当てはまると必要な能力は上がります。
+            この面積は標準的な条件での目安です。同じ坪数でも、以下の条件に当てはまる場合は必要な能力が上がります。
           </p>
         </section>
 
@@ -144,12 +144,12 @@ export default async function HpClassPage({ params }: Props) {
             <li>・厨房がある飲食店（熱・油煙・水蒸気の負荷が大きい）</li>
             <li>・南向き・西向きの大きな窓がある（直射日光の熱負荷）</li>
             <li>・天井が高い（4m以上。温度のむらが出やすい）</li>
-            <li>・人が多く集まる場所（人体の発熱が積み上がる）</li>
+            <li>・人が多く集まる場所（人体の発熱が加わる）</li>
             <li>・OA機器やサーバーが多い（機器の発熱）</li>
             <li>・断熱性の低い古い建物（熱の出入りが大きい）</li>
           </ul>
           <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-            これらに当てはまる場合、{c.area}でも{c.hp}では足りないことがあります。
+            これらに当てはまる場合、{c.area}の範囲内でも{c.hp}では能力が不足することがあります。
             補正の考え方と計算例は
             <Link href="/guide/horsepower/" className="text-[#1E40AF] underline">馬力選びガイド</Link>
             にまとめています。
@@ -157,7 +157,7 @@ export default async function HpClassPage({ params }: Props) {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">前後のクラスと比べる</h2>
+          <h2 className="text-xl font-bold text-gray-800 mb-4">前後のクラスとの比較</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {prev && (
               <Link href={`/guide/horsepower/${prev.slug}/`} className="block border border-gray-200 rounded-xl p-5 hover:border-[#1E40AF] transition">
@@ -175,7 +175,7 @@ export default async function HpClassPage({ params }: Props) {
             )}
           </div>
           <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-            迷ったときは、上のクラスにしておくほうが冷えない失敗は避けられます。ただし本体価格と電気代は上がるため、現地調査で熱負荷を見てもらったうえで決めてください。
+            判断に迷う場合は、上のクラスを選ぶことで能力不足を避けられます。ただし本体価格と電気代が上がるため、現地調査で熱負荷を確認したうえでご判断ください。
           </p>
         </section>
 

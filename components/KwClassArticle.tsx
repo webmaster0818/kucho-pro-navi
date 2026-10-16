@@ -25,7 +25,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
     },
     {
       q: `なぜ「${c.calcHp}」と「${c.classHp}」の2つの数字が出てくるのですか？`,
-      a: `${c.calcHp}は1馬力≒2.8kWで割った計算上の値、${c.classHp}は実際に販売されている機種クラス（${c.classModel}）の呼び方です。見積書や仕様書では機種クラス側の表記が使われるため、業者とやり取りするときは型番（${c.classModel}）で確認すると行き違いがありません。`,
+      a: `${c.calcHp}は1馬力≒2.8kWで割った計算上の値、${c.classHp}は実際に販売されている機種クラス（${c.classModel}）の呼び方です。見積書や仕様書では機種クラス側の表記が使われるため、業者とのやり取りでは型番（${c.classModel}）で確認することをおすすめします。行き違いを防ぐためです。`,
     },
     ...(c.area
       ? [
@@ -65,7 +65,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
         </h1>
 
         <div className="bg-[#1E40AF] text-white rounded-xl p-6 mb-8">
-          <p className="text-sm opacity-90 mb-2">結論</p>
+          <p className="text-sm opacity-90 mb-2">換算と機種クラスの要点</p>
           <p className="text-xl font-bold mb-3">
             {c.kw} ＝ 換算{c.calcHp} ／ 選ぶ機種クラスは{c.classHp}（{c.classModel}・{c.classKw}）
           </p>
@@ -80,7 +80,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 mb-4">{c.kw}に出てくる2つの数字</h2>
           <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-            「{c.kw}は何馬力か」を調べると、数値が2種類出てきて混乱しやすい部分です。用途が違うので、分けて考えると整理できます。
+            「{c.kw}は何馬力か」を調べると、2種類の数値が示されます。それぞれ用途が異なるため、以下のとおり分けてご説明します。
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -108,7 +108,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3 leading-relaxed">
-            P形の型番は「冷房能力kW×10」の規則です（{c.classModel} ＝ {c.classKw}）。見積書や仕様書ではこの型番で書かれることが多いため、業者とやり取りするときは型番で確認すると行き違いがありません。
+            P形の型番は「冷房能力kW×10」の規則です（{c.classModel} ＝ {c.classKw}）。見積書や仕様書ではこの型番で記載されることが多いため、業者とのやり取りでは型番で確認することをおすすめします。
           </p>
         </section>
 
@@ -128,7 +128,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
                 </p>
               </div>
               <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-                これは標準的な条件での目安です。同じ坪数でも、下の条件に当てはまると必要な能力は上がります。
+                これは標準的な条件での目安です。同じ坪数でも、以下の条件に当てはまる場合は必要な能力が上がります。
               </p>
             </>
           ) : (
@@ -144,7 +144,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
             <li>・厨房がある飲食店（熱・油煙・水蒸気の負荷が大きい）</li>
             <li>・南向き・西向きの大きな窓がある（直射日光の熱負荷）</li>
             <li>・天井が高い（4m以上。温度のむらが出やすい）</li>
-            <li>・人が多く集まる場所（人体の発熱が積み上がる）</li>
+            <li>・人が多く集まる場所（人体の発熱が加わる）</li>
             <li>・OA機器やサーバーが多い（機器の発熱）</li>
             <li>・断熱性の低い古い建物（熱の出入りが大きい）</li>
           </ul>
@@ -159,12 +159,12 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
 
         {hp && (
           <section className="mb-10">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">対応する馬力クラスを詳しく見る</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">対応する馬力クラスの詳細</h2>
             <Link
               href={`/guide/horsepower/${hp.slug}/`}
               className="block border border-gray-200 rounded-xl p-5 hover:border-[#1E40AF] transition"
             >
-              <p className="text-xs text-gray-500 mb-1">{c.kw}で選ぶ機種クラス</p>
+              <p className="text-xs text-gray-500 mb-1">{c.kw}に対応する機種クラス</p>
               <p className="font-bold text-[#1E40AF] mb-1">
                 {hp.hp}（{hp.classKw}・{hp.model}）
               </p>
@@ -174,7 +174,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
         )}
 
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">前後のkWと比べる</h2>
+          <h2 className="text-xl font-bold text-gray-800 mb-4">前後のkWとの比較</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {prev && (
               <Link

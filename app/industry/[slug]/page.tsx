@@ -80,7 +80,7 @@ export default async function IndustryPage(props: {
         {/* Challenges */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-            <span className="text-[#F59E0B]"></span> この業種特有の空調課題
+            <span className="text-[#F59E0B]"></span> この業種に特有の空調課題
           </h2>
           <ul className="space-y-2">
             {industry.challenges.map((c) => (
@@ -168,10 +168,10 @@ export default async function IndustryPage(props: {
 
         <div className="bg-[#1E40AF] rounded-2xl p-8 text-white text-center">
           <h2 className="text-xl font-bold mb-3">
-            まずは無料で見積もり比較
+            無料見積もりによる比較のご案内
           </h2>
           <p className="text-blue-100 mb-6 text-sm">
-            複数業者に一括依頼して最安値を見つけましょう
+            複数業者に見積もりを依頼し、費用と内容を比較することをおすすめします
           </p>
           <Link
             href="/ranking/"

@@ -28,15 +28,15 @@ const rankBadge = [
 const faqs = [
   {
     q: "業務用エアコンの工事費はどのくらいかかりますか？",
-    a: "規模や機種によって異なりますが、小規模オフィス（10〜20坪）で機器代・工事費込み30〜80万円が目安です。飲食店や工場など特殊な環境では追加費用が発生する場合があります。複数業者から見積もりを取ることで適正価格がわかります。",
+    a: "規模や機種によって異なりますが、小規模オフィス（10〜20坪）で機器代・工事費込み30〜80万円が目安です。飲食店や工場など特殊な環境では追加費用が発生する場合があります。複数業者から見積もりを取ることで、適正価格を判断しやすくなります。",
   },
   {
     q: "業務用エアコンの寿命はどのくらいですか？",
-    a: "適切なメンテナンスを行えば15〜20年程度使用できます。ただし10年を過ぎると部品供給が難しくなるケースもあり、省エネ性能も大幅に向上しているため、10〜15年を目安に交換を検討することをお勧めします。",
+    a: "適切なメンテナンスを行えば15〜20年程度使用できます。ただし10年を過ぎると部品供給が難しくなるケースもあり、省エネ性能も大幅に向上しているため、10〜15年を目安に交換を検討することをおすすめします。",
   },
   {
     q: "複数の業者に見積もりを依頼するメリットはありますか？",
-    a: "非常に大きいメリットがあります。同じ工事内容でも業者によって20〜40%の価格差が生じることがあります。また複数の提案を比較することで、最適な機器選定や工事方法を選べます。最低3社から見積もりを取ることを推奨します。",
+    a: "メリットは大きいといえます。同じ工事内容でも業者によって20〜40%の価格差が生じることがあります。また複数の提案を比較することで、最適な機器選定や工事方法を選べます。最低3社から見積もりを取ることを推奨します。",
   },
   {
     q: "業務用エアコンにはどんな種類がありますか？",
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "リース契約と購入はどちらがお得ですか？",
-    a: "初期費用を抑えたい場合はリース、長期的なコストを重視する場合は購入が有利です。リースは月額固定費で資金繰りが安定しますが、総支払額は購入より高くなります。税務上の扱いや資金状況に合わせて選択しましょう。",
+    a: "初期費用を抑えたい場合はリース、長期的なコストを重視する場合は購入が有利です。リースは月額固定費で資金繰りが安定しますが、総支払額は購入より高くなります。税務上の扱いや資金状況に合わせて選択することをおすすめします。",
   },
 ];
 
@@ -79,13 +79,13 @@ export default function HomePage() {
               法人・店舗向け業務用エアコン専門ポータル
             </div>
             <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-white drop-shadow-lg">
-              法人の空調問題を、
+              法人・店舗の業務用エアコン選びを
               <br />
-              <span className="text-amber-300">最適な業者</span>で解決。
+              <span className="text-amber-300">業者比較</span>で支援します
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-              業務用エアコンの設置・交換・修理業者を徹底比較。<br className="hidden md:block" />
-              業種・予算・地域から最適なパートナーを見つけましょう。
+              業務用エアコンの設置・交換・修理業者を比較・掲載しています。<br className="hidden md:block" />
+              業種・予算・地域に応じた業者選びにご活用ください。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -110,7 +110,7 @@ export default function HomePage() {
               <div className="w-px bg-white/20 hidden md:block"></div>
               <div className="flex flex-col items-center">
                 <span className="text-2xl font-black text-white">3<span className="text-base font-bold">社</span></span>
-                <span>無料見積り比較</span>
+                <span>無料見積もり比較</span>
               </div>
               <div className="w-px bg-white/20 hidden md:block"></div>
               <div className="flex flex-col items-center">
@@ -128,7 +128,7 @@ export default function HomePage() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 業種別に探す
               </h2>
-              <p className="text-gray-500 text-sm">お客様の業種に合わせた最適な業者をご紹介</p>
+              <p className="text-gray-500 text-sm">業種ごとに適した業者をご紹介します</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {industryNav.map((item) => (
@@ -156,7 +156,7 @@ export default function HomePage() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 おすすめ業者 TOP3
               </h2>
-              <p className="text-gray-500 text-sm">編集部が厳選した信頼性の高い業者</p>
+              <p className="text-gray-500 text-sm">編集部が選定した業者を掲載しています</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {top3.map((company, index) => (
@@ -225,7 +225,7 @@ export default function HomePage() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 業者比較一覧
               </h2>
-              <p className="text-gray-500 text-sm">主要業者のサービス内容を一目で比較</p>
+              <p className="text-gray-500 text-sm">主要業者のサービス内容を一覧で比較できます</p>
             </div>
             <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
               <table className="w-full border-collapse text-sm">
@@ -273,7 +273,7 @@ export default function HomePage() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 よくある質問
               </h2>
-              <p className="text-gray-500 text-sm">業務用エアコンに関するご質問</p>
+              <p className="text-gray-500 text-sm">業務用エアコンに関するご質問にお答えします</p>
             </div>
             <div className="space-y-3">
               {faqs.map((faq, index) => (
@@ -300,10 +300,10 @@ export default function HomePage() {
         <section className="py-14 px-4 bg-[#1E40AF]">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              まず無料で業者を比較しましょう
+              無料見積もりによる業者比較をおすすめします
             </h2>
             <p className="text-blue-200 mb-8 text-sm md:text-base leading-relaxed">
-              最大3社から無料で見積もりを取得。費用感を把握してから業者を選べます。
+              複数業者（3社程度）から無料で見積もりを取り、費用感を把握したうえで業者を選ぶことをおすすめします。
             </p>
             <Link
               href="/ranking/"
