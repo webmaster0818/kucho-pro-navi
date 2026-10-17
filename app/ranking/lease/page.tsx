@@ -7,7 +7,7 @@ import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/lease/" },
-  title: "業務用エアコンリース対応業者ランキング【2026年7月】",
+  title: "業務用エアコンリース対応業者ランキング【2026年10月】",
   description:
     "業務用エアコンのリース・レンタルに対応する業者を比較・掲載しています。初期費用なしで導入できるリースプランの仕組みと、メリット・デメリットもご説明します。",
 };
@@ -53,7 +53,7 @@ export default function LeaseRankingPage() {
         />
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-          業務用エアコンリース対応業者ランキング【2026年7月】
+          業務用エアコンリース対応業者ランキング【2026年10月】
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
           初期費用を抑えて業務用エアコンを導入したい場合、リース契約が有力な選択肢です。当ページでは、リースに対応する業者をランキング形式で掲載し、リース導入のメリット・デメリットをご説明します。

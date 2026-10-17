@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
+    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   description:
     "業務用エアコン専門店「エアコンフロンティア」（運営：アトム冷熱工業）の口コミ・評判をまとめました。実際の利用者の声、料金やリースの仕組み、対応エリア、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-frontier" },
@@ -95,7 +95,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
+    "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
   dateModified: "2026-06-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },

@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
+    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   description:
     "業務用エアコン専門サイト「空調エキスパート」の口コミ・評判をまとめています。運営会社や対応エリア、リースの仕組み、メリット・デメリット、向いている事業者まで、良い点・注意点の両面から中立的に解説します。",
   alternates: { canonical: "/company/kucho-expert" },
@@ -74,7 +74,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
+    "空調エキスパートの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
   dateModified: "2026-06-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },

@@ -7,9 +7,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 const CHECKED = "2026年7月7日";
 
 export const metadata: Metadata = {
-  title: "業務用エアコン 坪数×馬力×費用 早見インデックス【2026年7月】本体・工事費の確認値",
+  title: "業務用エアコン 坪数×馬力×費用 早見インデックス 本体・工事費の確認値",
   description:
-    "業務用エアコンの「坪数→必要馬力」「馬力別の本体価格＋工事費」を、メーカー資料と業務用エアコン専門店の公開価格にもとづき、当サイトが2026年7月7日に確認して一覧にしています。1馬力≒2.8kWの換算、飲食店など用途別の補正、撤去・配管などの追加費用を、出典を明記して掲載した早見インデックスです（月次更新）。",
+    "業務用エアコンの「坪数→必要馬力」「馬力別の本体価格＋工事費」を、メーカー資料と業務用エアコン専門店の公開価格にもとづき、当サイトが2026年7月7日に確認して一覧にしています。1馬力≒2.8kWの換算、飲食店など用途別の補正、撤去・配管などの追加費用を、出典を明記して掲載した早見インデックスです。",
   alternates: { canonical: "/cost-index/" },
 };
 
@@ -73,7 +73,7 @@ const faqLd = {
 const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "業務用エアコン 坪数×馬力×費用 早見インデックス【2026年7月】",
+  headline: "業務用エアコン 坪数×馬力×費用 早見インデックス",
   description: "坪数→必要馬力、馬力別の本体価格＋工事費を、専門店・メーカー資料で確認して一覧にした早見インデックスです。",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
@@ -91,7 +91,7 @@ export default function CostIndexPage() {
         <Breadcrumb items={[{ label: "ホーム", href: "/" }, { label: "坪数×馬力×費用 早見インデックス" }]} />
 
         <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mt-4 mb-2 leading-snug">
-          業務用エアコン 坪数×馬力×費用 早見インデックス【2026年7月】
+          業務用エアコン 坪数×馬力×費用 早見インデックス
         </h1>
         <p className="text-sm text-slate-500 mb-1">最終更新日：{CHECKED}</p>
         <p className="text-xs text-slate-400 mb-6">費用・目安の確認日：{CHECKED}（メーカー資料・専門店の公開価格を毎月見直し・更新）</p>

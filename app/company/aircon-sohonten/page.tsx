@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコン総本店（東洋電興）の口コミ・評判は？1981年創業・施工5万台の実力と料金を検証【2026年7月】",
+    "エアコン総本店（東洋電興）の口コミ・評判は？1981年創業・施工5万台の実力と料金を検証【2026年10月】",
   description:
     "業務用エアコン専門店「エアコン総本店」（運営：東洋電興株式会社／総本舗とは別会社）の口コミ・評判をまとめています。1981年創業・施工5万台以上の実績、DAIKIN AWARD受賞、対応エリア・料金・保証、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-sohonten" },
@@ -74,7 +74,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年7月】",
+    "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
   dateModified: "2026-06-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },

@@ -28,9 +28,6 @@ export default async function Image() {
         <div style={{ fontSize: 38, fontWeight: 500, opacity: 0.92, lineHeight: 1.3, maxWidth: 1000 }}>
           空調設備の専門業者を比較
         </div>
-        <div style={{ marginTop: 60, fontSize: 24, fontWeight: 400, opacity: 0.7 }}>
-          2026年7月時点
-        </div>
       </div>
     ),
     size,

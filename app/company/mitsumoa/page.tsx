@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "ミツモア（みつもあ）の口コミ・評判は？業務用エアコンの一括見積もり・料金・手数料の仕組み【2026年7月】",
+    "ミツモア（みつもあ）の口コミ・評判は？業務用エアコンの一括見積もり・料金・手数料の仕組み【2026年10月】",
   description:
     "相見積もりサービス「ミツモア（みつもあ／mitsumoa）」（運営：株式会社ミツモア）の口コミ・評判をまとめています。業務用エアコンの一括見積もりでの利用方法、料金と手数料の仕組み、メリット・デメリット、向いている事業者について、中立的な立場でご説明します。",
   alternates: { canonical: "/company/mitsumoa" },

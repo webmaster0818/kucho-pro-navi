@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンコムの口コミ・評判は？業務用エアコンの料金・リース・対応エリアを調査【2026年7月】",
+    "エアコンコムの口コミ・評判は？業務用エアコンの料金・リース・対応エリアを調査【2026年10月】",
   description:
     "業務用エアコン専門通販「エアコンコム」（運営：株式会社エアリズム）の特徴・料金・対応エリアをまとめました。3,000機種以上の取り扱い、全国の取付工事、リース、選ぶ際の一般的な注意点まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-com" },

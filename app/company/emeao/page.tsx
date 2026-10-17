@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "EMEAO!（エミーオ）の口コミ・評判は？業務用エアコンの一括見積もりの仕組みを解説【2026年7月】",
+    "EMEAO!（エミーオ）の口コミ・評判は？業務用エアコンの一括見積もりの仕組みを解説【2026年10月】",
   description:
     "業者マッチングサービス「EMEAO!（エミーオ）」の口コミ・評判をまとめています。業務用エアコンの一括見積もり（相見積もり）の仕組み、コンシェルジュ対応、料金、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/emeao" },
@@ -74,7 +74,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "EMEAO!（エミーオ）の口コミ・評判は？業務用エアコンの一括見積もりの仕組みを解説【2026年7月】",
+    "EMEAO!（エミーオ）の口コミ・評判は？業務用エアコンの一括見積もりの仕組みを解説【2026年10月】",
   datePublished: "2026-06-10",
   dateModified: "2026-06-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
