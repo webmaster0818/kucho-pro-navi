@@ -14,11 +14,13 @@ export type HpClass = {
   sameAsClass: boolean; // 単純換算と機種クラスが一致するか
   area: string;
   usage: string;
+  title?: string;    // 検索結果で答えが伝わるよう個別に調整したタイトル（値は上の各項目と同じもののみ）
 };
 
 export const HP_CLASSES: HpClass[] = [
   { slug: "2-bariki", hp: "2馬力", hpNum: 2, model: "P50形", classKw: "5.0kW", calcKw: "5.6kW", sameAsClass: false,
-    area: "6〜10坪", usage: "個室オフィス・小型店舗・個人クリニックの診察室" },
+    area: "6〜10坪", usage: "個室オフィス・小型店舗・個人クリニックの診察室",
+    title: "業務用エアコン2馬力は5.0kW（P50形）｜単純換算5.6kWとの違い・適用6〜10坪" },
   { slug: "2-5-bariki", hp: "2.5馬力", hpNum: 2.5, model: "P63形", classKw: "6.3kW", calcKw: "7.0kW", sameAsClass: false,
     area: "8〜13坪", usage: "小規模会議室・小型飲食店・美容室" },
   { slug: "3-bariki", hp: "3馬力", hpNum: 3, model: "P80形", classKw: "8.0kW", calcKw: "8.4kW", sameAsClass: false,

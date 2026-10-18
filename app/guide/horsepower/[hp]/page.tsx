@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) return {};
   return {
     alternates: { canonical: `/guide/horsepower/${c.slug}/` },
-    title: `業務用エアコン${c.hp}は何kW？｜${c.classKw}（${c.model}）・適用${c.area}の目安`,
+    title: c.title ?? `業務用エアコン${c.hp}は何kW？｜${c.classKw}（${c.model}）・適用${c.area}の目安`,
     description: `業務用エアコンの${c.hp}は、機種クラスで${c.classKw}（${c.model}）です。1馬力≒2.8kWの単純換算では${c.calcKw}で、実際に選ぶ機種クラスとの違いも説明します。適用面積は${c.area}、主な用途は${c.usage}です。必要馬力が上振れする条件もご説明します。`,
   };
 }
