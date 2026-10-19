@@ -8,37 +8,37 @@ import { KW_CLASSES } from "@/data/kw-classes";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guide/horsepower/" },
-  title: "業務用エアコンのkW・馬力換算早見表｜10kWは何馬力？【一覧表・計算方法付き】",
+  title: "業務用エアコンの馬力・kW換算早見表｜10kWは何馬力？10馬力は何kW？",
   description:
-    "業務用エアコンのkW⇔馬力換算を早見表で掲載しています。1馬力≒2.8kW（メーカー公式の換算値）で換算すると、10kWは約3.6馬力（機種クラスは4馬力/P112形）です。P形の機種クラス対応表と、坪数・用途から必要な馬力を計算する方法もご説明します。",
+    "業務用エアコンのkW⇔馬力換算を早見表で掲載しています。1馬力≒2.8kW（メーカー公式の換算値）で換算すると、10kWは約3.6馬力（機種クラスは4馬力/P112形）、10馬力は28.0kW（P280形）です。P形の機種クラス対応表と、坪数・用途から必要な馬力を計算する方法もご説明します。",
 };
 
 // kW→馬力 換算早見表（1馬力≒2.8kW・ダイキン公式の換算値。機種クラスはP形=冷房能力kW×10の公式規則）
-const kwToHp = [
-  { kw: "4.5kW", hp: "約1.6馬力", model: "1.8馬力（P45形）" },
-  { kw: "5.6kW", hp: "約2.0馬力", model: "2.3馬力（P56形）" },
-  { kw: "6.3kW", hp: "約2.3馬力", model: "2.5馬力（P63形）＝6.3kWそのもの" },
-  { kw: "8.0kW", hp: "約2.9馬力", model: "3馬力（P80形）＝8.0kWそのもの" },
-  { kw: "10kW", hp: "約3.6馬力", model: "4馬力（P112形・11.2kW）が目安" },
-  { kw: "11.2kW", hp: "4馬力", model: "4馬力（P112形）＝11.2kWそのもの" },
-  { kw: "12.5kW", hp: "約4.5馬力", model: "5馬力（P140形・14.0kW）が目安" },
-  { kw: "14kW", hp: "5馬力", model: "5馬力（P140形）＝14.0kWそのもの" },
-  { kw: "16kW", hp: "約5.7馬力", model: "6馬力（P160形）＝16.0kWそのもの" },
-  { kw: "20kW", hp: "約7.1馬力", model: "8馬力（P224形・22.4kW）が目安" },
-  { kw: "22.4kW", hp: "8馬力", model: "8馬力（P224形）＝22.4kWそのもの" },
-  { kw: "25kW", hp: "約8.9馬力", model: "10馬力（P280形・28.0kW）が目安" },
-  { kw: "28kW", hp: "10馬力", model: "10馬力（P280形）＝28.0kWそのもの" },
+const kwToHp: { kw: string; hp: string; model: string; kwSlug?: string; hpSlug?: string }[] = [
+  { kw: "4.5kW", hp: "約1.6馬力", model: "1.8馬力（P45形）", kwSlug: "4-5-kw" },
+  { kw: "5.6kW", hp: "約2.0馬力", model: "2.3馬力（P56形）", kwSlug: "5-6-kw" },
+  { kw: "6.3kW", hp: "約2.3馬力", model: "2.5馬力（P63形）＝6.3kWそのもの", hpSlug: "2-5-bariki" },
+  { kw: "8.0kW", hp: "約2.9馬力", model: "3馬力（P80形）＝8.0kWそのもの", hpSlug: "3-bariki" },
+  { kw: "10kW", hp: "約3.6馬力", model: "4馬力（P112形・11.2kW）が目安", kwSlug: "10-kw", hpSlug: "4-bariki" },
+  { kw: "11.2kW", hp: "4馬力", model: "4馬力（P112形）＝11.2kWそのもの", hpSlug: "4-bariki" },
+  { kw: "12.5kW", hp: "約4.5馬力", model: "5馬力（P140形・14.0kW）が目安", kwSlug: "12-5-kw", hpSlug: "5-bariki" },
+  { kw: "14kW", hp: "5馬力", model: "5馬力（P140形）＝14.0kWそのもの", hpSlug: "5-bariki" },
+  { kw: "16kW", hp: "約5.7馬力", model: "6馬力（P160形）＝16.0kWそのもの", hpSlug: "6-bariki" },
+  { kw: "20kW", hp: "約7.1馬力", model: "8馬力（P224形・22.4kW）が目安", kwSlug: "20-kw", hpSlug: "8-bariki" },
+  { kw: "22.4kW", hp: "8馬力", model: "8馬力（P224形）＝22.4kWそのもの", hpSlug: "8-bariki" },
+  { kw: "25kW", hp: "約8.9馬力", model: "10馬力（P280形・28.0kW）が目安", kwSlug: "25-kw", hpSlug: "10-bariki" },
+  { kw: "28kW", hp: "10馬力", model: "10馬力（P280形）＝28.0kWそのもの", hpSlug: "10-bariki" },
 ];
 
 const hpGuide = [
-  { hp: "2馬力（5.0kW・P50形）", area: "6〜10坪", usage: "個室オフィス・小型店舗・個人クリニック診察室" },
-  { hp: "2.5馬力（6.3kW・P63形）", area: "8〜13坪", usage: "小規模会議室・小型飲食店・美容室" },
-  { hp: "3馬力（8.0kW・P80形）", area: "10〜16坪", usage: "標準的なオフィス・中型飲食店・ブティック" },
-  { hp: "4馬力（11.2kW・P112形）", area: "13〜20坪", usage: "大会議室・中規模レストラン・中型店舗" },
-  { hp: "5馬力（14.0kW・P140形）", area: "16〜26坪", usage: "フロア全体・大型飲食店・ジム" },
-  { hp: "6馬力（16.0kW・P160形）", area: "20〜33坪", usage: "大型フロア・工場作業エリア・大型店舗" },
-  { hp: "8馬力（22.4kW・P224形）", area: "26〜43坪", usage: "工場・倉庫・大型商業施設の一区画" },
-  { hp: "10馬力（28.0kW・P280形）", area: "33〜53坪", usage: "大型工場・倉庫・ホール・体育館（補助的に）" },
+  { hp: "2馬力（5.0kW・P50形）", area: "6〜10坪", usage: "個室オフィス・小型店舗・個人クリニック診察室", slug: "2-bariki" },
+  { hp: "2.5馬力（6.3kW・P63形）", area: "8〜13坪", usage: "小規模会議室・小型飲食店・美容室", slug: "2-5-bariki" },
+  { hp: "3馬力（8.0kW・P80形）", area: "10〜16坪", usage: "標準的なオフィス・中型飲食店・ブティック", slug: "3-bariki" },
+  { hp: "4馬力（11.2kW・P112形）", area: "13〜20坪", usage: "大会議室・中規模レストラン・中型店舗", slug: "4-bariki" },
+  { hp: "5馬力（14.0kW・P140形）", area: "16〜26坪", usage: "フロア全体・大型飲食店・ジム", slug: "5-bariki" },
+  { hp: "6馬力（16.0kW・P160形）", area: "20〜33坪", usage: "大型フロア・工場作業エリア・大型店舗", slug: "6-bariki" },
+  { hp: "8馬力（22.4kW・P224形）", area: "26〜43坪", usage: "工場・倉庫・大型商業施設の一区画", slug: "8-bariki" },
+  { hp: "10馬力（28.0kW・P280形）", area: "33〜53坪", usage: "大型工場・倉庫・ホール・体育館（補助的に）", slug: "10-bariki" },
 ];
 
 const heatLoadFactors = [
@@ -86,7 +86,7 @@ export default function HorsepowerGuidePage() {
           業務用エアコンのkW・馬力換算早見表と選び方ガイド
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。たとえば10kWは約3.6馬力で、機種クラスでは4馬力（P112形・11.2kW）が目安です。下の早見表で換算したうえで、坪数・用途に応じた選び方をご確認ください。
+          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。たとえば10kWは約3.6馬力で、機種クラスでは4馬力（P112形・11.2kW）が目安です。反対に10馬力は28.0kW（P280形）、6馬力クラスは16.0kW（P160形）です。下の早見表の各行から、kW別・馬力別の詳しいページへ進めます。換算したうえで、坪数・用途に応じた選び方をご確認ください。
         </p>
 
         {/* 馬力クラス別ページへの導線 */}
@@ -137,9 +137,13 @@ export default function HorsepowerGuidePage() {
               <tbody>
                 {kwToHp.map((row, i) => (
                   <tr key={row.kw} id={`kw-${row.kw.replace("kW", "").replace(".", "-")}`} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="p-3 font-semibold text-[#1E40AF]">{row.kw}</td>
+                    <td className="p-3 font-semibold text-[#1E40AF]">
+                      {row.kwSlug ? <Link href={`/guide/horsepower/${row.kwSlug}/`} className="underline hover:no-underline">{row.kw}</Link> : row.kw}
+                    </td>
                     <td className="p-3 text-gray-800 font-medium">{row.hp}</td>
-                    <td className="p-3 text-gray-600">{row.model}</td>
+                    <td className="p-3 text-gray-600">
+                      {row.hpSlug ? <Link href={`/guide/horsepower/${row.hpSlug}/`} className="text-[#1E40AF] underline hover:no-underline">{row.model}</Link> : row.model}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -185,7 +189,9 @@ export default function HorsepowerGuidePage() {
               <tbody>
                 {hpGuide.map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="p-3 font-semibold text-[#1E40AF]">{row.hp}</td>
+                    <td className="p-3 font-semibold text-[#1E40AF]">
+                      <Link href={`/guide/horsepower/${row.slug}/`} className="underline hover:no-underline">{row.hp}</Link>
+                    </td>
                     <td className="p-3 text-gray-600">{row.area}</td>
                     <td className="p-3 text-gray-700">{row.usage}</td>
                   </tr>
