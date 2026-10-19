@@ -5,17 +5,18 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "電気工事110番の口コミ・評判は？エアコン工事・緊急対応の料金と仕組みを解説",
+    "電気工事110番・換気扇110番は悪質？口コミ・評判と料金・契約の仕組みを公式で確認",
   description:
-    "生活トラブル対応サービス「電気工事110番」（運営：シェアリングテクノロジー）の口コミ・評判をまとめています。エアコン工事・緊急対応の仕組み、料金、対応エリア、メリット・デメリット、向いている事業者まで中立的に解説します。",
+    "「電気工事110番」と同じ運営会社（シェアリングテクノロジー）の「換気扇110番」の口コミ・評判と、悪質かどうかを判断するための事実を公式サイトで確認しました。換気扇110番の料金表（交換11,000円〜・掃除10,000円〜）、見積もり後のキャンセル、契約相手が加盟店になる規約の仕組みを解説します。",
   alternates: { canonical: "/company/denki-koujikouji-110" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月19日";
 
 const toc = [
   { id: "summary", label: "電気工事110番とは" },
   { id: "company", label: "運営会社・基本情報" },
+  { id: "kankisen", label: "換気扇110番は悪質？運営会社・料金・契約の仕組み" },
   { id: "good", label: "良い口コミ・評判" },
   { id: "bad", label: "注意点を指摘する口コミ・評判" },
   { id: "merit", label: "メリット・デメリット" },
@@ -68,15 +69,19 @@ const faqs = [
     q: "運営会社はどこですか？",
     a: "電気工事110番は、東証グロース市場に上場するシェアリングテクノロジー株式会社が運営するWebサービスのひとつです。生活トラブル全般のマッチング・受付を手がけており、加盟店ネットワークを通じてサービスを提供しています。",
   },
+  {
+    q: "換気扇110番は悪質な業者ですか？",
+    a: "換気扇110番（kankisen-c.jp）は、電気工事110番と同じシェアリングテクノロジー株式会社（証券コード3989）が運営する受付サービスで、実際の作業は加盟店が行います。料金は公式の料金表で交換11,000円〜（税込）、掃除はプロペラタイプ10,000円〜・レンジフードタイプ11,000円〜（税込）です。公式は現地調査後の見積もりを無料、見積もり後のキャンセルも可能としていますが、エリア・加盟店・現場状況によっては事前の確認のうえで調査・見積もりに費用がかかる場合があると注記しています。利用規約では契約はお客様と加盟店の間で結ばれるとされているため、作業前に総額・作業範囲・調査費の有無を書面で確認すると安心です（2026年10月19日に公式サイトで確認）。",
+  },
 ];
 
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "電気工事110番の口コミ・評判は？エアコン工事・緊急対応の料金と仕組みを解説",
+    "電気工事110番・換気扇110番は悪質？口コミ・評判と料金・契約の仕組みを公式で確認",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-19",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -120,14 +125,14 @@ export default function Page() {
             生活トラブル対応サービスの口コミ・評判
           </p>
           <h1 className="text-[1.7rem] leading-snug md:text-[2.1rem] md:leading-tight font-bold text-slate-900">
-            電気工事110番の口コミ・評判は？
+            電気工事110番・換気扇110番は悪質？
             <br className="hidden md:block" />
-            エアコン工事・緊急対応の料金と仕組みを解説
+            口コミ・評判と料金・契約の仕組みを公式で確認
           </h1>
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-19">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -231,6 +236,67 @@ export default function Page() {
             </div>
             <p className="mt-3 text-xs text-slate-400">
               出典：電気工事110番公式サイト（運営会社情報）。受付体制・対応エリア等は変更される場合があります。
+            </p>
+          </section>
+
+          {/* 換気扇110番 */}
+          <section id="kankisen" className="scroll-mt-24">
+            <h2 className="text-2xl font-bold text-slate-900 border-l-4 border-teal-600 pl-4 mb-5">
+              換気扇110番は悪質？運営会社・料金・契約の仕組み
+            </h2>
+            <p className="leading-8 text-slate-700">
+              「換気扇110番」（kankisen-c.jp）は、換気扇の掃除・交換・修理を扱う受付サービスです。公式サイトに「換気扇110番は、東証上場企業が運営しております。（証券コード: 3989）」とあり、電気工事110番と同じ
+              <strong className="font-semibold">シェアリングテクノロジー株式会社</strong>
+              が運営しています。生活110番の公式サイトでも、関連サービスの一覧に換気扇110番が掲載されています。電気工事110番と同じく、受付は運営会社、実際の作業は地域の加盟店が担当する仕組みです。
+            </p>
+            <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+              <table className="w-full text-[0.95rem]">
+                <tbody>
+                  {[
+                    ["換気扇の交換", "11,000円〜（税込）"],
+                    ["換気扇の修理", "別途相談"],
+                    ["掃除（プロペラタイプ）", "10,000円〜（税込）"],
+                    ["掃除（レンジフードタイプ）", "11,000円〜（税込）"],
+                    ["見積もり", "現地調査の後、無料で見積もり（エリア・加盟店・現場状況により、事前に確認のうえ調査・見積もりに費用がかかる場合あり）"],
+                    ["キャンセル", "見積もり後のキャンセルが可能（公式）"],
+                    ["追加料金", "見積もり確定後の追加料金は発生しない（公式）"],
+                    ["支払い", "各種クレジットカード可（一部の加盟店・エリアを除く）"],
+                  ].map(([k, v], i) => (
+                    <tr key={k} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <th className="text-left align-top font-semibold text-slate-600 w-1/3 px-4 py-3 border-b border-slate-100">
+                        {k}
+                      </th>
+                      <td className="text-slate-700 px-4 py-3 border-b border-slate-100">{v}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 text-xs text-slate-400">
+              出典：
+              <a href="https://www.kankisen-c.jp/price/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">換気扇110番 料金のご案内</a>
+              ・
+              <a href="https://www.kankisen-c.jp/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">換気扇110番 公式サイト</a>
+              ・
+              <a href="https://www.kankisen-c.jp/terms/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">利用規約</a>
+              （2026年10月19日確認）。料金は「〜」表記の最低額で、作業内容・機種・現場状況により変わります。
+            </p>
+            <h3 className="mt-8 font-bold text-slate-900">「悪質かどうか」を判断するために知っておきたい規約の内容</h3>
+            <p className="mt-3 leading-8 text-slate-700">
+              換気扇110番の利用規約（第8条）では、運営会社は受付・加盟店の紹介を行う立場で、
+              <strong className="font-semibold">工事の契約はお客様と加盟店の間で結ばれる</strong>
+              とされています。運営会社は取引の当事者にならないため、加盟店が提供するサービスの内容・質については保証できないこと、質問・要望・苦情や契約の解除は加盟店に直接連絡することも定められています。
+            </p>
+            <p className="mt-4 leading-8 text-slate-700">
+              このため、「悪質かどうか」は運営会社よりも、実際に来た加盟店の見積もりと説明で判断することになります。依頼する前に、次の3点を確認しておくとトラブルを避けやすくなります。
+            </p>
+            <ul className="mt-4 space-y-2 text-slate-700 text-[0.95rem] leading-7 list-disc pl-6">
+              <li>現地調査・見積もりに費用がかかるかどうか（公式は原則無料としつつ、費用がかかる場合があると注記しています）</li>
+              <li>見積もりの総額と作業範囲（本体代・部品代・処分費を含むか）を、作業前に書面で受け取る</li>
+              <li>断る場合・契約を解除する場合の連絡先が加盟店であること（規約第8条）</li>
+            </ul>
+            <p className="mt-4 leading-8 text-slate-700">
+              請求額や契約の内容に納得できない場合は、消費者ホットライン「188」（最寄りの消費生活相談窓口につながります）に相談できます。業務用の厨房・店舗の換気設備は、ダクトや排気量の設計が絡むため、空調・設備の専門業者からも相見積もりを取って比べることをおすすめします。
             </p>
           </section>
 
