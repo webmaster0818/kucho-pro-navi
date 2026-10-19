@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/emeao" },
 };
 
-const UPDATED = "2026年7月12日";
+const UPDATED = "2026年10月19日";
 
 const toc = [
   { id: "summary", label: "EMEAO!とは" },
   { id: "company", label: "運営会社・基本情報" },
   { id: "good", label: "良い口コミ・評判" },
-  { id: "bad", label: "注意点を指摘する口コミ・評判" },
+  { id: "bad", label: "注意点（公式サイトの説明から）" },
   { id: "merit", label: "メリット・デメリット" },
   { id: "fit", label: "向いている事業者・向いていない事業者" },
   { id: "price", label: "料金・利用の仕組み" },
@@ -29,21 +29,21 @@ const toc = [
 const goodReviews = [
   {
     body:
-      "コンシェルジュに要望を伝えるだけで、条件に合う業者を選んで紹介してくれました。自分で1社ずつ探す手間が省けて、時間を大きく短縮できました。",
-    who: "利用者（業者選びの体験談）",
-    source: "コピー機Gメン 掲載のEMEAO!利用レビュー",
+      "実際、10分後には1社目から連絡をいただき、3日後には発注先を確定することができました。",
+    who: "スキャンマン株式会社 代表取締役社長 杉本 勝男様（出張スキャニング事業）",
+    source: "EMEAO! 公式サイト「ご利用者様の声」",
   },
   {
     body:
-      "10分後には1社目から連絡をいただき、3日後には発注先を確定することができました。スピード感がありがたかったです。",
-    who: "利用者（一括見積もり利用者）",
-    source: "EMEAO!利用体験レビュー（第三者メディア掲載）",
+      "EMEAO!はコンシェルジュに事情を電話で相談するだけで済むので、余計な手間が省けて大変助かりました。紹介された業者はどこもとても親切で正直迷いましたが、最終的に１社に決めました。",
+    who: "株式会社TSO 代表取締役社長 中屋 仁志様（リサイクル業）",
+    source: "EMEAO! 公式サイト「ご利用者様の声」",
   },
   {
     body:
-      "コンシェルジュが予算感や条件を丁寧に整理してくれたので、比較しやすくなりました。月々のランニングコストを削減できた事例もあるそうです。",
-    who: "利用者（BtoBサービス導入）",
-    source: "EMEAO!の評判紹介記事（第三者メディア掲載）",
+      "ご紹介いただいた企業からの提案を比較して発注し、なんと月々のランニングコストを30％も削減することができました。",
+    who: "株式会社レティクル 代表取締役社長 松木 徹雄様（映像制作）",
+    source: "EMEAO! 公式サイト「ご利用者様の声」",
   },
 ];
 
@@ -76,7 +76,7 @@ const articleJsonLd = {
   headline:
     "EMEAO!（エミーオ）の口コミ・評判は？業務用エアコンの一括見積もりの仕組みを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-19",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -127,7 +127,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-19">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -150,10 +150,10 @@ export default function Page() {
             業務用エアコンの入れ替えで「どの業者に頼めば適正価格なのか」を見極めるには、複数社からの相見積もりが欠かせません。
             本記事では、業者マッチング（一括見積もり）サービスの
             <strong className="font-semibold text-slate-900">EMEAO!（エミーオ）</strong>
-            （運営：株式会社eclore）について、公開されている利用者の声、料金や仕組み、メリット・デメリットを、良い点・注意点の両面から中立的にまとめています。
+            （運営：株式会社eclore）について、公式サイトに掲載された利用者の声、料金や仕組み、メリット・デメリットを、良い点・注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を、出典を明記して引用・要約したものです。EMEAO!は業者を紹介するマッチングサービスで、実際の工事は紹介先の業者が行います。最新情報は公式サイトや無料相談でご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、EMEAO!の公式サイト「ご利用者様の声」に掲載されているものを原文のまま引用しています（運営会社が掲載している声で、業務用エアコンの事例ではありません）。EMEAO!は業者を紹介するマッチングサービスで、実際の工事は紹介先の業者が行います。条件は公式サイトでご確認ください（2026年10月19日確認）。
           </p>
         </div>
 
@@ -163,7 +163,7 @@ export default function Page() {
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
             <p className="font-bold text-teal-800 mb-2">EMEAO!（エミーオ）の評判の要点</p>
             <p className="text-[0.95rem] leading-7 text-slate-700">
-              EMEAO!は<strong className="font-semibold">コンシェルジュ型の業者マッチング（一括見積もり）サービス</strong>（運営：株式会社eclore）です。口コミでは業者探しの時間短縮・紹介スピードを評価する声が中心ですが、<strong className="font-semibold">最大8社から連絡が来るため電話対応の負担</strong>と、紹介後の各社とのやり取りは発注者自身で行う点を、あらかじめご確認ください。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金の仕組み</a>をご覧ください。
+              EMEAO!は<strong className="font-semibold">コンシェルジュ型の業者マッチング（一括見積もり）サービス</strong>（運営：株式会社eclore）です。公式サイトの利用者の声は業者探しの時間短縮・紹介スピードを評価する内容です。一方、<strong className="font-semibold">紹介は最大8社で、紹介後は各社から直接連絡が来て、打ち合わせ・見積もりのやり取りは発注者自身で行う</strong>仕組みです（公式）。あらかじめご確認ください。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金の仕組み</a>をご覧ください。
             </p>
           </div>
         </div>
@@ -240,9 +240,9 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミで多く見られたのは、
-              <strong className="font-semibold">コンシェルジュ対応の丁寧さと、業者紹介のスピード</strong>
-              を評価する声です。要望を伝えるだけで条件に合う業者が選定される点、連絡が早い点、比較がしやすくなった点が好意的に受け止められています。
+              EMEAO!の公式サイトには、利用した企業の声が社名・役職つきで掲載されています。内容は
+              <strong className="font-semibold">業者探しの手間が省けた点、連絡の早さ、相見積もりによるコスト削減</strong>
+              を評価するものです。3件を原文のまま引用します。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
@@ -257,7 +257,7 @@ export default function Page() {
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※上記は第三者メディアに掲載された利用体験レビューをもとに要約したものです。出典を明記したうえで参考としてご覧ください。実際の評価は依頼内容や紹介された業者によって異なります。
+              ※運営会社が自社サイトに掲載している声で、第三者の口コミサイトの評価ではありません。業務用エアコンでの利用事例ではない点にご注意ください。出典（掲載サイト）を特定できる第三者の口コミは、当サイトの調査では確認できなかったため掲載していません。
             </p>
           </section>
 
@@ -275,40 +275,24 @@ export default function Page() {
           {/* Bad reviews */}
           <section id="bad" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-slate-900 border-l-4 border-teal-600 pl-4 mb-5">
-              注意点を指摘する口コミ・評判
+              注意点（公式サイトの説明から）
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              一方で、マッチングサービスならではの注意点を挙げる声もありました。多く見られたのは
-              <strong className="font-semibold">複数社から営業の連絡が来ること</strong>
-              と、その後のやり取りは発注者自身で進める必要がある点です。条件に合う複数社へ連絡が届く仕組みのため、電話やメールが重なることがあります。
+              出典を特定できる否定的な口コミは確認できなかったため、ここでは公式サイトに書かれている仕組みから、利用前に知っておきたい点をまとめます。
             </p>
-            <div className="grid gap-4">
-              {[
-                {
-                  body:
-                    "条件に合う最大8社へ連絡がいくので、営業電話や確認の連絡が多めでした。連絡を受ける時間に余裕をもっておくと安心です。",
-                  who: "利用者（一括見積もり利用者）",
-                  source: "EMEAO!の評判紹介記事（第三者メディア掲載）",
-                },
-                {
-                  body:
-                    "コンシェルジュが間に入ってくれるのは最初のヒアリングまで。その後の各社への連絡やお断りは自分で行う必要がありました。",
-                  who: "利用者（業者選びの体験談）",
-                  source: "EMEAO!利用体験レビュー（第三者メディア掲載）",
-                },
-              ].map((r, i) => (
-                <figure key={i} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                  <Stars n={3} />
-                  <blockquote className="mt-3 text-slate-700 leading-7">「{r.body}」</blockquote>
-                  <figcaption className="mt-3 text-sm text-slate-500">
-                    {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
+            <ul className="space-y-3 text-slate-700 text-[0.95rem] leading-7 list-disc pl-6">
+              <li>紹介される業者は最大8社。ヒアリングの後は、紹介された各業者から直接連絡が来る（最短5分・ほとんどの場合は当日中、翌日以降になる場合もある）</li>
+              <li>紹介後の打ち合わせ・見積もりのやり取りは、発注者が各業者と直接行う</li>
+              <li>電話受付は平日9:00〜18:00</li>
+              <li>利用者の費用は無料で、EMEAO!は掲載業者からの紹介手数料で運営されている</li>
+              <li>問い合わせても契約する必要はなく、不安が残る場合は見送ってよいとされている</li>
+            </ul>
             <p className="mt-4 text-xs text-slate-400">
-              ※マッチングサービスは紹介された業者ごとに価格・品質・対応が異なります。見積もり内容と保証範囲は、各社に必ずご確認ください。
+              出典：
+              <a href="https://emeao.jp/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">EMEAO! 公式サイト</a>
+              ・
+              <a href="https://emeao.jp/faq/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">よくある質問</a>
+              （2026年10月19日確認）。
             </p>
           </section>
 
