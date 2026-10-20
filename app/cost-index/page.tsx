@@ -46,6 +46,18 @@ const extras = [
   { item: "電気工事（動力200V三相・専用回路）", cost: "約5,000円〜（新規三相引込は別途）" },
 ];
 
+const sources = [
+  { label: "馬力・能力（形番・kW）の目安", title: "ダイキン「業務用エアコンの選び方」", url: "https://www.ac.daikin.co.jp/customercenter/useful/article/28" },
+  { label: "飲食店向けの馬力の目安", title: "ダイキン「飲食店様向け 業務用エアコンの選び方」", url: "https://www.ac.daikin.co.jp/customercenter/useful/article/32" },
+  { label: "メーカー公式の費用相場", title: "ダイキン「業務用エアコンの価格相場は？工事費込みでいくらが目安？」", url: "https://www.ac.daikin.co.jp/customercenter/useful/article/49" },
+  { label: "本体価格（天井カセット形4方向）", title: "エアコンコム「天井カセット形4方向の業務用エアコンの一覧」", url: "https://www.airizm.com/products/tenkase4.html" },
+  { label: "本体価格（天井カセット形4方向）", title: "エアコン総本店「業務用エアコンの価格一覧」", url: "https://www.1981airconsohonten.jp/price-list/" },
+  { label: "本体価格（天井カセット形4方向）", title: "エアコンセンターAC「業務用エアコンの価格一覧」", url: "https://www.e-aircon.jp/isyo/price-list.html" },
+  { label: "標準取付工事費", title: "エアコンセンターAC「工事費について」", url: "https://www.e-aircon.jp/kouji/kouji-price.html" },
+  { label: "標準取付工事費", title: "エアコンコム「業務用エアコンの工事費用について」", url: "https://www.airizm.com/construction/cost/" },
+  { label: "追加費用（撤去・配管延長・化粧カバー・電気工事）", title: "比較ビズまとめ「業務用エアコンの設置工事費用は4万円〜21万円」", url: "https://www.biz.ne.jp/matome/2004015/" },
+];
+
 const faqs = [
   {
     q: "店舗・事務所の広さに対して、何馬力が必要ですか？",
@@ -188,6 +200,17 @@ export default function CostIndexPage() {
         <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-8 text-xs text-slate-500 leading-relaxed">
           <p className="font-bold text-slate-600 mb-1">出典（{CHECKED}確認）</p>
           メーカー資料：ダイキン（馬力選定・費用相場・飲食店向け選び方）／業務用エアコン専門店の公開価格：エアコンコム・エアコン総本店・エアコンセンターAC・ACC ほか／追加費用：比較ビズ・ミツモア。数値は各社で随時改定されるため、見積もりの際に各社の公式サイトにて最新情報をご確認ください。
+          <p className="font-bold text-slate-600 mt-3 mb-1">出典ページ（URLは2026年10月20日に追記）</p>
+          <ul className="list-disc pl-5 space-y-1">
+            {sources.map((s) => (
+              <li key={s.url}>
+                {s.label}：
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 break-all">
+                  {s.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* 内部リンク */}
