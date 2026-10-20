@@ -18,7 +18,7 @@ const hpTable = [
   { hp: "2馬力", tsubo: "約7〜15坪", jo: "約13〜29畳", kw: "5.0kW（P50形）" },
   { hp: "2.5馬力", tsubo: "約8〜17坪", jo: "約16〜34畳", kw: "6.3kW" },
   { hp: "3馬力", tsubo: "約11〜23坪", jo: "約21〜46畳", kw: "8.0kW（P80形）" },
-  { hp: "4馬力", tsubo: "約15〜32坪", jo: "約30〜64畳", kw: "10.0kW" },
+  { hp: "4馬力", tsubo: "約15〜32坪", jo: "約30〜64畳", kw: "11.2kW（P112形）" },
   { hp: "5馬力", tsubo: "約18〜40坪", jo: "約36〜80畳", kw: "14.0kW" },
   { hp: "6馬力", tsubo: "約21〜46坪", jo: "約42〜92畳", kw: "16.0kW" },
   { hp: "8馬力", tsubo: "約29〜59坪", jo: "約58〜118畳", kw: "22.4kW" },
@@ -143,7 +143,7 @@ export default function CostIndexPage() {
           ※ 換算の目安は1馬力≒2.8kWです（小馬力ほどやや小さく、2.5〜2.8kWの幅があります）。坪数は<strong>事務所・店舗を中心とした目安</strong>であり、用途・天井高・断熱・発熱により変わります。
         </p>
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 text-sm text-slate-700 leading-relaxed">
-          <strong className="text-amber-900">用途により必要馬力は変わります：</strong>飲食店の厨房は熱負荷が高く、同じ広さでも1ランク上の馬力が必要になる傾向があります（例：3馬力は事務所で約11〜23坪が目安ですが、飲食店では約6〜11坪が目安です）。天井高が2.5mを超える空間や、体育館・工場など機械の発熱がある空間も、床面積だけで選ぶと能力が不足します。詳しくは<Link href="/guide/horsepower/" className="text-sky-700 underline">馬力の選び方</Link>をご覧ください。
+          <strong className="text-amber-900">用途により必要馬力は変わります：</strong>飲食店の厨房は熱負荷が高く、同じ広さでも1ランク上の馬力が必要になる傾向があります（例：3馬力は事務所で約11〜23坪が目安ですが、ダイキンの飲食店向けの目安では3馬力相当（P80形）は約22〜42㎡（約6.7〜12.7坪）です）。天井高が2.5mを超える空間や、体育館・工場など機械の発熱がある空間も、床面積だけで選ぶと能力が不足します。詳しくは<Link href="/guide/horsepower/" className="text-sky-700 underline">馬力の選び方</Link>をご覧ください。
         </div>
 
         {/* 馬力→費用 */}
