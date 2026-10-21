@@ -56,6 +56,8 @@ const sources = [
   { label: "標準取付工事費", title: "エアコンセンターAC「工事費について」", url: "https://www.e-aircon.jp/kouji/kouji-price.html" },
   { label: "標準取付工事費", title: "エアコンコム「業務用エアコンの工事費用について」", url: "https://www.airizm.com/construction/cost/" },
   { label: "追加費用（撤去・配管延長・化粧カバー・電気工事）", title: "比較ビズまとめ「業務用エアコンの設置工事費用は4万円〜21万円」", url: "https://www.biz.ne.jp/matome/2004015/" },
+  { label: "本体価格（天井カセット形4方向）", title: "ACC「業務用エアコン料金一覧」", url: "https://www.e-acc.co.jp/price-list", checked: "2026年10月21日" },
+  { label: "追加費用（フロン回収・破壊）", title: "ミツモア「業務用エアコン(天カセ)の工事費用相場！取り付け・撤去・交換はいくら？馬力ごとに解説」", url: "https://meetsmore.com/services/air-conditioner-installation/media/126644", checked: "2026年10月21日" },
 ];
 
 const faqs = [
@@ -208,6 +210,7 @@ export default function CostIndexPage() {
                 <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 break-all">
                   {s.title}
                 </a>
+                {"checked" in s && s.checked ? `（URLは${s.checked}に追記・同日確認）` : null}
               </li>
             ))}
           </ul>
