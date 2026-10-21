@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/acn-aircon" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "ACNエアコンとは" },
@@ -26,35 +26,45 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+const GMEN_SOURCE =
+  "コピー機Gメン「ACNのエアコンの評判｜激安じゃないけどサポートは高評価！」（2026-10-21確認）";
+const GMEN_URL = "https://www.copyki-gmen.com/aircon/acn-aircon";
+
+const goodReviews: { body: string; who: string; rating: string; source: string; url?: string }[] = [
   {
     body:
-      "トラブルが起きる前に点検と清掃をしてもらえるので、繁忙期でも空調を気にせず営業に集中できて安心です。",
-    who: "利用事業者（口コミを要約）",
-    source: "業務用エアコン比較サイト（aircon-businessuse.com）掲載の口コミ",
+      "ACNエアコンのリースプランで契約しましたが、大変満足しています。初期費用が不要で、省エネ性能の高い最新モデルを選べるのが魅力です。特に、自動フィルター清掃機能が付いたモデルは清潔で快適です。また、24時間体制のサポートが心強く、小さなトラブルも迅速に解決してくれました。",
+    who: "大阪府 30代 男性",
+    rating: "やや満足",
+    source: GMEN_SOURCE,
+    url: GMEN_URL,
   },
   {
     body:
-      "機種の選び方やランニングコストについて、専門的なアドバイスをもらえたのが良かったです。納得して導入できました。",
-    who: "利用事業者（口コミを要約）",
-    source: "コピー機Gメン（copyki-gmen.com）掲載の口コミ",
+      "購入前とても丁寧に説明していただきましたが、わかりやすく好印象でした。ものの方も、実際コンパクトですごくいいなと思いました。",
+    who: "富山県 男性",
+    rating: "とても満足",
+    source: GMEN_SOURCE,
+    url: GMEN_URL,
   },
   {
     body:
-      "激安というわけではありませんが、点検や修理を含めたサポートが手厚く、長く付き合える業者だと感じました。",
-    who: "利用事業者（中立評価を要約）",
-    source: "業務用エアコン比較サイト（aircon-businessuse.com）掲載の口コミ",
+      "平均的な価格で購入しました。設置時のフロアの下見も丁寧にして頂き事前にしっかりとした準備をすることができました。何かあった時の対応についての説明も非常に丁寧でした。",
+    who: "利用者（地域・年代の記載なし）",
+    rating: "とても満足",
+    source: GMEN_SOURCE,
+    url: GMEN_URL,
   },
 ];
 
 const faqs = [
   {
     q: "ACNエアコンはどんなサービスですか？",
-    a: "ACNエアコンは、株式会社ACNソリューションが運営する業務用エアコンのリース専門サービスです。初期費用0円のリースを中心に、販売や保守にも対応しています。リースの累計実績は20,000社超とされています。",
+    a: "ACNエアコンは、株式会社ACNソリューションが運営する業務用エアコンのリース専門サービスです。初期費用0円のリースを中心に、販売や保守にも対応しています。公式サイトの会社概要には「2万社以上の実績」との記載がありますが、業務用エアコンのリースに限った数字かどうかは明記されていません（2026-10-21確認）。",
   },
   {
     q: "「あんしん保証Ecoプラン」とは何ですか？",
-    a: "ACNエアコンが用意するプランで、電気代の節約に配慮しつつ、出張修理費が無料、分解洗浄に対応するなど、導入後のサポートを重視した内容です。プランの詳細や条件は契約時にご確認ください。",
+    a: "ACNエアコンが用意するリースプランで、公式サイトでは出張・修理費無料、24時間365日サポート、動産総合保険付きなどが案内されています。内部の分解洗浄は標準プランには含まれず、オプションで追加する形です（公式サイト https://www.acn-aircon.com/plan/ 2026-10-21確認）。プランの詳細や条件は契約時にご確認ください。",
   },
   {
     q: "リースのメリットは何ですか？",
@@ -62,7 +72,7 @@ const faqs = [
   },
   {
     q: "料金は安いですか？",
-    a: "第三者の評価では「激安というわけではないが、サポートが手厚く高評価」という中立的な声が見られます。点検・清掃・出張修理などのサポートを含めた総合的な価値で選ばれているサービスです。正確な金額は見積もりでご確認ください。",
+    a: "比較サイト「コピー機Gメン」の記事では、価格について「正直『激安です』とは言えません」としつつ、リース料の中にメンテナンス費用や修理費用が組み込まれている点を評価しています（2026-10-21確認）。本体価格だけでなく、サポートを含めた総額で比較することをおすすめします。正確な金額は見積もりでご確認ください。",
   },
   {
     q: "運営会社はどこですか？",
@@ -76,7 +86,7 @@ const articleJsonLd = {
   headline:
     "ACNエアコンの口コミ・評判は？リース料金・対応内容を調査",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -90,15 +100,6 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span className="text-amber-500 tracking-tight" aria-hidden>
-      {"★".repeat(n)}
-      <span className="text-slate-300">{"★".repeat(5 - n)}</span>
-    </span>
-  );
-}
 
 export default function Page() {
   return (
@@ -127,7 +128,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -153,7 +154,7 @@ export default function Page() {
             （運営：株式会社ACNソリューション）について、公開されている利用者の声、初期費用0円リースや「あんしん保証Ecoプラン」の仕組み、対応内容、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、掲載サイトで公開されている内容を、出典ページを明記したうえで原文のまま引用したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -183,10 +184,10 @@ export default function Page() {
             <p className="leading-8 text-slate-700">
               ACNエアコンは、飲食店・オフィス・店舗・施設など、事業者向けの
               <strong className="font-semibold">業務用エアコンのリース専門サービス</strong>
-              です。運営は株式会社ACNソリューションです。初期費用0円のリースを中心に、販売や保守にも対応しています。リースの累計実績は20,000社超とされ、リースを軸にした空調導入を長く手がけている事業者です。
+              です。運営は株式会社ACNソリューションです。初期費用0円のリースを中心に、販売や保守にも対応しています。公式サイトの会社概要には「2万社以上の実績」との記載があります（業務用エアコンのリースに限った数字かは明記なし）。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
-              特徴的なのが「あんしん保証Ecoプラン」です。電気代の節約に配慮しつつ、出張修理費が無料、分解洗浄に対応するなど、導入後のサポートを重視した内容で、設置後の運用段階まで支援する設計になっています。
+              特徴的なのが「あんしん保証Ecoプラン」です。公式サイトでは出張・修理費無料、24時間365日サポート、動産総合保険付きなどが案内されており、設置後の運用段階まで支援する設計になっています。なお、内部の分解洗浄は標準プランには含まれず、オプションです。
             </p>
           </section>
 
@@ -204,8 +205,8 @@ export default function Page() {
                     ["公式サイト", "https://www.acn-aircon.com/"],
                     ["資本金・年商", "資本金4億100万円（グループ計）／年商671億円（グループ会社の単純合算）"],
                     ["事業内容", "業務用エアコンのリース（初期費用0円）＋販売・保守"],
-                    ["主なプラン", "あんしん保証Ecoプラン（電気代節約・出張修理費無料・分解洗浄）"],
-                    ["導入実績", "2万社以上"],
+                    ["主なプラン", "あんしん保証Ecoプラン（出張・修理費無料／24時間365日サポート／分解洗浄はオプション）"],
+                    ["実績", "「2万社以上の実績」（会社概要の記載。リースに限った数字かは明記なし）"],
                   ].map(([k, v], i) => (
                     <tr key={k} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
                       <th className="text-left align-top font-semibold text-slate-600 w-1/3 px-4 py-3 border-b border-slate-100">
@@ -218,7 +219,11 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：ACNエアコン公式サイト（会社情報）。実績・規模は公称値です。内容は変更される場合があります。
+              出典：ACNエアコン公式サイト（
+              <a href="https://www.acn-aircon.com/company/" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>
+              ・
+              <a href="https://www.acn-aircon.com/plan/" target="_blank" rel="nofollow noopener" className="underline">あんしん保証Ecoプラン</a>
+              、2026-10-21確認）。実績・規模は公称値です。内容は変更される場合があります。
             </p>
           </section>
 
@@ -228,24 +233,30 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミで多く見られたのは、
-              <strong className="font-semibold">トラブル前の点検・清掃や、専門的なアドバイスを評価する声</strong>
-              です。導入時の機種選びやランニングコストの相談、導入後の点検・修理サポートまで含めた手厚さが、好意的に受け止められています。
+              比較サイト「コピー機Gメン」に掲載された口コミでは、
+              <strong className="font-semibold">初期費用が不要な点、24時間体制のサポート、購入前・設置前の説明の丁寧さを評価する声</strong>
+              が見られました。以下は同ページの口コミを原文のまま引用したものです（満足度の表記も同ページのものです）。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  <span className="text-xs font-semibold text-teal-700">評価：{r.rating}</span>
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※口コミは各掲載サイトで公開されている内容を要約したものです。顧客満足度は公式の公称値で、評価は時期により変動します。出典を明記したうえで参考としてご覧ください。
+              ※口コミは出典ページに掲載されている内容の引用です（2026-10-21確認）。掲載内容は変更・削除される場合があります。参考としてご覧ください。
             </p>
           </section>
 
@@ -266,9 +277,11 @@ export default function Page() {
               注意点
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              第三者の評価では「
-              <strong className="font-semibold">激安というわけではないが、サポートが手厚く高評価</strong>
-              」という中立的な声が見られました。本体価格の安さよりも、点検・清掃・出張修理などのサポートを含めた総合的な価値で選ばれているサービスです。リース契約は中長期にわたるため、契約前に料金やプラン内容を確認しておくことをおすすめします。
+              比較サイト「コピー機Gメン」の記事では、価格について「
+              <strong className="font-semibold">正直「激安です」とは言えません</strong>
+              」としたうえで、リース料にメンテナンス費用・修理費用が含まれる点を評価しています。同ページには「スピーディーな対応だったが、やや連携不足を感じた」（評価：普通）という口コミもあり、担当者が変わった際の引き継ぎに触れています（
+              <a href={GMEN_URL} target="_blank" rel="nofollow noopener" className="underline">出典</a>
+              、2026-10-21確認）。リース契約は中長期にわたるため、契約前に料金やプラン内容を確認しておくことをおすすめします。
             </p>
             <ul className="space-y-3 text-slate-700 text-[0.95rem] leading-7">
               <li className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
@@ -290,9 +303,9 @@ export default function Page() {
                 <h3 className="font-bold text-teal-800 mb-3">メリット</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
                   <li>初期費用0円のリースで、まとまった出費を抑えて導入できる</li>
-                  <li>あんしん保証Ecoプランで出張修理費無料・分解洗浄に対応</li>
-                  <li>トラブル前の点検・清掃など、運用フェーズのサポートが手厚い</li>
-                  <li>導入実績2万社以上で、機種選びの専門的アドバイスが受けられる</li>
+                  <li>あんしん保証Ecoプランで出張・修理費無料、24時間365日サポート（分解洗浄はオプション）</li>
+                  <li>フロン排出抑制法に基づく簡易点検・定期点検の代行に対応（公式FAQ）</li>
+                  <li>購入前・設置前の説明が丁寧だったという口コミがある</li>
                 </ul>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -338,10 +351,10 @@ export default function Page() {
             <p className="leading-8 text-slate-700">
               ACNエアコンは
               <strong className="font-semibold">初期費用0円のリース</strong>
-              を中心としたサービスです。まとまった導入費用をかけずに業務用エアコンを使い始められ、月々のリース料で計画的に空調を管理できます。「あんしん保証Ecoプラン」を選べば、出張修理費無料や分解洗浄、電気代の節約への配慮など、運用面のサポートが月額に組み込まれます。
+              を中心としたサービスです。まとまった導入費用をかけずに業務用エアコンを使い始められ、月々のリース料で計画的に空調を管理できます。「あんしん保証Ecoプラン」を選べば、出張・修理費無料や24時間365日サポートなど、運用面のサポートが月額に組み込まれます（分解洗浄はオプション）。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
-              第三者の評価では「激安ではないが、サポートが手厚く高評価」という中立的な声が見られます。正確な金額やプラン内容は、設置環境を踏まえた見積もりでご確認ください。本体価格だけでなく、契約期間・月額・含まれるサポート範囲を、複数業者で比較することをおすすめします。
+              比較サイト「コピー機Gメン」でも、価格は「激安」とは言えない一方、メンテナンス・修理費用込みのリース料である点が評価されています。正確な金額やプラン内容は、設置環境を踏まえた見積もりでご確認ください。本体価格だけでなく、契約期間・月額・含まれるサポート範囲を、複数業者で比較することをおすすめします。
             </p>
             <p className="mt-3 text-xs text-slate-400">
               ※料金・リース条件は機種・台数・設置環境・プランにより異なります。最新の条件は公式の見積もりでご確認ください。
@@ -398,7 +411,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              ACNエアコンは、株式会社ACNソリューションが運営する業務用エアコンのリース専門サービスで、初期費用0円のリースと、あんしん保証Ecoプランによる手厚い運用サポートが強みです。口コミでは、トラブル前の点検・清掃や専門的なアドバイスを評価する声が目立ち、リースの累計実績は20,000社超とされています。
+              ACNエアコンは、株式会社ACNソリューションが運営する業務用エアコンのリース専門サービスで、初期費用0円のリースと、あんしん保証Ecoプランによる手厚い運用サポートが強みです。比較サイトに掲載された口コミでは、初期費用不要や24時間体制のサポート、説明の丁寧さを評価する声が見られました。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               一方で、本体価格の安さを最優先する場合は割高に感じることもあるため、サポートを含めた総額で比較することが大切です。業務用エアコンの導入は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・サポート内容を比較して選ぶことが、失敗を防ぐうえで有効です。

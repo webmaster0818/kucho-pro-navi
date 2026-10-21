@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/tenpos-dotcom" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "テンポスドットコムとは" },
   { id: "company", label: "運営会社・基本情報" },
   { id: "feature", label: "飲食店向けの特徴・強み" },
-  { id: "good", label: "利用者の声・評判" },
+  { id: "good", label: "公式サイト掲載の導入事例" },
   { id: "note", label: "依頼前の注意点" },
   { id: "merit", label: "メリット・デメリット" },
   { id: "fit", label: "向いている事業者・向いていない事業者" },
@@ -27,18 +27,24 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+const OFFICIAL_SOURCE = "テンポスドットコム公式「業務用エアコン」ページ内「エアコン導入事例」（2026-10-21確認）";
+const OFFICIAL_URL = "https://www.tenpos.com/c/aircon-all";
+
+// 公式サイト掲載の導入事例（「エアコン工事をテンポスに依頼しようと思ったきっかけは？」への回答）を原文のまま引用
+const goodReviews: { body: string; who: string; source: string; url?: string }[] = [
   {
     body:
-      "厨房機器の買い替えで何度も利用していますが、品揃えが豊富で、飲食店の現場をわかってくれている安心感があります。",
-    who: "飲食店経営者（リピート利用者）",
-    source: "テンポス利用者の声（厨房・店舗備品の購入体験）",
+      "冷蔵庫の修理依頼時にエアコンも古く(10年前)冷房の効きも悪かった為テンポスに相談。新しいエアコンにすると電気代も安くなるとの話を聞き注文。",
+    who: "太古ダイニング様（中華料理・30坪／三菱電機 天カセ4方向×2台 同機種更新工事）",
+    source: OFFICIAL_SOURCE,
+    url: OFFICIAL_URL,
   },
   {
     body:
-      "開業のタイミングで厨房機器から空調までまとめて相談でき、店舗づくりを一か所で進められたのが助かりました。",
-    who: "新規開業の飲食店オーナー",
-    source: "テンポス公式サイト 開業支援の紹介事例",
+      "客席の8台あるエアコンの1台が壊れてしまい、年中無休営業に支障がなく費用も安くできるテンポスに依頼。",
+    who: "牛国屋 ふじみ野店様（焼肉屋・60坪／ダイキン 天井埋込カセット形）",
+    source: OFFICIAL_SOURCE,
+    url: OFFICIAL_URL,
   },
 ];
 
@@ -49,11 +55,11 @@ const faqs = [
   },
   {
     q: "業務用エアコンの設置工事も依頼できますか？",
-    a: "公式サイトでは業務用エアコンの販売に加え、設置の手配についても案内されています。ただし機種・地域・店舗の状況によって対応範囲が変わるため、設置まで含めて依頼したい場合は、見積もり段階で工事の有無と内容を必ず確認してください。",
+    a: "公式サイトの業務用エアコンページでは、工事の流れや導入事例が紹介されており、「最短7日で設置完了」と案内されています（2026-10-21確認）。ただし機種・地域・店舗の状況によって対応範囲が変わるため、設置まで含めて依頼したい場合は、見積もり段階で工事の有無と内容を必ず確認してください。",
   },
   {
     q: "対応エリアはどこまでですか？",
-    a: "テンポスドットコムは全国通販に対応しています。空調・厨房機器を扱う拠点（島根県松江市の空調・店舗厨房センターなど）を持ち、全国の飲食店へ商品を届ける体制です。設置工事の対応可否は地域によって異なる場合があります。",
+    a: "テンポスドットコムは通販サイトで、グループのテンポスバスターズ各店舗とも連携しています（公式の会社概要より）。設置工事の対応可否は地域によって異なる場合があるため、見積もり時にご確認ください。",
   },
   {
     q: "料金の目安はどのくらいですか？",
@@ -71,7 +77,7 @@ const articleJsonLd = {
   headline:
     "テンポスドットコムの口コミ・評判は？飲食店向け業務用エアコンの料金・特徴を調査",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -85,15 +91,6 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span className="text-amber-500 tracking-tight" aria-hidden>
-      {"★".repeat(n)}
-      <span className="text-slate-300">{"★".repeat(5 - n)}</span>
-    </span>
-  );
-}
 
 export default function Page() {
   return (
@@ -122,7 +119,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -147,7 +144,7 @@ export default function Page() {
             です。テンポスホールディングスのグループ会社が運営する飲食店向けの通販サイトで、業務用エアコンも扱っています。本記事では、サービスの特徴、料金の考え方、向いている事業者、依頼前の注意点を中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事は公開情報をもとに構成しています。テンポスは厨房機器・店舗備品に関する評判が多い一方、業務用エアコン単体の第三者による口コミは多くないため、本記事では公式情報と一般的な選び方の注意点を中心にご説明します。料金・対応内容は時期・地域・在庫により変わるため、最新情報は公式サイトや見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事は公開情報をもとに構成しています。業務用エアコンに関する第三者の口コミは確認できなかったため、本記事では公式サイトの情報・導入事例と一般的な選び方の注意点を中心にご説明します。料金・対応内容は時期・地域・在庫により変わるため、最新情報は公式サイトや見積もりでご確認ください（出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -180,7 +177,7 @@ export default function Page() {
               です。運営は、テンポスホールディングスのグループ会社である株式会社テンポスドットコムです。グループは中古厨房機器の販売・買取を中心に、新品・中古の幅広い品揃えで飲食店向けの事業を展開しています。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
-              冷蔵庫・コンロといった厨房機器だけでなく、店舗の備品や設備を幅広く扱っており、その中で業務用エアコンも販売しています。空調・店舗厨房センター（島根県松江市）などの拠点を持ち、全国の飲食店へ商品を届ける通販体制を整えている点が特徴です。
+              冷蔵庫・コンロといった厨房機器だけでなく、店舗の備品や設備を幅広く扱っており、その中で業務用エアコンも販売しています。公式サイトの業務用エアコンページでは「最短7日で設置完了」とし、飲食店の導入事例も紹介しています。また、グループのテンポスバスターズ各店舗と連携していると案内されています。
             </p>
           </section>
 
@@ -195,10 +192,10 @@ export default function Page() {
                   {[
                     ["サービス名", "テンポスドットコム（飲食店向け通販／業務用エアコン）"],
                     ["運営", "株式会社テンポスドットコム（テンポスホールディングスのグループ会社）"],
-                    ["グループ創業", "1997年（業務用厨房機器のリサイクル・販売が中心）"],
+                    ["設立", "平成18年5月（株式会社テンポスドットコム）"],
+                    ["所在地", "東京都大田区南蒲田1-1-25 蒲田東日本ビル7階"],
                     ["主な事業", "飲食店向けの厨房機器・店舗備品・空調機器の販売"],
                     ["対応エリア", "全国（通販。設置工事の対応は地域・機種により異なる）"],
-                    ["拠点の一例", "空調・店舗厨房センター（島根県松江市）ほか"],
                     ["取扱区分", "新品・中古（リユース）を含む幅広い品揃え"],
                     ["公式サイト", "https://www.tenpos.com/c/aircon-all"],
                   ].map(([k, v], i) => (
@@ -213,7 +210,11 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：テンポスドットコム公式サイト（会社・サービス情報）。所在地・取扱内容等は変更される場合があります。
+              出典：テンポスドットコム公式サイト（
+              <a href="https://www.tenpos.com/c/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>
+              ・
+              <a href="https://www.tenpos.com/c/aircon-all" target="_blank" rel="nofollow noopener" className="underline">業務用エアコン</a>
+              、2026-10-21確認）。所在地・取扱内容等は変更される場合があります。
             </p>
           </section>
 
@@ -238,27 +239,32 @@ export default function Page() {
           {/* Good reviews */}
           <section id="good" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-slate-900 border-l-4 border-teal-600 pl-4 mb-5">
-              利用者の声・評判
+              公式サイト掲載の導入事例
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              テンポスは厨房機器・店舗備品を中心に利用者が多く、
-              <strong className="font-semibold">品揃えの豊富さと飲食店の現場を理解した対応</strong>
-              を評価する声が見られます。業務用エアコン単体の口コミは多くありませんが、店舗設備をまとめて相談できる利便性が評価されています。
+              業務用エアコンに関する第三者サイトの口コミは確認できませんでした。参考として、公式サイトの業務用エアコンページに掲載されている
+              <strong className="font-semibold">飲食店の導入事例</strong>
+              から、「エアコン工事をテンポスに依頼しようと思ったきっかけ」への回答を原文のまま引用します。公式サイトが掲載する事例であり、第三者による評価ではない点にご留意ください。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
-                  <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
+                  <blockquote className="text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※掲載の声には、飲食店向けの厨房・店舗備品の利用体験を含みます。業務用エアコン単体の第三者による口コミは限られているため、参考としてご覧ください。
+              ※上記は公式サイトに掲載された導入事例の引用です（2026-10-21確認）。事業者自身が掲載する事例のため、第三者の口コミとは性質が異なります。参考としてご覧ください。
             </p>
           </section>
 

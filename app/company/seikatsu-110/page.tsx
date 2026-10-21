@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/seikatsu-110" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "生活110番とは" },
@@ -26,45 +26,60 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+type Review = {
+  body: string;
+  who: string;
+  source: string;
+  url?: string;
+  stars?: number;
+  summary?: boolean;
+};
+
+const goodReviews: Review[] = [
   {
     body:
-      "夜遅い時間に焦って電話したのに、対応がとても丁寧で優しく、30分以内にスタッフが来てくれました。急ぎのトラブルで本当に助かりました。",
+      "23時頃仕事から帰宅して、玄関の鍵を開けようと思ったら鍵がなかった時、焦って要領えていない電話に対しても丁寧で優しく対応してくれました。きてくれるまで、30分もかからなかったと思います。",
     who: "鍵トラブルで利用した方（深夜23時頃）",
-    source: "みん評 掲載の生活110番 利用者口コミ",
+    source:
+      "おかたづけろぐ「生活110番の口コミと評判を徹底調査！怪しいと言われる理由と安全に利用するコツ」（みん評からの引用として掲載）（2026-10-21確認）",
+    url: "https://okatadukelog.com/fuyouhin-seikatsu110/",
   },
   {
     body:
-      "見積りと説明がわかりやすく、安心してお願いできました。対応も早く、丁寧な対応で助かりました。",
-    who: "解体・駆除作業を依頼した方",
-    source: "みん評 掲載の生活110番 利用者口コミ",
+      "すぐに目的に沿った業者を紹介してもらえたので、非常に迅速で使い勝手が良かったです。",
+    who: "生活110番の利用者（30代／女性）",
+    source:
+      "駅探PICKS「生活110番のリアルな口コミ・評判とは？特徴や使い方についても解説」（2026-10-21確認）",
+    url: "https://ekitan.com/media/house-cleaning/seikatu-110-kuchikomi/",
   },
   {
     body:
-      "目的にあった業者を紹介してもらえて、作業も丁寧、料金も納得できる範囲でした。何をどこに頼めばいいか分からなかったので助かりました。",
-    who: "生活トラブルを相談した利用者",
-    source: "駅探PICKS（生活110番のリアルな口コミ）",
-  },
-  {
-    body:
-      "24時間いつでも受付してくれるので、急なトラブルでもまず電話して相談できる安心感があります。",
-    who: "緊急対応を利用した方",
-    source: "カジナビ 掲載の生活110番 口コミ",
+      "子供がトイレトレーニング中にトイレ詰まりが発生し困った時に連絡しました。24時間365日対応してくれるし、連絡をしたらすぐに対応してくれたので助かりました。作業スタッフの方も丁寧かつ作業が早く、すぐに元に戻って良かったです。",
+    who: "トイレつまりで利用した方（40代前半・カジナビ独自調査の口コミ・評価5.00）",
+    stars: 5,
+    source:
+      "カジナビ「生活110番の口コミ評判｜サービス内容からトラブルを避けるためのポイントまで徹底調査！」（2026-10-21確認）",
+    url: "https://kaji-navi.co.jp/seikatsu110/",
   },
 ];
 
-const badReviews = [
+const badReviews: Review[] = [
   {
     body:
-      "紹介してもらった業者の作業後に、事前説明のなかった追加費用を案内されました。最初に費用の範囲をもう少し詳しく確認しておけばよかったです。",
-    who: "設置作業を依頼した方（指摘を要約）",
-    source: "おかたづけろぐ 掲載の生活110番 口コミ",
+      "エアコンを取り付けてもらうために生活110番に依頼しましたが、作業員の態度が終始そっけなく質問にも「大丈夫ですから」としか答えてくれませんでした。作業後に配管カバーの取り付け費用を追加で請求され、事前に説明がなかったことが気になりました。",
+    who: "エアコン取り付けを依頼した方（50代｜主婦）",
+    source:
+      "おかたづけろぐ「生活110番の口コミと評判を徹底調査！怪しいと言われる理由と安全に利用するコツ」（2026-10-21確認）",
+    url: "https://okatadukelog.com/fuyouhin-seikatsu110/",
   },
   {
     body:
-      "紹介される業者には当たりはずれがあるように感じました。依頼の時期や地域によっては、対応まで少し日数がかかることもありました。",
-    who: "利用者（傾向に関する指摘を要約）",
-    source: "駅探PICKS（生活110番のリアルな口コミ）",
+      "玄関にスズメバチの巣が作られていたので依頼しましたが、予約が取れたのは約10日先だったので、急いで駆除してもらいたかった分、正直もう少し早く来ていただきたかったです。しかし、担当の方は話しやすく非常に気さくな方でしたし、作業の丁寧さはもちろん大変スピーディーであっという間に駆除してもらえたので、とても助かりました。",
+    who: "ハチの巣駆除で利用した方（40代前半・カジナビ独自調査の口コミ・評価4.00）",
+    stars: 4,
+    source:
+      "カジナビ「生活110番の口コミ評判｜サービス内容からトラブルを避けるためのポイントまで徹底調査！」（2026-10-21確認）",
+    url: "https://kaji-navi.co.jp/seikatsu110/",
   },
 ];
 
@@ -87,11 +102,11 @@ const faqs = [
   },
   {
     q: "料金の目安は？追加費用はかかりますか？",
-    a: "料金は紹介される加盟店ごとに異なり、機種・台数・設置環境によって変わります。生活110番自体は無料で相談・見積もり依頼ができますが、配管カバーなどの追加作業で費用が発生することもあるため、契約前に見積もりの内訳と作業範囲を確認しておくことをおすすめします。",
+    a: "料金は紹介される加盟店ごとに異なり、機種・台数・設置環境によって変わります。公式サイトでは業者の紹介を無料としていますが、配管カバーなどの追加作業で費用が発生することもあるため、契約前に見積もりの内訳と作業範囲を確認しておくことをおすすめします。",
   },
   {
     q: "見積もり後にキャンセルできますか？",
-    a: "見積もり内容に納得がいかない場合はキャンセルが可能とされています。複数業者の見積もりを比較したうえで判断する場合にも利用しやすい仕組みです。",
+    a: "公式サイトの『よくある質問』では、見積もり後のキャンセルやキャンセル料について『対応状況を確認いたします』として、窓口への問い合わせ（お急ぎの場合は提携業者へ直接）を案内しています（https://www.seikatsu110.jp/faq/ 2026-10-21確認）。キャンセルの可否や費用は、契約前に担当窓口・加盟店へ確認しておくことをおすすめします。",
   },
   {
     q: "運営会社はどこですか？上場企業ですか？",
@@ -105,7 +120,7 @@ const articleJsonLd = {
   headline:
     "生活110番は怪しい？口コミ・評判と業務用エアコンでの使い方・加盟店の仕組み【2026年】",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -156,7 +171,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -181,7 +196,7 @@ export default function Page() {
             （運営：シェアリングテクノロジー株式会社）です。本記事では、業務用エアコンの依頼における利用可否の観点から、公開されている利用者の口コミ、加盟店紹介型の仕組み、料金、メリット・デメリットを、評価点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・加盟店により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、掲載ページを編集部が確認できたもののみを、原文のまま出典URLとともに引用しています（2026年10月21日確認）。料金や対応内容は時期・地域・加盟店により変わるため、最新の情報は公式サイトや見積もりでご確認ください。
           </p>
         </div>
 
@@ -259,7 +274,7 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：生活110番公式サイト（運営会社）、シェアリングテクノロジー株式会社 企業情報。加盟店数・受付時間等は変更される場合があります。
+              出典：<a href="https://www.seikatsu110.jp/" target="_blank" rel="nofollow noopener" className="underline">生活110番公式サイト</a>（「全国7,600社以上の提携業者」「24時間365日受付」）、<a href="https://sharing-tech.co.jp/company-profile/" target="_blank" rel="nofollow noopener" className="underline">シェアリングテクノロジー株式会社 会社概要</a>（本社所在地）、上場は同社有価証券報告書の沿革（2017年8月東証マザーズ上場、2022年4月グロース市場へ移行）による（いずれも2026-10-21確認）。加盟店数・受付時間等は変更される場合があります。
             </p>
           </section>
 
@@ -269,24 +284,30 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミで多く見られたのは、
+              編集部が掲載ページを確認できた口コミでは、
               <strong className="font-semibold">受付対応の丁寧さと、急ぎのトラブルへのスピード感</strong>
-              を評価する声です。24時間受付で電話相談ができる点、見積もりや説明のわかりやすさ、目的に合った業者が紹介された点などが評価されています。
+              を評価する声が見られました。深夜の電話にも丁寧に対応してもらえた点、目的に沿った業者をすぐ紹介してもらえた点、24時間365日対応で連絡後すぐに対応してもらえた点などが挙げられています。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  {r.stars ? <Stars n={r.stars} /> : null}
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※口コミは生活トラブル全般に対する利用者の声を含みます。実際の施工は紹介される加盟店が担当するため、評価は依頼内容や担当業者によって異なります。出典を明記したうえで参考としてご覧ください。
+              ※口コミは生活トラブル全般（鍵・トイレなど）に対する利用者の声で、業務用エアコンに関するものではありません。実際の施工は紹介される加盟店が担当するため、評価は依頼内容や担当業者によって異なります。
             </p>
           </section>
 
@@ -308,17 +329,23 @@ export default function Page() {
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
               一方で、加盟店紹介型のサービスである性質上、
-              <strong className="font-semibold">紹介される業者によって対応にばらつきが出ること</strong>
-              や、追加費用の事前説明に関する指摘も見られました。これはマッチング型サービス全般に共通する傾向です。ご利用の際は、契約前に見積もりの内訳・作業範囲・追加費用の有無を確認しておくことをおすすめします。
+              <strong className="font-semibold">作業員の対応や追加費用の事前説明</strong>
+              に関する指摘や、時期・地域によって作業日まで日数がかかったという声も見られました。これはマッチング型サービス全般に共通する傾向です。ご利用の際は、契約前に見積もりの内訳・作業範囲・追加費用の有無を確認しておくことをおすすめします。
             </p>
             <div className="grid gap-4">
               {badReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                  <Stars n={2} />
+                  {r.stars ? <Stars n={r.stars} /> : null}
                   <blockquote className="mt-3 text-slate-700 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
@@ -337,7 +364,7 @@ export default function Page() {
                   <li>空調以外の設備トラブルもまとめて一つの窓口に相談できる</li>
                   <li>24時間365日受付で、急なトラブルにも電話で相談しやすい</li>
                   <li>全国7,600社以上の加盟店から地域に合った業者が紹介される</li>
-                  <li>見積もり内容に納得できない場合はキャンセルできる</li>
+                  <li>業者の紹介は無料で受けられる</li>
                 </ul>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -443,7 +470,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              生活110番は、上場企業であるシェアリングテクノロジー株式会社が運営する生活トラブル総合サービスです。エアコンを含む設備のトラブルを一つの窓口でまとめて相談できること、24時間受付で緊急時にも対応しやすいことが強みです。口コミでは受付対応の丁寧さやスピードを評価する声が多い一方、加盟店紹介型であるため業者によって対応に差が出ることや、追加費用の確認を求める声もありました。
+              生活110番は、上場企業であるシェアリングテクノロジー株式会社が運営する生活トラブル総合サービスです。エアコンを含む設備のトラブルを一つの窓口でまとめて相談できること、24時間受付で緊急時にも対応しやすいことが強みです。確認できた口コミでは受付対応の丁寧さやスピードを評価する声がある一方、作業員の対応や事前説明のない追加費用、作業日までの日数を指摘する声もありました。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの導入・修理は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・対応エリアを比較したうえで選ぶことが、失敗を防ぐうえで有効です。

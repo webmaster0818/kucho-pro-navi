@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコン総本店（東洋電興）の口コミ・評判は？1981年創業・施工5万台の実力と料金を検証【2026年10月】",
+    "エアコン総本店（東洋電興）の口コミ・評判は？1981年創業・施工5万件の実力と料金を検証【2026年10月】",
   description:
-    "業務用エアコン専門店「エアコン総本店」（運営：東洋電興株式会社／総本舗とは別会社）の口コミ・評判をまとめています。1981年創業・施工5万台以上の実績、DAIKIN AWARD受賞、対応エリア・料金・保証、メリット・デメリット、向いている事業者まで中立的に解説します。",
+    "業務用エアコン専門店「エアコン総本店」（運営：東洋電興株式会社／総本舗とは別会社）の口コミ・評判をまとめています。1981年創業・施工5万件以上の実績、対応エリア・料金・保証、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-sohonten" },
 };
 
-const UPDATED = "2026年7月19日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "エアコン総本店とは" },
@@ -26,31 +26,34 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+const goodReviews: { body: string; who: string; source: string; url?: string }[] = [
   {
     body:
-      "見積もりから施工完了まで同じ担当者が一貫して対応してくれたので、話が伝わりやすく安心して任せられました。",
-    who: "専任担当制を利用した事業者",
-    source: "エアコン総本店公式サイト「選ばれる理由」で紹介されている利用者の声",
+      "他社の方からエアコン総本店さんの話を聞き、問い合わせてみたところ、親身に話を聞いてくださいました。最初に話をした人が工事終了までずっと担当してくれたので、こちらも相談しやすくてよかったです。工事も非常にスムーズで、すぐに新しいエアコンになったので本当に助かりました。",
+    who: "神奈川県・建設業・50代男性（原文から一部抜粋）",
+    source: "エアコン総本店公式サイト「神奈川県の対応エリア」掲載のお客様の声（2026-10-21確認）",
+    url: "https://www.1981airconsohonten.jp/area/kanagawa/",
   },
   {
     body:
-      "急な故障の相談にもスピーディーに動いてくれました。国家資格を持った担当者が来てくれて心強かったです。",
-    who: "急な空調トラブルで依頼した事業者",
-    source: "エアコン総本店公式サイト「選ばれる理由」で紹介されている利用者の声",
+      "できるだけ急ぎで対応してほしいと依頼したところ、こちらが思っていたよりも早く対応してもらえて本当に助かりました。費用の相場もこちらで簡単に調べてはいましたが、それよりも安く済んだことにも驚きました。担当してくれた人が丁寧で、気になることも説明してもらえたので安心して任せられました。",
+    who: "東京都渋谷区・文具小売業・30代男性（原文から一部抜粋）",
+    source: "エアコン総本店公式サイト「東京都の対応エリア」掲載のお客様の声（2026-10-21確認）",
+    url: "https://www.1981airconsohonten.jp/area/tokyo/",
   },
   {
     body:
-      "夜間工事や近隣への配慮、作業後の清掃まで丁寧に対応してもらえました。複雑な工事でも責任を持って進めてくれた印象です。",
-    who: "店舗で営業時間外工事を依頼した事業者",
-    source: "エアコン総本店公式サイト「選ばれる理由」で紹介されている利用者の声",
+      "工事の内容も事前にわかりやすく説明してもらえましたし、スケジュール通りに終わらせてもらえたので営業にも影響が出なくて助かりました。",
+    who: "神奈川県・飲食店・40代女性（原文から一部抜粋）",
+    source: "エアコン総本店公式サイト「神奈川県の対応エリア」掲載のお客様の声（2026-10-21確認）",
+    url: "https://www.1981airconsohonten.jp/area/kanagawa/",
   },
 ];
 
 const faqs = [
   {
     q: "エアコン総本店は業務用エアコンの設置に対応していますか？",
-    a: "はい。エアコン総本店は1981年創業の業務用エアコン専門店で、業務用エアコン・設備用エアコンの販売から現場の打ち合わせ・施工・工程管理までを手がけています。これまでに5万台以上の施工実績があります。",
+    a: "はい。エアコン総本店は1981年創業の業務用エアコン専門店で、業務用エアコン・設備用エアコンの販売から現場の打ち合わせ・施工・工程管理までを手がけています。公式サイトでは50,000件以上の施工実績があるとされています。",
   },
   {
     q: "対応エリアはどこまでですか？",
@@ -66,7 +69,7 @@ const faqs = [
   },
   {
     q: "運営会社はどこですか？",
-    a: "エアコン総本店は、東京都千代田区外神田に本社を置く東洋電興株式会社が運営する業務用エアコンの専門店です。1981年の創業以来、業務用エアコンの販売・施工・アフターメンテナンスを手がけ、2023年にはDAIKIN AWARDを受賞しています。",
+    a: "エアコン総本店は、東京都千代田区外神田に本社を置く東洋電興株式会社が運営する業務用エアコンの専門店です。1981年の創業以来、業務用エアコンの販売・施工・アフターメンテナンスを手がけ、公式サイトでは「DAIKIN AWARD」や三菱重工からの感謝状を掲げています。",
   },
 ];
 
@@ -76,7 +79,7 @@ const articleJsonLd = {
   headline:
     "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -90,15 +93,6 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span className="text-amber-500 tracking-tight" aria-hidden>
-      {"★".repeat(n)}
-      <span className="text-slate-300">{"★".repeat(5 - n)}</span>
-    </span>
-  );
-}
 
 export default function Page() {
   return (
@@ -127,7 +121,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -153,7 +147,7 @@ export default function Page() {
             （運営：東洋電興株式会社）について、公開されている利用者の声、料金や保証、対応エリア、メリット・デメリットを、良い点・注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を、出典を明記して引用・要約したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、各掲載サイトで公開されている内容を、出典ページを明記したうえで原文から引用したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（口コミの出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -163,7 +157,7 @@ export default function Page() {
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
             <p className="font-bold text-teal-800 mb-2">エアコン総本店の評判の要点</p>
             <p className="text-[0.95rem] leading-7 text-slate-700">
-              エアコン総本店は<strong className="font-semibold">創業40年以上の老舗</strong>業務用エアコン業者（運営：東洋電興株式会社）です。公開されている口コミでは<strong className="font-semibold">担当者の一貫対応・急な故障への対応スピード・夜間工事や清掃まで含めた丁寧さ</strong>を評価する声が中心です。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金</a>をご覧ください。
+              エアコン総本店は<strong className="font-semibold">創業40年以上の老舗</strong>業務用エアコン業者（運営：東洋電興株式会社）です。公式サイトに掲載されたお客様の声では<strong className="font-semibold">担当者の一貫対応・急ぎの依頼への対応スピード・事前説明の丁寧さ</strong>を評価する声が見られます。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金</a>をご覧ください。
             </p>
           </div>
         </div>
@@ -194,10 +188,10 @@ export default function Page() {
             <p className="leading-8 text-slate-700">
               エアコン総本店は、飲食店・オフィス・病院・クリニック・店舗など、事業者向けの
               <strong className="font-semibold">業務用エアコン</strong>
-              の販売・施工・アフターメンテナンスを手がける専門店です。運営は、東京都千代田区外神田に本社を構える東洋電興株式会社です。1981年の創業以来、首都圏を中心に業務用空調の施工を手がけており、施工実績は5万台を超えています。
+              の販売・施工・アフターメンテナンスを手がける専門店です。運営は、東京都千代田区外神田に本社を構える東洋電興株式会社です。1981年の創業以来、首都圏を中心に業務用空調の施工を手がけており、公式サイトでは50,000件以上の施工実績があるとしています。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
-              ダイキン・三菱電機・三菱重工・日立・東芝（日本キヤリア）・パナソニック・富士通ゼネラルなど主要メーカーの機種を幅広く扱い、見積もりから施工完了まで同じ担当者が対応する「専任担当制」を採用しているのが特徴です。2023年にはダイキンの「2023 DAIKIN AWARD」を受賞しています。
+              ダイキン・三菱電機・三菱重工・日立・東芝（日本キヤリア）・パナソニック・富士通ゼネラルなど主要メーカーの機種を幅広く扱い、見積もりから施工完了まで同じ担当者が対応する「専任担当制」を採用しているのが特徴です。公式サイトでは「DAIKIN AWARD」や三菱重工からの感謝状を掲げています。
             </p>
           </section>
 
@@ -216,7 +210,7 @@ export default function Page() {
                     ["設立", "1981年1月（創業40年以上）"],
                     ["対応エリア", "東京・神奈川・埼玉・千葉（施工）／全国（機器販売のみ）"],
                     ["取扱メーカー", "ダイキン／三菱電機／三菱重工／日立／東芝（日本キヤリア）／パナソニック／富士通ゼネラル"],
-                    ["施工実績", "5万台以上"],
+                    ["施工実績", "50,000件以上（公式サイト表記）"],
                     ["保証", "メーカー保証（1年）＋独自の工事保証（3年・無料）"],
                     ["受付時間", "平日 9:00〜18:00"],
                   ].map(([k, v], i) => (
@@ -241,24 +235,27 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公式サイトで紹介されている利用者の声で多く見られたのは、
-              <strong className="font-semibold">専任担当制による安心感と、現場対応のきめ細かさ</strong>
-              を評価する声です。見積もりから完了まで担当者が変わらない点、急な故障にも迅速に対応する点、夜間工事や清掃まで配慮する点が好意的に受け止められています。
+              公式サイトの対応エリアページに掲載されているお客様の声では、
+              <strong className="font-semibold">担当者が変わらない安心感と、対応の早さ・説明の丁寧さ</strong>
+              を評価する声が見られます。最初に話をした人が工事終了まで担当した点、急ぎの依頼に早く対応した点、工事内容を事前にわかりやすく説明した点が挙げられています。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="nofollow noopener" className="underline block text-xs text-slate-400 mt-0.5">出典：{r.source}</a>
+                    ) : (
+                      <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    )}
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※上記は公式サイトで紹介されている利用者の声をもとに要約したものです。公式サイトの声は自社で収集・掲載された内容のため、出典を明記したうえで参考としてご覧ください。独立した口コミ投稿サイトでの件数は限られています。
+              ※上記は公式サイトに掲載されているお客様の声を原文から一部抜粋して引用したものです。公式サイトの声は自社で収集・掲載された内容のため、出典を明記したうえで参考としてご覧ください。独立した口コミ投稿サイトでの件数は限られています。
             </p>
           </section>
 
@@ -299,7 +296,7 @@ export default function Page() {
               <div className="rounded-2xl border border-teal-100 bg-teal-50/60 p-6">
                 <h3 className="font-bold text-teal-800 mb-3">メリット</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
-                  <li>創業40年以上・施工5万台超の豊富な実績</li>
+                  <li>創業40年以上・施工50,000件以上（公式サイト表記）の実績</li>
                   <li>見積もりから完了まで一貫対応する専任担当制</li>
                   <li>3年間の工事保証が無料で付帯する（メーカー保証とは別）</li>
                   <li>急な故障など、急ぎの相談にも対応する（最短3日での施工にも対応）</li>
@@ -408,7 +405,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              エアコン総本店は、東洋電興株式会社が1981年から運営する業務用エアコンの老舗専門店で、創業40年以上の実績、専任担当制による安心感、3年・無料の工事保証が強みです。公式サイトで紹介されている利用者の声では、担当者が変わらない安心感や、急な故障への迅速な対応、現場でのきめ細かい配慮を評価する声が見られました。一方で、施工エリアが関東1都3県中心である点にご留意ください。
+              エアコン総本店は、東洋電興株式会社が1981年から運営する業務用エアコンの老舗専門店で、創業40年以上の実績、専任担当制による安心感、3年・無料の工事保証が強みです。公式サイトに掲載されているお客様の声では、担当者が変わらない安心感や、急ぎの依頼への早い対応、事前説明の丁寧さを評価する声が見られました。一方で、施工エリアが関東1都3県中心である点にご留意ください。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの導入は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・対応エリアを比較して選ぶことが、失敗を防ぐうえで有効です。

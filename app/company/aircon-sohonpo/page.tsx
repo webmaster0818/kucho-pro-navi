@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-sohonpo" },
 };
 
-const UPDATED = "2026年7月12日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "エアコン総本舗とは" },
@@ -26,30 +26,45 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+const goodReviews: { body: string; who: string; rating?: string; source: string; url?: string }[] = [
   {
     body:
-      "こちらの聞きたい事に対しても的確なアドバイスをしてもらえ、安心できました。",
-    who: "業務用エアコンの設置を依頼した利用者",
-    source: "コピー機Gメン 掲載のエアコン総本舗 利用者口コミ",
+      "こちらの聞きたい事に対しても的確なアドバイスをしてもらえ安心できましたし、購入をするとスピーディーに設置工事もしてもらえたので、とても助かりました。",
+    who: "広島県・40代男性",
+    rating: "とても満足",
+    source: "コピー機Gメン（業務用エアコン）「エアコン総本舗の業務用エアコンは安い？評判・口コミから分かる実力」（2026-10-21確認）",
+    url: "https://www.copyki-gmen.com/aircon/aircon-sohompo",
   },
   {
     body:
-      "安くて取り付けもスムーズで、丁寧に対応してもらいました。比較した他店よりも安価に取り付けていただきました。",
-    who: "業務用エアコンの設置を依頼した利用者",
-    source: "コピー機Gメン 掲載のエアコン総本舗 利用者口コミ",
+      "安くて取り付けもスムーズで丁寧に対応してもらいました。取り付けも2週間ほどで工事も早かったので満足しました。",
+    who: "30代女性",
+    rating: "やや満足",
+    source: "コピー機Gメン（業務用エアコン）「エアコン総本舗の業務用エアコンは安い？評判・口コミから分かる実力」（2026-10-21確認）",
+    url: "https://www.copyki-gmen.com/aircon/aircon-sohompo",
   },
   {
     body:
-      "お見積りから工事まで迅速に行っていただき、大変助かりました。見積内容と請求金額にズレがなく、施工も細かい希望を聞いていただき丁寧でした。",
-    who: "業務用エアコンの設置を依頼した利用者",
-    source: "コピー機Gメン 掲載のエアコン総本舗 利用者口コミ",
+      "大手が経営しているのでエアコン総本舗を選んだ。購入も施工も依頼し、比較した他店よりも安価に取り付けていただいた。アフターサービスも豊富。担当者が決まっているので、壊れた時もいつも同じ人が来てくれてありがたい。",
+    who: "利用者（属性の記載なし）",
+    rating: "やや満足",
+    source: "コピー機Gメン（業務用エアコン）「エアコン総本舗の業務用エアコンは安い？評判・口コミから分かる実力」（2026-10-21確認）",
+    url: "https://www.copyki-gmen.com/aircon/aircon-sohompo",
   },
   {
     body:
-      "商品の品質とサービスに満足しています。スタッフの対応が親切で、信頼性がありました。",
-    who: "業務用エアコンの設置を依頼した利用者",
-    source: "コピー機Gメン 掲載のエアコン総本舗 利用者口コミ",
+      "お見積りから工事まで迅速に行っていただき大変助かりました。ありがちな工事の日に追加料金を支払うということもなく、お見積り通りのご請求でした。施工も細かい希望を聞いていただきながらとても丁寧に設置していただき、またお願いしたいと思います。",
+    who: "Googleマップの口コミ（同記事内で引用）",
+    source: "コピー機Gメン（業務用エアコン）「エアコン総本舗の業務用エアコンは安い？評判・口コミから分かる実力」（2026-10-21確認）",
+    url: "https://www.copyki-gmen.com/aircon/aircon-sohompo",
+  },
+  {
+    body:
+      "商品の品質とサービスに満足しています。スタッフの対応が親切で、商品の性能も期待通り。購入後のアフターサポートも信頼性がありました。",
+    who: "東京都・20代女性",
+    rating: "やや満足",
+    source: "コピー機Gメン（業務用エアコン）「エアコン総本舗の業務用エアコンは安い？評判・口コミから分かる実力」（2026-10-21確認）",
+    url: "https://www.copyki-gmen.com/aircon/aircon-sohompo",
   },
 ];
 
@@ -82,7 +97,7 @@ const articleJsonLd = {
   headline:
     "エアコン総本舗の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -96,15 +111,6 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span className="text-amber-500 tracking-tight" aria-hidden>
-      {"★".repeat(n)}
-      <span className="text-slate-300">{"★".repeat(5 - n)}</span>
-    </span>
-  );
-}
 
 export default function Page() {
   return (
@@ -133,7 +139,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -154,12 +160,12 @@ export default function Page() {
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <p className="text-[1.05rem] leading-8 text-slate-700">
             業務用エアコンの入れ替えでは、費用の抑制と工事品質の確保を両立させることが重要です。
-            本記事では、コストパフォーマンスと工事品質の両立で知られる
+            本記事では、業務用エアコンの販売・設置を手がける
             <strong className="font-semibold text-slate-900">エアコン総本舗</strong>
             （運営：株式会社フジテック）について、実際に公開されている利用者の口コミ、料金、対応エリア、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、各掲載サイトで公開されている内容を、出典ページを明記したうえで原文のまま引用したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（口コミの出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -169,7 +175,7 @@ export default function Page() {
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
             <p className="font-bold text-teal-800 mb-2">エアコン総本舗の評判の要点</p>
             <p className="text-[0.95rem] leading-7 text-slate-700">
-              エアコン総本舗は<strong className="font-semibold">コストパフォーマンスと工事品質の両立</strong>で知られる業務用エアコン業者（運営：株式会社フジテック）です。公開されている口コミでは<strong className="font-semibold">他店比較での安さ・見積もりと請求のズレのなさ・対応の丁寧さ</strong>を評価する声が中心です。「最悪」といった語句で検索されることもありますが、本記事では評価されている点と注意点の両方を、出典を明記して掲載しています。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金</a>をご覧ください。
+              エアコン総本舗は、業務用エアコンの販売から設置工事までを手がける業者（運営：株式会社フジテック）です。第三者サイトに掲載された口コミでは<strong className="font-semibold">他店比較での安さ・見積もりと請求のズレのなさ・対応の丁寧さ</strong>を評価する声が中心です。「最悪」といった語句で検索されることもありますが、本記事では評価されている点と注意点の両方を、出典を明記して掲載しています。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金</a>をご覧ください。
             </p>
           </div>
         </div>
@@ -253,17 +259,21 @@ export default function Page() {
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  {r.rating && <p className="text-xs font-semibold text-amber-600">{r.rating}</p>}
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="nofollow noopener" className="underline block text-xs text-slate-400 mt-0.5">出典：{r.source}</a>
+                    ) : (
+                      <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    )}
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※上記は第三者の業務用エアコン情報サイトに掲載された利用者口コミを引用・要約したものです。出典を明記したうえで参考としてご覧ください。
+              ※上記は第三者の業務用エアコン情報サイトに掲載された利用者口コミ（うち1件は同サイトが引用したGoogleマップの口コミ）を原文のまま引用したものです。満足度の表記は掲載元の表記に従っています。
             </p>
           </section>
 
@@ -284,7 +294,7 @@ export default function Page() {
               注意点を指摘する口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミは肯定的なものが中心で、明確に不利な指摘は確認できませんでした。ただし注意点として、
+              出典とした掲載サイトの口コミは肯定的なものが中心で、同サイトの記事でも明確な悪い口コミは確認できなかったとされています。ただし注意点として、
               <strong className="font-semibold">対応エリアが首都圏を中心とした関東圏に限られる</strong>
               点が挙げられます。エリア外の事業者は対応可否を事前に確認する必要があります。また、需要が集中する繁忙期は工事日程が読みづらくなることがあるため、早めに相談することをおすすめします。
             </p>
@@ -305,7 +315,7 @@ export default function Page() {
                 <h3 className="font-bold text-teal-800 mb-3">メリット</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
                   <li>施工前に正確な見積もりを提示し、追加工事の発生防止に努めている</li>
-                  <li>他店より安く取り付けられたという価格面の口コミが多い</li>
+                  <li>「比較した他店よりも安価に取り付けていただいた」など価格面を評価する口コミがある</li>
                   <li>年間6,000件以上・累計63,000件超の施工実績がある</li>
                   <li>写真を送るだけのクイック見積もりで概算を確認できる</li>
                 </ul>
@@ -413,7 +423,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              エアコン総本舗は、株式会社フジテックが2004年から運営する業務用エアコンの専門店で、市場調査と格安仕入れによる価格設定と、首都圏での豊富な施工実績が強みです。口コミでは「他店より安く取り付けられた」「見積もりと請求にズレがなく丁寧」といった、価格と対応の両面を評価する声が目立ちました。一方で、対応エリアが関東圏中心である点や、長期保証が有償である点には注意が必要です。
+              エアコン総本舗は、株式会社フジテックが2004年から運営する業務用エアコンの専門店で、市場調査と格安仕入れによる価格設定と、首都圏での豊富な施工実績が強みです。第三者サイトに掲載された口コミでは、比較した他店より安く取り付けられた、見積もり通りの請求で施工も丁寧だった、といった価格と対応の両面を評価する声が見られました。一方で、対応エリアが関東圏中心である点や、長期保証が有償である点には注意が必要です。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの導入は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・対応エリアを比較して選ぶことが、失敗を防ぐうえで有効です。

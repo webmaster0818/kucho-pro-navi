@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title:
     "エアコンセンターACの口コミ・評判は？料金・対応エリアを調査【2026年10月】",
   description:
-    "業務用エアコン専門店「エアコンセンターAC」（運営：株式会社ミタデン）の口コミ・評判をまとめました。Googleマップの評価、本体＋工事一括やリースの仕組み、対応エリア、メリット・デメリット、向いている事業者まで中立的に解説します。",
+    "業務用エアコン専門店「エアコンセンターAC」（運営：株式会社ミタデン）の口コミ・評判をまとめました。比較サイト掲載の口コミ、本体＋工事一括やリースの仕組み、対応エリア、メリット・デメリット、向いている事業者まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-center-ac" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "エアコンセンターACとは" },
@@ -26,24 +26,34 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+const GMEN_SOURCE =
+  "コピー機Gメン「エアコンセンターAC 業務用エアコンの評判はどう？安いだけじゃない理由を解説」（2026-10-21確認）";
+const GMEN_URL = "https://www.copyki-gmen.com/aircon/airconcenter-ac";
+
+const goodReviews: { body: string; who: string; rating: string; source: string; url?: string }[] = [
   {
     body:
-      "機種選びの段階から説明が分かりやすく、こちらの予算や使い方に合わせて提案してくれました。初めての入れ替えでも安心して任せられました。",
-    who: "店舗オーナー（利用者口コミを要約）",
-    source: "コピー機Gメン（copyki-gmen.com）掲載の利用者口コミ",
+      "こちらの疑問にも丁寧にわかりやすい説明をしてくれたスタッフの対応が特によく好感が持てました。",
+    who: "埼玉県 40代 男性",
+    rating: "やや満足",
+    source: GMEN_SOURCE,
+    url: GMEN_URL,
   },
   {
     body:
-      "補助金の対応や現地調査を丁寧にしてもらえて助かりました。施工後の保証についてもきちんと説明があり、信頼できると感じました。",
-    who: "事業者（利用者口コミを要約）",
-    source: "Watching Review（watching-review.com）掲載の口コミ",
+      "見積に際しての現場確認など対応もよかった。補助金の説明も丁寧。保証内容もしっかりしていた。",
+    who: "利用者（地域・年代の記載なし）",
+    rating: "普通",
+    source: GMEN_SOURCE,
+    url: GMEN_URL,
   },
   {
     body:
-      "見積もりから工事までスムーズで、対応も誠実でした。料金の内訳がはっきりしていて納得して契約できました。",
-    who: "オフィス管理担当者（利用者口コミを要約）",
-    source: "コピー機Gメン（copyki-gmen.com）掲載の利用者口コミ",
+      "事前に工事の見積もりに来て頂き丁寧な対応をしていただきました。値段も地元工務店の見積もり３割程度で済み満足しております。",
+    who: "利用者（地域・年代の記載なし）",
+    rating: "とても満足",
+    source: GMEN_SOURCE,
+    url: GMEN_URL,
   },
 ];
 
@@ -58,7 +68,7 @@ const faqs = [
   },
   {
     q: "口コミでの評価はどのくらいですか？",
-    a: "Googleマップでは★4.7（305件・調査時点）と高い評価が付いており、★1の割合は2.3%にとどまっています。説明の分かりやすさや、補助金対応・現地調査・施工後保証の丁寧さを評価する声が見られます。",
+    a: "比較サイト「コピー機Gメン」の記事（2026-10-21確認）では、Googleマップの口コミ評価を★4.7（305件）と紹介しています（当サイトでGoogleマップの数値を直接確認したものではなく、件数・評価は変動します）。同記事に掲載された口コミでは、説明の分かりやすさや、現場確認・補助金の説明・保証内容を評価する声が見られます。",
   },
   {
     q: "料金やリースの目安は？",
@@ -66,7 +76,7 @@ const faqs = [
   },
   {
     q: "運営会社はどこですか？",
-    a: "「エアコンセンターAC」は株式会社ミタデンが運営する業務用エアコンの専門店です。年間施工数15,000件・満足度98%を公称しています。",
+    a: "「エアコンセンターAC」は株式会社ミタデンが運営する業務用エアコンの専門店です。公式サイトでは「全国対応520拠点」「年間施工数15,000件」「お客様満足度98％」と公称しています（https://www.e-aircon.jp/ 2026-10-21確認）。",
   },
 ];
 
@@ -76,7 +86,7 @@ const articleJsonLd = {
   headline:
     "エアコンセンターACの口コミ・評判は？料金・対応エリアを調査",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -90,15 +100,6 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span className="text-amber-500 tracking-tight" aria-hidden>
-      {"★".repeat(n)}
-      <span className="text-slate-300">{"★".repeat(5 - n)}</span>
-    </span>
-  );
-}
 
 export default function Page() {
   return (
@@ -127,7 +128,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -150,10 +151,10 @@ export default function Page() {
             店舗やオフィスの空調を入れ替えるとき、「どの業者に依頼すれば安心か」の判断が重要になります。
             本記事では、業務用エアコンの専門店として知られる
             <strong className="font-semibold text-slate-900">エアコンセンターAC</strong>
-            （運営：株式会社ミタデン）について、Googleマップなどで公開されている利用者の評価、本体＋工事一括やリースの仕組み、対応エリア、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
+            （運営：株式会社ミタデン）について、比較サイトに掲載されている利用者の口コミ、本体＋工事一括やリースの仕組み、対応エリア、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、掲載サイトで公開されている内容を、出典ページを明記したうえで原文のまま引用したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -186,7 +187,7 @@ export default function Page() {
               の販売と設置工事を専門に手がけるサービスです。運営は株式会社ミタデンです。本体と工事をまとめて依頼できる一括対応に加え、初期費用0円で導入できるリース契約にも対応しているのが特徴で、年間施工数15,000件・満足度98%を公称しています。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
-              施工体制は、首都圏は直営の工事部門が担当し、地方は近隣の提携工事店が担当する全国対応型です。補助金の相談や現地調査、施工後の保証まで一貫して任せられる点が、利用者から評価されています。
+              施工体制は、首都圏は直営の工事部門が担当し、地方は近隣の提携工事店が担当する全国対応型です。公式サイトでは補助金・リースの案内や延長保証などのアフターサービスも紹介されており、比較サイトに掲載された口コミでも現場確認・補助金の説明・保証内容を評価する声が見られます。
             </p>
           </section>
 
@@ -204,7 +205,7 @@ export default function Page() {
                     ["公式サイト", "https://www.e-aircon.jp/"],
                     ["事業内容", "業務用エアコンの販売・設置工事（本体＋工事一括／リース初期費用0円）"],
                     ["対応エリア", "全国（首都圏は直営工事部門、地方は近隣の提携工事店が施工）"],
-                    ["施工実績", "年間施工数15,000件／満足度98%（公称）"],
+                    ["施工実績", "全国対応520拠点／年間施工数15,000件／お客様満足度98％（公称）"],
                     ["特徴", "補助金対応・現地調査・施工後保証に対応"],
                   ].map(([k, v], i) => (
                     <tr key={k} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
@@ -218,7 +219,9 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：エアコンセンターAC公式サイト（会社情報）。実績・満足度は公式の公称値です。内容は変更される場合があります。
+              出典：
+              <a href="https://www.e-aircon.jp/" target="_blank" rel="nofollow noopener" className="underline">エアコンセンターAC公式サイト</a>
+              （2026-10-21確認）。実績・満足度は公式の公称値です。内容は変更される場合があります。
             </p>
           </section>
 
@@ -228,24 +231,30 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              エアコンセンターACは、
-              <strong className="font-semibold">Googleマップで★4.7（305件・調査時点）</strong>
-              という高い評価が付いており、★1の割合は2.3%にとどまっています。公開されている口コミで多く見られたのは、機種選びの段階からの説明の分かりやすさ、補助金対応・現地調査・施工後保証の丁寧さを評価する声です。
+              比較サイト「コピー機Gメン」の記事では、エアコンセンターACのGoogleマップの評価を
+              <strong className="font-semibold">★4.7（305件）</strong>
+              と紹介しています（同記事の記載。当サイトでの直接確認ではなく、件数・評価は変動します）。同記事に掲載された口コミでは、価格の安さに加え、説明の分かりやすさや、現場確認・補助金の説明・保証内容を評価する声が見られました。以下は同ページの口コミを原文のまま引用したものです（満足度の表記も同ページのものです）。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  <span className="text-xs font-semibold text-teal-700">評価：{r.rating}</span>
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※口コミは各掲載サイトで公開されている内容を要約したものです。Googleマップの★4.7（305件）は調査時点の数値で、件数・評価は変動します。出典を明記したうえで参考としてご覧ください。
+              ※口コミは出典ページに掲載されている内容の引用です（2026-10-21確認）。Googleマップの★4.7（305件）は出典記事に記載された数値で、件数・評価は変動します。参考としてご覧ください。
             </p>
           </section>
 
@@ -275,6 +284,11 @@ export default function Page() {
                 地方の案件は近隣の提携工事店が施工を担当するため、地域によって対応に差が出る場合があります。
               </li>
               <li className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                比較サイト「コピー機Gメン」の記事では、Googleマップの★1〜2の口コミの共通点として「連絡が遅い／来ない」「担当者が変わって話がズレた」「施工後の軽微な不具合対応が遅い」「追加費用が想定より高かった」などを挙げています（
+                <a href={GMEN_URL} target="_blank" rel="nofollow noopener" className="underline">出典</a>
+                、2026-10-21確認）。
+              </li>
+              <li className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
                 繁忙期は現地調査や工事日程の調整に時間がかかることがあります。早めに相談することをおすすめします。
               </li>
             </ul>
@@ -289,10 +303,10 @@ export default function Page() {
               <div className="rounded-2xl border border-teal-100 bg-teal-50/60 p-6">
                 <h3 className="font-bold text-teal-800 mb-3">メリット</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
-                  <li>Googleマップ★4.7（305件）と口コミ評価が高い</li>
+                  <li>比較サイトの記事でGoogleマップ★4.7（305件）と紹介されている</li>
                   <li>本体＋工事の一括対応に加え、初期費用0円のリースにも対応</li>
-                  <li>補助金対応・現地調査・施工後保証まで一貫して相談できる</li>
-                  <li>年間施工数15,000件の実績があり、業種を問わず相談できる</li>
+                  <li>補助金・現地調査・延長保証などを含めて相談できる</li>
+                  <li>年間施工数15,000件（公称）の実績があり、業種を問わず相談できる</li>
                 </ul>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -398,7 +412,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              エアコンセンターACは、株式会社ミタデンが運営する業務用エアコンの専門店で、年間施工数15,000件の実績と、Googleマップ★4.7（305件）という高い口コミ評価が強みです。本体＋工事の一括対応に加え、初期費用0円のリースにも対応し、補助金対応・現地調査・施工後保証まで一貫して相談できる点が好意的に受け止められています。
+              エアコンセンターACは、株式会社ミタデンが運営する業務用エアコンの専門店で、年間施工数15,000件（公称）の実績が強みです。比較サイトの記事ではGoogleマップの評価が★4.7（305件）と紹介されており、掲載口コミでは説明の分かりやすさや現場確認・補助金の説明・保証内容が評価されています。本体＋工事の一括対応に加え、初期費用0円のリースにも対応しています。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               一方で、地方は近隣の提携工事店が施工を担当するため、地域によって対応に差が出る可能性があります。業務用エアコンの導入は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・対応エリアを比較して選ぶことが、失敗を防ぐうえで有効です。

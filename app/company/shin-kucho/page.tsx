@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/shin-kucho" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "新空調とは" },
@@ -26,24 +26,27 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+const goodReviews: { body: string; who: string; source: string; url?: string }[] = [
   {
     body:
-      "対応がとてもスピーディーで、見積もりから工事までスムーズに進みました。地元の業者さんなので相談しやすく、安心してお任せできました。",
-    who: "飲食店・愛知県名古屋市",
-    source: "新空調公式サイト「施工実績・お客様の声」",
+      "新規店舗オープンの際にHPを拝見させて相談いたしました。問い合わせしてから業務用エアコン工事完了までとてもスピーディーに対応して頂き大満足です。今後のメンテナス等宜しく御願い致します。",
+    who: "事務所・愛知県知多市（ダイキン天井カセット2.5馬力交換）",
+    source: "新空調公式サイト 施工実績「【愛知県知多市】事務所のダイキン天カセ2.5馬力交換工事」（2026-10-21確認）",
+    url: "https://www.ecoaircon.jp/results/%e6%84%9b%e7%9f%a5%e7%9c%8c-%e6%a5%ad%e5%8b%99%e7%94%a8%e3%82%a8%e3%82%a2%e3%82%b3%e3%83%b3%e5%b7%a5%e4%ba%8b19725",
   },
   {
     body:
-      "説明が丁寧で、こちらの予算や使い方に合わせて機種を提案してくれました。無理に高い機種を勧められることもなく、納得して決められました。",
-    who: "事業者・愛知県（業務用エアコン入れ替え）",
-    source: "新空調公式サイト「選ばれる5つの理由」掲載の利用者の声",
+      "スタッフルームの業務用エアコンが壊れ早急に対応して頂き有難うございます。夏の季節だったのでスタッフ一同とても満足でした。ありがとうございます。",
+    who: "接骨院・愛知県知立市（ダイキン壁掛2.5馬力交換）",
+    source: "新空調公式サイト 施工実績「【愛知県知立市】接骨院のダイキン壁掛 2.5馬力交換工事」（2026-10-21確認）",
+    url: "https://www.ecoaircon.jp/results/%e6%84%9b%e7%9f%a5%e7%9c%8c-%e6%a5%ad%e5%8b%99%e7%94%a8%e3%82%a8%e3%82%a2%e3%82%b3%e3%83%b3%e5%b7%a5%e4%ba%8b19726",
   },
   {
     body:
-      "中古の業務用エアコンも扱っていて、初期費用をかなり抑えられました。職人さんの工事も丁寧で仕上がりに満足しています。",
-    who: "店舗オーナー・名古屋市近郊",
-    source: "新空調公式サイト「中古をお探しの方へ」関連ページ",
+      "業務用エアコンが壊れ以前使用していた業務用エアコンの電気代も高く相談いたしました。１０年以上使用していた業務用エアコンよりも電気代も安くとても満足しています。違う業務用エアコンも相談させていただきます。",
+    who: "事務所・愛知県安城市（ダイキン天井カセット3馬力交換）",
+    source: "新空調公式サイト 施工実績「【愛知県安城市】事務所のダイキン天カセ3馬力交換工事」（2026-10-21確認）",
+    url: "https://www.ecoaircon.jp/results/%e6%84%9b%e7%9f%a5%e7%9c%8c-%e6%a5%ad%e5%8b%99%e7%94%a8%e3%82%a8%e3%82%a2%e3%82%b3%e3%83%b3%e5%b7%a5%e4%ba%8b19724",
   },
 ];
 
@@ -76,7 +79,7 @@ const articleJsonLd = {
   headline:
     "新空調の口コミ・評判は？名古屋の業務用エアコン専門店の料金・対応エリアを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -90,15 +93,6 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span className="text-amber-500 tracking-tight" aria-hidden>
-      {"★".repeat(n)}
-      <span className="text-slate-300">{"★".repeat(5 - n)}</span>
-    </span>
-  );
-}
 
 export default function Page() {
   return (
@@ -127,7 +121,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -153,7 +147,7 @@ export default function Page() {
             （運営：有限会社新空調）について、公開されている利用者の声、料金と中古・リースの仕組み、対応エリア、メリット・デメリットを、評価点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、公式サイトなどで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、公式サイトなどで公開されている内容を出典ページを明記したうえで原文のまま引用したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（口コミの出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -229,24 +223,27 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている声で多く見られたのは、
-              <strong className="font-semibold">地域密着ならではの相談のしやすさと、対応・施工の丁寧さ</strong>
-              を評価する内容です。予算や用途に合わせた機種の提案、高額な機種を無理に勧めない姿勢、見積もりから工事までの円滑な進行といった点が評価されています。
+              公式サイトの施工実績ページに掲載されているお客様の声では、
+              <strong className="font-semibold">問い合わせから工事完了までの対応の早さ</strong>
+              を評価する内容が見られます。故障時に早急に対応してもらえた、入れ替え後に電気代が安くなった、といった点が挙げられています。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="nofollow noopener" className="underline block text-xs text-slate-400 mt-0.5">出典：{r.source}</a>
+                    ) : (
+                      <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    )}
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※上記は公式サイトに掲載されている施工実績やお客様の声をもとに要約したものです。自社で収集・掲載された内容のため、出典を明記したうえで参考としてご覧ください。
+              ※上記は公式サイトの施工実績ページに掲載されているお客様の声を原文のまま引用したものです。自社で収集・掲載された内容のため、出典を明記したうえで参考としてご覧ください。
             </p>
           </section>
 
@@ -396,7 +393,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              新空調は、名古屋・愛知エリアで約20年の実績を持つ業務用エアコンの専門店です。地域密着による相談のしやすさ、新品・中古・リースから選べること、販売から修理までを一括で依頼できることが強みです。口コミでは丁寧な対応と提案力を評価する声が多く見られます。一方で、対応エリアが愛知県中心に限られる点は、事前にご確認ください。
+              新空調は、名古屋・愛知エリアで約20年の実績を持つ業務用エアコンの専門店です。地域密着による相談のしやすさ、新品・中古・リースから選べること、販売から修理までを一括で依頼できることが強みです。公式サイトに掲載されたお客様の声では、対応の早さを評価する声が見られます。一方で、対応エリアが愛知県中心に限られる点は、事前にご確認ください。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの導入は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・対応エリアを比較したうえで選ぶことが、失敗を防ぐうえで有効です。

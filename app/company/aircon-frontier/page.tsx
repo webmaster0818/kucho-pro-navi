@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-frontier" },
 };
 
-const UPDATED = "2026年7月12日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "エアコンフロンティアとは" },
@@ -26,45 +26,58 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+type Review = { body: string; who: string; rating?: string; source: string; url?: string };
+
+const goodReviews: Review[] = [
   {
     body:
-      "対応はスピーディーで、まさに神対応でした。価格は普通かと思いますが、工事は意外と簡単に終わりました。",
+      "対応はスピーディーで、まさに神対応でした。価格は普通かと。工事は意外と簡単に終わりました。",
     who: "福岡県・40代男性",
-    source: "コピー機Gメン 掲載の利用者口コミ",
+    rating: "とても満足",
+    source: "コピー機Gメン（業務用エアコン）「エアコンフロンティアの業務用エアコンの評判は？安い上に対応の評価も◎」（2026-10-21確認）",
+    url: "https://www.copyki-gmen.com/aircon/aircon-frontier",
   },
   {
     body:
-      "ラインで相談しましたが、とても丁寧に説明していただき、無理に進めることもなく本当に安心でした。",
-    who: "Kimiko さん（★5・2024年7月）",
-    source: "PR Haco 掲載の口コミ",
+      "ラインで相談しましたが　とても丁寧に説明して頂き　無理に進める事もなく本当に安心でした　ありがとうございました。",
+    who: "Kimiko さん（2024年7月11日投稿）",
+    rating: "★5.0",
+    source: "PR Haco「エアコンフロンティア評判と口コミ・レビュー!」（2026-10-21確認）",
+    url: "https://hacolib.com/pr/aircon-f-co-jp/",
   },
   {
     body:
-      "見積もりから支払い手続き、作業日程の調整、作業当日まで、どれもスムーズに対応していただきました。",
-    who: "教育施設・東京都世田谷区（天井吊形を設置）",
-    source: "エアコンフロンティア公式サイト「お客様の声」",
+      "見積もりから支払い手続き、作業日程調整、作業当日。どれもスムーズにご対応いただきました。",
+    who: "教育施設・東京都世田谷区（天吊形を設置）",
+    source: "エアコンフロンティア公式サイト「お客様の声：教育施設 業務用エアコン入替工事 2025年12月16日 東京都世田谷区」（2026-10-21確認）",
+    url: "https://aircon-f.co.jp/weblog/voice/educational_facilities/58022",
   },
   {
     body:
-      "梱包、配送、対応、すべてにおいて満足できました。電話での質問にも迅速で親切な対応でした。",
-    who: "Yahoo!ショッピング店の購入者（★5）",
-    source: "Yahoo!ショッピング 店舗評価（機器販売）",
+      "梱包、配送、対応、全てにおいて満足出来ました。",
+    who: "Yahoo!ショッピング店の購入者（2018年3月29日投稿）",
+    rating: "★5",
+    source: "Yahoo!ショッピング「エアコンフロンティア」ストアレビュー（2026-10-21確認）",
+    url: "https://shopping.yahoo.co.jp/store_rating/aircon-f/store/review/",
   },
 ];
 
-const badReviews = [
+const badReviews: Review[] = [
   {
     body:
-      "問い合わせ当初の対応は丁寧で迅速でしたが、繁忙期に重なったためか、その後の日程連絡に少し時間がかかった印象でした。",
-    who: "利用者（★2相当の指摘を要約）",
-    source: "PR Haco 掲載の口コミ",
+      "クレジット決済する迄はとても迅速で丁寧な対応だったが、決済が決まった途端、うんともすんとも言って来なくなった。工事日程と見積内容について変更及び追加の問合せをしているのだが。現場と営業窓口が噛み合っていない気がする。工事はまだ先なので心配。天井カセットエアコン。",
+    who: "PR Haco投稿者（2024年7月11日投稿）",
+    rating: "★2.0",
+    source: "PR Haco「エアコンフロンティア評判と口コミ・レビュー!」（2026-10-21確認）",
+    url: "https://hacolib.com/pr/aircon-f-co-jp/",
   },
   {
     body:
-      "希望していた機種が在庫切れで取り寄せになり、納期が読みづらかった。事前に在庫状況がわかると助かりました。",
-    who: "Yahoo!ショッピング店の購入者（★2）",
-    source: "Yahoo!ショッピング 店舗評価（機器販売）",
+      "正月のキャンペーンで購入をしたが、在庫がなかったためキャンセルになりました。年末から探していたこと、他の店で購入したするタイミングを逃したことが残念です。今後在庫情報の精度アップに期待します。支払い修正して対応は迅速でした。",
+    who: "Yahoo!ショッピング店の購入者（2021年1月7日投稿）",
+    rating: "★2",
+    source: "Yahoo!ショッピング「エアコンフロンティア」ストアレビュー（2026-10-21確認）",
+    url: "https://shopping.yahoo.co.jp/store_rating/aircon-f/store/review/",
   },
 ];
 
@@ -79,7 +92,7 @@ const faqs = [
   },
   {
     q: "料金やリースの目安は？",
-    a: "本体価格に設置工事費を含む販売のほか、初期費用を抑えられるリース契約も用意されています。第三者の紹介サイトでは月額3,410円〜という記載が見られますが、機種・台数・契約条件で変わるため、正式な金額は無料の現地調査・見積もりでご確認ください。",
+    a: "本体価格に設置工事費を含む販売のほか、初期費用を抑えられるリース契約も用意されています。公式サイトでは月額リース料3,100円〜と表示されていますが（2026-10-21確認）、機種・台数・契約条件で変わるため、正式な金額は無料の現地調査・見積もりでご確認ください。",
   },
   {
     q: "保証はありますか？",
@@ -97,7 +110,7 @@ const articleJsonLd = {
   headline:
     "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -111,15 +124,6 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span className="text-amber-500 tracking-tight" aria-hidden>
-      {"★".repeat(n)}
-      <span className="text-slate-300">{"★".repeat(5 - n)}</span>
-    </span>
-  );
-}
 
 export default function Page() {
   return (
@@ -148,7 +152,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-07-12">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -174,7 +178,7 @@ export default function Page() {
             （運営：アトム冷熱工業株式会社）について、実際に公開されている利用者の口コミ、料金やリースの仕組み、対応エリア、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、各掲載サイトで公開されている内容を、出典ページを明記したうえで原文のまま引用したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（口コミの出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -184,7 +188,7 @@ export default function Page() {
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
             <p className="font-bold text-teal-800 mb-2">エアコンフロンティアの評判の要点</p>
             <p className="text-[0.95rem] leading-7 text-slate-700">
-              エアコンフロンティアは<strong className="font-semibold">業務用エアコンの専門店</strong>（運営：アトム冷熱工業株式会社）で、公開されている口コミでは対応の速さ・説明の丁寧さを評価する声が多い一方、繁忙期の連絡スピードや在庫切れ時の納期を指摘する声もあります。<strong className="font-semibold">リース・購入の両方に対応</strong>しており、導入形態で総費用が変わるため、見積もり時にリース総額と購入額の比較を依頼することをおすすめします。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金・リースの仕組み</a>をご覧ください。
+              エアコンフロンティアは<strong className="font-semibold">業務用エアコンの専門店</strong>（運営：アトム冷熱工業株式会社）で、公開されている口コミでは対応の速さ・説明の丁寧さを評価する声がある一方、決済後の連絡が途絶えた、在庫がなくキャンセルになった、と指摘する声もあります。<strong className="font-semibold">リース・購入の両方に対応</strong>しており、導入形態で総費用が変わるため、見積もり時にリース総額と購入額の比較を依頼することをおすすめします。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金・リースの仕組み</a>をご覧ください。
             </p>
           </div>
         </div>
@@ -261,18 +265,22 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミで多く見られたのは、
+              公開されている口コミで見られたのは、
               <strong className="font-semibold">問い合わせから設置までの対応のスピードと丁寧さ</strong>
-              を評価する声です。相談時の説明がわかりやすい、無理に契約を勧められない、日程調整がスムーズ、といった点が好意的に受け止められています。
+              を評価する声です。LINEでの相談時に丁寧に説明してもらえた、無理に進められなかった、見積もりから作業当日までスムーズだった、といった点が好意的に受け止められています。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  {r.rating && <p className="text-xs font-semibold text-amber-600">{r.rating}</p>}
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="nofollow noopener" className="underline block text-xs text-slate-400 mt-0.5">出典：{r.source}</a>
+                    ) : (
+                      <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    )}
                   </figcaption>
                 </figure>
               ))}
@@ -300,17 +308,21 @@ export default function Page() {
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
               一方で、件数は多くないものの
-              <strong className="font-semibold">繁忙期の連絡スピードや在庫・納期</strong>
-              に関する不満の声も見られました。需要が集中する時期は、対応に差が生じる場合があります。見積もりの段階で、スケジュールや在庫状況を確認しておくことをおすすめします。
+              <strong className="font-semibold">決済後の連絡や在庫状況</strong>
+              に関する不満の声も見られました。契約・決済の前に、工事日程の連絡方法や担当窓口、在庫状況を確認しておくことをおすすめします。
             </p>
             <div className="grid gap-4">
               {badReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                  <Stars n={2} />
+                  {r.rating && <p className="text-xs font-semibold text-slate-500">{r.rating}</p>}
                   <blockquote className="mt-3 text-slate-700 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="nofollow noopener" className="underline block text-xs text-slate-400 mt-0.5">出典：{r.source}</a>
+                    ) : (
+                      <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    )}
                   </figcaption>
                 </figure>
               ))}
@@ -336,7 +348,7 @@ export default function Page() {
                 <h3 className="font-bold text-slate-700 mb-3">デメリット・注意点</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
                   <li>施工は地域の認定・提携工事店が担当するため、対応に地域差が出ることがある</li>
-                  <li>繁忙期は連絡や工事日程に時間がかかる場合がある</li>
+                  <li>決済後の連絡や在庫状況について不満を指摘する口コミがある</li>
                   <li>機種・台数・契約条件で料金が変わるため、相見積もりでの比較が前提</li>
                 </ul>
               </div>
@@ -375,13 +387,13 @@ export default function Page() {
             <p className="leading-8 text-slate-700">
               業務用エアコンは、機種の馬力（能力）・台数・設置場所・既存機の撤去有無などで費用が大きく変わります。エアコンフロンティアでは、本体＋工事をまとめて購入する方法と、初期費用を抑えられる
               <strong className="font-semibold">リース契約</strong>
-              の両方が選べます。第三者の紹介サイトでは、リースの目安として月額3,410円〜という記載が見られますが、これはあくまで条件次第の参考値です。
+              の両方が選べます。公式サイトのリース案内では「月額リース料3,100円〜」と表示されていますが、これはあくまで条件次第の下限の目安です（出典：<a href="https://aircon-f.co.jp/deals/lease.php" target="_blank" rel="nofollow noopener" className="underline">エアコンフロンティア公式「業務用エアコンをリースで！」</a>、2026-10-21確認）。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               正確な金額は、無料の現地調査と見積もりでご確認ください。複数業者から相見積もりを取り、本体価格・工事費・保証年数・アフター対応を同じ条件で比較することをおすすめします。
             </p>
             <p className="mt-3 text-xs text-slate-400">
-              ※月額の参考値は第三者サイト掲載の情報に基づきます。最新の料金・リース条件は公式の見積もりでご確認ください。
+              ※月額の目安は公式サイトの表示に基づきます。最新の料金・リース条件は公式の見積もりでご確認ください。
             </p>
           </section>
 
@@ -435,7 +447,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              エアコンフロンティアは、長い実績を持つアトム冷熱工業が運営する業務用エアコンの専門店で、主要メーカーの機種を横断して選べること、購入・リースの両方に対応していることが強みです。口コミでは対応の速さと丁寧さを評価する声が目立つ一方、繁忙期の連絡や納期に関する指摘も見られました。
+              エアコンフロンティアは、長い実績を持つアトム冷熱工業が運営する業務用エアコンの専門店で、主要メーカーの機種を横断して選べること、購入・リースの両方に対応していることが強みです。口コミでは対応の速さと丁寧さを評価する声がある一方、決済後の連絡や在庫状況に関する指摘も見られました。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの導入は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・対応エリアを比較して選ぶことが、失敗を防ぐうえで有効です。

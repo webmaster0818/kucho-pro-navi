@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/proni-imitsu" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "PRONIアイミツとは" },
   { id: "company", label: "運営会社・基本情報" },
   { id: "howto", label: "業者紹介・マッチングの仕組み" },
-  { id: "good", label: "良い口コミ・評判" },
+  { id: "good", label: "利用者の声（運営会社掲載）" },
   { id: "note", label: "利用前の注意点" },
   { id: "merit", label: "メリット・デメリット" },
   { id: "fit", label: "向いている事業者・向いていない事業者" },
@@ -27,18 +27,23 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+type Review = {
+  body: string;
+  who: string;
+  source: string;
+  url?: string;
+  stars?: number;
+  summary?: boolean;
+};
+
+const goodReviews: Review[] = [
   {
     body:
-      "一度の問い合わせで複数の業者を紹介してもらえて、自分で何社も探す手間が省けました。比較しながら選べたのが良かったです。",
-    who: "発注を行った事業者の利用体験",
-    source: "PRONIアイミツ 利用者の発注体験レビュー",
-  },
-  {
-    body:
-      "断りの連絡を代行してもらえたので、検討しなかった業者へのやり取りに気を使わずに済みました。",
-    who: "一括見積もりの利用者",
-    source: "PRONIアイミツ マッチングサービス利用レビュー",
+      "圧倒的なスピード感ですね。ビジネスを進めるにあたって、最も重要なことは「スピード」だと考えています。PRONIアイミツを使うことで、候補を検索し問い合わせをする労力が圧倒的に減りました。コンシェルジュに選んでもらった企業もこちらのニーズにあっていたので、結果的に時間をかけず、理想の企業と出会い、発注することができました。",
+    who: "発注側の利用企業（運営会社が公開する利用事例のコメント・業務用エアコン以外の発注）",
+    source:
+      "PRONI株式会社 よくある質問「PRONIアイミツのサービスを利用した利用事例を教えてください」（運営会社掲載）（2026-10-21確認）",
+    url: "https://faq.proni.co.jp/PRONI%E3%82%A2%E3%82%A4%E3%83%9F%E3%83%84%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E5%88%A9%E7%94%A8%E4%BA%8B%E4%BE%8B%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84-676b64e577013ba96e6cc894",
   },
 ];
 
@@ -49,7 +54,7 @@ const faqs = [
   },
   {
     q: "利用に費用はかかりますか？",
-    a: "発注者（依頼する側）はサービスを無料で利用できます。マッチングが成立した際に受注する業者側が費用を負担するビジネスモデルのため、依頼者は無料で複数社の見積もりを取ることができます。",
+    a: "発注者（依頼する側）はサービスを無料で利用できます。公式サイトでは、受注企業（PRONIパートナー）から広告掲載料を受け取って運営しているため、発注者は相談から企業の紹介まで無料で利用できると説明しています（https://imitsu.jp/how-to-imitsu/ 2026-10-21確認）。",
   },
   {
     q: "業務用エアコンの業者も紹介してもらえますか？",
@@ -71,7 +76,7 @@ const articleJsonLd = {
   headline:
     "PRONIアイミツの口コミ・評判は？業務用エアコン業者の一括見積もり・利用方法を調査",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -122,7 +127,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -146,10 +151,10 @@ export default function Page() {
             <strong className="font-semibold text-slate-900">PRONIアイミツ</strong>
             （旧アイミツ）があります。PRONIアイミツは、自社で工事を行う業者ではなく、条件に合う業者を紹介する
             <strong className="font-semibold text-slate-900">BtoB一括見積もり・マッチングサービス</strong>
-            です。本記事では、サービスの仕組み、利用者の声、無料で利用できる理由、向いている事業者、注意点を中立的にまとめています。
+            です。本記事では、サービスの仕組み、運営会社が公開する利用者の声、無料で利用できる理由、向いている事業者、注意点を中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事は公開情報をもとに構成しています。サービスはマッチングであり、実際の施工・販売は紹介先の各業者が担当します。最新の対応内容は公式サイトでご確認ください（調査時点：2026年6月）。
+            ※本記事は公開情報をもとに構成しています。サービスはマッチングであり、実際の施工・販売は紹介先の各業者が担当します。最新の対応内容は公式サイトでご確認ください（2026年10月21日確認）。
           </p>
         </div>
 
@@ -215,7 +220,7 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：PRONIアイミツ公式サイト（会社・サービス情報）。実績数値・対応内容は変更される場合があります。
+              出典：<a href="https://imitsu.jp/" target="_blank" rel="nofollow noopener" className="underline">PRONIアイミツ公式サイト</a>（「2,000社以上の優良パートナー企業」「累計60万件以上のマッチング実績」）、<a href="https://www.proni.co.jp/company/" target="_blank" rel="nofollow noopener" className="underline">PRONI株式会社 会社情報</a>（2023年9月に旧社名ユニラボからリブランディング）（いずれも2026-10-21確認）。実績数値・対応内容は変更される場合があります。
             </p>
           </section>
 
@@ -243,27 +248,33 @@ export default function Page() {
           {/* Good reviews */}
           <section id="good" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-slate-900 border-l-4 border-teal-600 pl-4 mb-5">
-              良い口コミ・評判
+              利用者の声（運営会社掲載）
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている利用体験で評価されているのは、
-              <strong className="font-semibold">一度の依頼で複数社を比較できる手軽さ</strong>
-              です。発注者自身で複数の業者を探して個別に問い合わせる手間が省け、やり取りの負担が軽減される点が評価されています。
+              運営会社PRONI株式会社が公開している発注側の利用事例では、
+              <strong className="font-semibold">候補を探して問い合わせる労力が減った点</strong>
+              が挙げられています。以下は運営会社が掲載しているコメントで、第三者の口コミサイトの評価ではない点にご留意ください。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  {r.stars ? <Stars n={r.stars} /> : null}
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※掲載の声は一括見積もり・マッチングサービスの利用体験に対するものです。施工そのものの品質は、紹介された各業者によって異なります。
+              ※掲載の声は運営会社が公開する利用事例のコメントで、業務用エアコン以外の発注に関するものです。施工そのものの品質は、紹介された各業者によって異なります。
             </p>
           </section>
 
@@ -365,13 +376,13 @@ export default function Page() {
             <p className="leading-8 text-slate-700">
               PRONIアイミツは、
               <strong className="font-semibold">発注者（依頼する側）は無料</strong>
-              で利用できます。マッチングが成立した際に受注する業者側が費用を負担するビジネスモデルのためです。依頼者は費用をかけずに複数社の見積もりを集めることができます。
+              で利用できます。公式サイトでは、受注企業（PRONIパートナー）から広告掲載料を受け取って運営しているため、発注者は相談から企業の紹介まで無料で利用できると説明しています。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               実際の工事費用は、紹介された各業者の見積もりによって決まります。業務用エアコンは機種の馬力・台数・設置場所・既存機の撤去の有無で費用が変わるため、紹介された複数社の見積もりを、本体価格・工事費・保証年数・アフター対応の観点で比較することをおすすめします。
             </p>
             <p className="mt-3 text-xs text-slate-400">
-              ※サービスの料金体系・対応内容は変更される場合があります。最新情報は公式サイトでご確認ください。
+              ※出典：<a href="https://imitsu.jp/how-to-imitsu/" target="_blank" rel="nofollow noopener" className="underline">PRONIアイミツ「はじめての方へ」</a>（2026-10-21確認）。サービスの料金体系・対応内容は変更される場合があります。最新情報は公式サイトでご確認ください。
             </p>
           </section>
 

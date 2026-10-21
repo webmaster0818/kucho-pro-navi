@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/mitsumoa" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "ミツモアとは" },
@@ -26,47 +26,48 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+type Review = {
+  body: string;
+  who: string;
+  source: string;
+  url?: string;
+  stars?: number;
+  summary?: boolean;
+};
+
+const goodReviews: Review[] = [
   {
     body:
-      "依頼内容を入力するだけで複数の業者から見積もりが届き、一度に比較できたので相場感を掴みやすかったです。",
-    who: "相見積もりを利用した方",
-    source: "みん評 掲載のミツモア 利用者口コミ",
+      "申し込む前に疑問点をチャットで問い合わせできたから、納得して予約ができました。",
+    who: "ミツモアの利用者（30代／男性／東京都）",
+    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？｜メリットデメリットと特徴も徹底解説」（2026-10-21確認）",
+    url: "https://ekitan.com/media/house-cleaning/mitsumoa-reputation/",
   },
   {
     body:
-      "チャットで気軽に細かい点を質問できたので、業者の対応の丁寧さを依頼前に確認できて安心でした。",
-    who: "チャット相談を活用した方",
-    source: "オヨビー（ミツモア 正直レビュー）",
-  },
-  {
-    body:
-      "スマホで質問に答えるだけで最短すぐに見積もりが集まり、業者探しの手間が大きく省けました。",
-    who: "スマホから依頼した利用者",
-    source: "駅探PICKS（ミツモアのリアルな口コミ）",
-  },
-  {
-    body:
-      "複数社が競い合う形になるので、適正な価格で依頼できた実感があります。GoogleやApp Storeの評価が高いのも納得でした。",
-    who: "価格面を評価した方",
-    source: "みん評 掲載のミツモア 利用者口コミ",
+      "複数社から見積もりが一度にもらえるところ。個人の小さいところが多く、作業内容を柔軟に対応してもらえる。",
+    who: "ミツモアの利用者（30代／女性／東京都）",
+    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？｜メリットデメリットと特徴も徹底解説」（2026-10-21確認）",
+    url: "https://ekitan.com/media/house-cleaning/mitsumoa-reputation/",
   },
 ];
 
-const badReviews = [
+const badReviews: Review[] = [
   {
     body:
-      "駅探PICKS に掲載の口コミでは、見積もりを依頼すると複数の業者から連絡が届くため、対応の数が多く感じられたとの声があります。早い段階で候補を絞ることで、やり取りを進めやすくなるとされています。",
-    who: "連絡量に関する指摘（当サイトによる要約）",
-    summary: true,
-    source: "駅探PICKS（ミツモアのリアルな口コミ）",
+      "業者さんとのやり取りや煩雑さが以外とあるなと思える所でありました。また、ハウスクリーニングに特化していないので、そのような面で、少し不安に思える所がありました。",
+    who: "ミツモアの利用者（40代／男性／愛知県）",
+    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？｜メリットデメリットと特徴も徹底解説」（2026-10-21確認）",
+    url: "https://ekitan.com/media/house-cleaning/mitsumoa-reputation/",
   },
   {
     body:
-      "オヨビー に掲載の口コミでは、業者とのやり取りは基本的に当事者間で進める形のため、契約条件や作業範囲を利用者自身で確認する必要があるとの声があります。",
+      "オヨビーの記事では、ミツモアの悪い評判として「業者とのやり取りを自分で管理する必要がある」と感じたという声を挙げ、依頼後の詳細確認や日程調整、条件のすり合わせは基本的に利用者と業者の間で行うと説明しています。",
     who: "やり取りの進め方に関する指摘（当サイトによる要約）",
     summary: true,
-    source: "オヨビー（ミツモア 正直レビュー）",
+    source:
+      "オヨビー「【正直レビュー】ミツモアの評判はどう？良い口コミ・悪い口コミでわかる“本当の評価”」（2026-10-21確認）",
+    url: "https://oyobee.com/column/reviews/meetsmore/",
   },
 ];
 
@@ -77,7 +78,7 @@ const faqs = [
   },
   {
     q: "利用料金はかかりますか？手数料の仕組みは？",
-    a: "依頼者（利用者）は無料で見積もりを依頼できます。手数料は成約時に業者側が支払う仕組みです。多くの生活カテゴリでは成約額の20%前後とされています。利用者の支払いは、最終的に契約した業者の工事料金です。",
+    a: "依頼者（利用者）は無料で見積もりを依頼できます。事業者向けページでは、事業者側の成約手数料を8%〜35%（税込8.8%〜38.5%、サービスにより異なる）としています（https://meetsmore.com/pro 2026-10-21確認）。利用者の支払いは、最終的に契約した業者の工事料金です。",
   },
   {
     q: "見積もりはどのくらいで届きますか？",
@@ -85,7 +86,7 @@ const faqs = [
   },
   {
     q: "業者とのトラブル時はミツモアが対応してくれますか？",
-    a: "ミツモアは見積もり提供プラットフォームの性質上、契約に関するやり取りには直接介入しないとしています。契約条件・作業範囲・保証はチャットで事前に確認し、書面で残しておくことをおすすめします。",
+    a: "ミツモアは依頼者と事業者をつなぐ見積もりプラットフォームで、作業内容や契約条件のやり取りは事業者とチャットなどで直接行います。トラブル時の補償・対応範囲は公式の利用規約・補償制度の条件をご確認のうえ、契約条件・作業範囲・保証はチャットで事前に確認し、記録を残しておくことをおすすめします。",
   },
   {
     q: "運営会社はどこですか？",
@@ -99,7 +100,7 @@ const articleJsonLd = {
   headline:
     "ミツモアの口コミ・評判は？業務用エアコンの一括見積もり・料金の仕組みを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -150,7 +151,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -175,7 +176,7 @@ export default function Page() {
             （『みつもあ』『mitsumoa』とも表記されます。運営：株式会社ミツモア）です。本記事では、業務用エアコンの一括見積もりの観点から、公開されている利用者の口コミ、料金と手数料の仕組み、メリット・デメリットを、評価点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・登録業者により変わるため、最新の情報は見積もり依頼やチャットでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、掲載ページを編集部が確認できたもののみを、原文のまま（要約の場合はその旨を明記して）出典URLとともに掲載しています（2026年10月21日確認）。料金や対応内容は時期・地域・登録業者により変わるため、最新の情報は見積もり依頼やチャットでご確認ください。
           </p>
         </div>
 
@@ -185,7 +186,7 @@ export default function Page() {
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
             <p className="font-bold text-teal-800 mb-2">ミツモアの評判の要点と業務用エアコンでの利用可否</p>
             <p className="text-[0.95rem] leading-7 text-slate-700">
-              ミツモアは<strong className="font-semibold">見積もりプラットフォーム</strong>（運営：株式会社ミツモア）で、業務用エアコンの入れ替えにも利用できます。公開されている口コミでは<strong className="font-semibold">複数見積もりの手軽さ・チャットで依頼前に業者の対応を確認できる点・相場を把握しやすい点</strong>を評価する声が中心です。一方、複数業者から連絡が届くため、対応の負担を指摘する声もあります。早い段階で候補を絞り込むことをおすすめします。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金・手数料の仕組み</a>をご覧ください。
+              ミツモアは<strong className="font-semibold">見積もりプラットフォーム</strong>（運営：株式会社ミツモア）で、業務用エアコンの入れ替えにも利用できます。確認できた口コミでは<strong className="font-semibold">複数社から一度に見積もりがもらえる点・申し込み前にチャットで疑問点を問い合わせできる点</strong>を評価する声があります。一方、業者とのやり取りの煩雑さを指摘する声もあります。早い段階で候補を絞り込むことをおすすめします。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金・手数料の仕組み</a>をご覧ください。
             </p>
           </div>
         </div>
@@ -216,7 +217,7 @@ export default function Page() {
             <p className="leading-8 text-slate-700">
               ミツモアは、依頼内容を一問一答形式で入力するだけで、
               <strong className="font-semibold">質問に回答すると最大5社の見積もりが届くプラットフォーム</strong>
-              です。届いた見積もりを比較し、チャットで質問しながら業者を選べる点を特徴としており、業務用エアコンの設置・入れ替えに対応する業者からも見積もりを取ることができます。複数社による競争となるため、適正価格を把握しやすい点が評価されています。
+              です。届いた見積もりを比較し、チャットで質問しながら業者を選べる点を特徴としており、業務用エアコンの設置・入れ替えに対応する業者からも見積もりを取ることができます。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               運営会社は、2017年設立の株式会社ミツモアです。公式サイトでは「サービス600種類以上」としています。自社で施工するのではなく、登録業者と依頼者をマッチングするプラットフォームである点が、専門の自社施工業者とは異なる特徴です。
@@ -237,7 +238,7 @@ export default function Page() {
                     ["設立", "2017年"],
                     ["サービス形態", "質問回答型の見積もりプラットフォーム"],
                     ["取扱サービス数", "600種類以上（公式）"],
-                    ["利用料金", "依頼者は無料（手数料は成約時に業者側が負担）"],
+                    ["利用料金", "依頼者は見積無料（事業者側の成約手数料は8〜35%・サービスにより異なる）"],
                     ["対応エリア", "全国（登録業者の所在による）"],
                     ["保証", "各業者による（契約時に確認）"],
                   ].map(([k, v], i) => (
@@ -252,7 +253,7 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：ミツモア公式・会社説明資料、株式会社ミツモア 企業情報。サービス数・依頼数等は変更される場合があります。
+              出典：<a href="https://meetsmore.com/" target="_blank" rel="nofollow noopener" className="underline">ミツモア公式サイト</a>（「サービス600種類以上」「見積無料」）、<a href="https://meetsmore.com/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>（設立2017年2月8日）、<a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">事業者向けページ</a>（成約手数料）（いずれも2026-10-21確認）。サービス数等は変更される場合があります。
             </p>
           </section>
 
@@ -262,24 +263,30 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミで多く見られたのは、
-              <strong className="font-semibold">複数業者を一度に比較できる手軽さと、相場を把握しやすい点</strong>
-              を評価する声です。入力のみで見積もりが集まること、チャットで質問しやすいこと、複数社の競争により適正価格で依頼しやすい点などが評価されています。GoogleやApp Storeでも比較的高い評価を得ています。
+              編集部が掲載ページを確認できた口コミでは、
+              <strong className="font-semibold">複数社から一度に見積もりがもらえる点と、申し込み前にチャットで疑問点を確認できる点</strong>
+              を評価する声が見られました。なお、App Storeのミツモアアプリの評価は4.6（5段階・評価件数1.5万）と表示されています（<a href="https://apps.apple.com/jp/app/id1613928734" target="_blank" rel="nofollow noopener" className="underline">App Store</a> 2026-10-21確認）。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  {r.stars ? <Stars n={r.stars} /> : null}
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※口コミは各種サービス全般に対する利用者の声を含みます。実際の作業は登録業者が担当するため、評価は依頼内容や担当業者によって異なります。出典を明記したうえで参考としてご覧ください。
+              ※口コミはハウスクリーニング等の利用者の声で、業務用エアコンに関するものではありません。実際の作業は登録業者が担当するため、評価は依頼内容や担当業者によって異なります。
             </p>
           </section>
 
@@ -301,7 +308,7 @@ export default function Page() {
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
               一方で、相見積もりサービスの性質上、
-              <strong className="font-semibold">複数業者からの連絡量や、当事者間でのやり取りの進め方</strong>
+              <strong className="font-semibold">業者とのやり取りの煩雑さや、当事者間でのやり取りの進め方</strong>
               に関する指摘も見られました。これはマッチング型サービス全般に共通する傾向です。ご利用の際は、早い段階で候補を絞り、契約条件や作業範囲をチャットで確認しておくことをおすすめします。
             </p>
             <div className="grid gap-4">
@@ -311,13 +318,19 @@ export default function Page() {
                     <p className="text-slate-700 leading-7">{r.body}</p>
                   ) : (
                     <>
-                      <Stars n={2} />
+                      {r.stars ? <Stars n={r.stars} /> : null}
                       <blockquote className="mt-3 text-slate-700 leading-7">「{r.body}」</blockquote>
                     </>
                   )}
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
@@ -334,7 +347,7 @@ export default function Page() {
                 <h3 className="font-bold text-teal-800 mb-3">メリット</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
                   <li>入力のみで最大5社程度の相見積もりが届く</li>
-                  <li>複数社の比較により相場を把握しやすく、適正価格で依頼しやすい</li>
+                  <li>複数社の見積もりを比較してから依頼先を選べる</li>
                   <li>チャットで質問でき、依頼前に業者の対応を確認できる</li>
                   <li>依頼者は無料で利用できる</li>
                 </ul>
@@ -382,13 +395,13 @@ export default function Page() {
             <p className="leading-8 text-slate-700">
               ミツモアは、依頼者が
               <strong className="font-semibold">無料で見積もり依頼でき、手数料は成約時に業者側が負担する仕組み</strong>
-              です。多くの生活カテゴリでは成約額の20%前後の手数料が業者にかかるとされています。利用者が支払うのは最終的に契約した業者の工事料金で、業務用エアコンであれば機種の馬力・台数・設置環境・既存機の撤去の有無などで費用が変わります。
+              です。事業者向けページでは、成約手数料を8%〜35%（税込8.8%〜38.5%、サービスにより異なる）としています。利用者が支払うのは最終的に契約した業者の工事料金で、業務用エアコンであれば機種の馬力・台数・設置環境・既存機の撤去の有無などで費用が変わります。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               複数社の見積もりが届くため相場を把握しやすい一方、契約条件や作業範囲は当事者間で確認する必要があります。チャットで内訳・追加費用・保証を確認したうえで契約することをおすすめします。
             </p>
             <p className="mt-3 text-xs text-slate-400">
-              ※手数料の割合はカテゴリにより異なります。最新の料金・条件は見積もり時にご確認ください。
+              ※出典：<a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">ミツモア 事業者向けページ</a>（2026-10-21確認）。手数料の割合はサービスにより異なります。最新の料金・条件は見積もり時にご確認ください。
             </p>
           </section>
 
@@ -442,7 +455,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              ミツモアは、株式会社ミツモアが運営する見積もりプラットフォームです。入力のみで複数社の見積もりが届き、相場を把握しながら適正価格で業者を選べる点が強みです。口コミでは比較の手軽さとチャットの利便性を評価する声が多い一方、複数業者からの連絡量や、当事者間でのやり取りの進め方を指摘する声もありました。
+              ミツモアは、株式会社ミツモアが運営する見積もりプラットフォームです。入力のみで複数社の見積もりが届き、料金や内容を比較しながら業者を選べる点が強みです。確認できた口コミでは、複数社の見積もりを一度に受け取れる点やチャットの利便性を評価する声がある一方、業者とのやり取りの煩雑さや、当事者間でのやり取りの進め方を指摘する声もありました。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの導入は費用が大きいため、届いた見積もりを比較し、料金・作業範囲・保証・対応エリアを確認したうえで選ぶことが、失敗を防ぐうえで有効です。

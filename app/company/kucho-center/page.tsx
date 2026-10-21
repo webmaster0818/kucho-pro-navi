@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/kucho-center" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "空調センターとは" },
@@ -26,18 +26,32 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+const YAHOO_SOURCE = "Yahoo!ショッピング「空調センターのレビュー」（2026-10-21確認）";
+const YAHOO_URL = "https://shopping.yahoo.co.jp/store_rating/tokyo-aircon/store/review/";
+
+const goodReviews: { body: string; who: string; stars: number; source: string; url?: string }[] = [
   {
     body:
-      "電話での連絡がとても迅速で丁寧でした。在庫や納期の問い合わせにもすぐ答えてもらえて安心できました。",
-    who: "Yahoo!ショッピング店の購入者（★5）",
-    source: "Yahoo!ショッピング 店舗評価（機器販売）",
+      "購入時、現在使用しているエアコンの後継機で合っているか問い合わせたところ丁寧におこたえいただきました。購入後、電話で納期を教えてくださり、こちらの都合も聞いてくださいました。エアコン購入時は次回もこちらにお願いしようと思います。",
+    who: "Yahoo!ショッピング店の購入者（2026/4/22投稿）",
+    stars: 5,
+    source: YAHOO_SOURCE,
+    url: YAHOO_URL,
   },
   {
     body:
-      "何度かリピートで購入していますが、毎回滞りなく手続きが進み、対応に不満を感じたことがありません。",
-    who: "Yahoo!ショッピング店のリピート購入者（★5）",
-    source: "Yahoo!ショッピング 店舗評価（機器販売）",
+      "購入手続き後、すぐにお電話をいただき 発送日や注文内容の確認などしてくださいました！高い買い物だったので、すごく安心できました！何度目かの利用ですが、毎回滞りなく買い物できています。またエアコン購入の際はよろしくお願いします！",
+    who: "Yahoo!ショッピング店のリピート購入者（2026/5/20投稿）",
+    stars: 5,
+    source: YAHOO_SOURCE,
+    url: YAHOO_URL,
+  },
+  {
+    body: "ほかに比較して価格が安いので発注しました、製品は問題なく設置できました。",
+    who: "Yahoo!ショッピング店の購入者（2026/5/22投稿）",
+    stars: 5,
+    source: YAHOO_SOURCE,
+    url: YAHOO_URL,
   },
 ];
 
@@ -70,7 +84,7 @@ const articleJsonLd = {
   headline:
     "空調センターの口コミ・評判は？業務用エアコンの料金・対応エリアを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -121,7 +135,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -148,7 +162,7 @@ export default function Page() {
             という点に留意が必要です。本記事では、利用者の声、料金の仕組み、向いている事業者、依頼前の注意点を中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、掲載サイトで公開されている内容を、出典を明記して引用・要約したものです。料金や在庫は時期により変わるため、最新情報は公式サイトでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、掲載サイトで公開されている内容を、出典ページを明記したうえで原文のまま引用したものです。料金や在庫は時期により変わるため、最新情報は公式サイトでご確認ください（出典確認日：2026年10月21日）。
           </p>
         </div>
 
@@ -216,7 +230,11 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：空調センター公式サイト（サービス情報）。価格・在庫・取扱内容は変更される場合があります。設置工事は行っていない販売専門店です。
+              出典：空調センター公式サイト（
+              <a href="https://www.tokyo-aircon.net/" target="_blank" rel="nofollow noopener" className="underline">トップページ</a>
+              ・
+              <a href="https://www.tokyo-aircon.net/law.php" target="_blank" rel="nofollow noopener" className="underline">特定商取引法の表記</a>
+              、2026-10-21確認）。価格・在庫・取扱内容は変更される場合があります。設置工事は行っていない販売専門店です。
             </p>
           </section>
 
@@ -226,24 +244,30 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミで多く見られたのは、
-              <strong className="font-semibold">電話連絡の迅速さと丁寧さ、購入手続きのスムーズさ</strong>
-              を評価する声です。在庫や納期の問い合わせへの回答が早い点、継続購入でも滞りなく取引できる点が好意的に受け止められています。
+              Yahoo!ショッピングの空調センター（運営：株式会社空調センター）のストアレビューは、
+              <strong className="font-semibold">総合評価4.86（179件、2026-10-21確認）</strong>
+              です。多く見られたのは、購入後の電話連絡や納期の案内が早く丁寧であること、価格の安さを評価する声です。一方で★1のレビューも2件あります。以下は同ページのレビューを原文のまま引用したものです（★は同ページの評価）。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  <Stars n={r.stars} />
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※掲載の評価はYahoo!ショッピング店での機器販売（EC）に対するものです。販売専門店のため、設置工事そのものの評価ではない点にご留意ください。
+              ※掲載の評価はYahoo!ショッピング店での機器販売（EC）に対するものです（2026-10-21確認。件数・評価は変動します）。販売専門店のため、設置工事そのものの評価ではない点にご留意ください。
             </p>
           </section>
 
@@ -407,7 +431,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              空調センターは、業務用エアコンの本体を低価格かつ短納期で調達したい事業者向けの販売専門店です。最大83%OFFの価格訴求や全国送料無料、最短翌日の納品が強みで、口コミでは電話対応の迅速さと購入手続きのスムーズさを評価する声が見られました。
+              空調センターは、業務用エアコンの本体を低価格かつ短納期で調達したい事業者向けの販売専門店です。最大83%OFFの価格訴求や全国送料無料、最短翌日の納品が強みで、Yahoo!ショッピング店のレビュー（総合評価4.86・179件、2026-10-21確認）では、電話連絡や納期案内の丁寧さ、価格の安さを評価する声が見られました。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               ただし、空調センターは設置工事を行わない販売専門店です。本体購入後の設置は別の工事業者へ依頼する必要があるため、工事費を含めた総額と保証範囲を確認したうえで判断することが大切です。販売と施工を一括で依頼したい場合は、両方に対応する業者と比較して選ぶことをおすすめします。

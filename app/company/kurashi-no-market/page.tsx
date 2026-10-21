@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/kurashi-no-market" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年10月21日";
 
 const toc = [
   { id: "summary", label: "くらしのマーケットとは" },
@@ -26,45 +26,47 @@ const toc = [
   { id: "summary-last", label: "まとめ" },
 ];
 
-const goodReviews = [
+type Review = {
+  body: string;
+  who: string;
+  source: string;
+  url?: string;
+  stars?: number;
+  summary?: boolean;
+};
+
+const goodReviews: Review[] = [
   {
     body:
-      "口コミやプロフィールをじっくり見て業者を選べたので、初めての依頼でも安心してお願いできました。",
-    who: "クリーニング・設置を依頼した利用者",
-    source: "みん評 掲載のくらしのマーケット 利用者口コミ",
+      "CMにつられた身ですが、たくさんある業者のなかから、自分で比べて選ぶことが出来るので良かったです。業者との連絡も、くらしのマーケットを通じてメッセージで連絡を取れるので、仕事が忙しく電話に出られない時でも便利でした。",
+    who: "エアコンクリーニング（2台）を依頼した方（評価5.00・冒頭部分を抜粋）",
+    stars: 5,
+    source: "カジナビ「くらしのマーケットは危ないの？実際に起こったトラブルや悪い口コミ評判を徹底調査」（カジナビ独自の利用者アンケートで寄せられた口コミ）（2026-10-21確認）",
+    url: "https://kaji-navi.co.jp/kurashi-matket-demerit/",
   },
   {
     body:
-      "料金が事前に明確に表示されていて、当日に追加費用を取られる心配がなかったのが良かったです。",
-    who: "料金の透明性を評価した方",
-    source: "おそうじ合衆国（くらしのマーケット 正直レビュー）",
-  },
-  {
-    body:
-      "予約前にメッセージで作業内容を細かく質問できたので、当日のイメージがしやすく、スムーズに進みました。",
-    who: "事前メッセージを活用した方",
-    source: "アポカレッジ!（くらしのマーケットの実態）",
-  },
-  {
-    body:
-      "実際に利用した人の口コミが星評価とコメントで見られるので、業者の人柄や仕事ぶりを想像しやすかったです。",
-    who: "口コミを参考に選んだ利用者",
-    source: "みん評 掲載のくらしのマーケット 利用者口コミ",
+      "人気のある業者に頼んだところ、安価でピカピカにしてもらえた。事前に口コミで評価を確認できたので安心して依頼できました",
+    who: "くらしのマーケットの利用者（成功事例）",
+    source: "アポカレッジ!「マッチングサービス『くらしのマーケット』の実態とは。評判や費用も解説」（ユーザーの声）（2026-10-21確認）",
+    url: "https://apocollege.com/curama/",
   },
 ];
 
-const badReviews = [
+const badReviews: Review[] = [
   {
     body:
-      "予約時に確認した金額と、当日案内された金額に差がありました。作業範囲をもう少し細かく擦り合わせておけばよかったです。",
-    who: "費用面の指摘をした利用者（要約）",
-    source: "みん評 掲載のくらしのマーケット 利用者口コミ",
+      "安さで選びましたが、現場に来てもらってから追加料金がかかると言われました。結果的にコストが高くついてしまいました",
+    who: "くらしのマーケットの利用者（失敗事例）",
+    source: "アポカレッジ!「マッチングサービス『くらしのマーケット』の実態とは。評判や費用も解説」（ユーザーの声）（2026-10-21確認）",
+    url: "https://apocollege.com/curama/",
   },
   {
     body:
-      "業者によって作業の丁寧さに差があると感じました。口コミ件数や評価をしっかり確認してから選ぶのが大事だと思います。",
-    who: "品質のばらつきを指摘した方（要約）",
-    source: "カジナビ（くらしのマーケットのデメリット調査）",
+      "フレンドリーな業者さんが来てくれることもあったが、対応が悪い業者さんにあたると最悪。トップレビューの業者だったのに残念だった",
+    who: "くらしのマーケットの利用者（失敗事例）",
+    source: "アポカレッジ!「マッチングサービス『くらしのマーケット』の実態とは。評判や費用も解説」（ユーザーの声）（2026-10-21確認）",
+    url: "https://apocollege.com/curama/",
   },
 ];
 
@@ -87,7 +89,7 @@ const faqs = [
   },
   {
     q: "運営会社はどこですか？",
-    a: "「くらしのマーケット」は、みんなのマーケット株式会社が運営するマッチングプラットフォームです。2025年時点でカテゴリ数400種類以上、累計出店者数10万店以上の国内最大規模のサービスとされています。",
+    a: "「くらしのマーケット」は、みんなのマーケット株式会社が運営するマッチングプラットフォームです。公式サイトでは掲載カテゴリを「400種類以上」、累計出店者数を「10万店以上」としています（https://curama.jp/about/ 2026-10-21確認）。",
   },
 ];
 
@@ -97,7 +99,7 @@ const articleJsonLd = {
   headline:
     "くらしのマーケットの口コミ・評判は？業務用エアコン工事の料金・仕組みを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-10-21",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -148,7 +150,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -173,7 +175,7 @@ export default function Page() {
             （運営：みんなのマーケット株式会社）です。本記事では、業務用エアコン工事の観点から、公開されている利用者の口コミ、料金の透明性とマッチングの仕組み、メリット・デメリットを、評価点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
-            ※本記事の口コミは、各掲載サイトで公開されている内容を出典を明記したうえで引用・要約したものです。料金や対応内容は時期・地域・出店業者により変わるため、最新の情報は各業者ページや事前メッセージでご確認ください（調査時点：2026年6月）。
+            ※本記事の口コミは、掲載ページを編集部が確認できたもののみを、原文のまま出典URLとともに引用しています（2026年10月21日確認）。料金や対応内容は時期・地域・出店業者により変わるため、最新の情報は各業者ページや事前メッセージでご確認ください。
           </p>
         </div>
 
@@ -206,7 +208,7 @@ export default function Page() {
               です。各業者が料金を事前に明示し、利用者が口コミ・評価・対応エリアを比較して直接予約できる仕組みを特徴としています。業務用エアコンの設置・取り外しに対応する業者も登録されており、店舗・オフィス向けの工事も探すことができます。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
-              運営会社は、みんなのマーケット株式会社です。2025年時点でカテゴリ数400種類以上、累計出店者数10万店以上とされる国内最大規模のサービスです。料金と口コミを事前に確認できるため、業者選びにおける認識の食い違いを減らせる点が評価されています。
+              運営会社は、みんなのマーケット株式会社です。公式サイトでは掲載カテゴリを「400種類以上」、累計出店者数を「10万店以上」としています（2026-10-21確認）。料金と口コミを事前に確認できるため、業者選びの判断材料にしやすい点が特徴です。
             </p>
           </section>
 
@@ -222,8 +224,8 @@ export default function Page() {
                     ["サービス名", "くらしのマーケット（暮らしのサービスマッチング）"],
                     ["運営会社", "みんなのマーケット株式会社"],
                     ["サービス形態", "口コミ型マッチングプラットフォーム（利用者が業者を直接予約）"],
-                    ["カテゴリ数", "400種類以上（2025年時点）"],
-                    ["累計出店者数", "10万店以上（国内最大規模）"],
+                    ["カテゴリ数", "400種類以上（公式）"],
+                    ["累計出店者数", "10万店以上（公式）"],
                     ["料金", "各業者が事前に明示（料金の透明性が高い）"],
                     ["対応エリア", "全国（出店業者の所在による）"],
                     ["特徴", "実利用者の口コミ・星評価、事前メッセージ"],
@@ -240,7 +242,7 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：くらしのマーケット公式サイト、みんなのマーケット株式会社 企業情報。カテゴリ数・出店者数等は変更される場合があります。
+              出典：<a href="https://curama.jp/about/" target="_blank" rel="nofollow noopener" className="underline">くらしのマーケット「はじめての方へ」</a>（カテゴリ数・累計出店者数、2026-10-21確認）。カテゴリ数・出店者数等は変更される場合があります。
             </p>
           </section>
 
@@ -250,24 +252,30 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              公開されている口コミで多く見られたのは、
-              <strong className="font-semibold">口コミと料金を確認したうえで利用者自身が業者を選べる点</strong>
-              を評価する声です。料金が事前に明示されていること、予約前にメッセージで質問できること、実際の利用者の星評価から業者の対応や作業内容を把握しやすいことなどが評価されています。みん評などでは平均4.6〜4.9点と、高い評価が多く見られます。
+              編集部が掲載ページを確認できた口コミでは、
+              <strong className="font-semibold">口コミを確認したうえで利用者自身が業者を比べて選べる点</strong>
+              を評価する声が見られました。たくさんある業者から自分で比べて選べること、メッセージで業者と連絡を取れること、事前に口コミで評価を確認できたことなどが挙げられています。
             </p>
             <div className="grid gap-4">
               {goodReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                  <Stars n={5} />
+                  {r.stars ? <Stars n={r.stars} /> : null}
                   <blockquote className="mt-3 text-slate-800 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <p className="mt-4 text-xs text-slate-400">
-              ※口コミは暮らしのサービス全般に対する利用者の声を含みます。実際の作業は出店業者が担当するため、評価は依頼内容や担当業者によって異なります。出典を明記したうえで参考としてご覧ください。
+              ※口コミは暮らしのサービス全般（家庭用エアコンクリーニング等）に対する利用者の声で、業務用エアコン工事に関するものではありません。実際の作業は出店業者が担当するため、評価は依頼内容や担当業者によって異なります。
             </p>
           </section>
 
@@ -289,17 +297,23 @@ export default function Page() {
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
               一方で、出店業者が多いマッチングサービスの性質上、
-              <strong className="font-semibold">業者による作業品質の差や、当日の費用に関する認識のずれ</strong>
+              <strong className="font-semibold">業者による対応の差や、現場で追加料金を案内されたこと</strong>
               を指摘する声も見られました。これはプラットフォーム型サービス全般に共通する傾向です。ご利用の際は、口コミ件数や評価を確認したうえで、予約前にメッセージで作業範囲・追加費用をすり合わせておくことをおすすめします。
             </p>
             <div className="grid gap-4">
               {badReviews.map((r, i) => (
                 <figure key={i} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                  <Stars n={2} />
+                  {r.stars ? <Stars n={r.stars} /> : null}
                   <blockquote className="mt-3 text-slate-700 leading-7">「{r.body}」</blockquote>
                   <figcaption className="mt-3 text-sm text-slate-500">
                     {r.who}
-                    <span className="block text-xs text-slate-400 mt-0.5">出典：{r.source}</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="nofollow noopener" className="underline">出典：{r.source}</a>
+                      ) : (
+                        <>出典：{r.source}</>
+                      )}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
@@ -318,7 +332,6 @@ export default function Page() {
                   <li>実利用者の口コミ・星評価を見て業者を選べる</li>
                   <li>料金が事前に明示され、透明性が高い</li>
                   <li>予約前にメッセージで作業内容を直接やり取りできる</li>
-                  <li>当日のキャンセルは予約金額の100%のキャンセル料がかかる</li>
                 </ul>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -327,6 +340,7 @@ export default function Page() {
                   <li>出店業者ごとに作業品質や対応に差が出ることがある</li>
                   <li>大型・多台数の業務用案件は対応業者が限られる場合がある</li>
                   <li>設置環境次第で当日費用が変わることがあり、事前確認が必要</li>
+                  <li>キャンセル料は時期により異なり、作業日当日のキャンセルは予約金額の100%とされている</li>
                 </ul>
               </div>
             </div>
@@ -424,7 +438,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              くらしのマーケットは、みんなのマーケット株式会社が運営する国内最大規模の口コミ型マッチングプラットフォームです。実際の利用者の口コミを確認しながら、料金が明示された業者を直接選べる点が強みです。口コミでは選びやすさと料金の透明性を評価する声が多い一方、業者による作業品質の差や、当日の費用に関する認識の食い違いを指摘する声もありました。
+              くらしのマーケットは、みんなのマーケット株式会社が運営する口コミ型マッチングプラットフォームです。実際の利用者の口コミを確認しながら、料金が明示された業者を直接選べる点が強みです。確認できた口コミでは、自分で比べて選べる点や事前に口コミを確認できる点を評価する声がある一方、業者による対応の差や、現場で追加料金を案内されたことを指摘する声もありました。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの設置は費用が大きいため、1社のみで決めず、複数業者の口コミと料金を比較し、作業範囲・追加費用・保証を事前に確認したうえで選ぶことが、失敗を防ぐうえで有効です。
