@@ -6,9 +6,37 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guide/cost/" },
-  title: "業務用エアコンの費用相場はいくら？本体価格・工事費の内訳",
+  title: "業務用エアコンの費用相場は工事費込み50〜70万円（5馬力以下）｜交換費用の内訳",
   description:
-    "業務用エアコンの設置・交換・修理にかかる費用相場をご説明します。規模・業種・機種タイプ別の費用目安と、費用を抑えるためのポイントを掲載しています。",
+    "業務用エアコンの費用相場は、機器代金と工事代金を合わせて5馬力以下で50〜70万円、6馬力以上で100〜150万円です（ダイキン公表の税込目安・2026年10月22日確認）。交換時の撤去費や追加工事、修理費の目安もご説明します。",
+};
+
+const DAIKIN_URL = "https://www.ac.daikin.co.jp/customercenter/useful/article/49";
+const CHECKED = "2026年10月22日";
+
+const faqs = [
+  {
+    q: "業務用エアコンの費用相場は、工事費込みでいくらですか？",
+    a: "ダイキンの公表値では、機器代金と工事代金を合わせた1セットあたりの目安（税込）は、5馬力以下（一般事務所で70㎡以下が目安）で50万〜70万円、6馬力以上（同80㎡以上）で100万〜150万円です。2023年4月〜2024年3月にダイキンへ問い合わせがあり成約した案件の販売価格をもとにした数値で、配管の長さや室外機の設置場所によって変わります（2026年10月22日に公式サイトで確認）。",
+  },
+  {
+    q: "交換（入れ替え）の場合も、同じ相場ですか？",
+    a: "ダイキンの目安価格は、新規の取り付けと入れ替えを区別せずに集計されています。入れ替えの場合は、既設機の撤去・廃棄費用、冷媒配管の洗浄費用、冷媒の処理費用が別にかかることがあり、ダイキンは機器の種類や台数により数万円〜数十万円としています。",
+  },
+  {
+    q: "工事費が目安より高くなるのは、どのような場合ですか？",
+    a: "ダイキンは、室内機と室外機の距離が遠い場合（配管が長くなる）、室外機を屋上や壁面に設置する場合（クレーン等が必要）、新設で三相200Vの電源工事が必要な場合、入れ替えで撤去・廃棄が発生する場合、古い建物でアスベストの事前調査が必要な場合を挙げています。",
+  },
+  {
+    q: "当ページの規模別の表と、メーカーの相場が違うのはなぜですか？",
+    a: "規模別の表は、機器代と基本工事費の目安で、配管延長・電気工事・足場などの追加費用を含みません。ダイキンの数値は、成約案件の販売価格（税込）を集計したものです。馬力ごとの専門店の公開価格は、出典つきの早見インデックスに掲載しています。金額は案件ごとに異なるため、現地調査のうえで複数社の見積もりを比較してください。",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
 const costTable = [
@@ -55,6 +83,7 @@ const subsidyInfo = [
 export default function CostGuidePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <SiteHeader />
       <main className="max-w-4xl mx-auto px-4 py-8">
         <Breadcrumb
@@ -67,14 +96,25 @@ export default function CostGuidePage() {
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           業務用エアコン費用相場ガイド
         </h1>
+        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-4">
+          <p className="text-gray-800 leading-relaxed">
+            業務用エアコンの費用相場は、機器代金と工事代金を合わせて<strong>5馬力以下で50万〜70万円、6馬力以上で100万〜150万円</strong>です（1セットあたり・税込）。これはダイキンが公表している目安で、5馬力以下は一般事務所で70㎡以下、6馬力以上は80㎡以上が目安とされています。新規の取り付けと交換（入れ替え）を区別せずに集計された数値です。
+          </p>
+          <p className="text-gray-700 text-sm leading-relaxed mt-3">
+            交換の場合は、既設機の撤去・廃棄や冷媒の処理に数万円〜数十万円が別にかかることがあります。配管が長い場合や、室外機の設置にクレーンが必要な場合も費用が上がります。
+          </p>
+          <p className="text-xs text-gray-500 mt-3">
+            出典：<a href={DAIKIN_URL} target="_blank" rel="noopener noreferrer" className="underline">ダイキン工業「業務用エアコンの価格相場は？工事費込みでいくらが目安？」</a>（スカイエアの目安。2023年4月〜2024年3月の成約案件の販売価格をもとに集計。{CHECKED}確認）
+          </p>
+        </div>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          業務用エアコンの設置・工事費用は、機器のサイズ・機種タイプ・設置環境・業者によって大きく異なります。当ページでは、費用の内訳と相場、費用を抑えるためのポイントをご説明します。
+          実際の費用は、機器のサイズ・機種タイプ・設置環境・業者によって大きく異なります。馬力ごとの本体価格と標準工事費は<Link href="/cost-index/" className="text-[#1E40AF] underline">坪数×馬力×費用 早見インデックス</Link>に出典つきで掲載しています。以下では、規模別の目安、費用の内訳、修理費の目安、補助金をご説明します。
         </p>
 
         {/* Installation Cost */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 mb-4">
-            新規設置・交換の費用相場
+            規模別の新規設置・交換の費用目安
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -195,6 +235,21 @@ export default function CostGuidePage() {
               <span><strong>リースや分割払いを活用する</strong> — 初期費用を分散し、資金繰りの負担を軽減できます</span>
             </li>
           </ol>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-gray-800 mb-4">よくある質問</h2>
+          <div className="space-y-4">
+            {faqs.map((f) => (
+              <div key={f.q} className="bg-white rounded-xl border border-gray-100 p-5">
+                <h3 className="font-bold text-gray-800 text-sm mb-2">{f.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">
+            出典：<a href={DAIKIN_URL} target="_blank" rel="noopener noreferrer" className="underline">ダイキン工業「業務用エアコンの価格相場は？工事費込みでいくらが目安？」</a>（{CHECKED}確認）
+          </p>
         </section>
 
         <div className="text-center">
