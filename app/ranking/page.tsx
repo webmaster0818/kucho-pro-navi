@@ -7,7 +7,7 @@ import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/" },
-  title: "業務用エアコン業者のおすすめランキング【2026年10月】｜業者タイプの違いと許可の確認方法",
+  title: "業務用エアコン業者のおすすめランキング｜業者タイプの違いと許可の確認方法",
   description:
     `業務用エアコン業者のおすすめ${companies.length}社のランキングです。販売・施工の専門店、紹介・見積もりサービス、販売のみの通販の違いと、建設業許可・フロン類充塡回収業者登録の確認方法を公的機関の出典とともにご説明します。`,
 };
@@ -109,7 +109,7 @@ export default function RankingPage() {
         <Breadcrumb items={[{ label: "総合ランキング" }]} />
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-          業務用エアコン業者のおすすめランキング【2026年10月】
+          業務用エアコン業者のおすすめランキング
         </h1>
         <p className="text-xs text-gray-500 mb-4">最終更新日：{UPDATED}</p>
         <p className="text-gray-700 mb-4 leading-relaxed">
