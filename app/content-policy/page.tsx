@@ -18,7 +18,7 @@ export default function ContentPolicyPage() {
 
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">記事の制作ポリシー</h1>
-          <p className="text-gray-500 text-sm">最終更新日：2026年4月27日</p>
+          <p className="text-gray-500 text-sm">最終更新日：2026年10月23日</p>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-200 p-8 space-y-8 text-sm leading-relaxed text-gray-700">
@@ -88,7 +88,7 @@ export default function ContentPolicyPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3 pb-2 border-b-2 border-[#1E40AF]">読者からのフィードバック対応</h2>
             <p>
-              当サイトの情報に誤りや不明点がある場合、読者の皆様からのご指摘をお待ちしています。いただいたフィードバックは編集部で確認のうえ、ご指摘の内容が正確であることを確認できた場合は、速やかに修正します。お問い合わせは当サイトのお問い合わせフォームよりご連絡ください。
+              当サイトの情報に誤りや不明点がある場合、読者の皆様からのご指摘をお待ちしています。いただいたフィードバックは編集部で確認のうえ、ご指摘の内容が正確であることを確認できた場合は、速やかに修正します。お問い合わせはメール（<a href="mailto:webmaster@mediax.biz" className="text-blue-600 hover:underline">webmaster@mediax.biz</a>）でご連絡ください。
             </p>
           </section>
 

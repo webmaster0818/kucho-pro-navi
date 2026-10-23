@@ -8,22 +8,26 @@ import { KW_CLASSES } from "@/data/kw-classes";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guide/horsepower/" },
-  title: "業務用エアコンの馬力・kW換算早見表｜10kWは何馬力？10馬力は何kW？",
+  title: "業務用エアコンの馬力・kW換算早見表｜1馬力≒2.8kW・10馬力は28kW・10kWは約3.6馬力",
   description:
-    "業務用エアコンのkW⇔馬力換算を早見表で掲載しています。1馬力≒2.8kW（メーカー公式の換算値）で換算すると、10kWは約3.6馬力（機種クラスは4馬力/P112形）、10馬力は28.0kW（P280形）です。P形の機種クラス対応表と、坪数・用途から必要な馬力を計算する方法もご説明します。",
+    "業務用エアコンの馬力は1馬力≒2.8kW（ダイキン公式）で換算します。10馬力は28.0kW（P280形）、10kWは約3.6馬力（機種は4馬力/P112形）、4.5kWは約1.6馬力（1.8馬力/P45形）、14kWは5馬力です。4kW〜28kWの早見表と機種クラス（P形）対応、広さからの選び方を掲載しています。",
 };
 
 // kW→馬力 換算早見表（1馬力≒2.8kW・ダイキン公式の換算値。機種クラスはP形=冷房能力kW×10の公式規則）
 const kwToHp: { kw: string; hp: string; model: string; kwSlug?: string; hpSlug?: string }[] = [
-  { kw: "4.5kW", hp: "約1.6馬力", model: "1.8馬力（P45形）", kwSlug: "4-5-kw" },
+  { kw: "4.0kW", hp: "約1.4馬力", model: "1.5馬力（P40形）＝4.0kWそのもの" },
+  { kw: "4.5kW", hp: "約1.6馬力", model: "1.8馬力（P45形）＝4.5kWそのもの", kwSlug: "4-5-kw" },
   { kw: "5.6kW", hp: "約2.0馬力", model: "2.3馬力（P56形）", kwSlug: "5-6-kw" },
   { kw: "6.3kW", hp: "約2.3馬力", model: "2.5馬力（P63形）＝6.3kWそのもの", hpSlug: "2-5-bariki" },
   { kw: "8.0kW", hp: "約2.9馬力", model: "3馬力（P80形）＝8.0kWそのもの", hpSlug: "3-bariki" },
+  { kw: "9kW", hp: "約3.2馬力", model: "4馬力（P112形・11.2kW）が目安", hpSlug: "4-bariki" },
   { kw: "10kW", hp: "約3.6馬力", model: "4馬力（P112形・11.2kW）が目安", kwSlug: "10-kw", hpSlug: "4-bariki" },
   { kw: "11.2kW", hp: "4馬力", model: "4馬力（P112形）＝11.2kWそのもの", hpSlug: "4-bariki" },
+  { kw: "12kW", hp: "約4.3馬力", model: "5馬力（P140形・14.0kW）が目安", hpSlug: "5-bariki" },
   { kw: "12.5kW", hp: "約4.5馬力", model: "5馬力（P140形・14.0kW）が目安", kwSlug: "12-5-kw", hpSlug: "5-bariki" },
   { kw: "14kW", hp: "5馬力", model: "5馬力（P140形）＝14.0kWそのもの", hpSlug: "5-bariki" },
   { kw: "16kW", hp: "約5.7馬力", model: "6馬力（P160形）＝16.0kWそのもの", hpSlug: "6-bariki" },
+  { kw: "18kW", hp: "約6.4馬力", model: "8馬力（P224形・22.4kW）が目安", hpSlug: "8-bariki" },
   { kw: "20kW", hp: "約7.1馬力", model: "8馬力（P224形・22.4kW）が目安", kwSlug: "20-kw", hpSlug: "8-bariki" },
   { kw: "22.4kW", hp: "8馬力", model: "8馬力（P224形）＝22.4kWそのもの", hpSlug: "8-bariki" },
   { kw: "25kW", hp: "約8.9馬力", model: "10馬力（P280形・28.0kW）が目安", kwSlug: "25-kw", hpSlug: "10-bariki" },
@@ -52,10 +56,13 @@ const heatLoadFactors = [
 
 // kW→馬力の個別即答FAQ（「◯kWは何馬力？」の検索に1問1答で対応）
 const kwFaqs = [
+  { q: "10馬力は何kWですか？", a: "10馬力は28.0kWです（1馬力≒2.8kW）。機種クラスではP280形にあたります。" },
+  { q: "4.5kWは何馬力ですか？", a: "4.5kWは約1.6馬力です（4.5÷2.8）。機種クラスでは1.8馬力（P45形）＝4.5kWそのものにあたります。" },
   { q: "10kWは何馬力ですか？", a: "10kWは約3.6馬力です（1馬力≒2.8kWで換算）。業務用エアコンの機種クラスでは、4馬力（P112形・11.2kW）が目安になります。" },
   { q: "6.3kWは何馬力ですか？", a: "6.3kWは約2.3馬力です。機種クラスでは2.5馬力（P63形）＝6.3kWそのものにあたります。" },
   { q: "12.5kWは何馬力ですか？", a: "12.5kWは約4.5馬力です。機種クラスでは5馬力（P140形・14.0kW）が目安になります。" },
   { q: "14kWは何馬力ですか？", a: "14kWは5馬力です。機種クラスの5馬力（P140形）＝14.0kWそのものにあたります。" },
+  { q: "18kWは何馬力ですか？", a: "18kWは約6.4馬力です。6馬力（P160形）は16.0kWで不足するため、機種クラスでは8馬力（P224形・22.4kW）が目安になります。" },
   { q: "20kWは何馬力ですか？", a: "20kWは約7.1馬力です。機種クラスでは8馬力（P224形・22.4kW）が目安になります。" },
   { q: "22.4kWは何馬力ですか？", a: "22.4kWは8馬力です。機種クラスの8馬力（P224形）＝22.4kWそのものにあたります。" },
   { q: "25kWは何馬力ですか？", a: "25kWは約8.9馬力です。機種クラスでは10馬力（P280形・28.0kW）が目安になります。" },
@@ -86,7 +93,7 @@ export default function HorsepowerGuidePage() {
           業務用エアコンのkW・馬力換算早見表と選び方ガイド
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。たとえば10kWは約3.6馬力で、機種クラスでは4馬力（P112形・11.2kW）が目安です。反対に10馬力は28.0kW（P280形）、6馬力クラスは16.0kW（P160形）です。下の早見表の各行から、kW別・馬力別の詳しいページへ進めます。換算したうえで、坪数・用途に応じた選び方をご確認ください。
+          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。<strong>10馬力は28.0kW</strong>（P280形）、6馬力は16.0kW（P160形）、5馬力は14.0kW（P140形）です。反対に<strong>10kWは約3.6馬力</strong>で、機種クラスでは4馬力（P112形・11.2kW）が目安です。4.5kWは約1.6馬力で、1.8馬力（P45形）にあたります。下の早見表の各行から、kW別・馬力別の詳しいページへ進めます。換算したうえで、坪数・用途に応じた選び方をご確認ください。
         </p>
 
         {/* 馬力クラス別ページへの導線 */}
@@ -151,7 +158,7 @@ export default function HorsepowerGuidePage() {
           </div>
           <div className="text-xs text-gray-500 mt-3 leading-relaxed space-y-1">
             <p>
-              出典: ダイキン公式「1馬力≒2.8kW」（ac.daikin.co.jp 業務用エアコンコラム）／P形と馬力の対応は三菱電機Mr.SLIM形名検索・パナソニック公式コラム・ダイキン公式で確認（いずれも2026年7月4日確認）。
+              出典: ダイキン公式「1馬力≒2.8kW」（<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/49" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの設置費用</a>）、P形と馬力の対応（P40形＝1.5馬力相当〜P280形、「P40形は4.0kW」）は<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/28" target="_blank" rel="nofollow noopener" className="underline">ダイキン公式 業務用エアコンの選び方</a>（いずれも2026年10月23日確認）。三菱電機Mr.SLIM形名検索・パナソニック公式コラムでも同じ対応を確認しています（2026年7月4日確認）。
             </p>
             <p>
               ※チラー（冷却水熱源機）など一部の機種カテゴリでは「1馬力=2.5kW」の換算が使われる場合があります（東芝キヤリア空調機器ハンドブックで確認）。本表は店舗・オフィス用パッケージエアコンの換算です。

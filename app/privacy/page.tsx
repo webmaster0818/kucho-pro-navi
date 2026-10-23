@@ -18,7 +18,7 @@ export default function PrivacyPage() {
 
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">プライバシーポリシー</h1>
-          <p className="text-gray-500 text-sm">最終更新日：2026年4月27日</p>
+          <p className="text-gray-500 text-sm">最終更新日：2026年10月23日</p>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-200 p-8 space-y-8 text-sm leading-relaxed text-gray-700">
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
               <li>アクセス解析ツールが収集する匿名の統計情報</li>
             </ul>
             <p className="mt-2">
-              当サイトでは、お問い合わせフォーム等を通じて氏名・メールアドレス等の個人情報を収集することがあります。
+              当サイトでは、メールでのお問い合わせにより氏名・メールアドレス等の個人情報を取得することがあります。
             </p>
           </section>
 
@@ -94,7 +94,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3 pb-2 border-b-2 border-[#1E40AF]">お問い合わせ</h2>
             <p>
-              個人情報の開示・訂正・削除等のご請求、その他プライバシーに関するお問い合わせは、当サイトのお問い合わせフォームよりご連絡ください。
+              個人情報の開示・訂正・削除等のご請求、その他プライバシーに関するお問い合わせは、メール（<a href="mailto:webmaster@mediax.biz" className="text-blue-600 hover:underline">webmaster@mediax.biz</a>）でご連絡ください。
             </p>
           </section>
 
