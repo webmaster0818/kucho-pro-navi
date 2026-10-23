@@ -240,7 +240,7 @@ export default function Page() {
               良い口コミ・評判
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
-              EMEAO!の公式サイトには、利用した企業の声が社名・役職つきで掲載されています。内容は
+              EMEAO!の公式サイトには、利用した企業の声が社名・役職とともに掲載されています。内容は
               <strong className="font-semibold">業者探しの手間が省けた点、連絡の早さ、相見積もりによるコスト削減</strong>
               を評価するものです。3件を原文のまま引用します。
             </p>
