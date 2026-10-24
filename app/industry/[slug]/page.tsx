@@ -27,6 +27,9 @@ interface Industry {
   estimatedCost: EstimatedCost;
   recommendedCompanies: string[];
   faqs: FAQ[];
+  updated?: string;
+  keyFacts?: string[];
+  sources?: { label: string; url: string }[];
 }
 
 const industries: Industry[] = industriesData as Industry[];
@@ -76,6 +79,25 @@ export default async function IndustryPage(props: {
         <p className="text-gray-600 leading-relaxed mb-8 text-lg">
           {industry.description}
         </p>
+
+        {industry.keyFacts && (
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-800 mb-4">要点（公的機関の公表資料による）</h2>
+            <ul className="space-y-3">
+              {industry.keyFacts.map((f) => (
+                <li key={f} className="flex items-start gap-2 text-gray-700 leading-relaxed">
+                  <span className="text-[#1E40AF] mt-0.5">•</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            {industry.updated && (
+              <p className="mt-4 text-xs text-gray-500">
+                最終更新：<time dateTime={industry.updated}>{industry.updated.replace(/^(\d+)-0?(\d+)-0?(\d+)$/, "$1年$2月$3日")}</time>
+              </p>
+            )}
+          </div>
+        )}
 
         {/* Challenges */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
@@ -165,6 +187,38 @@ export default async function IndustryPage(props: {
             ))}
           </div>
         </div>
+
+        {industry.sources && (
+          <div className="mb-8 text-xs text-gray-500 leading-relaxed">
+            <p className="font-bold mb-1">出典（{industry.updated ?? ""}確認）</p>
+            <ul className="space-y-1">
+              {industry.sources.map((s) => (
+                <li key={s.url}>
+                  <a href={s.url} target="_blank" rel="nofollow noopener" className="underline">
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {industry.updated && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: industry.faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.question,
+                  acceptedAnswer: { "@type": "Answer", text: f.answer },
+                })),
+              }),
+            }}
+          />
+        )}
 
         <div className="bg-[#1E40AF] rounded-2xl p-8 text-white text-center">
           <h2 className="text-xl font-bold mb-3">
