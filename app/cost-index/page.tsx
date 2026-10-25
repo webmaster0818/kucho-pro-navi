@@ -89,7 +89,7 @@ const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "業務用エアコン 坪数×馬力×費用 早見インデックス",
-  description: "坪数→必要馬力と、馬力別の本体価格（専門店3社の公開価格）を出典つきで一覧にした早見インデックスです。",
+  description: "坪数→必要馬力と、馬力別の本体価格（専門店3社の公開価格）を出典とあわせて一覧にした早見インデックスです。",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
   datePublished: "2026-07-07",

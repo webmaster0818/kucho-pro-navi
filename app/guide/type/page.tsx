@@ -157,7 +157,7 @@ export default function TypeGuidePage() {
         </div>
 
         <p className="text-xs text-gray-500 -mt-6 mb-10 leading-relaxed">
-          ※「設置費用」の高・中・低は形状どうしの大まかな比較で、金額の目安ではありません。金額は機種・馬力・設置条件で変わるため、業者の見積もりで確認してください。馬力別の専門店の掲載価格は<Link href="/cost-index/" className="text-[#1E40AF] underline">早見インデックス</Link>に出典つきで掲載しています。
+          ※「設置費用」の高・中・低は形状どうしの大まかな比較で、金額の目安ではありません。金額は機種・馬力・設置条件で変わるため、業者の見積もりで確認してください。馬力別の専門店の掲載価格は<Link href="/cost-index/" className="text-[#1E40AF] underline">早見インデックス</Link>に出典とあわせて掲載しています。
         </p>
 
         {/* Detailed Cards */}

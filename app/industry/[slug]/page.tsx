@@ -130,7 +130,7 @@ export default async function IndustryPage(props: {
             <Link href="/guide/cost/" className="text-[#1E40AF] underline">費用相場ガイド</Link>
             、馬力別の専門店の掲載価格は
             <Link href="/cost-index/" className="text-[#1E40AF] underline">早見インデックス</Link>
-            に出典つきで掲載しています。
+            に出典とあわせて掲載しています。
           </p>
         </div>
 
