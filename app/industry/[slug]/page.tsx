@@ -12,19 +12,12 @@ interface FAQ {
   answer: string;
 }
 
-interface EstimatedCost {
-  small: string;
-  medium: string;
-  large: string;
-}
-
 interface Industry {
   slug: string;
   title: string;
   description: string;
   challenges: string[];
   recommendations: string[];
-  estimatedCost: EstimatedCost;
   recommendedCompanies: string[];
   faqs: FAQ[];
   updated?: string;
@@ -129,19 +122,16 @@ export default async function IndustryPage(props: {
           </ul>
         </div>
 
-        {/* Cost Estimate */}
+        {/* Cost */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">費用目安</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {Object.entries(industry.estimatedCost).map(([size, cost]) => (
-              <div key={size} className="bg-[#F1F5F9] rounded-lg p-4 text-center">
-                <div className="text-sm text-gray-500 mb-1">
-                  {size === "small" ? "小規模" : size === "medium" ? "中規模" : "大規模"}
-                </div>
-                <div className="font-bold text-gray-800 text-sm">{cost}</div>
-              </div>
-            ))}
-          </div>
+          <h2 className="text-xl font-bold text-gray-800 mb-4">費用について</h2>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            設置費用は、広さ・必要な馬力・台数・設置条件で大きく変わります。金額は業者の見積もりで確認してください。メーカー公表の目安は
+            <Link href="/guide/cost/" className="text-[#1E40AF] underline">費用相場ガイド</Link>
+            、馬力別の専門店の掲載価格は
+            <Link href="/cost-index/" className="text-[#1E40AF] underline">早見インデックス</Link>
+            に出典つきで掲載しています。
+          </p>
         </div>
 
         {/* Recommended Companies */}

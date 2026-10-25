@@ -36,7 +36,6 @@ const types = [
       "天井高が2.5m以上必要",
     ],
     bestFor: "オフィス・飲食店・小売店舗・クリニック",
-    costRange: "本体・工事 30万〜80万円（1台）",
     maintenanceEase: "普通",
   },
   {
@@ -52,7 +51,6 @@ const types = [
       "対応エリアが限られる",
     ],
     bestFor: "廊下・細長い店舗・個室・クリニック廊下",
-    costRange: "本体・工事 25万〜60万円（1台）",
     maintenanceEase: "普通",
   },
   {
@@ -70,7 +68,6 @@ const types = [
       "大容量モデルは外観が目立つ",
     ],
     bestFor: "小規模店舗・事務所・バックヤード・学校教室",
-    costRange: "本体・工事 15万〜40万円（1台）",
     maintenanceEase: "簡単",
   },
   {
@@ -88,7 +85,6 @@ const types = [
       "見た目が大型で圧迫感がある",
     ],
     bestFor: "工場・倉庫・ショールーム・ホテルロビー",
-    costRange: "本体・工事 25万〜70万円（1台）",
     maintenanceEase: "簡単",
   },
   {
@@ -105,7 +101,6 @@ const types = [
       "メンテナンスに高所作業が必要",
     ],
     bestFor: "工場・倉庫・体育館・大型倉庫型小売店",
-    costRange: "本体・工事 40万〜120万円（1台）",
     maintenanceEase: "難しい（高所作業）",
   },
 ];
@@ -161,6 +156,10 @@ export default function TypeGuidePage() {
           </table>
         </div>
 
+        <p className="text-xs text-gray-500 -mt-6 mb-10 leading-relaxed">
+          ※「設置費用」の高・中・低は形状どうしの大まかな比較で、金額の目安ではありません。金額は機種・馬力・設置条件で変わるため、業者の見積もりで確認してください。馬力別の専門店の掲載価格は<Link href="/cost-index/" className="text-[#1E40AF] underline">早見インデックス</Link>に出典つきで掲載しています。
+        </p>
+
         {/* Detailed Cards */}
         <div className="space-y-8">
           {types.map((type) => (
@@ -200,10 +199,6 @@ export default function TypeGuidePage() {
                 <div className="flex-1 bg-[#F1F5F9] rounded-lg p-3">
                   <span className="text-gray-500 text-xs">おすすめ用途</span>
                   <p className="font-semibold text-gray-800">{type.bestFor}</p>
-                </div>
-                <div className="flex-1 bg-[#F1F5F9] rounded-lg p-3">
-                  <span className="text-gray-500 text-xs">費用目安</span>
-                  <p className="font-semibold text-[#1E40AF]">{type.costRange}</p>
                 </div>
               </div>
             </div>

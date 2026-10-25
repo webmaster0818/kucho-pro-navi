@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guide/cost/" },
   title: "業務用エアコンの費用相場は工事費込み50〜70万円（5馬力以下）｜交換費用の内訳",
   description:
-    "業務用エアコンの費用相場は、機器代金と工事代金を合わせて5馬力以下で50〜70万円、6馬力以上で100〜150万円です（ダイキン公表の税込目安・2026年10月22日確認）。交換時の撤去費や追加工事、修理費の目安もご説明します。",
+    "業務用エアコンの費用相場は、機器代金と工事代金を合わせて5馬力以下で50〜70万円、6馬力以上で100〜150万円です（ダイキン公表の税込目安・2026年10月25日確認）。交換時の撤去費や追加工事、修理費の目安もご説明します。",
 };
 
 const DAIKIN_URL = "https://www.ac.daikin.co.jp/customercenter/useful/article/49";
-const CHECKED = "2026年10月22日";
+const CHECKED = "2026年10月25日";
 
 const faqs = [
   {
     q: "業務用エアコンの費用相場は、工事費込みでいくらですか？",
-    a: "ダイキンの公表値では、機器代金と工事代金を合わせた1セットあたりの目安（税込）は、5馬力以下（一般事務所で70㎡以下が目安）で50万〜70万円、6馬力以上（同80㎡以上）で100万〜150万円です。2023年4月〜2024年3月にダイキンへ問い合わせがあり成約した案件の販売価格をもとにした数値で、配管の長さや室外機の設置場所によって変わります（2026年10月22日に公式サイトで確認）。",
+    a: "ダイキンの公表値では、機器代金と工事代金を合わせた1セットあたりの目安（税込）は、5馬力以下（一般事務所で70㎡以下が目安）で50万〜70万円、6馬力以上（同80㎡以上）で100万〜150万円です。2023年4月〜2024年3月にダイキンへ問い合わせがあり成約した案件の販売価格をもとにした数値で、配管の長さや室外機の設置場所によって変わります（2026年10月25日に公式サイトで確認）。",
   },
   {
     q: "交換（入れ替え）の場合も、同じ相場ですか？",
@@ -28,8 +28,8 @@ const faqs = [
     a: "ダイキンは、室内機と室外機の距離が遠い場合（配管が長くなる）、室外機を屋上や壁面に設置する場合（クレーン等が必要）、新設で三相200Vの電源工事が必要な場合、入れ替えで撤去・廃棄が発生する場合、古い建物でアスベストの事前調査が必要な場合を挙げています。",
   },
   {
-    q: "当ページの規模別の表と、メーカーの相場が違うのはなぜですか？",
-    a: "規模別の表は、機器代と基本工事費の目安で、配管延長・電気工事・足場などの追加費用を含みません。ダイキンの数値は、成約案件の販売価格（税込）を集計したものです。馬力ごとの専門店の公開価格は、出典とあわせて早見インデックスに掲載しています。金額は案件ごとに異なるため、現地調査のうえで複数社の見積もりを比較してください。",
+    q: "馬力ごとの本体価格は、どこで確認できますか？",
+    a: "業務用エアコン専門店の公式サイトに、馬力・形状ごとの本体価格が掲載されています。当サイトでは、専門店3社の掲載価格（天井カセット形4方向・本体のみ）を、税込・税別などの条件と確認日とあわせて早見インデックスにまとめています。工事費・追加費用は設置条件で変わるため、現地調査のうえで複数社の見積もりを比較してください。",
   },
 ];
 
@@ -38,23 +38,6 @@ const faqLd = {
   "@type": "FAQPage",
   mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
-
-const costTable = [
-  { size: "〜10坪（小型店舗・個室）", unit: "2.5〜4馬力", cost: "20万〜50万円" },
-  { size: "10〜20坪（小規模オフィス）", unit: "4〜6馬力", cost: "40万〜80万円" },
-  { size: "20〜50坪（中規模店舗）", unit: "6〜10馬力", cost: "80万〜160万円" },
-  { size: "50〜100坪（大型店舗）", unit: "10〜20馬力", cost: "150万〜300万円" },
-  { size: "100坪以上（工場・大型施設）", unit: "20馬力以上", cost: "300万円〜" },
-];
-
-const repairCosts = [
-  { work: "ガス補充（フロン充填）", cost: "3万〜8万円" },
-  { work: "コンプレッサー交換", cost: "15万〜30万円" },
-  { work: "ファンモーター交換", cost: "5万〜12万円" },
-  { work: "基板（電装部品）修理", cost: "4万〜15万円" },
-  { work: "ドレンポンプ修理・交換", cost: "3万〜8万円" },
-  { work: "フィルター清掃（プロ）", cost: "1万〜3万円" },
-];
 
 // 補助金は年度・公募回で条件が変わるため概要のみ。最新の公募状況・対象要件は必ず公式で確認（詳細は発注タイミングと補助金カレンダーのガイド参照）。
 const subsidyInfo = [
@@ -111,83 +94,11 @@ export default function CostGuidePage() {
           実際の費用は、機器のサイズ・機種タイプ・設置環境・業者によって大きく異なります。馬力ごとの本体価格と標準工事費は、出典とあわせて<Link href="/cost-index/" className="text-[#1E40AF] underline">坪数×馬力×費用 早見インデックス</Link>に掲載しています。以下では、規模別の目安、費用の内訳、修理費の目安、補助金をご説明します。
         </p>
 
-        {/* Installation Cost */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">
-            規模別の新規設置・交換の費用目安
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="bg-[#1E40AF] text-white">
-                  <th className="p-3 text-left">設置場所・規模</th>
-                  <th className="p-3 text-left">目安馬力</th>
-                  <th className="p-3 text-left">費用目安（機器+工事）</th>
-                </tr>
-              </thead>
-              <tbody>
-                {costTable.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="p-3 text-gray-700">{row.size}</td>
-                    <td className="p-3 text-gray-600">{row.unit}</td>
-                    <td className="p-3 font-semibold text-[#1E40AF]">{row.cost}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-gray-500 mt-2">
-            ※上記は機器代・基本工事費の目安です。配管延長・電気工事・足場設置が必要な場合は追加費用が発生します。
+          <h2 className="text-xl font-bold text-gray-800 mb-4">規模別・修理の費用について</h2>
+          <p className="text-gray-700 text-sm leading-relaxed">
+            店舗の広さ別の設置費用や、ガス補充・部品交換などの修理費用は、機種・馬力・台数・設置条件・故障の内容で大きく変わります。金額は業者の見積もりで確認してください。見積もりでは、機器代・基本工事費・配管や電気の追加工事・既設機の撤去費用が分けて記載されているかを確認すると比較しやすくなります。
           </p>
-        </section>
-
-        {/* Cost Breakdown */}
-        <section className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-10">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">費用の内訳</h2>
-          <div className="space-y-4">
-            {[
-              { item: "機器本体代", ratio: "50〜60%", desc: "室内機・室外機の機器代。馬力・グレードにより大きく変わります" },
-              { item: "基本工事費", ratio: "20〜30%", desc: "取り付け・配管・電気接続などの標準工事費" },
-              { item: "配管・電気工事", ratio: "10〜20%", desc: "配管延長・電気幹線工事が必要な場合に加算されます" },
-              { item: "既設機撤去費", ratio: "5〜10%", desc: "古い機器の取り外し・廃棄費用" },
-              { item: "その他（足場・養生等）", ratio: "5%前後", desc: "高所作業や特殊環境での追加費用" },
-            ].map((item) => (
-              <div key={item.item} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-24 text-right">
-                  <span className="bg-blue-100 text-[#1E40AF] text-xs font-bold px-2 py-1 rounded">
-                    {item.ratio}
-                  </span>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-800 text-sm">{item.item}</div>
-                  <div className="text-gray-500 text-xs">{item.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Repair Costs */}
-        <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">修理・メンテナンスの費用目安</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="bg-gray-700 text-white">
-                  <th className="p-3 text-left">工事・修理内容</th>
-                  <th className="p-3 text-left">費用目安</th>
-                </tr>
-              </thead>
-              <tbody>
-                {repairCosts.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="p-3 text-gray-700">{row.work}</td>
-                    <td className="p-3 font-semibold text-gray-800">{row.cost}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
         </section>
 
         {/* Subsidy */}
@@ -216,7 +127,7 @@ export default function CostGuidePage() {
           <ol className="space-y-3 text-sm text-amber-700">
             <li className="flex gap-2">
               <span className="font-black">1.</span>
-              <span><strong>相見積もりを3社以上取る</strong> — 同じ工事内容でも20〜40%の価格差が生じることがあります</span>
+              <span><strong>相見積もりを3社以上取る</strong> — 業者によって機器の仕入れ値や工事の範囲が異なるため、同じ条件で比較します</span>
             </li>
             <li className="flex gap-2">
               <span className="font-black">2.</span>
