@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "ミツモア（みつもあ）の口コミ・評判は？業務用エアコンの一括見積もり・料金・手数料の仕組み【2026年10月】",
+    "ミツモア（みつもあ）とは？見積無料・最大5社の仕組みと手数料｜業務用エアコンでの使い方と口コミ",
   description:
-    "相見積もりサービス「ミツモア（みつもあ／mitsumoa）」（運営：株式会社ミツモア）の口コミ・評判をまとめています。業務用エアコンの一括見積もりでの利用方法、料金と手数料の仕組み、メリット・デメリット、向いている事業者について、中立的な立場でご説明します。",
+    "ミツモア（みつもあ）は株式会社ミツモアが運営する見積もりサイトです。質問に答えると最大5社の見積もりが届き、依頼者は無料で利用できます。成約手数料8〜35%は事業者側の負担です。業務用エアコンでの使い方と口コミを公式情報（2026年10月26日確認）とともにご説明します。",
   alternates: { canonical: "/company/mitsumoa" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年10月26日";
 
 const toc = [
   { id: "summary", label: "ミツモアとは" },
@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: "利用料金はかかりますか？手数料の仕組みは？",
-    a: "依頼者（利用者）は無料で見積もりを依頼できます。事業者向けページでは、事業者側の成約手数料を8%〜35%（税込8.8%〜38.5%、サービスにより異なる）としています（https://meetsmore.com/pro 2026-10-21確認）。利用者の支払いは、最終的に契約した業者の工事料金です。",
+    a: "依頼者（利用者）は無料で見積もりを依頼できます。事業者向けページでは、事業者側の成約手数料を8%〜35%（税込8.8%〜38.5%、サービスにより異なる）としています（https://meetsmore.com/pro 2026-10-26確認）。利用者の支払いは、最終的に契約した業者の工事料金です。",
   },
   {
     q: "見積もりはどのくらいで届きますか？",
@@ -87,6 +87,10 @@ const faqs = [
   {
     q: "業者とのトラブル時はミツモアが対応してくれますか？",
     a: "ミツモアは依頼者と事業者をつなぐ見積もりプラットフォームで、作業内容や契約条件のやり取りは事業者とチャットなどで直接行います。トラブル時の補償・対応範囲は公式の利用規約・補償制度の条件をご確認のうえ、契約条件・作業範囲・保証はチャットで事前に確認し、記録を残しておくことをおすすめします。",
+  },
+  {
+    q: "「みつもあ」「ミツモア」の公式サイトはどこですか？",
+    a: "公式サイトは https://meetsmore.com/ です。英字表記は MeetsMore で、ひらがなの「みつもあ」も同じサービスを指します。運営会社の情報は公式の会社概要（https://meetsmore.com/company）に掲載されています（2026-10-26確認）。",
   },
   {
     q: "運営会社はどこですか？",
@@ -98,9 +102,9 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "ミツモアの口コミ・評判は？業務用エアコンの一括見積もり・料金の仕組みを解説",
+    "ミツモア（みつもあ）とは？業務用エアコンの見積もりの仕組み・手数料と口コミ",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-10-26",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -144,14 +148,14 @@ export default function Page() {
             業務用エアコン業者の口コミ・評判
           </p>
           <h1 className="text-[1.7rem] leading-snug md:text-[2.1rem] md:leading-tight font-bold text-slate-900">
-            ミツモアの口コミ・評判は？
+            ミツモア（みつもあ）とは？
             <br className="hidden md:block" />
-            業務用エアコンの一括見積もり・料金の仕組みを解説
+            業務用エアコンの見積もりの仕組み・手数料と口コミ
           </h1>
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-26">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -184,7 +188,16 @@ export default function Page() {
         {/* 要点 */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
-            <p className="font-bold text-teal-800 mb-2">ミツモアの評判の要点と業務用エアコンでの利用可否</p>
+            <p className="font-bold text-teal-800 mb-2">ミツモア（みつもあ）とは</p>
+            <ul className="mb-4 space-y-1 text-[0.95rem] leading-7 text-slate-700 list-disc pl-5">
+              <li>株式会社ミツモア（2017年2月8日設立・東京都中央区銀座）が運営する見積もりサイトです。公式サイトは meetsmore.com です。</li>
+              <li>依頼したいサービスを選んで質問に答えると見積もり依頼が自動で作成され、<strong className="font-semibold">最大5社</strong>の見積もりが届きます。</li>
+              <li>依頼者は<strong className="font-semibold">見積無料</strong>です。成約手数料8%〜35%（税込8.8%〜38.5%・サービスにより異なる）は事業者側が負担します。</li>
+              <li>エアコン取り付けのカテゴリがあり、業務用エアコンの設置・入れ替えに対応する業者からも見積もりを取れます。</li>
+            </ul>
+            <p className="mb-4 text-xs text-slate-500">
+              出典：<a href="https://meetsmore.com/" target="_blank" rel="nofollow noopener" className="underline">ミツモア公式サイト</a>（見積無料・最大5社）、<a href="https://meetsmore.com/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>、<a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">事業者向けページ</a>（いずれも2026-10-26確認）
+            </p>
             <p className="text-[0.95rem] leading-7 text-slate-700">
               ミツモアは<strong className="font-semibold">見積もりプラットフォーム</strong>（運営：株式会社ミツモア）で、業務用エアコンの入れ替えにも利用できます。確認できた口コミでは<strong className="font-semibold">複数社から一度に見積もりがもらえる点・申し込み前にチャットで疑問点を問い合わせできる点</strong>を評価する声があります。一方、業者とのやり取りの煩雑さを指摘する声もあります。早い段階で候補を絞り込むことをおすすめします。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金・手数料の仕組み</a>をご覧ください。
             </p>
@@ -235,6 +248,7 @@ export default function Page() {
                   {[
                     ["サービス名", "ミツモア（見積もりプラットフォーム）"],
                     ["運営会社", "株式会社ミツモア"],
+                    ["所在地", "東京都中央区銀座7-16-12 G7ビルディング8階"],
                     ["設立", "2017年"],
                     ["サービス形態", "質問回答型の見積もりプラットフォーム"],
                     ["取扱サービス数", "600種類以上（公式）"],
@@ -253,7 +267,7 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：<a href="https://meetsmore.com/" target="_blank" rel="nofollow noopener" className="underline">ミツモア公式サイト</a>（「サービス600種類以上」「見積無料」）、<a href="https://meetsmore.com/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>（設立2017年2月8日）、<a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">事業者向けページ</a>（成約手数料）（いずれも2026-10-21確認）。サービス数等は変更される場合があります。
+              出典：<a href="https://meetsmore.com/" target="_blank" rel="nofollow noopener" className="underline">ミツモア公式サイト</a>（「サービス600種類以上」「見積無料」）、<a href="https://meetsmore.com/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>（設立2017年2月8日・所在地）、<a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">事業者向けページ</a>（成約手数料）（いずれも2026-10-26確認）。サービス数等は変更される場合があります。
             </p>
           </section>
 
@@ -401,7 +415,7 @@ export default function Page() {
               複数社の見積もりが届くため相場を把握しやすい一方、契約条件や作業範囲は当事者間で確認する必要があります。チャットで内訳・追加費用・保証を確認したうえで契約することをおすすめします。
             </p>
             <p className="mt-3 text-xs text-slate-400">
-              ※出典：<a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">ミツモア 事業者向けページ</a>（2026-10-21確認）。手数料の割合はサービスにより異なります。最新の料金・条件は見積もり時にご確認ください。
+              ※出典：<a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">ミツモア 事業者向けページ</a>（2026-10-26確認）。手数料の割合はサービスにより異なります。最新の料金・条件は見積もり時にご確認ください。
             </p>
           </section>
 
