@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-sohonpo" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年10月27日";
 
 const toc = [
   { id: "summary", label: "エアコン総本舗とは" },
@@ -97,7 +97,7 @@ const articleJsonLd = {
   headline:
     "エアコン総本舗の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-10-27",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -139,7 +139,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-27">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -169,6 +169,29 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <p className="font-bold text-slate-900 mb-3">エアコン総本舗とは・エアコン総本店との違い（2026年10月27日確認）</p>
+            <ul className="space-y-3 text-[0.95rem] leading-7 text-slate-700 list-disc pl-5">
+              <li>
+                エアコン総本舗は、株式会社フジテック（東京都品川区東五反田）が運営する業務用・家庭用エアコンの販売と取り付け工事の専門店です。公式サイトは <a href="https://ac.fj-tec.co.jp/" target="_blank" rel="nofollow noopener" className="text-teal-700 underline underline-offset-4">ac.fj-tec.co.jp</a>、電話は0120-366-244です。
+              </li>
+              <li>
+                公式サイトの工事エリアは東京・神奈川・埼玉・千葉・群馬・静岡・山梨ほかです。他社で購入した商品や持ち込み品の取り付け、工事のみの依頼、エアコンの修理は受け付けていません。
+              </li>
+              <li>
+                名前の似た「エアコン総本店」は、東洋電興株式会社（東京都千代田区外神田・1981年設立）が運営する別の会社です。詳しくは
+                <Link href="/company/aircon-sohonten/" className="text-teal-700 underline underline-offset-4">エアコン総本店の会社ページ</Link>
+                をご覧ください。
+              </li>
+            </ul>
+            <p className="mt-3 text-xs text-slate-400">
+              出典：<a href="https://ac.fj-tec.co.jp/" target="_blank" rel="nofollow noopener" className="underline">エアコン総本舗公式サイト</a>、<a href="https://ac.fj-tec.co.jp/law/" target="_blank" rel="nofollow noopener" className="underline">同 特定商取引法に基づく表記</a>、<a href="https://www.1981airconsohonten.jp/law/" target="_blank" rel="nofollow noopener" className="underline">エアコン総本店 特定商取引表記</a>（2026年10月27日確認）
+            </p>
+          </div>
+        </div>
 
         {/* 要点 */}
         <div className="max-w-3xl mx-auto px-5 pt-8">

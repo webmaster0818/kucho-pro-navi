@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title:
     "生活110番は怪しい？口コミ・評判と業務用エアコンでの使い方・加盟店の仕組み【2026年】",
   description:
-    "生活トラブル総合サービス「生活110番」（運営：シェアリングテクノロジー株式会社）の口コミ・評判をまとめています。業務用エアコンの設置・修理での利用可否、加盟店紹介型の仕組み、料金、メリット・デメリット、向いている事業者について、中立的な立場でご説明します。",
+    "生活110番は東証上場のシェアリングテクノロジー株式会社（証券コード3989）が運営する業者紹介サービスで、全国7,600社以上の提携業者から無料で紹介を受けられます。怪しいと言われる理由、口コミ・評判の傾向、業務用エアコンでの使い方を公式情報（2026年10月27日確認）とともにご説明します。",
   alternates: { canonical: "/company/seikatsu-110" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年10月27日";
 
 const toc = [
   { id: "summary", label: "生活110番とは" },
@@ -120,7 +120,7 @@ const articleJsonLd = {
   headline:
     "生活110番は怪しい？口コミ・評判と業務用エアコンでの使い方・加盟店の仕組み【2026年】",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-10-27",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -171,7 +171,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-27">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -200,6 +200,30 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <p className="font-bold text-slate-900 mb-3">生活110番は怪しい？評判は？（2026年10月27日確認）</p>
+            <ul className="space-y-3 text-[0.95rem] leading-7 text-slate-700 list-disc pl-5">
+              <li>
+                <strong className="font-semibold">生活110番とは：</strong>東証上場のシェアリングテクノロジー株式会社（証券コード3989・名古屋市）が運営する業者紹介サービスです。公式サイトでは「全国7,600社以上の提携業者」の中から、希望の地域で対応できる専門業者を無料で紹介すると説明しています（受付は24時間365日）。
+              </li>
+              <li>
+                <strong className="font-semibold">「怪しい」と言われる理由：</strong>受付窓口と実際に作業する業者（提携業者）が別で、料金や対応の質が業者ごとに違うためです。運営会社の実態が不明なサービスではありません。
+              </li>
+              <li>
+                <strong className="font-semibold">評判の傾向：</strong>本記事で引用した口コミでは、紹介や駆けつけの早さを評価する声がある一方、作業後の追加請求や予約が先になったことを指摘する声もあります。
+              </li>
+              <li>
+                <strong className="font-semibold">依頼前の確認：</strong>作業前に見積もりを書面で受け取り、追加費用が出る条件を確認してください。個人として依頼した契約のトラブルは、消費者ホットライン188で最寄りの消費生活相談窓口を案内してもらえます。
+              </li>
+            </ul>
+            <p className="mt-3 text-xs text-slate-400">
+              出典：<a href="https://www.seikatsu110.jp/" target="_blank" rel="nofollow noopener" className="underline">生活110番公式サイト</a>、<a href="https://sharing-tech.co.jp/company-profile/" target="_blank" rel="nofollow noopener" className="underline">シェアリングテクノロジー株式会社 会社概要</a>、<a href="https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/" target="_blank" rel="nofollow noopener" className="underline">消費者庁「消費者ホットライン」</a>（いずれも2026年10月27日確認）
+            </p>
+          </div>
+        </div>
 
         {/* 要点 */}
         <div className="max-w-3xl mx-auto px-5 pt-8">

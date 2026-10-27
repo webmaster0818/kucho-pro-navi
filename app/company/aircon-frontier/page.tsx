@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-frontier" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年10月27日";
 
 const toc = [
   { id: "summary", label: "エアコンフロンティアとは" },
@@ -110,7 +110,7 @@ const articleJsonLd = {
   headline:
     "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-10-27",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -152,7 +152,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-27">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -182,6 +182,27 @@ export default function Page() {
           </p>
         </div>
 
+
+        {/* 即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <p className="font-bold text-slate-900 mb-3">エアコンフロンティアとは（2026年10月27日確認）</p>
+            <ul className="space-y-3 text-[0.95rem] leading-7 text-slate-700 list-disc pl-5">
+              <li>
+                横浜市のアトム冷熱工業株式会社（創業1946年・特定建設業許可 第64687号）が運営する、業務用エアコンの機器販売と取り付け工事の専門サイトです。公式サイトによると2014年に開設されました。
+              </li>
+              <li>
+                工事は全国に対応し、本体は全国送料無料です（離島・一部地域とメーカーによっては送料がかかります）。リースは月額3,100円からの案内があります。
+              </li>
+              <li>
+                公式サイトは <a href="https://aircon-f.co.jp/" target="_blank" rel="nofollow noopener" className="text-teal-700 underline underline-offset-4">aircon-f.co.jp</a>、電話の受付は平日9:00〜17:30（0120-620-500）です。
+              </li>
+            </ul>
+            <p className="mt-3 text-xs text-slate-400">
+              出典：<a href="https://aircon-f.co.jp/" target="_blank" rel="nofollow noopener" className="underline">エアコンフロンティア公式サイト</a>、<a href="https://aircon-f.co.jp/deals/lease.php" target="_blank" rel="nofollow noopener" className="underline">リースのご案内</a>（2026年10月27日確認）
+            </p>
+          </div>
+        </div>
 
         {/* 要点 */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
@@ -247,7 +268,8 @@ export default function Page() {
                     ["対応エリア", "全国（各地域の認定・提携工事店が施工を担当）"],
                     ["取扱メーカー", "ダイキン／三菱電機／三菱重工／日立／東芝／パナソニック ほか"],
                     ["保証", "メーカー保証＋有償の延長保証（最長10年）"],
-                    ["受付時間", "平日 9:00〜18:00（電話：0120-620-500）"],
+                    ["受付時間", "平日 9:00〜17:30（電話：0120-620-500）"],
+                    ["建設業許可", "特定建設業許可 第64687号（公式サイト記載）"],
                   ].map(([k, v], i) => (
                     <tr key={k} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
                       <th className="text-left align-top font-semibold text-slate-600 w-1/3 px-4 py-3 border-b border-slate-100">
