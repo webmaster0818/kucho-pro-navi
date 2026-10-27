@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -18,7 +19,7 @@ export default function ContentPolicyPage() {
 
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">記事の制作ポリシー</h1>
-          <p className="text-gray-500 text-sm">最終更新日：2026年10月23日</p>
+          <p className="text-gray-500 text-sm">最終更新日：2026年10月27日</p>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-200 p-8 space-y-8 text-sm leading-relaxed text-gray-700">
@@ -75,6 +76,11 @@ export default function ContentPolicyPage() {
             <h2 className="text-base font-bold text-gray-900 mb-3 pb-2 border-b-2 border-[#1E40AF]">更新頻度</h2>
             <p>
               ランキングページは定期的（概ね月1回以上）に見直しを行い、市場状況・業者の変更に応じて更新します。コラム・ガイド記事は情報の陳腐化が確認された場合に随時更新します。各ページの最終更新日を記載し、情報の鮮度を読者が確認できるようにしています。
+            </p>
+            <p className="mt-2">
+              2026年10月27日、
+              <Link href="/company/kucho-expert/" className="text-[#1E40AF] underline">空調エキスパート</Link>
+              をランキングから外しました。お問い合わせ先がエアコンフロンティアと同じためです。会社ページは引き続き掲載しています。
             </p>
           </section>
 

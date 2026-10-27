@@ -3,7 +3,10 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
-import companies from "@/data/companies.json";
+import allCompanies from "@/data/companies.json";
+
+// rankingListed: false の会社（空調エキスパート＝問い合わせ先がエアコンフロンティアと同じ）は順位・おすすめに並べない。会社ページは残す
+const companies = allCompanies.filter((c) => c.rankingListed !== false);
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/" },
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
     `業務用エアコン業者のおすすめ${companies.length}社のランキングです。販売・施工の専門店、紹介・見積もりサービス、販売のみの通販の違いと、建設業許可・フロン類充塡回収業者登録の確認方法を公的機関の出典とともにご説明します。`,
 };
 
-const UPDATED = "2026年10月23日";
+const UPDATED = "2026年10月27日";
 const CHECKED = "2026年10月23日";
 
 const SRC = {

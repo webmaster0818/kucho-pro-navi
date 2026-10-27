@@ -3,7 +3,10 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
-import companies from "@/data/companies.json";
+import allCompanies from "@/data/companies.json";
+
+// rankingListed: false の会社（空調エキスパート＝問い合わせ先がエアコンフロンティアと同じ）は順位・おすすめに並べない。会社ページは残す
+const companies = allCompanies.filter((c) => c.rankingListed !== false);
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/lease/" },

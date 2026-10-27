@@ -224,6 +224,11 @@ export default function Page() {
             <p className="mt-4 leading-8 text-slate-700">
               ダイキン・三菱電機・三菱重工・日立・東芝・パナソニックなど主要メーカーの機種を幅広く扱い、本体＋工事の販売だけでなく、初期費用を抑えられるリース契約にも対応しているのが特徴です。
             </p>
+            <p className="mt-4 leading-8 text-slate-700">
+              業務用エアコンの情報サイト「空調エキスパート」は2025年4月1日にアトム冷熱工業株式会社へ譲渡され、販売・施工のお問い合わせはエアコンフロンティアが受け付けています（2026年10月23日確認）。経緯は
+              <Link href="/company/kucho-expert/" className="text-teal-700 underline underline-offset-4">空調エキスパートの会社ページ</Link>
+              をご覧ください。
+            </p>
           </section>
 
           {/* Company table */}

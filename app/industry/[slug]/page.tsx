@@ -51,8 +51,9 @@ export default async function IndustryPage(props: {
   const industry = industries.find((i) => i.slug === slug);
   if (!industry) notFound();
 
-  const relatedCompanies = companiesData.filter((c) =>
-    industry.recommendedCompanies.includes(c.slug)
+  // rankingListed: false の会社はおすすめに並べない（会社ページは残す）
+  const relatedCompanies = companiesData.filter(
+    (c) => c.rankingListed !== false && industry.recommendedCompanies.includes(c.slug)
   );
 
   return (
