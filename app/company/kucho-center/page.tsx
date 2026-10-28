@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/kucho-center" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年10月28日";
 
 const toc = [
   { id: "summary", label: "空調センターとは" },
@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "運営会社はどこですか？",
-    a: "空調センターは業務用エアコンの販売専門店として運営されています。運営法人の詳細は公式サイトの会社概要で確認できます。購入前に、運営者情報・支払い方法・返品条件などもあわせてご確認ください。",
+    a: "株式会社空調センター（東京都品川区西五反田）が運営しています（公式サイトの特定商取引法の表記で確認）。購入前に、運営者情報・支払い方法・返品条件などもあわせてご確認ください。",
   },
 ];
 
@@ -84,7 +84,7 @@ const articleJsonLd = {
   headline:
     "空調センターの口コミ・評判は？業務用エアコンの料金・対応エリアを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-10-28",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -135,7 +135,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-28">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -164,6 +164,22 @@ export default function Page() {
           <p className="mt-4 text-sm leading-7 text-slate-500">
             ※本記事の口コミは、掲載サイトで公開されている内容を、出典ページを明記したうえで原文のまま引用したものです。料金や在庫は時期により変わるため、最新情報は公式サイトでご確認ください（出典確認日：2026年10月21日）。
           </p>
+        </div>
+
+        {/* 結論即答 */}
+        <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
+            <p className="font-bold text-teal-800 mb-2">空調センターとは？評判を見る前に確認したい要点</p>
+            <ul className="text-[0.95rem] leading-7 text-slate-700 list-disc pl-5 space-y-1">
+              <li>株式会社空調センター（東京都品川区西五反田）が運営する、<strong className="font-semibold">業務用エアコン本体の通販専門店</strong>です（公式サイト：tokyo-aircon.net）</li>
+              <li><strong className="font-semibold">新規設置・入れ替えの工事は行っていません</strong>。部材のみの購入にも対応していないため、工事は別の業者に依頼します</li>
+              <li>本体は全国送料無料（離島・一部地域は送料がかかる場合あり）。メーカー直送で最短翌日納品（商品により異なる）</li>
+              <li>お客様都合の交換・返品は受け付けていません。納品後のアフターサービスは1年間保証としています</li>
+            </ul>
+            <p className="mt-3 text-[0.95rem] leading-7 text-slate-700">
+              本体価格を抑えて工事は地元の業者に頼みたい場合に向く一方、機種選定と工事の段取りは自分で行う必要があります。口コミは<a href="#good" className="text-teal-700 underline underline-offset-4">良い口コミ・評判</a>の節で出典とともに紹介しています（<a href="https://www.tokyo-aircon.net/law.php" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">特定商取引法の表記</a>・公式トップで2026年10月28日確認）。
+            </p>
+          </div>
         </div>
 
         {/* TOC */}
@@ -213,7 +229,7 @@ export default function Page() {
                     ["サービス名", "空調センター（業務用エアコン販売専門店）"],
                     ["サービス区分", "本体販売のみ（新規設置・入替工事は非対応）"],
                     ["価格の特徴", "最大83%OFFの価格訴求"],
-                    ["配送", "全国送料無料"],
+                    ["配送", "全国送料無料（離島・一部地域を除く）"],
                     ["対応エリア", "全国（販売・通販。設置工事は対象外）"],
                     ["納期", "最短翌日納品（在庫状況による）"],
                     ["運営会社", "株式会社空調センター（東京都品川区）"],

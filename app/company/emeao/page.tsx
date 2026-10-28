@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/emeao" },
 };
 
-const UPDATED = "2026年10月19日";
+const UPDATED = "2026年10月28日";
 
 const toc = [
   { id: "summary", label: "EMEAO!とは" },
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "運営会社はどこですか？",
-    a: "EMEAO!は、東京に拠点を置く株式会社eclore（エクロール）が運営しています。設立から10年以上の実績があり、業者マッチングサイトの運営やWebマーケティング事業を手がけています。",
+    a: "EMEAO!は、株式会社eclore（エクロール、東京都新宿区・2008年1月11日設立）が運営しています。同社はEMEAO!のほか、SEO・運用型広告などのWebマーケティング事業を手がけています。",
   },
 ];
 
@@ -76,7 +76,7 @@ const articleJsonLd = {
   headline:
     "EMEAO!（エミーオ）の口コミ・評判は？業務用エアコンの一括見積もりの仕組みを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-19",
+  dateModified: "2026-10-28",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -127,7 +127,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-19">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-28">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -161,9 +161,16 @@ export default function Page() {
         {/* 結論即答 */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
-            <p className="font-bold text-teal-800 mb-2">EMEAO!（エミーオ）の評判の要点</p>
-            <p className="text-[0.95rem] leading-7 text-slate-700">
-              EMEAO!は<strong className="font-semibold">コンシェルジュ型の業者マッチング（一括見積もり）サービス</strong>（運営：株式会社eclore）です。公式サイトの利用者の声は業者探しの時間短縮・紹介スピードを評価する内容です。一方、<strong className="font-semibold">紹介は最大8社で、紹介後は各社から直接連絡が来て、打ち合わせ・見積もりのやり取りは発注者自身で行う</strong>仕組みです（公式）。あらかじめご確認ください。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金の仕組み</a>をご覧ください。
+            <p className="font-bold text-teal-800 mb-2">EMEAO!（エミーオ）とは？評判の要点</p>
+            <ul className="text-[0.95rem] leading-7 text-slate-700 list-disc pl-5 space-y-1">
+              <li>読み方は「エミーオ」。専任コンシェルジュが条件を聞き取り、合う業者を紹介する<strong className="font-semibold">業者マッチング（一括見積もり）サービス</strong>です</li>
+              <li>運営は株式会社eclore（東京都新宿区・2008年1月11日設立）</li>
+              <li><strong className="font-semibold">発注者の利用料は無料</strong>。運営費は掲載業者からの紹介手数料でまかなわれています</li>
+              <li>紹介は最大8社。ヒアリング完了から最短5分で業者から直接連絡が来て、打ち合わせ・見積もりは発注者が各社と直接行います</li>
+              <li>電話受付は平日9:00〜18:00（フリーダイヤル）</li>
+            </ul>
+            <p className="mt-3 text-[0.95rem] leading-7 text-slate-700">
+              公式サイトの利用者の声は、業者探しの時間短縮・紹介の速さを評価する内容です。複数社から連絡が来る仕組みのため、比較する社数や連絡の希望はヒアリングの段階で伝えておくと進めやすくなります。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金の仕組み</a>をご覧ください（<a href="https://emeao.jp/faq/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">よくある質問</a>・<a href="https://eclr.jp/company/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">運営会社</a>で2026年10月28日確認）。
             </p>
           </div>
         </div>
@@ -213,9 +220,9 @@ export default function Page() {
                     ["サービス名", "EMEAO!（エミーオ）"],
                     ["サービス種別", "業者マッチング・一括見積もりサービス（BtoB）"],
                     ["運営会社", "株式会社eclore（エクロール）"],
-                    ["所在地", "東京都"],
+                    ["所在地", "東京都新宿区新宿2-8-6"],
                     ["対応エリア", "全国（紹介される業者の対応範囲による）"],
-                    ["紹介社数", "条件に合う最大8社程度"],
+                    ["紹介社数", "条件に合う業者を最大8社"],
                     ["利用料金", "発注側は無料"],
                     ["特徴", "専任コンシェルジュが業者選びをサポート／登録業者は事前審査あり"],
                   ].map(([k, v], i) => (
@@ -292,7 +299,7 @@ export default function Page() {
               <a href="https://emeao.jp/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">EMEAO! 公式サイト</a>
               ・
               <a href="https://emeao.jp/faq/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">よくある質問</a>
-              （2026年10月19日確認）。
+              （2026年10月19日確認。利用料・紹介社数・受付時間は2026年10月28日に再確認）。
             </p>
           </section>
 

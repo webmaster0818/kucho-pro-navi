@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-no-mori" },
 };
 
-const UPDATED = "2026年10月20日";
+const UPDATED = "2026年10月28日";
 const CHECKED = "2026年10月20日確認";
 const OFFICIAL = "https://www.airconnomori.com";
 
@@ -105,7 +105,7 @@ const articleJsonLd = {
   headline:
     "エアコンの森の口コミ・評判は？運営会社・料金・対応エリアを公式情報で確認",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-20",
+  dateModified: "2026-10-28",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -158,7 +158,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-20">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-28">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -194,6 +194,21 @@ export default function Page() {
               <li>2026年6月2日以降、北海道・沖縄・離島への取付工事は受け付けていない（本体配送は全国）</li>
               <li>原則として発送後のキャンセル・返品・交換は不可。繁忙期は工事訪問まで3〜5週間以降が目安とした告知あり</li>
             </ul>
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto px-5 pt-6">
+          <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
+            <p className="font-bold text-amber-800 mb-2">エアコンの森の評判は？（価格.comのショップ評価）</p>
+            <p className="text-[0.95rem] leading-7 text-slate-700">
+              価格.comのショップ評価では、「またこのショップを利用したいですか？」に<strong className="font-semibold">「はい」と答えた割合が全期間で95%（投稿数492件）</strong>、最近6か月では83%（投稿数6件）です。項目別（全期間）では、注文のスムーズさ・期日どおりの到着・梱包がいずれも98%、ショップの連絡・対応が95%です。
+            </p>
+            <p className="mt-3 text-[0.95rem] leading-7 text-slate-700">
+              最近の投稿では「予定日通りの配達でした」「数日で届きました」など配送への評価がある一方、標準設置工事を頼んだが施工業者がなかなか工事しない・高額の追加費用を請求された、延長保証の連絡がない、という不満の投稿（2026年6月）もあります。本体の配送と取付工事は分けて評価を確認し、工事を頼む場合は追加費用の条件を事前に確かめることをおすすめします。
+            </p>
+            <p className="mt-3 text-xs leading-6 text-slate-500">
+              出典：<a href="https://kakaku.com/shopreview/1794/" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">価格.com「激安エアコン専門店エアコンの森 ショップ評価」</a>（2026年10月28日確認）。評価は投稿者の主観による目安です。
+            </p>
           </div>
         </div>
 
@@ -259,7 +274,7 @@ export default function Page() {
               公式サイトのメニュー（ご利用案内・よくある質問・お知らせ等）には、利用者の声や施工事例を掲載したページは見当たりませんでした（{CHECKED}）。
               当ページでは以前、通販モール等のレビューとして利用者の声を掲載していましたが、
               <strong className="font-semibold">掲載元のページを特定できなかったため削除</strong>
-              しました。評価の点数や件数も、出典を確認できないため掲載していません。
+              しました。評価の点数と件数は、ページを特定できた価格.comのショップ評価（<a href="https://kakaku.com/shopreview/1794/" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">激安エアコン専門店エアコンの森 ショップ評価</a>・2026年10月28日確認）を冒頭に掲載しています。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               エアコンの森の口コミ・評判を調べるときは、次の点を分けて確認すると判断しやすくなります。
