@@ -21,6 +21,8 @@ interface Industry {
   recommendedCompanies: string[];
   faqs: FAQ[];
   updated?: string;
+  /** ページの最終変更日（出典の確認日 updated と別。未指定なら updated） */
+  modified?: string;
   keyFacts?: string[];
   sources?: { label: string; url: string }[];
 }
@@ -87,7 +89,7 @@ export default async function IndustryPage(props: {
             </ul>
             {industry.updated && (
               <p className="mt-4 text-xs text-gray-500">
-                最終更新：<time dateTime={industry.updated}>{industry.updated.replace(/^(\d+)-0?(\d+)-0?(\d+)$/, "$1年$2月$3日")}</time>
+                最終更新：<time dateTime={industry.modified ?? industry.updated}>{(industry.modified ?? industry.updated).replace(/^(\d+)-0?(\d+)-0?(\d+)$/, "$1年$2月$3日")}</time>
               </p>
             )}
           </div>
