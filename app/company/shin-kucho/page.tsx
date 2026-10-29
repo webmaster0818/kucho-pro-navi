@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/shin-kucho" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年10月29日";
 
 const toc = [
   { id: "summary", label: "新空調とは" },
@@ -57,7 +57,11 @@ const faqs = [
   },
   {
     q: "対応エリアはどこまでですか？",
-    a: "名古屋市全域を中心に、愛知県を主な対応エリアとしています。家庭用エアコンについては名古屋市北区・春日井市・守山区などにも対応しています。エリア外の場合は、問い合わせ時にご確認ください。",
+    a: "公式サイトでは「愛知・岐阜・三重の業務用エアコン販売・取り付け工事専門店」としており、施工実績は名古屋市と愛知県内が中心です。公式の対応エリアのページには全国の都道府県が掲載されていますが、地域によって対応日数が異なり、メーカーによっては施工に対応していない地域があると案内されています。愛知・岐阜・三重以外の場合は、問い合わせ時にご確認ください（公式サイト 2026-10-29確認）。",
+  },
+  {
+    q: "見積もりは無料ですか？料金はいくらですか？",
+    a: "公式のよくある質問では、業務用エアコンの新規取り付け工事・買い替えの見積もりは無料、県外でも見積もりの出張費は無料とされています。現地調査後1〜3日程度で正式見積もりが出ます。業務用エアコンの料金表は公式サイトに掲載されていないため、金額は機種・台数・設置場所に応じた見積もりで確認します（公式サイト 2026-10-29確認）。",
   },
   {
     q: "中古の業務用エアコンも扱っていますか？",
@@ -79,7 +83,7 @@ const articleJsonLd = {
   headline:
     "新空調の口コミ・評判は？名古屋の業務用エアコン専門店の料金・対応エリアを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-10-29",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -121,7 +125,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-29">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -140,6 +144,16 @@ export default function Page() {
 
         {/* Lead */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-5 mb-6">
+            <p className="font-bold text-slate-900 mb-2">新空調とは（要点）</p>
+            <ul className="space-y-1.5 text-[0.95rem] leading-7 text-slate-700 list-disc pl-5">
+              <li>運営は<strong className="font-semibold">有限会社新空調</strong>（愛知県名古屋市北区龍ノ口町2-14・2000年5月創立）。建設業許可は愛知県知事許可（般-29）第108842号です。</li>
+              <li>サービス内容は、業務用エアコンの販売・取り付け工事・交換・修理・クリーニング・リース。新品のほか中古機も扱い、全メーカーに対応すると案内しています。公式サイトでは取付件数1万件超としています。</li>
+              <li>料金は公式サイトに料金表が無く、現地調査のうえ見積もりで決まります。見積もりは無料（県外も出張費無料）、正式見積もりは1〜3日程度、取り付け工事保証は5年です。</li>
+              <li>受付は9:00〜21:00・年中無休（フリーダイヤル 0120-979-760）。依頼後の返品・キャンセルは基本的に不可とされています。</li>
+            </ul>
+            <p className="mt-2 text-xs text-slate-500">出典：新空調公式サイト（<a href="https://www.ecoaircon.jp/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>・<a href="https://www.ecoaircon.jp/faq" target="_blank" rel="nofollow noopener" className="underline">よくある質問</a>・<a href="https://www.ecoaircon.jp/" target="_blank" rel="nofollow noopener" className="underline">トップ</a>、2026-10-29確認）</p>
+          </div>
           <p className="text-[1.05rem] leading-8 text-slate-700">
             名古屋エリアで業務用エアコンの入れ替えを検討する際は、地元で信頼できる業者を選ぶことが重要です。
             本記事では、名古屋の業務用エアコン専門店として知られる
@@ -195,9 +209,12 @@ export default function Page() {
                   {[
                     ["サービス名", "新空調（業務用エアコン専門店）"],
                     ["運営会社", "有限会社新空調"],
-                    ["所在地", "愛知県名古屋市北区"],
+                    ["所在地", "愛知県名古屋市北区龍ノ口町2-14"],
+                    ["創立", "2000年5月"],
+                    ["営業時間", "9:00〜21:00（年中無休）"],
+                    ["建設業許可", "愛知県知事許可（般-29）第108842号（管工事業・内装仕上工事業）"],
                     ["事業内容", "業務用エアコンの販売・交換・修理・リース・工事、家庭用エアコン工事"],
-                    ["対応エリア", "名古屋市全域を中心とした愛知県エリア"],
+                    ["対応エリア", "愛知・岐阜・三重が中心（公式の対応エリアページには全国の都道府県を掲載・地域により対応日数が異なる）"],
                     ["取扱機種", "主要メーカーの新品／中古の業務用エアコン"],
                     ["保証", "取り付け工事保証5年（公式）＋機器メーカー保証"],
                     ["特徴", "地域密着・即日対応可（在庫・スケジュール次第）・中古取扱あり"],
@@ -213,7 +230,7 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：新空調公式サイト（会社概要）。所在地・対応エリア等は変更される場合があります。最新情報は公式サイトでご確認ください。
+              出典：新空調公式サイト（<a href="https://www.ecoaircon.jp/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>・<a href="https://www.ecoaircon.jp/area" target="_blank" rel="nofollow noopener" className="underline">対応エリア</a>、2026-10-29確認）。所在地・対応エリア等は変更される場合があります。最新情報は公式サイトでご確認ください。
             </p>
           </section>
 
@@ -265,8 +282,8 @@ export default function Page() {
             </h2>
             <p className="leading-8 text-slate-700 mb-6">
               新空調は地域密着の中小規模の専門店であるため、インターネット上で公開されている第三者の口コミ件数は多くありません。注意点として挙げられるのは、
-              <strong className="font-semibold">対応エリアが愛知県中心に限られること</strong>
-              と、繁忙期は在庫や工事日程の都合により希望日に対応できない場合がある点です。全国対応の大手業者と比べると対応範囲が限られるため、エリア外の事業者には適していません。
+              <strong className="font-semibold">対応エリアが愛知・岐阜・三重中心であること</strong>
+              と、繁忙期は在庫や工事日程の都合により希望日に対応できない場合がある点です。公式の対応エリアページには全国の都道府県が掲載されていますが、地域によって対応日数が異なるため、愛知・岐阜・三重以外の事業者は事前に確認が必要です。
             </p>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
               <p className="text-slate-700 leading-7 text-[0.95rem]">
@@ -293,7 +310,7 @@ export default function Page() {
               <div className="rounded-2xl border border-slate-200 bg-white p-6">
                 <h3 className="font-bold text-slate-700 mb-3">デメリット・注意点</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
-                  <li>対応エリアが愛知県中心で、遠方の事業者は依頼しづらい</li>
+                  <li>対応エリアが愛知・岐阜・三重中心で、遠方は対応日数が異なる</li>
                   <li>第三者サイトの口コミ件数は大手ほど多くない</li>
                   <li>繁忙期は在庫・工事日程の都合で希望日に間に合わないことがある</li>
                 </ul>
@@ -318,7 +335,7 @@ export default function Page() {
               <div className="rounded-2xl border border-slate-200 p-6">
                 <h3 className="font-bold text-slate-800 mb-3">向いていない事業者</h3>
                 <ul className="space-y-2 text-slate-700 text-[0.95rem] leading-7">
-                  <li>愛知県外・全国の複数拠点をまとめて任せたい企業</li>
+                  <li>全国の複数拠点をまとめて任せたい企業</li>
                   <li>大手メーカー系列の長期保証を重視する事業者</li>
                 </ul>
               </div>
