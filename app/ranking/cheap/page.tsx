@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/ranking/cheap/" },
   title: "業務用エアコン格安業者ランキング【最安値比較2026】",
   description:
-    "業務用エアコン工事の費用を抑えたい方に向けて、低価格で工事を依頼できる業者をランキング形式でご紹介します。初期費用を抑える方法もご説明します。",
+    "業務用エアコンを格安で導入する方法（専門店の通販価格・室内機の形・整備済みの中古・相見積もりと補助金）と、ダイキン公表の工事費込み相場をご説明し、低価格で依頼できる業者をランキング形式でご紹介します。",
 };
 
 const cheapRanking = [...companies]
@@ -34,19 +34,32 @@ export default function CheapRankingPage() {
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           業務用エアコン格安業者ランキング【最安値比較2026】
         </h1>
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          初期費用を抑えて業務用エアコンを導入したい方に向けて、費用対効果の高い業者をランキング形式で掲載しています。掲載順は平均費用の低い順です。
-        </p>
-
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
-          <h2 className="font-bold text-amber-800 mb-2">費用を抑えるポイント</h2>
-          <ul className="text-sm text-amber-700 space-y-1">
-            <li> 複数業者に見積もりを依頼し、相見積もりで比較する</li>
-            <li> 繁忙期（夏・冬の直前）を避け、閑散期に依頼する</li>
-            <li> 省エネ補助金・税制優遇を活用する</li>
-            <li> 中古・整備済み機器の活用を検討する</li>
+        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-6">
+          <p className="text-gray-800 leading-relaxed">
+            業務用エアコンを格安で導入する方法は、<strong>①専門店の通販価格で本体を買う、②設置費用の安い室内機の形を選ぶ、③整備済みの中古を選ぶ、④相見積もり・補助金・リースを使う</strong>の4つです。工事費込みの総額は、ダイキン公表の目安で5馬力以下が50万〜70万円、6馬力以上が100万〜150万円（1セットあたり・税込）のため、見積もりをこの目安と比べると安さを判断できます。
+          </p>
+          <ul className="text-sm text-gray-700 space-y-2 mt-3">
+            <li>
+              <strong>専門店の通販価格：</strong>業務用エアコン専門店は、公式サイトに馬力・形状ごとの本体価格を掲載しています。空調センターのように販売専門で取付工事を行わない店もあるため、本体価格だけでなく工事費を含めた総額で比べてください。本体価格と工事費は<Link href="/cost-index/" className="text-[#1E40AF] underline">費用早見インデックス</Link>にまとめています。
+            </li>
+            <li>
+              <strong>室内機の形：</strong>ダイキンは、壁掛形が業務用エアコンの中で設置費用を最も抑えられ、天井埋込カセット形は最も高額になる場合があるとしています。また、省エネタイプは標準タイプより本体価格が高い一方、電気代を抑えられるとしています。
+            </li>
+            <li>
+              <strong>整備済みの中古：</strong>中古を販売する専門店もあります。エアコンマートは、中古エアコンはすべて分解洗浄・試運転整備をおこなったものを販売するとしています。
+            </li>
+            <li>
+              <strong>相見積もり・補助金・リース：</strong>同じ条件で複数社の見積もりを比べます。高効率空調への更新は、国や自治体の補助金の対象になる場合があります（<Link href="/guide/timing/" className="text-[#1E40AF] underline">補助金カレンダー</Link>）。初期費用を分けて払う場合は<Link href="/ranking/lease/" className="text-[#1E40AF] underline">リース</Link>も選択肢です。
+            </li>
           </ul>
+          <p className="text-xs text-gray-500 mt-3">
+            出典：<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/49" target="_blank" rel="noopener noreferrer" className="underline">ダイキン工業「業務用エアコンの価格相場は？工事費込みでいくらが目安？」</a>、<a href="https://www.tokyo-aircon.net/" target="_blank" rel="noopener noreferrer" className="underline">空調センター公式サイト</a>、<a href="https://aircon-mart.com/" target="_blank" rel="noopener noreferrer" className="underline">エアコンマート公式サイト</a>（2026年10月30日確認）
+          </p>
         </div>
+
+        <p className="text-gray-600 mb-8 leading-relaxed">
+          以下では、初期費用を抑えて業務用エアコンを導入したい方に向けて、業者をランキング形式で掲載しています。掲載順は平均費用の低い順です。
+        </p>
 
         <div className="space-y-6">
           {cheapRanking.map((company, index) => (

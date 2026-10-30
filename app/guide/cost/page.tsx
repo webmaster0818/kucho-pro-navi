@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guide/cost/" },
   title: "業務用エアコンの費用相場は工事費込み50〜70万円（5馬力以下）｜交換費用の内訳",
   description:
-    "業務用エアコンの費用相場は、機器代金と工事代金を合わせて5馬力以下で50〜70万円、6馬力以上で100〜150万円です（ダイキン公表の税込目安・2026年10月25日確認）。交換時の撤去費や追加工事、修理費の目安もご説明します。",
+    "業務用エアコンの値段（設置費用＝機器代金＋工事代金）の相場は、5馬力以下で50〜70万円、6馬力以上で100〜150万円です（ダイキン公表の税込目安・2026年10月30日確認）。室内機の形による設置費用の違い、交換時の撤去費や追加工事もご説明します。",
 };
 
 const DAIKIN_URL = "https://www.ac.daikin.co.jp/customercenter/useful/article/49";
-const CHECKED = "2026年10月25日";
+const CHECKED = "2026年10月30日";
 
 const faqs = [
   {
     q: "業務用エアコンの費用相場は、工事費込みでいくらですか？",
-    a: "ダイキンの公表値では、機器代金と工事代金を合わせた1セットあたりの目安（税込）は、5馬力以下（一般事務所で70㎡以下が目安）で50万〜70万円、6馬力以上（同80㎡以上）で100万〜150万円です。2023年4月〜2024年3月にダイキンへ問い合わせがあり成約した案件の販売価格をもとにした数値で、配管の長さや室外機の設置場所によって変わります（2026年10月25日に公式サイトで確認）。",
+    a: "ダイキンの公表値では、機器代金と工事代金を合わせた1セットあたりの目安（税込）は、5馬力以下（一般事務所で70㎡以下が目安）で50万〜70万円、6馬力以上（同80㎡以上）で100万〜150万円です。2023年4月〜2024年3月にダイキンへ問い合わせがあり成約した案件の販売価格をもとにした数値で、配管の長さや室外機の設置場所によって変わります（2026年10月30日に公式サイトで確認）。",
   },
   {
     q: "交換（入れ替え）の場合も、同じ相場ですか？",
@@ -81,7 +81,7 @@ export default function CostGuidePage() {
         </h1>
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-4">
           <p className="text-gray-800 leading-relaxed">
-            業務用エアコンの費用相場は、機器代金と工事代金を合わせて<strong>5馬力以下で50万〜70万円、6馬力以上で100万〜150万円</strong>です（1セットあたり・税込）。これはダイキンが公表している目安で、5馬力以下は一般事務所で70㎡以下、6馬力以上は80㎡以上が目安とされています。新規の取り付けと交換（入れ替え）を区別せずに集計された数値です。
+            業務用エアコンの費用相場は、機器代金と工事代金を合わせて<strong>5馬力以下で50万〜70万円、6馬力以上で100万〜150万円</strong>です（1セットあたり・税込）。これはダイキンが公表している目安で、5馬力以下は一般事務所で70㎡以下、6馬力以上は80㎡以上が目安とされています。新規の取り付けと交換（入れ替え）を区別せずに集計された数値です。ダイキンはこの金額を「設置費用の目安」としており、6馬力以上では80万〜90万円が2番目に多い価格帯としています。
           </p>
           <p className="text-gray-700 text-sm leading-relaxed mt-3">
             交換の場合は、既設機の撤去・廃棄や冷媒の処理に数万円〜数十万円が別にかかることがあります。配管が長い場合や、室外機の設置にクレーンが必要な場合も費用が上がります。
@@ -93,6 +93,22 @@ export default function CostGuidePage() {
         <p className="text-gray-600 mb-8 leading-relaxed">
           実際の費用は、機器のサイズ・機種タイプ・設置環境・業者によって大きく異なります。馬力ごとの本体価格と標準工事費は、出典とあわせて<Link href="/cost-index/" className="text-[#1E40AF] underline">坪数×馬力×費用 早見インデックス</Link>に掲載しています。以下では、規模別の目安、費用の内訳、修理費の目安、補助金をご説明します。
         </p>
+
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-gray-800 mb-4">室内機の形と設置費用</h2>
+          <p className="text-gray-700 text-sm leading-relaxed mb-3">
+            ダイキンは、室内機の形と設置方法が設置費用に影響するとしています。設置費用が高い順は次のとおりです。
+          </p>
+          <ol className="text-sm text-gray-700 space-y-2 list-decimal pl-5">
+            <li><strong>天井埋込カセット形</strong>：重い室内機を天井裏に取り付けるうえ、新設で天井に開口が無い場合は開ける工事が必要なため、ほかの形より最も高額になる場合があります。</li>
+            <li><strong>天井吊形</strong>：天井に穴をあけずに設置できますが、重い室内機を天井から吊るす作業が必要なため、天井埋込カセット形に次いで高くなります。</li>
+            <li><strong>床置形</strong>：本体が重いため壁掛形よりは費用がかかりますが、天井吊形よりは抑えられます。</li>
+            <li><strong>壁掛形</strong>：工事の手順が家庭用と大きく違わないため、業務用エアコンの中で設置費用を最も抑えられます。</li>
+          </ol>
+          <p className="text-xs text-gray-500 mt-3">
+            出典：<a href={DAIKIN_URL} target="_blank" rel="noopener noreferrer" className="underline">ダイキン工業「業務用エアコンの価格相場は？工事費込みでいくらが目安？」</a>（{CHECKED}確認）。費用を抑える方法と低価格の業者は<Link href="/ranking/cheap/" className="text-[#1E40AF] underline">格安業者ランキング</Link>でご案内しています。
+          </p>
+        </section>
 
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 mb-4">規模別・修理の費用について</h2>
@@ -131,7 +147,7 @@ export default function CostGuidePage() {
             </li>
             <li className="flex gap-2">
               <span className="font-black">2.</span>
-              <span><strong>閑散期（春・秋）に依頼する</strong> — 夏・冬の直前は繁忙期のため、割高になりやすい傾向があります</span>
+              <span><strong>室内機の形を検討する</strong> — ダイキンは、壁掛形が業務用エアコンの中で設置費用を最も抑えられるとしています（設置できる場所かは現地調査で確認します）</span>
             </li>
             <li className="flex gap-2">
               <span className="font-black">3.</span>
