@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "くらしのマーケットの口コミ・評判は？業務用エアコン工事の料金・仕組みを解説",
+    "くらしのマーケットで業務用エアコンは頼める？取り付けの対応範囲と口コミ・評判",
   description:
-    "口コミで業者を選べるマッチングプラットフォーム「くらしのマーケット」（運営：みんなのマーケット株式会社）の口コミ・評判をまとめています。業務用エアコン工事での利用方法、料金の透明性、メリット・デメリット、向いている事業者について、中立的な立場でご説明します。",
+    "くらしのマーケットには「業務用エアコン取り付け」のカテゴリがあり、共通の作業内容は3馬力までの業務用エアコン1台の取り付け（本体は利用者が用意）です。運営会社、公式で確認できた範囲、口コミ、料金の仕組みと注意点をまとめています。",
   alternates: { canonical: "/company/kurashi-no-market" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年10月30日";
 
 const toc = [
   { id: "summary", label: "くらしのマーケットとは" },
@@ -73,7 +73,7 @@ const badReviews: Review[] = [
 const faqs = [
   {
     q: "くらしのマーケットで業務用エアコンの工事は依頼できますか？",
-    a: "はい。くらしのマーケットには空調・エアコン関連の工事業者が多数登録されており、店舗・オフィス向けの業務用エアコンの設置や取り外しにも対応する業者を探せます。ただし大型・多台数の案件は対応できる業者が限られる場合があります。",
+    a: "はい。「業務用エアコン取り付け」のカテゴリがあり、すべてのサービスに共通の作業内容は、3馬力までの業務用エアコンの取り付け（室内機1台・室外機1台・リモコン1台、本体は利用者が用意）です（公式 2026-10-30確認）。4馬力以上の機種や複数台の工事は、予約前に出店業者へメッセージで確認してください。",
   },
   {
     q: "料金はどのくらいですか？追加費用はかかりますか？",
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: "運営会社はどこですか？",
-    a: "「くらしのマーケット」は、みんなのマーケット株式会社が運営するマッチングプラットフォームです。公式サイトでは掲載カテゴリを「400種類以上」、累計出店者数を「10万店以上」としています（https://curama.jp/about/ 2026-10-21確認）。",
+    a: "「くらしのマーケット」は、みんなのマーケット株式会社が運営するマッチングプラットフォームです。公式サイトでは掲載カテゴリを「400種類以上」、累計出店者数を「10万店以上」としています（https://curama.jp/about/ 2026-10-30確認）。",
   },
 ];
 
@@ -97,9 +97,9 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "くらしのマーケットの口コミ・評判は？業務用エアコン工事の料金・仕組みを解説",
+    "くらしのマーケットで業務用エアコンは頼める？取り付けの対応範囲と口コミ・評判",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-10-30",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -143,14 +143,14 @@ export default function Page() {
             業務用エアコン業者の口コミ・評判
           </p>
           <h1 className="text-[1.7rem] leading-snug md:text-[2.1rem] md:leading-tight font-bold text-slate-900">
-            くらしのマーケットの口コミ・評判は？
+            くらしのマーケットで業務用エアコンは頼める？
             <br className="hidden md:block" />
-            業務用エアコン工事の料金・仕組みを解説
+            取り付けの対応範囲と口コミ・評判
           </h1>
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-10-30">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -169,6 +169,16 @@ export default function Page() {
 
         {/* Lead */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
+          <div className="mb-6 rounded-2xl border border-teal-200 bg-teal-50/60 p-5">
+            <p className="leading-8 text-slate-800">
+              <strong className="font-semibold">くらしのマーケットには「業務用エアコン取り付け」のカテゴリがあり、共通の作業内容は3馬力までの業務用エアコンの取り付け（室内機1台・室外機1台・リモコン1台）です。</strong>
+              エアコン本体は利用者が用意します。表示料金には、配管類の取り付け・真空引き・動作確認などの必須の作業内容が含まれます。エアコンクリーニングのカテゴリには「天井埋込タイプ」の区分があります。
+              4馬力以上の機種や複数台の工事は共通の作業内容に含まれないため、出店業者へ予約前にメッセージで確認してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              出典：<a href="https://curama.jp/commercial-aircon-install/" target="_blank" rel="nofollow noopener" className="underline">くらしのマーケット「業務用エアコン取り付け」</a>・<a href="https://curama.jp/aircon/" target="_blank" rel="nofollow noopener" className="underline">「エアコンクリーニング」</a>（共通の作業内容・区分、2026-10-30確認）
+            </p>
+          </div>
           <p className="text-[1.05rem] leading-8 text-slate-700">
             店舗やオフィスのエアコン工事を依頼する際、業者の評判を確認したうえで選びたい方に利用されているのが、口コミを見て業者を選べるマッチングプラットフォーム
             <strong className="font-semibold text-slate-900">くらしのマーケット</strong>
@@ -208,7 +218,7 @@ export default function Page() {
               です。各業者が料金を事前に明示し、利用者が口コミ・評価・対応エリアを比較して直接予約できる仕組みを特徴としています。業務用エアコンの設置・取り外しに対応する業者も登録されており、店舗・オフィス向けの工事も探すことができます。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
-              運営会社は、みんなのマーケット株式会社です。公式サイトでは掲載カテゴリを「400種類以上」、累計出店者数を「10万店以上」としています（2026-10-21確認）。料金と口コミを事前に確認できるため、業者選びの判断材料にしやすい点が特徴です。
+              運営会社は、みんなのマーケット株式会社です。公式サイトでは掲載カテゴリを「400種類以上」、累計出店者数を「10万店以上」としています（2026-10-30確認）。料金と口コミを事前に確認できるため、業者選びの判断材料にしやすい点が特徴です。
             </p>
           </section>
 
@@ -242,7 +252,7 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              出典：<a href="https://curama.jp/about/" target="_blank" rel="nofollow noopener" className="underline">くらしのマーケット「はじめての方へ」</a>（カテゴリ数・累計出店者数、2026-10-21確認）。カテゴリ数・出店者数等は変更される場合があります。
+              出典：<a href="https://curama.jp/about/" target="_blank" rel="nofollow noopener" className="underline">くらしのマーケット「はじめての方へ」</a>（カテゴリ数・累計出店者数、2026-10-30確認）。カテゴリ数・出店者数等は変更される場合があります。
             </p>
           </section>
 
