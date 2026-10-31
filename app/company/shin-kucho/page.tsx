@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/shin-kucho" },
 };
 
-const UPDATED = "2026年10月29日";
+const UPDATED = "2026年10月31日";
 
 const toc = [
   { id: "summary", label: "新空調とは" },
@@ -149,7 +149,7 @@ export default function Page() {
             <ul className="space-y-1.5 text-[0.95rem] leading-7 text-slate-700 list-disc pl-5">
               <li>運営は<strong className="font-semibold">有限会社新空調</strong>（愛知県名古屋市北区龍ノ口町2-14・2000年5月創立）。建設業許可は愛知県知事許可（般-29）第108842号です。</li>
               <li>サービス内容は、業務用エアコンの販売・取り付け工事・交換・修理・クリーニング・リース。新品のほか中古機も扱い、全メーカーに対応すると案内しています。公式サイトでは取付件数1万件超としています。</li>
-              <li>料金は公式サイトに料金表が無く、現地調査のうえ見積もりで決まります。見積もりは無料（県外も出張費無料）、正式見積もりは1〜3日程度、取り付け工事保証は5年です。</li>
+              <li>料金は公式サイトに料金表がなく、現地調査のうえ見積もりで決まります。見積もりは無料（県外も出張費無料）、正式見積もりは1〜3日程度、取り付け工事保証は5年です。</li>
               <li>受付は9:00〜21:00・年中無休（フリーダイヤル 0120-979-760）。依頼後の返品・キャンセルは基本的に不可とされています。</li>
             </ul>
             <p className="mt-2 text-xs text-slate-500">出典：新空調公式サイト（<a href="https://www.ecoaircon.jp/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>・<a href="https://www.ecoaircon.jp/faq" target="_blank" rel="nofollow noopener" className="underline">よくある質問</a>・<a href="https://www.ecoaircon.jp/" target="_blank" rel="nofollow noopener" className="underline">トップ</a>、2026-10-29確認）</p>
