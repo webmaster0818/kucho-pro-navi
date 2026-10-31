@@ -28,8 +28,8 @@ const subsidies = [
     org: "経済産業省／SII（環境共創イニシアチブ）",
     target: "業務用の高効率空調（電気式パッケージ・GHP・チリングユニット等）が主な対象です",
     rate: "1/3〜（トップ性能枠は更新1/2）・上限1億円〜数億円 ※枠により異なります（公式サイトでの確認が必要）",
-    status: "2026年は4次公募を受付中です（公募期間 2026年10月5日〜10月30日）。空調更新で中心となる制度のため、公募要領をご確認ください（2026年10月17日に公式サイトで確認）",
-    source: "syouenehojyokin.sii.or.jp",
+    status: "2026年の4次公募（2026年10月5日〜10月30日17時）は締め切られました。5次公募の概要・日程は詳細が決まり次第SIIが公表するとしています。空調更新で中心となる制度のため、次の公募を公式サイトでご確認ください（2026年10月31日に公式サイトで確認）",
+    source: "sii.or.jp/setsubi07r/overview4.html",
   },
   {
     name: "脱炭素ビルリノベ2026事業",
@@ -101,7 +101,7 @@ export default function TimingGuidePage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 leading-snug">
           業務用エアコンの入れ替え・設置はいつ発注すべき？工事が混む時期と2026年の補助金カレンダー
         </h1>
-        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日 ／ 最終更新日：2026年10月17日 ／ 空調プロナビ編集部</p>
+        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日） ／ 最終更新日：2026年10月31日 ／ 空調プロナビ編集部</p>
 
         {/* 結論即答 */}
         <div className="bg-sky-50 border border-sky-100 rounded-xl p-5 mb-8">
