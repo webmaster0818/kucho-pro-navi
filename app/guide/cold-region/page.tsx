@@ -21,6 +21,7 @@ const series = [
   {
     maker: "ダイキン",
     makerHref: "/maker/daikin/",
+    seriesHref: "/maker/daikin/sugodan-zeas/",
     name: "スゴ暖ZEAS",
     capacity: "P80〜P160形",
     items: [
@@ -34,6 +35,7 @@ const series = [
   {
     maker: "三菱電機",
     makerHref: "/maker/mitsubishi-electric/",
+    seriesHref: "/maker/mitsubishi-electric/zubadan-slim/",
     name: "ズバ暖スリム（DHシリーズ・Hシリーズ）",
     capacity: "P80〜P160形（P160形はHシリーズのみ）",
     items: [
@@ -47,6 +49,7 @@ const series = [
   {
     maker: "日立",
     makerHref: "/maker/hitachi/",
+    seriesHref: "/maker/hitachi/samusa-shirazu/",
     name: "寒さ知らず",
     capacity: "80型〜160型",
     items: [
@@ -73,6 +76,7 @@ const series = [
   {
     maker: "三菱重工",
     makerHref: "/maker/mitsubishi-heavy/",
+    seriesHref: "/maker/mitsubishi-heavy/dangan-hyper-inverter/",
     name: "暖ガンハイパーインバータ",
     capacity: "P80〜P160形（P80・P112形はR32冷媒、P140・P160形はR410A冷媒）",
     items: [
@@ -163,6 +167,14 @@ export default function ColdRegionPage() {
                 ))}
               </ul>
               <p className="mt-3 text-sm">
+                {s.seriesHref && (
+                  <>
+                    <Link href={s.seriesHref} className="text-[#1E40AF] underline">
+                      {s.name}の詳細を見る
+                    </Link>
+                    <span className="text-gray-400">　</span>
+                  </>
+                )}
                 <Link href={s.makerHref} className="text-[#1E40AF] underline">
                   {s.maker}のほかのシリーズを見る
                 </Link>
