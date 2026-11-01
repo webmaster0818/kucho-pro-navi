@@ -25,6 +25,7 @@ export default function SiteFooter() {
               <li><Link href="/guide/cost/" className="hover:text-[#F59E0B] transition-colors">費用相場ガイド</Link></li>
               <li><Link href="/guide/horsepower/" className="hover:text-[#F59E0B] transition-colors">馬力選びガイド</Link></li>
               <li><Link href="/guide/type/" className="hover:text-[#F59E0B] transition-colors">機種タイプ比較</Link></li>
+              <li><Link href="/maker/" className="hover:text-[#F59E0B] transition-colors">メーカー別シリーズ一覧</Link></li>
             </ul>
           </div>
           <div>
