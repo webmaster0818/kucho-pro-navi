@@ -295,7 +295,7 @@ export const MAKERS: Maker[] = [
         capacity: "40型〜335型",
       },
       {
-        name: "寒さ知らず（R32）",
+        name: "寒さ知らず",
         position: "寒冷地向けパッケージエアコン",
         summary: "「低外気温でも高い暖房性能を発揮」と案内されています。形式は RAS-GP RHN です。",
         capacity: "80型〜160型",
