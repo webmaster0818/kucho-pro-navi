@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
+import { SHAPE_PAGES } from "@/data/shapes";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guide/type/" },
@@ -204,6 +205,18 @@ export default function TypeGuidePage() {
             </div>
           ))}
         </div>
+
+        <section className="mt-10 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">形ごとの詳しいページ</h2>
+          <p className="text-sm text-gray-600 mb-3">上の比較に入っていない形を、メーカー公式ページの形式・特長とあわせて個別に解説しています。</p>
+          <ul className="space-y-2 text-sm">
+            {SHAPE_PAGES.map((p) => (
+              <li key={p.slug}>
+                <Link href={`/guide/type/${p.slug}/`} className="text-[#1E40AF] underline">{p.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <div className="mt-10 text-center">
           <p className="text-gray-600 mb-4 text-sm">

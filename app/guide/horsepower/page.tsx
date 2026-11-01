@@ -47,7 +47,7 @@ const hpGuide = [
 
 // 馬力→kW・P形・一般事務所の床面積（ダイキン公式 article/28 の表。面積は冷房負荷105〜230W/㎡で算出された目安）
 const hpQuick = [
-  { hp: "1.5馬力", kw: "4.0kW", model: "P40形", office: "17〜38㎡" },
+  { hp: "1.5馬力", kw: "4.0kW", model: "P40形", office: "17〜38㎡", slug: "1-5-bariki" },
   { hp: "1.8馬力", kw: "4.5kW", model: "P45形", office: "20〜43㎡" },
   { hp: "2馬力", kw: "5.0kW", model: "P50形", office: "22〜48㎡", slug: "2-bariki" },
   { hp: "2.3馬力", kw: "5.6kW", model: "P56形", office: "24〜53㎡" },

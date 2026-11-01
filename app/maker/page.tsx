@@ -62,7 +62,9 @@ export default function MakerIndex() {
           <Link href="/guide/horsepower/" className="text-[#1E40AF] underline">馬力選びガイド</Link>
           、室内機の形の違いは
           <Link href="/guide/type/" className="text-[#1E40AF] underline">機種タイプ比較</Link>
-          をご覧ください。
+          をご覧ください。寒冷地向けのシリーズ（スゴ暖ZEAS・ズバ暖スリム・寒さ知らず・フル暖 XEPHY・暖ガンハイパーインバータ）は
+          <Link href="/guide/cold-region/" className="text-[#1E40AF] underline">寒冷地向け業務用エアコン5社比較</Link>
+          で比べています。
         </p>
       </main>
       <SiteFooter />
