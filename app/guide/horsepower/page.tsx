@@ -23,9 +23,9 @@ const kwToHp: { kw: string; hp: string; model: string; kwSlug?: string; hpSlug?:
   { kw: "9kW", hp: "約3.2馬力", model: "4馬力（P112形・11.2kW）が目安", hpSlug: "4-bariki" },
   { kw: "10kW", hp: "約3.6馬力", model: "4馬力（P112形・11.2kW）が目安", kwSlug: "10-kw", hpSlug: "4-bariki" },
   { kw: "11.2kW", hp: "4馬力", model: "4馬力（P112形）＝11.2kWそのもの", hpSlug: "4-bariki" },
-  { kw: "12kW", hp: "約4.3馬力", model: "5馬力（P140形・14.0kW）が目安", hpSlug: "5-bariki" },
-  { kw: "12.5kW", hp: "約4.5馬力", model: "5馬力（P140形・14.0kW）が目安", kwSlug: "12-5-kw", hpSlug: "5-bariki" },
-  { kw: "14kW", hp: "5馬力", model: "5馬力（P140形）＝14.0kWそのもの", hpSlug: "5-bariki" },
+  { kw: "12kW", hp: "約4.3馬力", model: "P140形（14.0kW・ダイキン表記は4馬力相当）が目安", hpSlug: "5-bariki" },
+  { kw: "12.5kW", hp: "約4.5馬力", model: "P140形（14.0kW・ダイキン表記は4馬力相当）が目安", kwSlug: "12-5-kw", hpSlug: "5-bariki" },
+  { kw: "14kW", hp: "5馬力", model: "P140形（ダイキン表記は4馬力相当）＝14.0kWそのもの", hpSlug: "5-bariki" },
   { kw: "16kW", hp: "約5.7馬力", model: "6馬力（P160形）＝16.0kWそのもの", hpSlug: "6-bariki" },
   { kw: "18kW", hp: "約6.4馬力", model: "8馬力（P224形・22.4kW）が目安", hpSlug: "8-bariki" },
   { kw: "20kW", hp: "約7.1馬力", model: "8馬力（P224形・22.4kW）が目安", kwSlug: "20-kw", hpSlug: "8-bariki" },
@@ -39,7 +39,7 @@ const hpGuide = [
   { hp: "2.5馬力（6.3kW・P63形）", area: "35〜39㎡／17〜33㎡", usage: "小規模会議室・小型飲食店・美容室", slug: "2-5-bariki" },
   { hp: "3馬力（8.0kW・P80形）", area: "44〜50㎡／22〜42㎡", usage: "標準的なオフィス・中型飲食店・ブティック", slug: "3-bariki" },
   { hp: "4馬力（11.2kW・P112形）", area: "62〜70㎡／30〜59㎡", usage: "大会議室・中規模レストラン・中型店舗", slug: "4-bariki" },
-  { hp: "5馬力（14.0kW・P140形）", area: "78〜88㎡／38〜74㎡", usage: "フロア全体・大型飲食店・ジム", slug: "5-bariki" },
+  { hp: "5馬力（14.0kW・P140形。ダイキン表記は4馬力相当）", area: "78〜88㎡／38〜74㎡", usage: "フロア全体・大型飲食店・ジム", slug: "5-bariki" },
   { hp: "6馬力（16.0kW・P160形）", area: "89〜100㎡／43〜84㎡", usage: "大型フロア・工場作業エリア・大型店舗", slug: "6-bariki" },
   { hp: "8馬力（22.4kW・P224形）", area: "124〜140㎡／61〜118㎡", usage: "工場・倉庫・大型商業施設の一区画", slug: "8-bariki" },
   { hp: "10馬力（28.0kW・P280形）", area: "156〜175㎡／76〜147㎡", usage: "大型工場・倉庫・ホール・体育館（補助的に）", slug: "10-bariki" },
@@ -54,7 +54,7 @@ const hpQuick = [
   { hp: "2.5馬力", kw: "6.3kW", model: "P63形", office: "27〜60㎡", slug: "2-5-bariki" },
   { hp: "3馬力", kw: "8.0kW", model: "P80形", office: "35〜76㎡", slug: "3-bariki" },
   { hp: "4馬力", kw: "11.2kW", model: "P112形", office: "49〜107㎡", slug: "4-bariki" },
-  { hp: "5馬力", kw: "14.0kW", model: "P140形", office: "61〜133㎡", slug: "5-bariki" },
+  { hp: "4馬力相当", kw: "14.0kW", model: "P140形", office: "61〜133㎡", slug: "5-bariki" },
   { hp: "6馬力", kw: "16.0kW", model: "P160形", office: "70〜152㎡", slug: "6-bariki" },
   { hp: "8馬力", kw: "22.4kW", model: "P224形", office: "97〜213㎡", slug: "8-bariki" },
   { hp: "10馬力", kw: "28.0kW", model: "P280形", office: "122〜267㎡", slug: "10-bariki" },
@@ -74,8 +74,8 @@ const kwFaqs = [
   { q: "4.5kWは何馬力ですか？", a: "4.5kWは約1.6馬力です（4.5÷2.8）。機種クラスでは1.8馬力（P45形）＝4.5kWそのものにあたります。" },
   { q: "10kWは何馬力ですか？", a: "10kWは約3.6馬力です（1馬力≒2.8kWで換算）。業務用エアコンの機種クラスでは、4馬力（P112形・11.2kW）が目安になります。" },
   { q: "6.3kWは何馬力ですか？", a: "6.3kWは約2.3馬力です。機種クラスでは2.5馬力（P63形）＝6.3kWそのものにあたります。" },
-  { q: "12.5kWは何馬力ですか？", a: "12.5kWは約4.5馬力です。機種クラスでは5馬力（P140形・14.0kW）が目安になります。" },
-  { q: "14kWは何馬力ですか？", a: "14kWは5馬力です。機種クラスの5馬力（P140形）＝14.0kWそのものにあたります。" },
+  { q: "12.5kWは何馬力ですか？", a: "12.5kWは約4.5馬力です。機種クラスではP140形（14.0kW）が目安になります。P140形はダイキン公式の表では「4馬力相当」と表記されています。" },
+  { q: "14kWは何馬力ですか？", a: "14kWは1馬力≒2.8kWで換算すると5馬力です。機種クラスではP140形（14.0kW）そのものにあたり、ダイキン公式の表ではP140形を「4馬力相当」と表記しています。" },
   { q: "18kWは何馬力ですか？", a: "18kWは約6.4馬力です。6馬力（P160形）は16.0kWで不足するため、機種クラスでは8馬力（P224形・22.4kW）が目安になります。" },
   { q: "20kWは何馬力ですか？", a: "20kWは約7.1馬力です。機種クラスでは8馬力（P224形・22.4kW）が目安になります。" },
   { q: "22.4kWは何馬力ですか？", a: "22.4kWは8馬力です。機種クラスの8馬力（P224形）＝22.4kWそのものにあたります。" },
@@ -107,7 +107,7 @@ export default function HorsepowerGuidePage() {
           業務用エアコンの馬力・kW換算早見表（1馬力≒2.8kW）と選び方
         </h1>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。<strong>10馬力は28.0kW</strong>（P280形）、6馬力は16.0kW（P160形）、5馬力は14.0kW（P140形）です。反対に<strong>10kWは約3.6馬力</strong>で、機種クラスでは4馬力（P112形・11.2kW）が目安です。4.5kWは約1.6馬力で1.8馬力（P45形）、20kWは約7.1馬力で8馬力（P224形・22.4kW）が目安です。すぐ下の早見表は、ダイキン公式の馬力とP形の対応にもとづいています。kW→馬力の換算表の各行から、kW別・馬力別の詳しいページへ進めます。換算したうえで、床面積・用途に応じた選び方をご確認ください。
+          <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。<strong>10馬力は28.0kW</strong>（P280形）、6馬力は16.0kW（P160形）、5馬力は14.0kWです（P140形＝14.0kWは、ダイキン公式の表では「4馬力相当」と表記）。反対に<strong>10kWは約3.6馬力</strong>で、機種クラスでは4馬力（P112形・11.2kW）が目安です。4.5kWは約1.6馬力で1.8馬力（P45形）、20kWは約7.1馬力で8馬力（P224形・22.4kW）が目安です。すぐ下の早見表は、ダイキン公式の馬力とP形の対応にもとづいています。kW→馬力の換算表の各行から、kW別・馬力別の詳しいページへ進めます。換算したうえで、床面積・用途に応じた選び方をご確認ください。
         </p>
 
         {/* 馬力→kW 早見表（冒頭の即答） */}
@@ -138,7 +138,7 @@ export default function HorsepowerGuidePage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3 leading-relaxed">
-            出典：ダイキン公式「<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/28" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの選び方</a>」の形式（P形）と馬力の対応・用途別の床面積の目安（一般事務所＝算出基準冷房負荷105〜230W/㎡）、1馬力≒2.8kWは「<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/49" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの設置費用</a>」（いずれも2026年10月28日確認）。冷房能力はP形の数字÷10（例：P40形＝4.0kW）です。P140形は同ページの表で「4馬力相当」と表記されていますが、14.0kW÷2.8kW＝5.0のため、本表では5馬力としています。床面積は目安で、建物・用途・発熱量により負荷が変わります。
+            出典：ダイキン公式「<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/28" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの選び方</a>」の形式（P形）と馬力の対応・用途別の床面積の目安（一般事務所＝算出基準冷房負荷105〜230W/㎡）、1馬力≒2.8kWは「<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/49" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの設置費用</a>」（article/28 は2026年11月1日、article/49 は2026年10月28日確認）。冷房能力はP形の数字÷10（例：P40形＝4.0kW）です。P140形の馬力は同ページの表の表記（4馬力相当）のとおりです。1馬力≒2.8kWで換算すると、14.0kWは5.0馬力です。床面積は目安で、建物・用途・発熱量により負荷が変わります。
           </p>
         </section>
 

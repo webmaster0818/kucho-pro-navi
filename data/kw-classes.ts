@@ -7,7 +7,8 @@
  * 新しい数値は作っていない。
  *
  * 適用面積・用途は data/horsepower-classes.ts に掲載がある馬力クラスのみ転記し、
- * 掲載のないクラス（1.8馬力/P45形・2.3馬力/P56形）は空にして「記載なし」扱いとする。
+ * 掲載のないクラス（1.8馬力/P45形・2.3馬力/P56形）は areaNote にダイキン公式の一般事務所の床面積のみ記載。
+ * 面積はダイキン公式「業務用エアコンの選び方」の表（2026年11月1日確認）。出典のない坪数は 2026-11-01 に削除。
  */
 export type KwClass = {
   slug: string;        // URL スラッグ
@@ -31,7 +32,7 @@ export const KW_CLASSES: KwClass[] = [
     classModel: "P45形",
     classKw: "4.5kW",
     areaNote:
-      "1.8馬力（P45形）の適用面積は当サイトで一次確認した掲載値がないため記載していません。ひとつ上の2馬力（5.0kW・P50形）は6〜10坪が目安です。",
+      "1.8馬力（P45形）の主な用途は記載していません。ダイキン公式の表では、P45形の床面積の目安は一般事務所で20〜43㎡です。",
     hpSlug: "2-bariki",
   },
   {
@@ -42,7 +43,7 @@ export const KW_CLASSES: KwClass[] = [
     classModel: "P56形",
     classKw: "5.6kW",
     areaNote:
-      "2.3馬力（P56形）の適用面積は当サイトで一次確認した掲載値がないため記載していません。前後のクラスは2馬力（5.0kW・P50形）が6〜10坪、2.5馬力（6.3kW・P63形）が8〜13坪です。",
+      "2.3馬力（P56形）の主な用途は記載していません。ダイキン公式の表では、P56形の床面積の目安は一般事務所で24〜53㎡です。",
     hpSlug: "2-5-bariki",
   },
   {
@@ -52,7 +53,7 @@ export const KW_CLASSES: KwClass[] = [
     classHp: "4馬力",
     classModel: "P112形",
     classKw: "11.2kW",
-    area: "13〜20坪",
+    area: "一般事務所で49〜107㎡",
     usage: "大会議室・中規模レストラン・中型店舗",
     hpSlug: "4-bariki",
   },
@@ -63,7 +64,7 @@ export const KW_CLASSES: KwClass[] = [
     classHp: "5馬力",
     classModel: "P140形",
     classKw: "14.0kW",
-    area: "16〜26坪",
+    area: "一般事務所で61〜133㎡",
     usage: "フロア全体・大型飲食店・ジム",
     hpSlug: "5-bariki",
   },
@@ -74,7 +75,7 @@ export const KW_CLASSES: KwClass[] = [
     classHp: "8馬力",
     classModel: "P224形",
     classKw: "22.4kW",
-    area: "26〜43坪",
+    area: "一般事務所で97〜213㎡",
     usage: "工場・倉庫・大型商業施設の一区画",
     hpSlug: "8-bariki",
   },
@@ -85,7 +86,7 @@ export const KW_CLASSES: KwClass[] = [
     classHp: "10馬力",
     classModel: "P280形",
     classKw: "28.0kW",
-    area: "33〜53坪",
+    area: "一般事務所で122〜267㎡",
     usage: "大型工場・倉庫・ホール",
     hpSlug: "10-bariki",
   },

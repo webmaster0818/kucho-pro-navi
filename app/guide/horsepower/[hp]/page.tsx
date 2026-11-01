@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) return {};
   return {
     alternates: { canonical: `/guide/horsepower/${c.slug}/` },
-    title: c.title ?? `業務用エアコン${c.hp}は何kW？｜${c.classKw}（${c.model}）・適用${c.area}の目安`,
+    title: c.title ?? `業務用エアコン${c.hp}は何kW？｜${c.classKw}（${c.model}）・${c.area}の目安`,
     description: `業務用エアコンの${c.hp}は、機種クラスで${c.classKw}（${c.model}）です。1馬力≒2.8kWの単純換算では${c.calcKw}で、実際に選ぶ機種クラスとの違いも説明します。適用面積は${c.area}、主な用途は${c.usage}です。必要馬力が上振れする条件もご説明します。`,
   };
 }
@@ -61,7 +61,7 @@ export default async function HpClassPage({ params }: Props) {
         ? `${c.hp}の機種クラスは${c.classKw}（${c.model}）です。1馬力≒2.8kWで単純換算しても${c.calcKw}となり、機種クラスの冷房能力と一致します。`
         : `${c.hp}の機種クラスは${c.classKw}（${c.model}）です。1馬力≒2.8kWで単純に計算すると${c.calcKw}になりますが、機種は連続した能力ではなくクラスで展開されるため、実際に選ぶのは${c.classKw}の${c.model}になります。`,
     },
-    { q: `${c.hp}は何坪まで対応できますか？`, a: `目安は${c.area}です。ただし坪数だけでは決まらず、厨房の有無・窓の向き・天井高・人の多さ・機器の発熱・建物の断熱性で必要能力は変わります。下記の「必要な馬力が上振れする条件」をご確認ください。` },
+    { q: `${c.hp}の適用面積の目安は？`, a: `ダイキン公式の表では、${c.model}の床面積の目安は${c.area}です。ただし面積だけでは決まらず、厨房の有無・窓の向き・天井高・人の多さ・機器の発熱・建物の断熱性で必要能力は変わります。下記の「必要な馬力が上振れする条件」をご確認ください。` },
     { q: `${c.hp}はどんな場所で使われますか？`, a: `${c.usage}などで使われることが多いクラスです。同じ面積でも用途によって熱負荷が変わるため、実際の選定は現地調査のうえでご判断ください。` },
   ];
   const faqSchema = {
@@ -92,6 +92,11 @@ export default async function HpClassPage({ params }: Props) {
               ? "この値は機種クラスの冷房能力と一致します。"
               : `機種は連続した能力ではなくクラスで展開されるため、実際に選ぶのは${c.classKw}の${c.model}になります。`}
           </p>
+          {c.daikinHp && (
+            <p className="text-sm leading-relaxed mt-3">
+              なお、ダイキン公式の表（業務用エアコンの選び方）では、{c.model}は「{c.daikinHp}」と表記されています。
+            </p>
+          )}
         </div>
 
         <section className="mb-10">
@@ -134,7 +139,7 @@ export default async function HpClassPage({ params }: Props) {
             <p><span className="font-semibold text-[#1E40AF]">主な用途：</span>{c.usage}</p>
           </div>
           <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-            この面積は標準的な条件での目安です。同じ坪数でも、以下の条件に当てはまる場合は必要な能力が上がります。
+            この面積はダイキン公式の表の一般事務所（算出基準冷房負荷105〜230W/㎡）の目安です。同じ面積でも、以下の条件に当てはまる場合は必要な能力が上がります。
           </p>
         </section>
 
@@ -207,14 +212,14 @@ export default async function HpClassPage({ params }: Props) {
             ))}
           </div>
           <p className="text-gray-600 text-sm mt-5 leading-relaxed">
-            kWから馬力を逆に調べたい場合や、坪数・用途から必要な馬力を計算したい場合は
+            kWから馬力を逆に調べたい場合や、床面積・用途から必要な馬力を計算したい場合は
             <Link href="/guide/horsepower/" className="text-[#1E40AF] underline">kW・馬力換算早見表と選び方ガイド</Link>
             をご覧ください。
           </p>
         </section>
 
         <p className="text-xs text-gray-500 leading-relaxed">
-          出典: ダイキン公式「1馬力≒2.8kW」（ac.daikin.co.jp 業務用エアコンコラム）／P形と馬力の対応は三菱電機Mr.SLIM形名検索・パナソニック公式コラム・ダイキン公式で確認（いずれも2026年7月4日確認）。適用面積と用途の目安は当サイトの馬力選びガイドと同一の基準です。
+          出典: ダイキン公式「1馬力≒2.8kW」（ac.daikin.co.jp 業務用エアコンコラム）／P形と馬力の対応は三菱電機Mr.SLIM形名検索・パナソニック公式コラム・ダイキン公式で確認（いずれも2026年7月4日確認）。適用面積はダイキン公式「<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/28" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの選び方</a>」の表の一般事務所の床面積です（2026年11月1日確認）。
         </p>
       </main>
       <SiteFooter />

@@ -30,7 +30,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
     ...(c.area
       ? [
           {
-            q: `${c.kw}クラスは何坪まで対応できますか？`,
+            q: `${c.kw}クラスの適用面積の目安は？`,
             a: `${c.kw}に対応する機種クラス${c.classHp}（${c.classModel}）の目安は${c.area}です。ただし厨房の有無・窓の向き・天井高・人の多さ・機器の発熱・建物の断熱性で必要能力は変わるため、目安として扱ってください。`,
           },
         ]
@@ -110,6 +110,11 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
           <p className="text-xs text-gray-500 mt-3 leading-relaxed">
             P形の型番は「冷房能力kW×10」の規則です（{c.classModel} ＝ {c.classKw}）。見積書や仕様書ではこの型番で記載されることが多いため、業者とのやり取りでは型番で確認することをおすすめします。
           </p>
+          {c.classModel === "P140形" && (
+            <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+              ダイキン公式の表（業務用エアコンの選び方）では、P140形は「4馬力相当」と表記されています（2026年11月1日確認）。
+            </p>
+          )}
         </section>
 
         <section className="mb-10">
@@ -128,7 +133,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
                 </p>
               </div>
               <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-                これは標準的な条件での目安です。同じ坪数でも、以下の条件に当てはまる場合は必要な能力が上がります。
+                これはダイキン公式の表の一般事務所（算出基準冷房負荷105〜230W/㎡）の目安です。同じ面積でも、以下の条件に当てはまる場合は必要な能力が上がります。
               </p>
             </>
           ) : (
@@ -233,7 +238,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
             ))}
           </div>
           <p className="text-gray-600 text-sm mt-5 leading-relaxed">
-            逆に「◯馬力は何kWか」を調べたい場合や、坪数・用途から必要な能力を計算したい場合は
+            逆に「◯馬力は何kWか」を調べたい場合や、床面積・用途から必要な能力を計算したい場合は
             <Link href="/guide/horsepower/" className="text-[#1E40AF] underline">
               kW・馬力換算早見表と選び方ガイド
             </Link>
@@ -255,7 +260,7 @@ export default function KwClassArticle({ c }: { c: KwClass }) {
           <Link href="/guide/horsepower/" className="underline">
             kW・馬力換算早見表
           </Link>
-          と同一の掲載値です。
+          と同一の掲載値です。適用面積はダイキン公式「業務用エアコンの選び方」の表の一般事務所の床面積です（2026年11月1日確認）。
           <br />
           ※チラー（冷却水熱源機）など一部の機種カテゴリでは「1馬力=2.5kW」の換算が使われる場合があります（東芝キヤリア空調機器ハンドブックで確認）。本ページは店舗・オフィス用パッケージエアコンの換算です。
         </p>
