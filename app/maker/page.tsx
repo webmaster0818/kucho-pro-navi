@@ -64,7 +64,11 @@ export default function MakerIndex() {
           <Link href="/guide/type/" className="text-[#1E40AF] underline">機種タイプ比較</Link>
           をご覧ください。寒冷地向けのシリーズ（スゴ暖ZEAS・ズバ暖スリム・寒さ知らず・フル暖 XEPHY・暖ガンハイパーインバータ）は
           <Link href="/guide/cold-region/" className="text-[#1E40AF] underline">寒冷地向け業務用エアコン5社比較</Link>
-          で比べています。
+          で比べています。既設の配管を使った入れ替え（更新専用機種・既設配管の再利用）は
+          <Link href="/guide/renewal-model/" className="text-[#1E40AF] underline">更新専用機種と既設配管の再利用</Link>
+          、食品加工場などの中温用は
+          <Link href="/maker/panasonic/xephy-eco-chuon/" className="text-[#1E40AF] underline">中温用の業務用エアコン</Link>
+          にまとめています。
         </p>
       </main>
       <SiteFooter />

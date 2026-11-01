@@ -208,7 +208,7 @@ export default function TypeGuidePage() {
 
         <section className="mt-10 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">形ごとの詳しいページ</h2>
-          <p className="text-sm text-gray-600 mb-3">上の比較に入っていない形を、メーカー公式ページの形式・特長とあわせて個別に解説しています。</p>
+          <p className="text-sm text-gray-600 mb-3">形ごとに、各社の公式名称・形式と特長を、メーカー公式ページをもとに個別に解説しています。</p>
           <ul className="space-y-2 text-sm">
             {SHAPE_PAGES.map((p) => (
               <li key={p.slug}>

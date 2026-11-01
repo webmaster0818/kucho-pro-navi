@@ -37,6 +37,7 @@ export default function SiteFooter() {
               <li><Link href="/industry/clinic/" className="hover:text-[#F59E0B] transition-colors">クリニック</Link></li>
               <li><Link href="/industry/shop/" className="hover:text-[#F59E0B] transition-colors">小売店舗</Link></li>
               <li><Link href="/industry/school/" className="hover:text-[#F59E0B] transition-colors">学校・教育施設</Link></li>
+              <li><Link href="/industry/beauty-salon/" className="hover:text-[#F59E0B] transition-colors">美容室</Link></li>
             </ul>
           </div>
         </div>

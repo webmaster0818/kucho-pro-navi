@@ -25,6 +25,8 @@ interface Industry {
   modified?: string;
   keyFacts?: string[];
   sources?: { label: string; url: string }[];
+  /** true のページは業者に番号を付けない（並びは順位ではない） */
+  unranked?: boolean;
 }
 
 const industries: Industry[] = industriesData as Industry[];
@@ -139,7 +141,10 @@ export default async function IndustryPage(props: {
 
         {/* Recommended Companies */}
         <div className="mb-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">おすすめ業者</h2>
+          <h2 className="text-xl font-bold text-gray-800 mb-4">{industry.unranked ? "見積もりを依頼できる業者の例" : "おすすめ業者"}</h2>
+          {industry.unranked && (
+            <p className="text-xs text-gray-500 mb-3">並びは順位ではありません。業種向けの対応内容は各業者に確認してください。</p>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {relatedCompanies.map((company, index) => (
               <div
@@ -147,7 +152,7 @@ export default async function IndustryPage(props: {
                 className="bg-white rounded-xl shadow-sm border border-gray-100 p-5"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[#F59E0B] font-black">#{index + 1}</span>
+                  {!industry.unranked && <span className="text-[#F59E0B] font-black">#{index + 1}</span>}
                   <span className="font-bold text-gray-800">{company.name}</span>
                 </div>
                 <p className="text-xs text-gray-600 mb-3">{company.tagline}</p>
