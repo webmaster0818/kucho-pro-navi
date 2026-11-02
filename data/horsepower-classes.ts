@@ -19,12 +19,14 @@ export type HpClass = {
   usage: string;
   daikinHp?: string; // ダイキン公式の表での馬力表記が異なる場合のみ
   title?: string;    // 検索結果で答えが伝わるよう個別に調整したタイトル（値は上の各項目と同じもののみ）
+  description?: string; // 既定の説明文が160字を超える場合のみ個別に指定（値は上の各項目と同じもののみ）
 };
 
 export const HP_CLASSES: HpClass[] = [
   { slug: "1-5-bariki", hp: "1.5馬力", hpNum: 1.5, model: "P40形", classKw: "4.0kW", calcKw: "4.2kW", sameAsClass: false,
     area: "一般事務所で17〜38㎡", usage: "小規模な事務所・店舗（ダイキン公式の表では一般商店22〜25㎡・理美容院14〜17㎡・飲食店11〜21㎡）",
-    title: "業務用エアコン1.5馬力は4.0kW（P40形）｜一般事務所17〜38㎡・用途別の広さの目安" },
+    title: "業務用エアコン1.5馬力は4.0kW（P40形）｜一般事務所17〜38㎡・用途別の広さの目安",
+    description: "業務用エアコンの1.5馬力は、機種クラスで4.0kW（P40形）です。1馬力≒2.8kWの単純換算では4.2kWです。適用面積は一般事務所で17〜38㎡で、一般商店・理美容院・飲食店の広さの目安と、必要馬力が上振れする条件もご説明します。" },
   { slug: "2-bariki", hp: "2馬力", hpNum: 2, model: "P50形", classKw: "5.0kW", calcKw: "5.6kW", sameAsClass: false,
     area: "一般事務所で22〜48㎡", usage: "個室オフィス・小型店舗・個人クリニックの診察室",
     title: "業務用エアコン2馬力は5.0kW（P50形）｜単純換算5.6kWとの違い・一般事務所22〜48㎡" },

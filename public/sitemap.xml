@@ -319,13 +319,13 @@
   </url>
   <url>
     <loc>https://kucho-pro-navi.com/maker/daikin/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kucho-pro-navi.com/maker/mitsubishi-electric/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -337,7 +337,7 @@
   </url>
   <url>
     <loc>https://kucho-pro-navi.com/maker/panasonic/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -373,7 +373,7 @@
   </url>
   <url>
     <loc>https://kucho-pro-navi.com/guide/horsepower/1-5-bariki/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -475,7 +475,7 @@
   </url>
   <url>
     <loc>https://kucho-pro-navi.com/maker/daikin/r32-machi-multi/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -487,7 +487,7 @@
   </url>
   <url>
     <loc>https://kucho-pro-navi.com/maker/mitsubishi-electric/fit-multi/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -518,6 +518,24 @@
   <url>
     <loc>https://kucho-pro-navi.com/industry/nursery/</loc>
     <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/maker/daikin/sugodan-machi-multi/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/maker/mitsubishi-electric/replace-fit-multi/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kucho-pro-navi.com/maker/panasonic/mini-multi/</loc>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
