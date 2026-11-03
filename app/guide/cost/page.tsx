@@ -106,7 +106,7 @@ export default function CostGuidePage() {
             <li><strong>壁掛形</strong>：工事の手順が家庭用と大きく違わないため、業務用エアコンの中で設置費用を最も抑えられます。</li>
           </ol>
           <p className="text-xs text-gray-500 mt-3">
-            出典：<a href={DAIKIN_URL} target="_blank" rel="noopener noreferrer" className="underline">ダイキン工業「業務用エアコンの価格相場は？工事費込みでいくらが目安？」</a>（{CHECKED}確認）。費用を抑える方法と低価格の業者は<Link href="/ranking/cheap/" className="text-[#1E40AF] underline">格安業者ランキング</Link>でご案内しています。
+            出典：<a href={DAIKIN_URL} target="_blank" rel="noopener noreferrer" className="underline">ダイキン工業「業務用エアコンの価格相場は？工事費込みでいくらが目安？」</a>（{CHECKED}確認）。費用を抑える方法と依頼先は<Link href="/ranking/cheap/" className="text-[#1E40AF] underline">業務用エアコンの費用を抑える方法と依頼先の公式情報</Link>でご案内しています。
           </p>
         </section>
 

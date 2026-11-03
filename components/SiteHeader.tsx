@@ -20,7 +20,7 @@ export default function SiteHeader() {
             ランキング
           </Link>
           <Link href="/ranking/cheap/" className="hover:text-[#F59E0B] transition-colors">
-            格安
+            費用を抑える
           </Link>
           <Link href="/ranking/lease/" className="hover:text-[#F59E0B] transition-colors">
             リース
@@ -52,7 +52,7 @@ export default function SiteHeader() {
               ランキング
             </Link>
             <Link href="/ranking/cheap/" className="hover:text-[#F59E0B]" onClick={() => setMenuOpen(false)}>
-              格安ランキング
+              費用を抑える方法
             </Link>
             <Link href="/ranking/lease/" className="hover:text-[#F59E0B]" onClick={() => setMenuOpen(false)}>
               リースランキング

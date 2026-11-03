@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     `業務用エアコン業者のおすすめ${companies.length}社のランキングです。販売・施工の専門店、紹介・見積もりサービス、販売のみの通販の違いと、建設業許可・フロン類充塡回収業者登録の確認方法を公的機関の出典とともにご説明します。`,
 };
 
-const UPDATED = "2026年10月27日";
+const UPDATED = "2026年11月3日";
 const CHECKED = "2026年10月23日";
 
 const SRC = {
@@ -159,7 +159,7 @@ export default function RankingPage() {
             href="/ranking/cheap/"
             className="flex-1 text-center bg-white border-2 border-[#1E40AF] text-[#1E40AF] py-2 px-4 rounded-lg text-sm font-semibold hover:bg-blue-50 transition-colors"
           >
-            格安ランキング
+            費用を抑える方法
           </Link>
           <Link
             href="/ranking/lease/"
@@ -205,7 +205,6 @@ export default function RankingPage() {
                     ))}
                   </div>
                   <div className="flex flex-col sm:flex-row gap-2 text-sm text-gray-500 mb-4">
-                    <span> 平均費用: ¥{company.avgCost.toLocaleString()}〜</span>
                     <span> 対応エリア: {company.coverage}</span>
                   </div>
                   <Link

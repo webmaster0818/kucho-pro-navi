@@ -15,7 +15,7 @@ export default function SiteFooter() {
             <h4 className="text-white font-semibold mb-3">ランキング</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/ranking/" className="hover:text-[#F59E0B] transition-colors">総合ランキング</Link></li>
-              <li><Link href="/ranking/cheap/" className="hover:text-[#F59E0B] transition-colors">格安ランキング</Link></li>
+              <li><Link href="/ranking/cheap/" className="hover:text-[#F59E0B] transition-colors">費用を抑える方法</Link></li>
               <li><Link href="/ranking/lease/" className="hover:text-[#F59E0B] transition-colors">リースランキング</Link></li>
             </ul>
           </div>

@@ -236,7 +236,6 @@ export default function HomePage() {
                   <tr className="bg-[#1E40AF] text-white">
                     <th className="p-4 text-left font-semibold">業者名</th>
                     <th className="p-4 text-left font-semibold">対応エリア</th>
-                    <th className="p-4 text-left font-semibold">平均費用</th>
                     <th className="p-4 text-left font-semibold">保証</th>
                     <th className="p-4 text-left font-semibold">詳細</th>
                   </tr>
@@ -249,9 +248,6 @@ export default function HomePage() {
                     >
                       <td className="p-4 font-semibold text-gray-800">{company.name}</td>
                       <td className="p-4 text-gray-600">{company.coverage}</td>
-                      <td className="p-4 text-gray-600 font-medium">
-                        ¥{company.avgCost.toLocaleString()}〜
-                      </td>
                       <td className="p-4 text-gray-600 text-xs">{company.warranty}</td>
                       <td className="p-4">
                         <Link

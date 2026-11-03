@@ -10,14 +10,13 @@ const companies = allCompanies.filter((c) => c.rankingListed !== false);
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/cheap/" },
-  title: "業務用エアコン格安業者ランキング【最安値比較2026】",
+  title: "業務用エアコンの費用を抑える方法と依頼先の公式情報",
   description:
-    "業務用エアコンを格安で導入する方法（専門店の通販価格・室内機の形・整備済みの中古・相見積もりと補助金）と、ダイキン公表の工事費込み相場をご説明し、低価格で依頼できる業者をランキング形式でご紹介します。",
+    "業務用エアコンを格安で導入する方法（専門店の通販価格・室内機の形・整備済みの中古・相見積もりと補助金）と、ダイキン公表の工事費込み相場をご説明し、依頼先の業者を掲載順でご紹介します。",
 };
 
-const cheapRanking = [...companies]
-  .sort((a, b) => a.avgCost - b.avgCost)
-  .slice(0, 7);
+// 並びは /ranking/ と同じ掲載順（companies.json の順）。公式で確認できる価格での並び順の根拠がないため、価格順・順位は付けない（2026-11-03）
+const listed = companies;
 
 export default function CheapRankingPage() {
   return (
@@ -27,12 +26,12 @@ export default function CheapRankingPage() {
         <Breadcrumb
           items={[
             { label: "ランキング", href: "/ranking/" },
-            { label: "格安ランキング" },
+            { label: "費用を抑える方法" },
           ]}
         />
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-          業務用エアコン格安業者ランキング【最安値比較2026】
+          業務用エアコンの費用を抑える方法と依頼先の公式情報
         </h1>
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-6">
           <p className="text-gray-800 leading-relaxed">
@@ -58,25 +57,19 @@ export default function CheapRankingPage() {
         </div>
 
         <p className="text-gray-600 mb-8 leading-relaxed">
-          以下では、初期費用を抑えて業務用エアコンを導入したい方に向けて、業者をランキング形式で掲載しています。掲載順は平均費用の低い順です。
+          以下では、業務用エアコンの依頼先を総合ランキングと同じ掲載順でご紹介します。価格による順位は付けていません。本体価格・工事費は各社の公式サイトと見積もりでご確認ください。
         </p>
 
         <div className="space-y-6">
-          {cheapRanking.map((company, index) => (
+          {listed.map((company) => (
             <div
               key={company.slug}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#F1F5F9] rounded-full font-black text-[#1E40AF] text-xl flex-shrink-0">
-                  {index + 1}
-                </div>
                 <div className="flex-1">
                   <h2 className="text-xl font-bold text-gray-900 mb-1">{company.name}</h2>
                   <p className="text-[#1E40AF] text-sm font-medium mb-2">{company.tagline}</p>
-                  <div className="inline-block bg-green-100 text-[#059669] font-bold text-lg px-4 py-1 rounded-lg mb-3">
-                    平均 ¥{company.avgCost.toLocaleString()}〜
-                  </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {company.features.slice(0, 3).map((f) => (
                       <span
