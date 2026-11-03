@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エコトピアの口コミ・評判は？中古エアコンの販売・買取・料金を解説【2026年10月】",
+    "エコトピアとは？中古エアコンの販売・買取と料金の決まり方・対応エリアを解説【2026年10月】",
   description:
-    "新品・中古エアコンの販売／買取で知られる「エコトピア」（運営：株式会社エコトピア）の特徴・料金・対応エリアをまとめています。関東最大級のショールーム、買取の仕組み、選ぶ際の一般的な注意点まで中立的に解説します。",
+    "新品・中古エアコンの販売／買取で知られる「エコトピア」（運営：株式会社エコトピア）の特徴・料金の仕組み・対応エリアをまとめています。関東最大級のショールーム、買取の仕組み、選ぶ際の一般的な注意点まで中立的に解説します。",
   alternates: { canonical: "/company/eco-topia" },
 };
 
-const UPDATED = "2026年6月10日";
+const UPDATED = "2026年11月4日";
 
 const toc = [
   { id: "summary", label: "エコトピアとは" },
@@ -53,9 +53,9 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "エコトピアの口コミ・評判は？中古エアコンの販売・買取・料金を解説",
+    "エコトピアとは？中古エアコンの販売・買取と料金の決まり方・対応エリアを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-11-04",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -79,7 +79,7 @@ export default function Page() {
       <Breadcrumb
         items={[
           { label: "ランキング", href: "/ranking/" },
-          { label: "エコトピアの口コミ・評判" },
+          { label: "エコトピアの特徴・対応エリア" },
         ]}
       />
 
@@ -87,17 +87,17 @@ export default function Page() {
         {/* Eyecatch / Header */}
         <header className="max-w-3xl mx-auto px-5 pt-10 pb-6">
           <p className="text-sm font-semibold tracking-widest text-teal-700 mb-3">
-            エアコン販売・買取業者の口コミ・評判
+            エアコン販売・買取業者の特徴と基本情報
           </p>
           <h1 className="text-[1.7rem] leading-snug md:text-[2.1rem] md:leading-tight font-bold text-slate-900">
-            エコトピアの口コミ・評判は？
+            エコトピアとは？
             <br className="hidden md:block" />
-            中古エアコンの販売・買取・料金を解説
+            中古エアコンの販売・買取と料金の決まり方・対応エリアを解説
           </h1>
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-04">最終更新：{UPDATED}</time>
           </div>
         </header>
 

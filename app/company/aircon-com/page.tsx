@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title:
-    "エアコンコムの口コミ・評判は？業務用エアコンの料金・リース・対応エリアを調査【2026年10月】",
+    "エアコンコムとは？業務用エアコンの販売・取付工事・リース・対応エリアを解説【2026年10月】",
   description:
-    "業務用エアコン専門通販「エアコンコム」（運営：株式会社エアリズム）の特徴・料金・対応エリアをまとめました。3,000機種以上の取り扱い、全国の取付工事、リース、選ぶ際の一般的な注意点まで中立的に解説します。",
+    "業務用エアコン専門通販「エアコンコム」（運営：株式会社エアリズム）の特徴・料金の仕組み・対応エリアをまとめました。3,000機種以上の取り扱い、全国の取付工事、リース、選ぶ際の一般的な注意点まで中立的に解説します。",
   alternates: { canonical: "/company/aircon-com" },
 };
 
-const UPDATED = "2026年10月31日";
+const UPDATED = "2026年11月4日";
 
 const toc = [
   { id: "summary", label: "エアコンコムとは" },
@@ -53,9 +53,9 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "エアコンコムの口コミ・評判は？業務用エアコンの料金・リース・対応エリアを調査",
+    "エアコンコムとは？業務用エアコンの販売・取付工事・リース・対応エリアを解説",
   datePublished: "2026-06-10",
-  dateModified: "2026-06-10",
+  dateModified: "2026-11-04",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -79,7 +79,7 @@ export default function Page() {
       <Breadcrumb
         items={[
           { label: "ランキング", href: "/ranking/" },
-          { label: "エアコンコムの口コミ・評判" },
+          { label: "エアコンコムの特徴・対応エリア" },
         ]}
       />
 
@@ -87,17 +87,17 @@ export default function Page() {
         {/* Eyecatch / Header */}
         <header className="max-w-3xl mx-auto px-5 pt-10 pb-6">
           <p className="text-sm font-semibold tracking-widest text-teal-700 mb-3">
-            業務用エアコン業者の口コミ・評判
+            業務用エアコン業者の特徴と基本情報
           </p>
           <h1 className="text-[1.7rem] leading-snug md:text-[2.1rem] md:leading-tight font-bold text-slate-900">
-            エアコンコムの口コミ・評判は？
+            エアコンコムとは？
             <br className="hidden md:block" />
-            業務用エアコンの料金・リース・対応エリアを調査
+            業務用エアコンの販売・取付工事・リース・対応エリアを解説
           </h1>
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-06-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-04">最終更新：{UPDATED}</time>
           </div>
         </header>
 
