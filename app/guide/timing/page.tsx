@@ -20,9 +20,9 @@ const monthCalendar = [
   { month: "11〜12月", demand: "冬前で上昇", note: "暖房シーズン前の2度目の繁忙期です。年末は工事が止まりやすいため、余裕を持った発注をおすすめします。", ease: "○" },
 ];
 
-// 2026年（令和8年度）業務用空調に使える補助金。すべて実施機関の公式情報で確認（基準日2026年10月17日）。
+// 2026年（令和8年度）業務用空調に使える補助金。すべて実施機関の公式情報で確認（基準日2026年10月17日。各自治体の行は2026年11月3日に再確認）。
 // 補助率・締切・予算残は各公募要領で最終確認が必要な箇所を「要公式確認」として残す。
-const subsidies = [
+const subsidies: { name: string; org: string; target: string; rate: string; status: string; source: string; links?: { label: string; url: string }[] }[] = [
   {
     name: "省エネ・非化石転換補助金（設備単位型／工場・事業場型）",
     org: "経済産業省／SII（環境共創イニシアチブ）",
@@ -48,12 +48,19 @@ const subsidies = [
     source: "tokyo-co2down.jp/subsidy/zeroemi-shoene/",
   },
   {
-    name: "各自治体の省エネ設備導入補助（神奈川県・横浜市・京都市・福岡市・埼玉県 ほか）",
+    name: "各自治体の省エネ設備導入補助（神奈川県・埼玉県・大阪府・札幌市 ほか）",
     org: "各都道府県・市",
     target: "中小事業者による高効率空調等の導入が対象です",
-    rate: "おおむね 1/3〜1/2・上限100万〜700万円（自治体・年度で異なる）",
-    status: "公募の状況は自治体・年度によって異なります。各自治体の公式サイトでご確認ください",
-    source: "各自治体公式サイト",
+    rate: "1/3〜3/4・上限500万円（神奈川県・埼玉県・大阪府・札幌市の公式サイトで確認できた範囲。埼玉県のスマートCO2排出削減設備導入事業の高効率省エネルギー設備への更新は1/3以内・上限300万円、神奈川県は県の認定・認証を受けた事業者は上限600万円）",
+    status: "補助率は神奈川県が3分の1、埼玉県が1/3以内または1/2、大阪府が2分の1以内、札幌市が4分の3です。公募の状況は自治体・年度によって異なります。各自治体の公式サイトでご確認ください（2026年11月3日に各公式サイトで確認）",
+    source: "各自治体公式サイト（2026年11月3日確認）",
+    links: [
+      { label: "神奈川県「中小企業省エネルギー設備導入費等補助金」", url: "https://www.pref.kanagawa.jp/docs/ap4/cnt/f7226/shouenesetubihojokin.html" },
+      { label: "埼玉県「令和8年度 スマートCO2排出削減設備導入事業」", url: "https://www.pref.saitama.lg.jp/a0502/hojokin/r8co2hojo.html" },
+      { label: "埼玉県「CO₂排出削減設備導入補助金【緊急対策枠】」", url: "https://www.pref.saitama.lg.jp/a0502/hojokin/r7co2hojo-kinkyutaisaku.html" },
+      { label: "大阪府「令和8年度中小事業者高効率空調機導入支援事業補助金」", url: "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html" },
+      { label: "札幌市「製造業省エネルギー設備導入補助金」", url: "https://www.city.sapporo.jp/keizai/seizo/shien/seizougyousyouene.html" },
+    ],
   },
   {
     name: "中小企業経営強化税制（設備投資減税）",
@@ -101,7 +108,7 @@ export default function TimingGuidePage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 leading-snug">
           業務用エアコンの入れ替え・設置はいつ発注すべき？工事が混む時期と2026年の補助金カレンダー
         </h1>
-        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日） ／ 最終更新日：2026年11月3日 ／ 空調プロナビ編集部</p>
+        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日、各自治体の省エネ設備導入補助は2026年11月3日） ／ 最終更新日：2026年11月3日 ／ 空調プロナビ編集部</p>
 
         {/* 結論即答 */}
         <div className="bg-sky-50 border border-sky-100 rounded-xl p-5 mb-8">
@@ -169,6 +176,15 @@ export default function TimingGuidePage() {
                   <p><span className="text-slate-500">出典：</span>{s.source}</p>
                 </div>
                 <p className="text-xs text-sky-800 bg-sky-50 rounded px-2 py-1.5 mt-2 leading-relaxed"><span className="font-bold">状況：</span>{s.status}</p>
+                {s.links && (
+                  <ul className="text-xs text-slate-600 mt-2 space-y-0.5">
+                    {s.links.map((l) => (
+                      <li key={l.url}>
+                        出典：<a href={l.url} target="_blank" rel="noopener noreferrer" className="text-sky-700 underline">{l.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
