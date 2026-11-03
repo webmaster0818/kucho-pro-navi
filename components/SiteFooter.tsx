@@ -39,6 +39,15 @@ export default function SiteFooter() {
               <li><Link href="/industry/school/" className="hover:text-[#F59E0B] transition-colors">学校・教育施設</Link></li>
               <li><Link href="/industry/beauty-salon/" className="hover:text-[#F59E0B] transition-colors">美容室</Link></li>
               <li><Link href="/industry/nursery/" className="hover:text-[#F59E0B] transition-colors">保育園</Link></li>
+              <li><Link href="/industry/care-facility/" className="hover:text-[#F59E0B] transition-colors">介護施設</Link></li>
+            </ul>
+            <h4 className="text-white font-semibold mt-6 mb-3">都道府県別の補助金</h4>
+            <ul className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
+              <li><Link href="/area/tokyo/" className="hover:text-[#F59E0B] transition-colors">東京都</Link></li>
+              <li><Link href="/area/kanagawa/" className="hover:text-[#F59E0B] transition-colors">神奈川県</Link></li>
+              <li><Link href="/area/saitama/" className="hover:text-[#F59E0B] transition-colors">埼玉県</Link></li>
+              <li><Link href="/area/osaka/" className="hover:text-[#F59E0B] transition-colors">大阪府</Link></li>
+              <li><Link href="/area/hokkaido/" className="hover:text-[#F59E0B] transition-colors">北海道（札幌市）</Link></li>
             </ul>
           </div>
         </div>

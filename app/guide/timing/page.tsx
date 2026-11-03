@@ -101,7 +101,7 @@ export default function TimingGuidePage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 leading-snug">
           業務用エアコンの入れ替え・設置はいつ発注すべき？工事が混む時期と2026年の補助金カレンダー
         </h1>
-        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日） ／ 最終更新日：2026年10月31日 ／ 空調プロナビ編集部</p>
+        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日） ／ 最終更新日：2026年11月3日 ／ 空調プロナビ編集部</p>
 
         {/* 結論即答 */}
         <div className="bg-sky-50 border border-sky-100 rounded-xl p-5 mb-8">
@@ -172,6 +172,14 @@ export default function TimingGuidePage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-slate-700 leading-relaxed mt-4">
+            都道府県・市の制度の要件と受付状況（2026年11月3日確認）：
+            <Link href="/area/tokyo/" className="text-sky-700 underline">東京都</Link>・
+            <Link href="/area/kanagawa/" className="text-sky-700 underline">神奈川県</Link>・
+            <Link href="/area/saitama/" className="text-sky-700 underline">埼玉県</Link>・
+            <Link href="/area/osaka/" className="text-sky-700 underline">大阪府</Link>・
+            <Link href="/area/hokkaido/" className="text-sky-700 underline">北海道（札幌市）</Link>
+          </p>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-4">
             <p className="text-xs text-amber-900 leading-relaxed">
               <strong>注意（誤解の多い制度）：</strong>環境省の<strong>SHIFT事業</strong>は「空調システムの単純な高効率化改修は補助対象外」と公式に明記されており、電化・燃料転換等を伴わない空調更新単体では利用できません。<strong>ものづくり補助金</strong>系（令和8年度は新事業進出・ものづくり商業サービス補助金へ統合）や<strong>省力化投資補助金</strong>も、単純な設備更新は対象外です。<strong>ZEB実証事業</strong>は建物単位のZEB化が前提で、空調単体更新の制度ではありません。「補助金が使える」とする情報であっても、対象要件は必ず公募要領にてご確認ください。
