@@ -1,0 +1,48 @@
+// TOP「エリアから探す」用。都道府県別ページ（app/area/[slug]・data/areas.json）を地方ごとに並べる。
+// 表示名は SiteFooter「都道府県別の補助金」と同じ。新しい都道府県を足したら areas.json とここを両方更新する。
+import areas from "./areas.json";
+
+export type AreaLink = { slug: string; label: string };
+export type Region = { name: string; items: AreaLink[] };
+
+const LABEL: Record<string, string> = {
+  tokyo: "東京都",
+  kanagawa: "神奈川県",
+  saitama: "埼玉県",
+  ibaraki: "茨城県",
+  hokkaido: "北海道（札幌市）",
+  fukushima: "福島県",
+  niigata: "新潟県",
+  fukui: "福井県",
+  aichi: "愛知県（名古屋市）",
+  kyoto: "京都府（京都市）",
+  osaka: "大阪府",
+  yamaguchi: "山口県",
+  hiroshima: "広島県",
+  fukuoka: "福岡県（福岡市）",
+};
+
+const REGION_OF: [string, string[]][] = [
+  ["北海道・東北", ["hokkaido", "fukushima"]],
+  ["関東", ["kanagawa", "saitama", "ibaraki"]],
+  ["中部・北陸", ["niigata", "fukui", "aichi"]],
+  ["近畿", ["kyoto", "osaka"]],
+  ["中国", ["hiroshima", "yamaguchi"]],
+  ["九州", ["fukuoka"]],
+];
+
+const slugs = new Set((areas as { slug: string }[]).map((a) => a.slug));
+const link = (slug: string): AreaLink => ({ slug, label: LABEL[slug] ?? slug });
+
+export const tokyo: AreaLink | null = slugs.has("tokyo") ? link("tokyo") : null;
+export const regions: Region[] = REGION_OF.map(([name, list]) => ({
+  name,
+  items: list.filter((s) => slugs.has(s)).map(link),
+})).filter((r) => r.items.length > 0);
+
+/** 地方に割り当てていない都道府県があればビルドで気づけるようにする */
+const placed = new Set(["tokyo", ...REGION_OF.flatMap(([, l]) => l)]);
+const missing = [...slugs].filter((s) => !placed.has(s));
+if (missing.length) throw new Error(`areaRegions.ts: 地方が未設定の都道府県ページ ${missing.join(",")}`);
+
+export const areaCount = slugs.size;

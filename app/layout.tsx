@@ -10,7 +10,7 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kucho-pro-navi.com"),
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: [{ url: "/favicon.ico", sizes: "48x48" }, { url: "/icon.svg", type: "image/svg+xml" }], apple: "/apple-icon.png" },
   twitter: {
     card: "summary_large_image",
   },

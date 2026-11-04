@@ -2,15 +2,17 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { KcMark } from "@/components/top/KcLogo";
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#1E40AF] text-white shadow-md sticky top-0 z-50">
+    <header className="bg-[#15365C] text-white shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight">空調プロナビ</span>
+        <Link href="/" className="flex items-center gap-2.5">
+          <KcMark size={34} tone="light" />
+          <span className="text-xl font-bold tracking-[0.04em]">空調プロナビ</span>
           <span className="bg-[#F59E0B] text-white text-xs px-2 py-0.5 rounded font-bold">
             PR
           </span>
@@ -36,7 +38,7 @@ export default function SiteHeader() {
           </Link>
         </nav>
         <button
-          className="md:hidden p-2 rounded hover:bg-blue-700 transition-colors"
+          className="md:hidden p-2 rounded hover:bg-[#0E2742] transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="メニューを開く"
         >
@@ -46,7 +48,7 @@ export default function SiteHeader() {
         </button>
       </div>
       {menuOpen && (
-        <div className="md:hidden bg-blue-800 border-t border-blue-600">
+        <div className="md:hidden bg-[#0E2742] border-t border-white/15">
           <nav className="flex flex-col px-4 py-3 gap-3 text-sm font-medium">
             <Link href="/ranking/" className="hover:text-[#F59E0B]" onClick={() => setMenuOpen(false)}>
               ランキング

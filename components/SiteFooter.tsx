@@ -1,3 +1,4 @@
+import { KcMark } from "@/components/top/KcLogo";
 import Link from "next/link";
 
 export default function SiteFooter() {
@@ -6,7 +7,7 @@ export default function SiteFooter() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">空調プロナビ</h3>
+            <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2.5"><KcMark size={32} tone="light" />空調プロナビ</h3>
             <p className="text-sm leading-relaxed">
               業務用エアコンの設置・交換・修理業者を比較・掲載し、空調業者選びを支援します。
             </p>

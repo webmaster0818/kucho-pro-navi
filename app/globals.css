@@ -14,3 +14,71 @@
     font-family: var(--font-sans);
   }
 }
+
+/* ======================================================================
+ * TOP 刷新（2026-11-05・redesign-20261105 ブランチ）
+ * 業務用空調の紺（--kc-navy）を基調に、冷気の淡い青（--kc-sky）を差し色に。
+ * 操作ボタンはすべて同じ紺。グラデーションは FV の写真の上だけ。大きな角丸・影の多用はしない。
+ * ====================================================================== */
+:root {
+  --kc-ink: #13202D;
+  --kc-navy: #15365C;
+  --kc-navy-dark: #0E2742;
+  --kc-sky: #7FB8DE;
+  --kc-sky-dark: #2F6E9E;
+  --kc-wash: #E9F1F7;
+  --kc-paper: #F3F6F9;
+  --kc-border: #C9D5E0;
+  --kc-border-strong: #8DA3B8;
+  --kc-muted: #4A5A6A;
+}
+
+@layer components {
+.kc-page { background: var(--kc-paper); color: var(--kc-ink); font-feature-settings: "palt" 1; }
+.kc-page :focus-visible { outline: 3px solid var(--kc-sky-dark); outline-offset: 2px; }
+.kc-container { max-width: 1160px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+@media (min-width: 768px) { .kc-container { padding-left: 24px; padding-right: 24px; } }
+
+.kc-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  min-height: 52px; padding: 0.8rem 1.5rem; border-radius: 3px;
+  background: var(--kc-navy); color: #fff; border: 1px solid var(--kc-navy);
+  font-weight: 700; letter-spacing: 0.04em; line-height: 1.35; text-align: center;
+  transition: background-color .2s ease;
+}
+.kc-btn:hover { background: var(--kc-navy-dark); }
+.kc-btn--lg { min-height: 64px; font-size: 17px; padding: 0.9rem 1.4rem; }
+@media (min-width: 768px) { .kc-btn--lg { min-height: 72px; font-size: 19px; } }
+
+.kc-card { background: #fff; border: 1px solid var(--kc-border); border-radius: 3px; }
+.kc-card-link { transition: border-color .2s ease, background-color .2s ease; }
+.kc-card-link:hover { border-color: var(--kc-navy); background: #FAFCFD; }
+
+.kc-h2 {
+  font-size: 24px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.4;
+  padding-bottom: 12px; border-bottom: 2px solid var(--kc-ink); margin-bottom: 24px;
+}
+@media (min-width: 768px) { .kc-h2 { font-size: 30px; margin-bottom: 32px; } }
+.kc-h2-sub { margin-top: -12px; margin-bottom: 24px; font-size: 14px; color: var(--kc-muted); }
+@media (min-width: 768px) { .kc-h2-sub { margin-top: -20px; } }
+.kc-h3 { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; padding-left: 12px; border-left: 4px solid var(--kc-navy); margin-bottom: 16px; }
+
+.kc-section { padding: 56px 0; }
+@media (min-width: 768px) { .kc-section { padding: 88px 0; } }
+.kc-band { background: #fff; border-top: 1px solid var(--kc-border); border-bottom: 1px solid var(--kc-border); }
+
+.kc-dot { position: relative; padding-left: 14px; }
+.kc-dot::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--kc-sky-dark); }
+
+.kc-acc > summary { list-style: none; cursor: pointer; }
+.kc-acc > summary::-webkit-details-marker { display: none; }
+.kc-acc[open] > summary .kc-chev { transform: rotate(180deg); }
+.kc-chev { transition: transform .25s ease; }
+}
+
+.kc-js .kc-reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.kc-js .kc-reveal.kc-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .kc-js .kc-reveal { opacity: 1; transform: none; transition: none; }
+}
+@media print { .kc-js .kc-reveal { opacity: 1 !important; transform: none !important; } }

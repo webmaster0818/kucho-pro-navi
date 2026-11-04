@@ -2,6 +2,10 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import allCompanies from "@/data/companies.json";
+import { areaCount } from "@/data/areaRegions";
+import TopIcon from "@/components/top/TopIcon";
+import AreaFinder from "@/components/top/AreaFinder";
+import ScrollReveal from "@/components/top/ScrollReveal";
 
 // rankingListed: false の会社（空調エキスパート＝問い合わせ先がエアコンフロンティアと同じ）は順位・おすすめに並べない。会社ページは残す
 const companies = allCompanies.filter((c) => c.rankingListed !== false);
@@ -12,21 +16,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-
-const industryNav = [
-  { slug: "restaurant", label: "飲食店", iconSrc: "/images/icon-restaurant.png", color: "bg-orange-50 border-orange-200 hover:border-orange-400 hover:bg-orange-100", iconBg: "bg-orange-100" },
-  { slug: "office", label: "オフィス", iconSrc: "/images/icon-office.png", color: "bg-blue-50 border-blue-200 hover:border-blue-400 hover:bg-blue-100", iconBg: "bg-blue-100" },
-  { slug: "factory", label: "工場・倉庫", iconSrc: "/images/icon-factory.png", color: "bg-gray-50 border-gray-200 hover:border-gray-400 hover:bg-gray-100", iconBg: "bg-gray-100" },
-  { slug: "clinic", label: "クリニック", iconSrc: "/images/icon-clinic.png", color: "bg-green-50 border-green-200 hover:border-green-400 hover:bg-green-100", iconBg: "bg-green-100" },
-  { slug: "shop", label: "小売店舗", iconSrc: "/images/icon-shop.png", color: "bg-purple-50 border-purple-200 hover:border-purple-400 hover:bg-purple-100", iconBg: "bg-purple-100" },
-  { slug: "school", label: "学校", iconSrc: "/images/icon-school.png", color: "bg-yellow-50 border-yellow-200 hover:border-yellow-400 hover:bg-yellow-100", iconBg: "bg-yellow-100" },
-];
-
-const rankBadge = [
-  { label: "1位", bg: "bg-amber-400", text: "text-white", border: "border-amber-400", shadow: "shadow-amber-100" },
-  { label: "2位", bg: "bg-slate-400", text: "text-white", border: "border-slate-300", shadow: "shadow-slate-100" },
-  { label: "3位", bg: "bg-orange-400", text: "text-white", border: "border-orange-300", shadow: "shadow-orange-100" },
-];
 
 const faqs = [
   {
@@ -51,209 +40,297 @@ const faqs = [
   },
 ];
 
+// 2026-11-05 TOP デザイン刷新（redesign-20261105）。本文・業者情報・順位・リンク先は変えず、見せ方だけを変えている。
+
+const ArrowRight = ({ className = "h-4 w-4" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="9 6 15 12 9 18" />
+  </svg>
+);
+
+const PinIcon = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" />
+    <circle cx="12" cy="9.5" r="2.5" />
+  </svg>
+);
+
+/* ─── Hero ─── */
+function HeroButtons() {
+  return (
+    <div className="grid gap-2.5 sm:grid-cols-2">
+      <a href="#industry" className="kc-btn kc-btn--lg justify-between">
+        <span className="flex items-center gap-3">
+          <TopIcon name="office" size={30} className="text-white" />
+          業種・お悩みから探す
+        </span>
+        <ArrowRight className="h-5 w-5" />
+      </a>
+      <a href="#area" className="kc-btn kc-btn--lg justify-between">
+        <span className="flex items-center gap-3">
+          <PinIcon />
+          エリアから探す
+        </span>
+        <ArrowRight className="h-5 w-5" />
+      </a>
+    </div>
+  );
+}
+
+const HERO_LINKS: [string, string][] = [
+  ["業者ランキングを見る", "/ranking/"],
+  ["費用相場を調べる", "/guide/cost/"],
+];
+
+const LEAD = "業務用エアコンの設置・交換・修理業者を比較・掲載しています。業種・予算・地域に応じた業者選びにご活用ください。";
+
+function HeroLinks() {
+  return (
+    <ul className="flex flex-wrap gap-2">
+      {HERO_LINKS.map(([label, href]) => (
+        <li key={href}>
+          <Link href={href} className="inline-flex min-h-[42px] items-center gap-1 rounded-[3px] border border-[color:var(--kc-border-strong)] bg-white px-3.5 text-[13px] font-bold text-[color:var(--kc-navy)] hover:border-[color:var(--kc-navy)]">
+            {label}
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Hero() {
+  return (
+    <section className="relative overflow-hidden border-b border-[color:var(--kc-border)] bg-[color:var(--kc-paper)]">
+      <div className="md:grid md:min-h-[580px] md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:min-h-[620px]">
+        <div className="relative z-10 flex flex-col justify-center px-4 pb-6 pt-7 md:py-14 md:pl-[max(24px,calc((100vw-1160px)/2+24px))] md:pr-0">
+          <p className="text-[13px] font-bold tracking-[0.06em] text-[color:var(--kc-sky-dark)] md:text-[14px]">
+            法人・店舗向け業務用エアコン専門ポータル
+          </p>
+          <h1 className="mt-3 text-[28px] font-bold leading-[1.42] tracking-[0.03em] text-[color:var(--kc-ink)] md:mt-4 md:text-[40px] lg:text-[46px]">
+            法人・店舗の
+            <br />
+            業務用エアコン選びを
+            <br />
+            <span className="text-[color:var(--kc-navy)] underline decoration-[color:var(--kc-sky)] decoration-[6px] underline-offset-[8px]">業者比較</span>で支援します
+          </h1>
+
+          <div className="relative mt-8 hidden md:block md:mr-[-90px] lg:mr-[-170px]">
+            <div className="border border-[color:var(--kc-border-strong)] bg-white p-3">
+              <HeroButtons />
+            </div>
+          </div>
+          <p className="mt-6 hidden max-w-[34em] text-[15px] leading-[1.9] text-[color:var(--kc-muted)] md:block">{LEAD}</p>
+          <div className="mt-5 hidden md:block"><HeroLinks /></div>
+        </div>
+
+        {/* PC：写真を右に置き、左から背景色のグラデーションを重ねる */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[64%] md:block lg:w-[62%]" aria-hidden>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/fv-kucho-tenken-pc.jpg" alt="" width={2400} height={1349} className="absolute inset-0 h-full w-full object-cover object-[62%_50%]" fetchPriority="high" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--kc-paper)_0%,var(--kc-paper)_6%,color-mix(in_srgb,var(--kc-paper)_84%,transparent)_24%,color-mix(in_srgb,var(--kc-paper)_38%,transparent)_42%,transparent_60%)]" />
+          <p className="absolute bottom-3 right-3 bg-black/50 px-2 py-1 text-[11px] text-white">写真はイメージです</p>
+        </div>
+        <div className="hidden md:block" />
+
+        {/* スマホ：写真の中に主導線 */}
+        <div className="relative md:hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/fv-kucho-tenken-sp.jpg" alt="天井の空調の吸込グリルを外して点検する作業者の手元" width={1200} height={675} className="block h-[390px] w-full object-cover object-[64%_50%]" fetchPriority="high" />
+          <p className="absolute right-2 top-2 bg-black/50 px-2 py-0.5 text-[10px] text-white">写真はイメージです</p>
+          <div className="absolute inset-x-3 bottom-3">
+            <HeroButtons />
+          </div>
+        </div>
+        <div className="px-4 pb-6 pt-5 md:hidden">
+          <p className="text-[14px] leading-[1.85] text-[color:var(--kc-muted)]">{LEAD}</p>
+          <div className="mt-4"><HeroLinks /></div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── 数値（サイト内のデータから数えた値・既存の表示） ─── */
+function TrustBadges() {
+  const badges: { k: string; v: string; u: string; desc: string }[] = [
+    { k: "掲載業者数", v: String(companies.length), u: "社", desc: "比較一覧に掲載" },
+    { k: "業種別ガイド", v: String(INDUSTRIES.length), u: "業種", desc: "飲食店・オフィス・工場など" },
+    { k: "都道府県別のまとめ", v: String(areaCount), u: "都道府県", desc: "補助金と対応業者" },
+    { k: "無料見積もり比較", v: "3", u: "社", desc: "3社程度から取って比べる" },
+    { k: "対応エリア", v: "全国", u: "", desc: "業者により異なります" },
+  ];
+  return (
+    <section className="border-b border-[color:var(--kc-border)] bg-white">
+      <div className="kc-container">
+        <dl className="grid grid-cols-2 md:grid-cols-5">
+          {badges.map((b, i) => (
+            <div
+              key={b.k}
+              className={`border-[color:var(--kc-border)] px-3 py-5 md:px-5 md:py-7 ${i < 4 ? "border-b md:border-b-0" : ""} ${i % 2 === 0 && i < 4 ? "border-r" : ""} ${i < 4 ? "md:border-r" : ""} ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}
+            >
+              <dt className="text-[12px] font-bold tracking-[0.06em] text-[color:var(--kc-muted)] md:text-[13px]">{b.k}</dt>
+              <dd className="mt-1.5">
+                <span className="text-[30px] font-bold leading-none text-[color:var(--kc-navy)] md:text-[36px]">{b.v}</span>
+                {b.u && <span className="ml-1 text-[13px] font-bold md:text-[14px]">{b.u}</span>}
+                <span className="mt-1.5 block text-[12px] text-[color:var(--kc-muted)] md:text-[13px]">{b.desc}</span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <p className="kc-container pb-3 text-[11px] leading-relaxed text-[color:var(--kc-muted)]">
+        ※ 掲載業者数・業種別ガイド・都道府県別のまとめの数は、当サイトの掲載ページを数えた値です（2026年11月5日時点）。対応エリアは業者ごとに異なるため、比較一覧と各社の公式サイトでご確認ください。写真はイメージです（Unsplash・撮影 Birmingham Airduct Cleaning Services・Unsplash License、2026年11月5日確認）。
+      </p>
+    </section>
+  );
+}
+
+/* ─── 業種・お悩みから探す ─── */
+const INDUSTRIES = [
+  { slug: "restaurant", label: "飲食店" },
+  { slug: "office", label: "オフィス" },
+  { slug: "factory", label: "工場・倉庫" },
+  { slug: "clinic", label: "クリニック" },
+  { slug: "shop", label: "小売店舗" },
+  { slug: "school", label: "学校" },
+  { slug: "beauty-salon", label: "美容室" },
+  { slug: "nursery", label: "保育園" },
+  { slug: "care-facility", label: "介護施設" },
+];
+
+const GUIDES = [
+  { icon: "cost", title: "費用相場", desc: "工事費込みの目安と内訳", href: "/guide/cost/" },
+  { icon: "horsepower", title: "馬力・kW換算", desc: "1馬力≒2.8kWの早見表", href: "/guide/horsepower/" },
+  { icon: "type", title: "機種タイプ比較", desc: "天井カセット・壁掛け・床置き", href: "/guide/type/" },
+  { icon: "timing", title: "発注の時期", desc: "工事が混む時期と補助金", href: "/guide/timing/" },
+  { icon: "renewal", title: "更新専用機種", desc: "既設配管の再利用", href: "/guide/renewal-model/" },
+  { icon: "cold-region", title: "寒冷地向け", desc: "寒冷地向け機種の比較", href: "/guide/cold-region/" },
+  { icon: "maker", title: "メーカー別", desc: "各社のシリーズ一覧", href: "/maker/" },
+  { icon: "index", title: "坪数×馬力×費用", desc: "早見インデックス", href: "/cost-index/" },
+];
+
+function IndustryFinder() {
+  return (
+    <section id="industry" className="kc-section scroll-mt-20">
+      <div className="kc-container">
+        <h2 className="kc-h2">業種・お悩みから探す</h2>
+
+        <h3 className="kc-h3">業種別に探す</h3>
+        <p className="mb-5 text-[14px] text-[color:var(--kc-muted)]">業種ごとに適した業者をご紹介します</p>
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-5">
+          {INDUSTRIES.map((t, i) => (
+            <li key={t.slug} data-reveal={String(i % 5)}>
+              <Link href={`/industry/${t.slug}/`} className="kc-card kc-card-link group flex h-full flex-col items-center px-3 pb-5 pt-6 text-center md:pt-7">
+                <TopIcon name={t.slug} size={80} className="h-[64px] w-[64px] text-[color:var(--kc-navy)] md:h-[80px] md:w-[80px]" />
+                <span className="mt-3 text-[16px] font-bold tracking-[0.04em] md:text-[17px]">{t.label}</span>
+                <span className="mt-2 inline-flex items-center gap-1 text-[12px] font-bold text-[color:var(--kc-sky-dark)]">
+                  選び方を見る
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="kc-h3 mt-12 md:mt-14">お悩み別のガイド</h3>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {GUIDES.map((g, i) => (
+            <li key={g.href} data-reveal={String(i % 4)}>
+              <Link href={g.href} className="kc-card kc-card-link flex h-full min-h-[84px] items-center gap-4 px-4 py-3">
+                <TopIcon name={g.icon} size={48} className="h-12 w-12 shrink-0 text-[color:var(--kc-navy)]" />
+                <span className="flex min-w-0 flex-col">
+                  <span className="text-[15px] font-bold">{g.title}</span>
+                  <span className="mt-0.5 text-[12px] leading-snug text-[color:var(--kc-muted)]">{g.desc}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   const top3 = companies.slice(0, 3);
 
   return (
     <>
       <SiteHeader />
-      <main>
-        {/* Hero - full-width with background image and overlay */}
-        <section
-          className="relative min-h-[520px] md:min-h-[600px] flex items-center justify-center overflow-hidden"
-          style={{
-            backgroundImage: "url('/images/hero-a.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
-          }}
-        >
-          {/* Navy blue gradient overlay */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(30,64,175,0.88) 0%, rgba(30,58,138,0.80) 60%, rgba(30,64,175,0.65) 100%)",
-            }}
-          />
-          <div className="relative z-10 max-w-4xl mx-auto text-center px-4 py-20">
-            {/* Trust badge */}
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 mb-6 text-sm text-white/90 font-medium">
-              <span className="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-              法人・店舗向け業務用エアコン専門ポータル
-            </div>
-            <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-white drop-shadow-lg">
-              法人・店舗の業務用エアコン選びを
-              <br />
-              <span className="text-amber-300">業者比較</span>で支援します
-            </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-              業務用エアコンの設置・交換・修理業者を比較・掲載しています。<br className="hidden md:block" />
-              業種・予算・地域に応じた業者選びにご活用ください。
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/ranking/"
-                className="bg-[#F59E0B] hover:bg-amber-500 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all shadow-lg shadow-amber-900/30 hover:shadow-xl hover:-translate-y-0.5"
-              >
-                業者ランキングを見る →
-              </Link>
-              <Link
-                href="/guide/cost/"
-                className="bg-white/15 backdrop-blur-sm border-2 border-white/60 text-white hover:bg-white hover:text-[#1E40AF] font-bold py-4 px-8 rounded-xl text-lg transition-all"
-              >
-                費用相場を調べる
-              </Link>
-            </div>
-            {/* Stats bar */}
-            <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-10 text-white/80 text-sm">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-black text-white">{companies.length}<span className="text-base font-bold">社</span></span>
-                <span>掲載業者数</span>
-              </div>
-              <div className="w-px bg-white/20 hidden md:block"></div>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-black text-white">3<span className="text-base font-bold">社</span></span>
-                <span>無料見積もり比較</span>
-              </div>
-              <div className="w-px bg-white/20 hidden md:block"></div>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-black text-white">全国<span className="text-base font-bold">対応</span></span>
-                <span>対応エリア</span>
-              </div>
-            </div>
+      <main className="kc-page">
+        <ScrollReveal />
+        <Hero />
+        <TrustBadges />
+        <IndustryFinder />
+
+        {/* エリアから探す */}
+        <section id="area" className="kc-section kc-band scroll-mt-20">
+          <div className="kc-container">
+            <h2 className="kc-h2">エリアから探す</h2>
+            <AreaFinder />
           </div>
         </section>
 
-        {/* Industry Nav - colored icon cards */}
-        <section className="py-14 px-4 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-                業種別に探す
-              </h2>
-              <p className="text-gray-500 text-sm">業種ごとに適した業者をご紹介します</p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {industryNav.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/industry/${item.slug}/`}
-                  className={`flex flex-col items-center p-5 rounded-2xl border-2 transition-all group ${item.color}`}
-                >
-                  <div className={`w-14 h-14 rounded-xl ${item.iconBg} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                    <img src={item.iconSrc} alt="" className="w-8 h-8 inline-block" />
-                  </div>
-                  <span className="text-sm font-semibold text-gray-700 group-hover:text-[#1E40AF] text-center leading-tight">
-                    {item.label}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* TOP3 - Professional ranking cards */}
-        <section className="py-14 px-4 bg-[#F1F5F9]">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-                おすすめ業者 TOP3
-              </h2>
-              <p className="text-gray-500 text-sm">編集部が選定した業者を掲載しています</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* TOP3 */}
+        <section id="ranking" className="kc-section scroll-mt-20">
+          <div className="kc-container">
+            <h2 className="kc-h2">おすすめ業者 TOP3</h2>
+            <p className="kc-h2-sub">編集部が選定した業者を掲載しています</p>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
               {top3.map((company, index) => (
-                <div
-                  key={company.slug}
-                  className={`bg-white rounded-2xl border-2 p-6 relative overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl ${rankBadge[index].border} shadow-md ${rankBadge[index].shadow}`}
-                >
-                  {/* Rank badge */}
-                  <div className={`absolute top-0 right-0 ${rankBadge[index].bg} ${rankBadge[index].text} text-xs font-black px-3 py-1 rounded-bl-xl`}>
-                    {rankBadge[index].label}
-                  </div>
-                  {/* Rank number */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <span
-                      className={`text-4xl font-black leading-none ${
-                        index === 0
-                          ? "text-amber-400"
-                          : index === 1
-                          ? "text-slate-400"
-                          : "text-orange-400"
-                      }`}
-                    >
-                      #{index + 1}
+                <div key={company.slug} className={`kc-card flex flex-col p-5 md:p-6 ${index === 0 ? "border-2 border-[color:var(--kc-navy)]" : ""}`} data-reveal={String(index)}>
+                  <div className="mb-4 flex items-center gap-3">
+                    <span className={`inline-flex h-10 min-w-[52px] items-center justify-center px-2 text-[15px] font-bold ${index === 0 ? "bg-[color:var(--kc-navy)] text-white" : "border border-[color:var(--kc-navy)] text-[color:var(--kc-navy)]"}`}>
+                      {index + 1}位
                     </span>
-                    <div>
-                      <h3 className="font-bold text-gray-800 text-base leading-tight">{company.name}</h3>
-                    </div>
+                    <h3 className="text-[17px] font-bold leading-tight">{company.name}</h3>
                   </div>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed border-l-2 border-gray-200 pl-3">{company.tagline}</p>
-                  <ul className="space-y-2 mb-5">
+                  <p className="mb-4 border-l-2 border-[color:var(--kc-border-strong)] pl-3 text-[14px] leading-relaxed text-[color:var(--kc-muted)]">{company.tagline}</p>
+                  <ul className="mb-5 grid gap-2">
                     {company.features.slice(0, 3).map((f) => (
-                      <li key={f} className="text-xs text-gray-700 flex items-start gap-2 bg-gray-50 rounded-lg px-3 py-2">
-                        <span className="text-emerald-500 font-bold mt-0.5 shrink-0"></span>
-                        <span>{f}</span>
-                      </li>
+                      <li key={f} className="kc-dot text-[13px] leading-relaxed">{f}</li>
                     ))}
                   </ul>
-                  <Link
-                    href={`/company/${company.slug}/`}
-                    className={`block text-center py-2.5 px-4 rounded-xl text-sm font-bold transition-all ${
-                      index === 0
-                        ? "bg-[#1E40AF] text-white hover:bg-blue-700 shadow-md shadow-blue-200"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                    }`}
-                  >
-                    詳しく見る →
+                  <Link href={`/company/${company.slug}/`} className="kc-btn mt-auto w-full !min-h-[48px] text-[14px]">
+                    詳しく見る
+                    <ArrowRight />
                   </Link>
                 </div>
               ))}
             </div>
-            <div className="text-center mt-6">
-              <Link
-                href="/ranking/"
-                className="inline-flex items-center gap-2 text-[#1E40AF] font-semibold hover:underline text-sm"
-              >
-                すべてのランキングを見る →
+            <div className="mt-6">
+              <Link href="/ranking/" className="inline-flex min-h-[44px] items-center gap-1 text-[14px] font-bold text-[color:var(--kc-navy)] underline decoration-[color:var(--kc-border-strong)] underline-offset-4 hover:decoration-[color:var(--kc-navy)]">
+                すべてのランキングを見る
+                <ArrowRight />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Comparison Table */}
-        <section className="py-14 px-4 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-                業者比較一覧
-              </h2>
-              <p className="text-gray-500 text-sm">主要業者のサービス内容を一覧で比較できます</p>
-            </div>
-            <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-              <table className="w-full border-collapse text-sm">
+        {/* 比較一覧 */}
+        <section className="kc-section kc-band">
+          <div className="kc-container">
+            <h2 className="kc-h2">業者比較一覧</h2>
+            <p className="kc-h2-sub">主要業者のサービス内容を一覧で比較できます</p>
+            <div className="overflow-x-auto border border-[color:var(--kc-border-strong)]" data-reveal="0">
+              <table className="w-full min-w-[640px] border-collapse text-[14px]">
                 <thead>
-                  <tr className="bg-[#1E40AF] text-white">
-                    <th className="p-4 text-left font-semibold">業者名</th>
-                    <th className="p-4 text-left font-semibold">対応エリア</th>
-                    <th className="p-4 text-left font-semibold">保証</th>
-                    <th className="p-4 text-left font-semibold">詳細</th>
+                  <tr className="bg-[color:var(--kc-navy)] text-white">
+                    <th className="p-3.5 text-left font-bold md:p-4">業者名</th>
+                    <th className="p-3.5 text-left font-bold md:p-4">対応エリア</th>
+                    <th className="p-3.5 text-left font-bold md:p-4">保証</th>
+                    <th className="p-3.5 text-left font-bold md:p-4">詳細</th>
                   </tr>
                 </thead>
                 <tbody>
                   {companies.map((company, index) => (
-                    <tr
-                      key={company.slug}
-                      className={`border-t border-gray-100 hover:bg-blue-50/40 transition-colors ${index % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}
-                    >
-                      <td className="p-4 font-semibold text-gray-800">{company.name}</td>
-                      <td className="p-4 text-gray-600">{company.coverage}</td>
-                      <td className="p-4 text-gray-600 text-xs">{company.warranty}</td>
-                      <td className="p-4">
-                        <Link
-                          href={`/company/${company.slug}/`}
-                          className="inline-flex items-center gap-1 text-[#1E40AF] hover:text-blue-800 font-semibold text-xs bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-colors"
-                        >
+                    <tr key={company.slug} className={`border-t border-[color:var(--kc-border)] ${index % 2 === 0 ? "bg-white" : "bg-[color:var(--kc-paper)]"}`}>
+                      <td className="whitespace-nowrap p-3.5 font-bold md:p-4">{company.name}</td>
+                      <td className="p-3.5 text-[color:var(--kc-muted)] md:p-4">{company.coverage}</td>
+                      <td className="p-3.5 text-[13px] text-[color:var(--kc-muted)] md:p-4">{company.warranty}</td>
+                      <td className="p-3.5 md:p-4">
+                        <Link href={`/company/${company.slug}/`} className="inline-flex min-h-[40px] items-center gap-1 whitespace-nowrap rounded-[3px] border border-[color:var(--kc-navy)] px-3 text-[13px] font-bold text-[color:var(--kc-navy)] hover:bg-[color:var(--kc-wash)]">
                           詳しく見る
                         </Link>
                       </td>
@@ -266,49 +343,33 @@ export default function HomePage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-14 px-4 bg-[#F1F5F9]">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-                よくある質問
-              </h2>
-              <p className="text-gray-500 text-sm">業務用エアコンに関するご質問にお答えします</p>
-            </div>
-            <div className="space-y-3">
+        <section className="kc-section">
+          <div className="kc-container max-w-[880px]">
+            <h2 className="kc-h2">よくある質問</h2>
+            <p className="kc-h2-sub">業務用エアコンに関するご質問にお答えします</p>
+            <div className="grid gap-3">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                  <div className="p-5">
-                    <h3 className="font-bold text-gray-800 mb-3 flex items-start gap-3">
-                      <span className="shrink-0 w-7 h-7 rounded-full bg-[#1E40AF] text-white text-xs font-black flex items-center justify-center mt-0.5">Q</span>
-                      <span>{faq.q}</span>
-                    </h3>
-                    <div className="flex items-start gap-3 pl-0">
-                      <span className="shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center mt-0.5">A</span>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {faq.a}
-                      </p>
-                    </div>
-                  </div>
+                <div key={index} className="kc-card p-5 md:p-6" data-reveal="0">
+                  <h3 className="mb-3 border-l-4 border-[color:var(--kc-navy)] pl-3 text-[16px] font-bold leading-snug">{faq.q}</h3>
+                  <p className="text-[14px] leading-[1.9] text-[color:var(--kc-muted)]">{faq.a}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Banner */}
-        <section className="py-14 px-4 bg-[#1E40AF]">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+        {/* CTA */}
+        <section className="bg-[color:var(--kc-navy)] py-14 md:py-16">
+          <div className="kc-container max-w-[880px]">
+            <h2 className="text-[22px] font-bold leading-snug tracking-[0.03em] text-white md:text-[28px]">
               無料見積もりによる業者比較をおすすめします
             </h2>
-            <p className="text-blue-200 mb-8 text-sm md:text-base leading-relaxed">
+            <p className="mt-4 text-[14px] leading-relaxed text-white/80 md:text-[15px]">
               複数業者（3社程度）から無料で見積もりを取り、費用感を把握したうえで業者を選ぶことをおすすめします。
             </p>
-            <Link
-              href="/ranking/"
-              className="inline-block bg-[#F59E0B] hover:bg-amber-500 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-            >
-              おすすめ業者ランキングを見る →
+            <Link href="/ranking/" className="mt-7 inline-flex min-h-[56px] items-center gap-2 rounded-[3px] border border-white bg-white px-7 text-[16px] font-bold text-[color:var(--kc-navy)] hover:bg-[color:var(--kc-wash)]">
+              おすすめ業者ランキングを見る
+              <ArrowRight />
             </Link>
           </div>
         </section>
