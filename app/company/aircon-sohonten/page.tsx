@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-sohonten" },
 };
 
-const UPDATED = "2026年10月27日";
+const UPDATED = "2026年11月5日";
 
 const toc = [
   { id: "summary", label: "エアコン総本店とは" },
@@ -79,7 +79,7 @@ const articleJsonLd = {
   headline:
     "エアコン総本店の口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-27",
+  dateModified: "2026-11-05",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -121,7 +121,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-27">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-05">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -142,7 +142,7 @@ export default function Page() {
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <p className="text-[1.05rem] leading-8 text-slate-700">
             業務用エアコンの入れ替えでは、長期的に取引できる信頼性の高い業者を選ぶことが重要です。
-            本記事では、創業40年以上の老舗として知られる
+            本記事では、公式サイトで「創業40年以上の実績」としている
             <strong className="font-semibold text-slate-900">エアコン総本店</strong>
             （運営：東洋電興株式会社）について、公開されている利用者の声、料金や保証、対応エリア、メリット・デメリットを、良い点・注意点の両面から中立的にまとめています。
           </p>
@@ -180,7 +180,7 @@ export default function Page() {
           <div className="rounded-2xl border border-teal-200 bg-teal-50/60 p-6">
             <p className="font-bold text-teal-800 mb-2">エアコン総本店の評判の要点</p>
             <p className="text-[0.95rem] leading-7 text-slate-700">
-              エアコン総本店は<strong className="font-semibold">創業40年以上の老舗</strong>業務用エアコン業者（運営：東洋電興株式会社）です。公式サイトに掲載されたお客様の声では<strong className="font-semibold">担当者の一貫対応・急ぎの依頼への対応スピード・事前説明の丁寧さ</strong>を評価する声が見られます。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金</a>をご覧ください。
+              エアコン総本店は、公式サイトで<strong className="font-semibold">「創業40年以上の実績」</strong>としている業務用エアコン業者（運営：東洋電興株式会社）です。公式サイトに掲載されたお客様の声では<strong className="font-semibold">担当者の一貫対応・急ぎの依頼への対応スピード・事前説明の丁寧さ</strong>を評価する声が見られます。詳しくは<a href="#good" className="text-teal-700 underline underline-offset-4">実際の口コミ</a>と<a href="#price" className="text-teal-700 underline underline-offset-4">料金</a>をご覧ください。
             </p>
           </div>
         </div>
@@ -428,7 +428,7 @@ export default function Page() {
               まとめ
             </h2>
             <p className="leading-8 text-slate-700">
-              エアコン総本店は、東洋電興株式会社が1981年から運営する業務用エアコンの老舗専門店で、創業40年以上の実績、専任担当制による安心感、3年・無料の工事保証が強みです。公式サイトに掲載されているお客様の声では、担当者が変わらない安心感や、急ぎの依頼への早い対応、事前説明の丁寧さを評価する声が見られました。一方で、施工エリアが関東1都3県中心である点にご留意ください。
+              エアコン総本店は、東洋電興株式会社（特定商取引表記の設立年月は「1981年1月6日」）が運営する業務用エアコンの専門店です。公式サイトでは「創業40年以上の実績」とし、見積もりから施工完了まで一貫して対応する「専任担当制」と、「弊社独自の工事保証が無料で３年付いております」とする工事保証を案内しています（出典：<a href="https://www.1981airconsohonten.jp/" target="_blank" rel="nofollow noopener" className="text-teal-700 underline underline-offset-4">公式トップページ</a>、<a href="https://www.1981airconsohonten.jp/law/" target="_blank" rel="nofollow noopener" className="text-teal-700 underline underline-offset-4">特定商取引表記</a>、<a href="https://www.1981airconsohonten.jp/warranty/" target="_blank" rel="nofollow noopener" className="text-teal-700 underline underline-offset-4">3年工事保証内容</a>。2026年11月5日確認）。公式サイトに掲載されているお客様の声では、担当者が変わらない安心感や、急ぎの依頼への早い対応、事前説明の丁寧さを評価する声が見られました。一方で、施工エリアが関東1都3県中心である点にご留意ください。
             </p>
             <p className="mt-4 leading-8 text-slate-700">
               業務用エアコンの導入は費用が大きいため、1社で決めず、複数業者から相見積もりを取り、料金・保証・対応エリアを比較して選ぶことが、失敗を防ぐうえで有効です。
