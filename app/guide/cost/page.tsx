@@ -40,11 +40,15 @@ const faqLd = {
 };
 
 // 補助金は年度・公募回で条件が変わるため概要のみ。最新の公募状況・対象要件は必ず公式で確認（詳細は発注タイミングと補助金カレンダーのガイド参照）。
-const subsidyInfo = [
+const SUBSIDY_CHECKED = "2026年11月4日";
+const subsidyInfo: { name: string; desc: string; amount: string; links?: { label: string; url: string }[] }[] = [
   {
     name: "省エネ・非化石転換補助金（経産省／SII）",
     desc: "業務用の高効率空調（電気式パッケージ・GHP等）の更新が主な対象で、空調更新で中心となる制度です。2026年の4次公募は2026年10月30日17時で締め切られました。5次公募の概要・日程は詳細が決まり次第SIIが公表するとしています（2026年10月31日に公式サイトで確認）",
-    amount: "補助率1/3〜（トップ性能枠1/2）",
+    amount: "補助率1/3以内（GX設備単位型トップ性能枠の更新は1/2以内）",
+    links: [
+      { label: "SII「省エネ・非化石転換補助金（設備単位型）4次公募 公募要領」1-11 補助率及び補助金限度額", url: "https://sii.or.jp/setsubi07r/uploads/r7h_st_01_kouboyouryou_4.pdf" },
+    ],
   },
   {
     name: "脱炭素ビルリノベ事業（環境省／SII）",
@@ -53,8 +57,16 @@ const subsidyInfo = [
   },
   {
     name: "東京都・各自治体の省エネ設備補助",
-    desc: "クール・ネット東京では高効率空調に最大3/4を補助しています。ほかの自治体にも独自の補助制度があります（公募の状況は自治体・年度で異なります）",
-    amount: "上限 100万〜4,500万円",
+    desc: "クール・ネット東京の「ゼロエミッション化に向けた省エネ設備導入・運用改善支援事業」の助成率・上限額は、年間CO2排出量を28t-CO2以上削減する区分が3/4・4,500万円、ほかの2区分が2/3・2,500万円または1,000万円です。神奈川県・埼玉県・大阪府・札幌市の制度は補助率1/3〜3/4・上限500万円です（埼玉県のスマートCO2排出削減設備導入事業の高効率省エネルギー設備への更新は上限300万円、神奈川県の認定・認証を受けた事業者は上限600万円）。公募の状況は自治体・年度で異なります（2026年11月4日に各公式サイトで確認）",
+    amount: "東京都 2/3〜3/4・上限1,000万〜4,500万円／4自治体 1/3〜3/4・上限300万〜600万円",
+    links: [
+      { label: "クール・ネット東京「ゼロエミッション化に向けた省エネ設備導入・運用改善支援事業」", url: "https://www.tokyo-co2down.jp/subsidy/zeroemi-shoene/" },
+      { label: "神奈川県「中小企業省エネルギー設備導入費等補助金」", url: "https://www.pref.kanagawa.jp/docs/ap4/cnt/f7226/shouenesetubihojokin.html" },
+      { label: "埼玉県「令和8年度 スマートCO2排出削減設備導入事業」", url: "https://www.pref.saitama.lg.jp/a0502/hojokin/r8co2hojo.html" },
+      { label: "埼玉県「CO₂排出削減設備導入補助金【緊急対策枠】」", url: "https://www.pref.saitama.lg.jp/a0502/hojokin/r7co2hojo-kinkyutaisaku.html" },
+      { label: "大阪府「令和8年度中小事業者高効率空調機導入支援事業補助金」", url: "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html" },
+      { label: "札幌市「製造業省エネルギー設備導入補助金」", url: "https://www.city.sapporo.jp/keizai/seizo/shien/seizougyousyouene.html" },
+    ],
   },
   {
     name: "中小企業経営強化税制（設備投資減税）",
@@ -128,6 +140,15 @@ export default function CostGuidePage() {
                 <span className="bg-green-100 text-[#059669] text-xs font-bold px-2 py-1 rounded">
                   目安: {subsidy.amount}
                 </span>
+                {subsidy.links && (
+                  <ul className="mt-2 space-y-1 text-xs text-gray-500">
+                    {subsidy.links.map((l) => (
+                      <li key={l.url}>
+                        出典: <a href={l.url} target="_blank" rel="noopener noreferrer" className="underline">{l.label}</a>（{SUBSIDY_CHECKED}確認）
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
@@ -151,7 +172,7 @@ export default function CostGuidePage() {
             </li>
             <li className="flex gap-2">
               <span className="font-black">3.</span>
-              <span><strong>補助金・税制優遇を活用する</strong> — 省エネ設備補助金により、費用の1/3〜1/2が補助される場合があります</span>
+              <span><strong>補助金・税制優遇を活用する</strong> — 国の省エネ・非化石転換補助金（設備単位型）の補助率は、補助対象経費の1/3以内（GX設備単位型トップ性能枠の更新は1/2以内）です（SIIの4次公募の公募要領・2026年11月4日確認）。自治体の補助は上の「使える補助金・助成金」をご覧ください</span>
             </li>
             <li className="flex gap-2">
               <span className="font-black">4.</span>
