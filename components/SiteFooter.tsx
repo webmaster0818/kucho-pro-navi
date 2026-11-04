@@ -48,6 +48,15 @@ export default function SiteFooter() {
               <li><Link href="/area/saitama/" className="hover:text-[#F59E0B] transition-colors">埼玉県</Link></li>
               <li><Link href="/area/osaka/" className="hover:text-[#F59E0B] transition-colors">大阪府</Link></li>
               <li><Link href="/area/hokkaido/" className="hover:text-[#F59E0B] transition-colors">北海道（札幌市）</Link></li>
+              <li><Link href="/area/ibaraki/" className="hover:text-[#F59E0B] transition-colors">茨城県</Link></li>
+              <li><Link href="/area/fukushima/" className="hover:text-[#F59E0B] transition-colors">福島県</Link></li>
+              <li><Link href="/area/niigata/" className="hover:text-[#F59E0B] transition-colors">新潟県</Link></li>
+              <li><Link href="/area/fukui/" className="hover:text-[#F59E0B] transition-colors">福井県</Link></li>
+              <li><Link href="/area/aichi/" className="hover:text-[#F59E0B] transition-colors">愛知県（名古屋市）</Link></li>
+              <li><Link href="/area/kyoto/" className="hover:text-[#F59E0B] transition-colors">京都府（京都市）</Link></li>
+              <li><Link href="/area/yamaguchi/" className="hover:text-[#F59E0B] transition-colors">山口県</Link></li>
+              <li><Link href="/area/hiroshima/" className="hover:text-[#F59E0B] transition-colors">広島県</Link></li>
+              <li><Link href="/area/fukuoka/" className="hover:text-[#F59E0B] transition-colors">福岡県（福岡市）</Link></li>
             </ul>
           </div>
         </div>
