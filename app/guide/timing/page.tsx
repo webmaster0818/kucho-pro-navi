@@ -108,7 +108,7 @@ export default function TimingGuidePage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 leading-snug">
           業務用エアコンの入れ替え・設置はいつ発注すべき？工事が混む時期と2026年の補助金カレンダー
         </h1>
-        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日、各自治体の省エネ設備導入補助は2026年11月3日） ／ 最終更新日：2026年11月4日 ／ 空調プロナビ編集部</p>
+        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日、各自治体の省エネ設備導入補助は2026年11月3日） ／ 最終更新日：2026年11月5日 ／ 空調プロナビ編集部</p>
 
         {/* 結論即答 */}
         <div className="bg-sky-50 border border-sky-100 rounded-xl p-5 mb-8">
@@ -189,7 +189,7 @@ export default function TimingGuidePage() {
             ))}
           </div>
           <p className="text-sm text-slate-700 leading-relaxed mt-4">
-            都道府県・市の制度の要件と受付状況（東京都〜北海道は2026年11月3日、茨城県以降は11月4日確認）：
+            都道府県・市の制度の要件と受付状況（東京都〜北海道は2026年11月3日、茨城県〜福岡県は11月4日、岩手県以降は11月5日確認）：
             <Link href="/area/tokyo/" className="text-sky-700 underline">東京都</Link>・
             <Link href="/area/kanagawa/" className="text-sky-700 underline">神奈川県</Link>・
             <Link href="/area/saitama/" className="text-sky-700 underline">埼玉県</Link>・
@@ -203,7 +203,13 @@ export default function TimingGuidePage() {
             <Link href="/area/kyoto/" className="text-sky-700 underline">京都府（京都市）</Link>・
             <Link href="/area/yamaguchi/" className="text-sky-700 underline">山口県</Link>・
             <Link href="/area/hiroshima/" className="text-sky-700 underline">広島県</Link>・
-            <Link href="/area/fukuoka/" className="text-sky-700 underline">福岡県（福岡市）</Link>
+            <Link href="/area/fukuoka/" className="text-sky-700 underline">福岡県（福岡市）</Link>・
+            <Link href="/area/iwate/" className="text-sky-700 underline">岩手県</Link>・
+            <Link href="/area/miyagi/" className="text-sky-700 underline">宮城県（仙台市）</Link>・
+            <Link href="/area/chiba/" className="text-sky-700 underline">千葉県</Link>・
+            <Link href="/area/shizuoka/" className="text-sky-700 underline">静岡県</Link>・
+            <Link href="/area/hyogo/" className="text-sky-700 underline">兵庫県（神戸市）</Link>・
+            <Link href="/area/kagoshima/" className="text-sky-700 underline">鹿児島県</Link>
           </p>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-4">
             <p className="text-xs text-amber-900 leading-relaxed">

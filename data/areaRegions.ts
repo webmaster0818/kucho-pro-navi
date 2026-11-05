@@ -20,15 +20,21 @@ const LABEL: Record<string, string> = {
   yamaguchi: "山口県",
   hiroshima: "広島県",
   fukuoka: "福岡県（福岡市）",
+  iwate: "岩手県",
+  miyagi: "宮城県（仙台市）",
+  chiba: "千葉県",
+  shizuoka: "静岡県",
+  hyogo: "兵庫県（神戸市）",
+  kagoshima: "鹿児島県",
 };
 
 const REGION_OF: [string, string[]][] = [
-  ["北海道・東北", ["hokkaido", "fukushima"]],
-  ["関東", ["kanagawa", "saitama", "ibaraki"]],
-  ["中部・北陸", ["niigata", "fukui", "aichi"]],
-  ["近畿", ["kyoto", "osaka"]],
+  ["北海道・東北", ["hokkaido", "iwate", "miyagi", "fukushima"]],
+  ["関東", ["kanagawa", "saitama", "chiba", "ibaraki"]],
+  ["中部・北陸", ["niigata", "fukui", "shizuoka", "aichi"]],
+  ["近畿", ["kyoto", "osaka", "hyogo"]],
   ["中国", ["hiroshima", "yamaguchi"]],
-  ["九州", ["fukuoka"]],
+  ["九州", ["fukuoka", "kagoshima"]],
 ];
 
 const slugs = new Set((areas as { slug: string }[]).map((a) => a.slug));
