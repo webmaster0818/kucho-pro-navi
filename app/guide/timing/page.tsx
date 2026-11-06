@@ -108,7 +108,7 @@ export default function TimingGuidePage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 leading-snug">
           業務用エアコンの入れ替え・設置はいつ発注すべき？工事が混む時期と2026年の補助金カレンダー
         </h1>
-        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日、各自治体の省エネ設備導入補助は2026年11月3日） ／ 最終更新日：2026年11月5日 ／ 空調プロナビ編集部</p>
+        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日、各自治体の省エネ設備導入補助は2026年11月3日） ／ 最終更新日：2026年11月6日 ／ 空調プロナビ編集部</p>
 
         {/* 結論即答 */}
         <div className="bg-sky-50 border border-sky-100 rounded-xl p-5 mb-8">
@@ -189,7 +189,7 @@ export default function TimingGuidePage() {
             ))}
           </div>
           <p className="text-sm text-slate-700 leading-relaxed mt-4">
-            都道府県・市の制度の要件と受付状況（東京都〜北海道は2026年11月3日、茨城県〜福岡県は11月4日、岩手県以降は11月5日確認）：
+            都道府県・市の制度の要件と受付状況（東京都〜北海道は2026年11月3日、茨城県〜福岡県は11月4日、岩手県〜鹿児島県は11月5日、島根県以降は11月6日確認）：
             <Link href="/area/tokyo/" className="text-sky-700 underline">東京都</Link>・
             <Link href="/area/kanagawa/" className="text-sky-700 underline">神奈川県</Link>・
             <Link href="/area/saitama/" className="text-sky-700 underline">埼玉県</Link>・
@@ -209,7 +209,11 @@ export default function TimingGuidePage() {
             <Link href="/area/chiba/" className="text-sky-700 underline">千葉県</Link>・
             <Link href="/area/shizuoka/" className="text-sky-700 underline">静岡県</Link>・
             <Link href="/area/hyogo/" className="text-sky-700 underline">兵庫県（神戸市）</Link>・
-            <Link href="/area/kagoshima/" className="text-sky-700 underline">鹿児島県</Link>
+            <Link href="/area/kagoshima/" className="text-sky-700 underline">鹿児島県</Link>・
+            <Link href="/area/shimane/" className="text-sky-700 underline">島根県</Link>・
+            <Link href="/area/tottori/" className="text-sky-700 underline">鳥取県</Link>・
+            <Link href="/area/wakayama/" className="text-sky-700 underline">和歌山県</Link>・
+            <Link href="/area/saga/" className="text-sky-700 underline">佐賀県</Link>
           </p>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-4">
             <p className="text-xs text-amber-900 leading-relaxed">
