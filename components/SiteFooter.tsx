@@ -68,6 +68,9 @@ export default function SiteFooter() {
               <li><Link href="/area/tottori/" className="hover:text-[#F59E0B] transition-colors">鳥取県</Link></li>
               <li><Link href="/area/wakayama/" className="hover:text-[#F59E0B] transition-colors">和歌山県</Link></li>
               <li><Link href="/area/saga/" className="hover:text-[#F59E0B] transition-colors">佐賀県</Link></li>
+              <li><Link href="/area/nagano/" className="hover:text-[#F59E0B] transition-colors">長野県</Link></li>
+              <li><Link href="/area/yamanashi/" className="hover:text-[#F59E0B] transition-colors">山梨県</Link></li>
+              <li><Link href="/area/ishikawa/" className="hover:text-[#F59E0B] transition-colors">石川県</Link></li>
             </ul>
           </div>
         </div>
