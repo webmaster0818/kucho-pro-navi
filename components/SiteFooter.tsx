@@ -71,6 +71,17 @@ export default function SiteFooter() {
               <li><Link href="/area/nagano/" className="hover:text-[#F59E0B] transition-colors">長野県</Link></li>
               <li><Link href="/area/yamanashi/" className="hover:text-[#F59E0B] transition-colors">山梨県</Link></li>
               <li><Link href="/area/ishikawa/" className="hover:text-[#F59E0B] transition-colors">石川県</Link></li>
+              <li><Link href="/area/tochigi/" className="hover:text-[#F59E0B] transition-colors">栃木県</Link></li>
+              <li><Link href="/area/toyama/" className="hover:text-[#F59E0B] transition-colors">富山県</Link></li>
+              <li><Link href="/area/shiga/" className="hover:text-[#F59E0B] transition-colors">滋賀県</Link></li>
+              <li><Link href="/area/nara/" className="hover:text-[#F59E0B] transition-colors">奈良県</Link></li>
+              <li><Link href="/area/yamagata/" className="hover:text-[#F59E0B] transition-colors">山形県（山形市）</Link></li>
+              <li><Link href="/area/akita/" className="hover:text-[#F59E0B] transition-colors">秋田県</Link></li>
+              <li><Link href="/area/okayama/" className="hover:text-[#F59E0B] transition-colors">岡山県</Link></li>
+              <li><Link href="/area/kagawa/" className="hover:text-[#F59E0B] transition-colors">香川県</Link></li>
+              <li><Link href="/area/kochi/" className="hover:text-[#F59E0B] transition-colors">高知県（高知市）</Link></li>
+              <li><Link href="/area/kumamoto/" className="hover:text-[#F59E0B] transition-colors">熊本県（熊本市）</Link></li>
+              <li><Link href="/area/oita/" className="hover:text-[#F59E0B] transition-colors">大分県</Link></li>
             </ul>
           </div>
         </div>

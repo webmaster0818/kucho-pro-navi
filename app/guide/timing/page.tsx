@@ -108,7 +108,7 @@ export default function TimingGuidePage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 leading-snug">
           業務用エアコンの入れ替え・設置はいつ発注すべき？工事が混む時期と2026年の補助金カレンダー
         </h1>
-        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日、各自治体の省エネ設備導入補助は2026年11月3日） ／ 最終更新日：2026年11月7日 ／ 空調プロナビ編集部</p>
+        <p className="text-xs text-slate-500 mb-6">補助金の公募状況の確認日：2026年10月17日（省エネ・非化石転換補助金は2026年10月31日、各自治体の省エネ設備導入補助は2026年11月3日） ／ 最終更新日：2026年11月8日 ／ 空調プロナビ編集部</p>
 
         {/* 結論即答 */}
         <div className="bg-sky-50 border border-sky-100 rounded-xl p-5 mb-8">
@@ -189,7 +189,7 @@ export default function TimingGuidePage() {
             ))}
           </div>
           <p className="text-sm text-slate-700 leading-relaxed mt-4">
-            都道府県・市の制度の要件と受付状況（東京都〜北海道は2026年11月3日、茨城県〜福岡県は11月4日、岩手県〜鹿児島県は11月5日、島根県〜佐賀県は11月6日、長野県以降は11月7日確認）：
+            都道府県・市の制度の要件と受付状況（東京都〜北海道は2026年11月3日、茨城県〜福岡県は11月4日、岩手県〜鹿児島県は11月5日、島根県〜佐賀県は11月6日、長野県〜石川県は11月7日、栃木県以降は11月8日確認）：
             <Link href="/area/tokyo/" className="text-sky-700 underline">東京都</Link>・
             <Link href="/area/kanagawa/" className="text-sky-700 underline">神奈川県</Link>・
             <Link href="/area/saitama/" className="text-sky-700 underline">埼玉県</Link>・
@@ -216,7 +216,18 @@ export default function TimingGuidePage() {
             <Link href="/area/saga/" className="text-sky-700 underline">佐賀県</Link>・
             <Link href="/area/nagano/" className="text-sky-700 underline">長野県</Link>・
             <Link href="/area/yamanashi/" className="text-sky-700 underline">山梨県</Link>・
-            <Link href="/area/ishikawa/" className="text-sky-700 underline">石川県</Link>
+            <Link href="/area/ishikawa/" className="text-sky-700 underline">石川県</Link>・
+            <Link href="/area/tochigi/" className="text-sky-700 underline">栃木県</Link>・
+            <Link href="/area/toyama/" className="text-sky-700 underline">富山県</Link>・
+            <Link href="/area/shiga/" className="text-sky-700 underline">滋賀県</Link>・
+            <Link href="/area/nara/" className="text-sky-700 underline">奈良県</Link>・
+            <Link href="/area/yamagata/" className="text-sky-700 underline">山形県（山形市）</Link>・
+            <Link href="/area/akita/" className="text-sky-700 underline">秋田県</Link>・
+            <Link href="/area/okayama/" className="text-sky-700 underline">岡山県</Link>・
+            <Link href="/area/kagawa/" className="text-sky-700 underline">香川県</Link>・
+            <Link href="/area/kochi/" className="text-sky-700 underline">高知県（高知市）</Link>・
+            <Link href="/area/kumamoto/" className="text-sky-700 underline">熊本県（熊本市）</Link>・
+            <Link href="/area/oita/" className="text-sky-700 underline">大分県</Link>
           </p>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-4">
             <p className="text-xs text-amber-900 leading-relaxed">

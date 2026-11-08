@@ -33,15 +33,27 @@ const LABEL: Record<string, string> = {
   nagano: "長野県",
   yamanashi: "山梨県",
   ishikawa: "石川県",
+  tochigi: "栃木県",
+  toyama: "富山県",
+  shiga: "滋賀県",
+  nara: "奈良県",
+  yamagata: "山形県（山形市）",
+  akita: "秋田県",
+  okayama: "岡山県",
+  kagawa: "香川県",
+  kochi: "高知県（高知市）",
+  kumamoto: "熊本県（熊本市）",
+  oita: "大分県",
 };
 
 const REGION_OF: [string, string[]][] = [
-  ["北海道・東北", ["hokkaido", "iwate", "miyagi", "fukushima"]],
-  ["関東", ["kanagawa", "saitama", "chiba", "ibaraki"]],
-  ["中部・北陸", ["niigata", "ishikawa", "fukui", "yamanashi", "nagano", "shizuoka", "aichi"]],
-  ["近畿", ["kyoto", "osaka", "hyogo", "wakayama"]],
-  ["中国", ["tottori", "shimane", "hiroshima", "yamaguchi"]],
-  ["九州", ["fukuoka", "saga", "kagoshima"]],
+  ["北海道・東北", ["hokkaido", "iwate", "akita", "miyagi", "yamagata", "fukushima"]],
+  ["関東", ["kanagawa", "saitama", "chiba", "ibaraki", "tochigi"]],
+  ["中部・北陸", ["niigata", "toyama", "ishikawa", "fukui", "yamanashi", "nagano", "shizuoka", "aichi"]],
+  ["近畿", ["shiga", "kyoto", "osaka", "hyogo", "nara", "wakayama"]],
+  ["中国", ["tottori", "shimane", "okayama", "hiroshima", "yamaguchi"]],
+  ["四国", ["kagawa", "kochi"]],
+  ["九州", ["fukuoka", "saga", "kumamoto", "oita", "kagoshima"]],
 ];
 
 const slugs = new Set((areas as { slug: string }[]).map((a) => a.slug));
