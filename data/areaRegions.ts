@@ -44,12 +44,13 @@ const LABEL: Record<string, string> = {
   kochi: "高知県（高知市）",
   kumamoto: "熊本県（熊本市）",
   oita: "大分県",
+  gifu: "岐阜県",
 };
 
 const REGION_OF: [string, string[]][] = [
   ["北海道・東北", ["hokkaido", "iwate", "akita", "miyagi", "yamagata", "fukushima"]],
   ["関東", ["kanagawa", "saitama", "chiba", "ibaraki", "tochigi"]],
-  ["中部・北陸", ["niigata", "toyama", "ishikawa", "fukui", "yamanashi", "nagano", "shizuoka", "aichi"]],
+  ["中部・北陸", ["niigata", "toyama", "ishikawa", "fukui", "yamanashi", "nagano", "gifu", "shizuoka", "aichi"]],
   ["近畿", ["shiga", "kyoto", "osaka", "hyogo", "nara", "wakayama"]],
   ["中国", ["tottori", "shimane", "okayama", "hiroshima", "yamaguchi"]],
   ["四国", ["kagawa", "kochi"]],
