@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/mitsumoa" },
 };
 
-const UPDATED = "2026年10月26日";
+const UPDATED = "2026年11月10日";
 
 const toc = [
   { id: "summary", label: "ミツモアとは" },
@@ -40,14 +40,14 @@ const goodReviews: Review[] = [
     body:
       "申し込む前に疑問点をチャットで問い合わせできたから、納得して予約ができました。",
     who: "ミツモアの利用者（30代／男性／東京都）",
-    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？｜メリットデメリットと特徴も徹底解説」（2026-10-21確認）",
+    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？」（2026-11-10確認）",
     url: "https://ekitan.com/media/house-cleaning/mitsumoa-reputation/",
   },
   {
     body:
       "複数社から見積もりが一度にもらえるところ。個人の小さいところが多く、作業内容を柔軟に対応してもらえる。",
     who: "ミツモアの利用者（30代／女性／東京都）",
-    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？｜メリットデメリットと特徴も徹底解説」（2026-10-21確認）",
+    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？」（2026-11-10確認）",
     url: "https://ekitan.com/media/house-cleaning/mitsumoa-reputation/",
   },
 ];
@@ -57,7 +57,7 @@ const badReviews: Review[] = [
     body:
       "業者さんとのやり取りや煩雑さが以外とあるなと思える所でありました。また、ハウスクリーニングに特化していないので、そのような面で、少し不安に思える所がありました。",
     who: "ミツモアの利用者（40代／男性／愛知県）",
-    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？｜メリットデメリットと特徴も徹底解説」（2026-10-21確認）",
+    source: "駅探PICKS「ミツモアのリアルな口コミ・評判とは？」（2026-11-10確認）",
     url: "https://ekitan.com/media/house-cleaning/mitsumoa-reputation/",
   },
   {
@@ -104,7 +104,7 @@ const articleJsonLd = {
   headline:
     "ミツモア（みつもあ）とは？業務用エアコンの見積もりの仕組み・手数料と口コミ",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-26",
+  dateModified: "2026-11-10",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -155,7 +155,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-26">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-10">最終更新：{UPDATED}</time>
           </div>
         </header>
 
