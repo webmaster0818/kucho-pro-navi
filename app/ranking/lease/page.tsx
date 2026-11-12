@@ -98,6 +98,27 @@ export default function LeaseRankingPage() {
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           業務用エアコンのリース対応業者とメリット・デメリット【2026年10月】
         </h1>
+        <section aria-label="業務用エアコンのリースの要点" className="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-6">
+          <p className="text-gray-800 leading-relaxed mb-3">
+            業務用エアコンのリース（ファイナンス・リース）は、利用者が選んだ機器をリース会社が購入し、月々のリース料で貸し出す契約です。初期費用を抑えて導入できる一方、次の点で一括購入やレンタルと異なります。
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 leading-relaxed">
+            <li>
+              リース期間中は原則として中途解約できず、解約する場合は残リース料または残リース料相当額の違約金を一括で支払います。月額リース料には物件価格のほか金利・固定資産税・保険料・リース会社の管理費等が含まれ、保守・修繕は原則として利用者の負担です（公益社団法人リース事業協会）。
+            </li>
+            <li>
+              リース期間は長期で、ダイキンのビジネスリースでは機種により4〜9年です。メーカー保証期間外の修理は有償です（ダイキン工業）。
+            </li>
+            <li>
+              レンタルは貸主が保有する物件を不特定多数に貸す契約で、一般的に借主に解約権があり、修繕義務は貸主が負います（公益社団法人リース事業協会）。短期間だけ使う場合や途中で解約する可能性がある場合は、この違いを確認したうえで選ぶ必要があります。
+            </li>
+            <li>
+              当ページで掲載している<a href="#lease-companies" className="text-[#1E40AF] hover:underline">リース対応の4社</a>は、いずれも対応エリアに東京都を含みます。
+            </li>
+          </ul>
+          <p className="text-xs text-gray-500 mt-3">確認日：2026年11月12日（リース事業協会「リース契約の特徴」・ダイキン工業「ビジネスリース」）。詳しいメリット・デメリットは<a href="#merit-demerit" className="text-[#1E40AF] hover:underline">下の項目</a>をご覧ください。</p>
+        </section>
+
         <p className="text-gray-600 mb-8 leading-relaxed">
           初期費用を抑えて業務用エアコンを導入したい場合、リース契約が選択肢になります。当ページでは、業務用エアコンをリースするメリット・デメリットを国税庁・公益社団法人リース事業協会・メーカー（ダイキン）の公式情報で整理し、公式サイトでリース対応を確認できた業者を掲載しています（2026年10月20日確認）。
         </p>
@@ -177,7 +198,7 @@ export default function LeaseRankingPage() {
           </div>
         </div>
 
-        <h2 className="text-xl font-bold text-gray-800 mb-2">リースに対応する業者（公式サイトで確認できた4社）</h2>
+        <h2 id="lease-companies" className="text-xl font-bold text-gray-800 mb-2">リースに対応する業者（公式サイトで確認できた4社）</h2>
         <p className="text-gray-600 text-sm mb-5 leading-relaxed">
           公式サイトにリース対応（またはリース契約の手続き）の記載がある業者のみを掲載しています。東京都内で検討する場合、4社とも対応エリアに東京を含みます（エアコン総本舗は東京・神奈川・埼玉・千葉・群馬・静岡・山梨）。リース料率・期間・審査の条件は各社・リース会社によって異なるため、見積もり時にご確認ください。
         </p>
