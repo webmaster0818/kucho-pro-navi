@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/denki-koujikouji-110" },
 };
 
-const UPDATED = "2026年10月28日";
+const UPDATED = "2026年11月14日";
 
 const toc = [
   { id: "summary", label: "電気工事110番とは" },
@@ -81,7 +81,7 @@ const articleJsonLd = {
   headline:
     "電気工事110番・換気扇110番は悪質？口コミ・評判と料金・契約の仕組みを公式で確認",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-28",
+  dateModified: "2026-11-14",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -132,7 +132,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-28">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-14">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -166,15 +166,17 @@ export default function Page() {
         {/* 換気扇110番の即答 */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
-            <p className="font-bold text-amber-800 mb-2">換気扇110番は悪質？　公式サイトと利用規約で確認できること</p>
+            <p className="font-bold text-amber-800 mb-2">換気扇110番は悪質？　口コミと、公式サイト・利用規約で確認できること</p>
             <ul className="text-[0.95rem] leading-7 text-slate-700 list-disc pl-5 space-y-1">
               <li>運営は電気工事110番と同じシェアリングテクノロジー株式会社（東証上場・証券コード3989）。受付は運営会社、作業は地域の加盟店です</li>
+              <li>口コミ：換気扇110番の公式サイト「最新の口コミ」に掲載されている5件（2026年9月28日〜10月21日・東京都、神奈川県、岐阜県、兵庫県）は、すべて★5です。作業の手際や対応の早さを評価する内容が中心で、1件（横浜市鶴見区）には「領収書の扱いや支払い方法についての認識があっておらず、現金か振込かを当日にやりとりしてしまった」との記載もあります。運営会社が選んで掲載している口コミで、掲載基準は公開されていません</li>
               <li>料金は交換11,000円〜、掃除はプロペラタイプ10,000円〜・レンジフードタイプ11,000円〜（いずれも税込の最低額）</li>
               <li>公式は「現地調査の後、無料で見積もり」「見積もり後のキャンセル可」「見積もり確定後の追加料金なし」としつつ、エリア・加盟店・現場状況により内容が異なる場合があると注記しています</li>
               <li>利用規約第8条では、契約はお客様と加盟店の間で結ばれ、サービスの内容・質や苦情・解約は加盟店との間で扱うとされています</li>
+              <li>公式の「ご利用の流れ」には、対応加盟店によっては作業前に料金の支払いを求める場合があると記載されています。支払いの方法と時期は、見積もりの段階でご確認ください</li>
             </ul>
             <p className="mt-3 text-[0.95rem] leading-7 text-slate-700">
-              契約の相手は加盟店のため、悪質かどうかは来訪した加盟店の見積もりと説明で判断することになります。作業前に総額・作業範囲・調査費の有無を書面で受け取り、納得できない場合は依頼しないことが確実です。詳しくは<a href="#kankisen" className="text-teal-700 underline underline-offset-4">換気扇110番の料金と契約の仕組み</a>をご覧ください（2026年10月28日に<a href="https://www.kankisen-c.jp/price/" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">料金のご案内</a>・<a href="https://www.kankisen-c.jp/terms/" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">利用規約</a>で確認）。
+              契約の相手は加盟店のため、悪質かどうかは来訪した加盟店の見積もりと説明で判断することになります。作業前に総額・作業範囲・調査費の有無を書面で受け取り、納得できない場合は依頼しないことが確実です。詳しくは<a href="#kankisen" className="text-teal-700 underline underline-offset-4">換気扇110番の料金と契約の仕組み</a>をご覧ください（2026年11月14日に<a href="https://www.kankisen-c.jp/" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">公式サイト</a>・<a href="https://www.kankisen-c.jp/price/" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">料金のご案内</a>・<a href="https://www.kankisen-c.jp/terms/" target="_blank" rel="nofollow noopener" className="underline underline-offset-2">利用規約</a>で確認）。
             </p>
           </div>
         </div>
