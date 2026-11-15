@@ -109,6 +109,13 @@ export default function HorsepowerGuidePage() {
         <p className="text-gray-600 mb-8 leading-relaxed">
           <strong>業務用エアコンの馬力は「1馬力≒冷房能力2.8kW」で換算します</strong>（ダイキン公式の換算値）。<strong>10馬力は28.0kW</strong>（P280形）、6馬力は16.0kW（P160形）、5馬力は14.0kWです（P140形＝14.0kWは、ダイキン公式の表では「4馬力相当」と表記）。反対に<strong>10kWは約3.6馬力</strong>で、機種クラスでは4馬力（P112形・11.2kW）が目安です。4.5kWは約1.6馬力で1.8馬力（P45形）、20kWは約7.1馬力で8馬力（P224形・22.4kW）が目安です。すぐ下の早見表は、ダイキン公式の馬力とP形の対応にもとづいています。kW→馬力の換算表の各行から、kW別・馬力別の詳しいページへ進めます。換算したうえで、床面積・用途に応じた選び方をご確認ください。
         </p>
+        <div id="mikata" className="mb-8 rounded-lg border border-[#1E40AF]/30 bg-blue-50 p-4 text-sm text-gray-700 leading-relaxed">
+          <p className="font-bold text-gray-900 mb-1">カタログ・見積書での馬力の見方</p>
+          <p>
+            業務用エアコンの容量は「P80形」のような<strong>形式（P形）</strong>で表され、Pの後の数字は冷房能力（kW）の10倍です。ダイキン公式「<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/28" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの選び方</a>」は「エアコン容量を示す数値は冷房最大能力です。（例：P40形は4.0kW）」としています。
+            たとえばP80形は8.0kWで3馬力相当、P160形は16.0kWで6馬力相当、P280形は28.0kWで10馬力相当です。馬力が書かれていない見積書では、P形の数字を10で割ってkWを出し、2.8で割ると馬力のおおよその値になります（1馬力≒2.8kWは同社「<a href="https://www.ac.daikin.co.jp/customercenter/useful/article/49" target="_blank" rel="nofollow noopener" className="underline">業務用エアコンの設置費用</a>」。いずれも2026年11月15日確認）。
+          </p>
+        </div>
 
         {/* 馬力→kW 早見表（冒頭の即答） */}
         <section id="quick" className="mb-10">
