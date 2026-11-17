@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-center-ac" },
 };
 
-const UPDATED = "2026年10月21日";
+const UPDATED = "2026年11月17日";
 
 const toc = [
   { id: "summary", label: "エアコンセンターACとは" },
@@ -86,7 +86,7 @@ const articleJsonLd = {
   headline:
     "エアコンセンターACの口コミ・評判は？料金・対応エリアを調査",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-21",
+  dateModified: "2026-11-17",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -128,7 +128,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-21">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-17">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -148,7 +148,17 @@ export default function Page() {
         {/* Lead */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <p className="text-[1.05rem] leading-8 text-slate-700">
-            店舗やオフィスの空調を入れ替えるとき、「どの業者に依頼すれば安心か」の判断が重要になります。
+            <strong className="font-semibold text-slate-900">エアコンセンターAC</strong>
+            は、1967年創業の株式会社ミタデン（東京本店：東京都目黒区）の空調事業部が運営する業務用エアコンの販売・工事サービスです。
+            公式サイトの会社概要には、
+            <strong className="font-semibold text-slate-900">国土交通大臣許可（特・般）10448号（管・電気・消防施設）</strong>
+            と、ISO9001（JQA-QMA12941）・ISO14001（JQA-EM5506）の認証取得、1級管工事施工管理技士5名・1級電気工事施工管理技士6名などの資格者が記載されています。
+            利用者の口コミでは、説明の分かりやすさや、現場確認・補助金の説明・保証内容を評価する声が見られます（下記「良い口コミ・評判」）。
+            出典：
+            <a href="https://www.e-aircon.jp/abouts/about_ac.html" target="_blank" rel="nofollow noopener" className="text-teal-700 underline underline-offset-2">エアコンセンターAC「エアコンセンターACとは（会社概要）」</a>
+            （2026年11月17日確認）
+          </p>
+          <p className="mt-4 text-[1.05rem] leading-8 text-slate-700">
             本記事では、業務用エアコンの専門店として知られる
             <strong className="font-semibold text-slate-900">エアコンセンターAC</strong>
             （運営：株式会社ミタデン）について、比較サイトに掲載されている利用者の口コミ、本体＋工事一括やリースの仕組み、対応エリア、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
