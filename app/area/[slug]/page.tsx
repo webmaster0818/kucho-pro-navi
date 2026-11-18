@@ -31,6 +31,8 @@ interface AreaCompany {
 interface Area {
   slug: string;
   pref: string;
+  /** 市独自の制度のページ（都道府県の一覧・件数に含めない） */
+  city?: boolean;
   title: string;
   description: string;
   updated: string;
@@ -74,14 +76,15 @@ export default async function AreaPage(props: {
       return c ? { ...ac, name: c.name, tagline: c.tagline } : null;
     })
     .filter((x): x is AreaCompany & { name: string; tagline: string } => x !== null);
-  const others = areas.filter((a) => a.slug !== area.slug);
+  const others = areas.filter((a) => a.slug !== area.slug && !a.city);
+  const cities = areas.filter((a) => a.slug !== area.slug && a.city);
   const checked = fmt(area.updated);
 
   return (
     <>
       <SiteHeader />
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <Breadcrumb items={[{ label: "都道府県別" }, { label: area.pref }]} />
+        <Breadcrumb items={[{ label: area.city ? "市の補助金" : "都道府県別" }, { label: area.pref }]} />
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{area.title}</h1>
         <p className="text-gray-600 leading-relaxed mb-2 text-lg">{area.description}</p>
@@ -216,6 +219,21 @@ export default async function AreaPage(props: {
             ))}
           </ul>
         </section>
+
+        {cities.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">市独自の補助金</h2>
+            <ul className="flex flex-wrap gap-2 text-sm">
+              {cities.map((o) => (
+                <li key={o.slug}>
+                  <Link href={`/area/${o.slug}/`} className="inline-block bg-blue-50 text-[#1E40AF] px-3 py-1 rounded hover:bg-blue-100">
+                    {o.pref}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <script
           type="application/ld+json"

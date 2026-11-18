@@ -57,7 +57,8 @@ const REGION_OF: [string, string[]][] = [
   ["九州", ["fukuoka", "saga", "kumamoto", "oita", "kagoshima"]],
 ];
 
-const slugs = new Set((areas as { slug: string }[]).map((a) => a.slug));
+// 市独自の制度のページ（city: true）は都道府県の一覧・件数に含めない（11/18 okina 25 B）
+const slugs = new Set((areas as { slug: string; city?: boolean }[]).filter((a) => !a.city).map((a) => a.slug));
 const link = (slug: string): AreaLink => ({ slug, label: LABEL[slug] ?? slug });
 
 export const tokyo: AreaLink | null = slugs.has("tokyo") ? link("tokyo") : null;
