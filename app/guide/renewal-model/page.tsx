@@ -180,6 +180,10 @@ export default function RenewalModelPage() {
             <Link href="/guide/timing/" className="text-[#1E40AF] underline">交換時期のガイド</Link>
             、費用の目安は
             <Link href="/guide/cost/" className="text-[#1E40AF] underline">費用相場ガイド</Link>
+            、既設機の冷媒がR22の場合は
+            <Link href="/guide/r22/" className="text-[#1E40AF] underline">R22冷媒の業務用エアコン</Link>
+            、撤去時のフロン類の引渡しと点検の義務は
+            <Link href="/guide/fron-law/" className="text-[#1E40AF] underline">フロン排出抑制法のガイド</Link>
             にまとめています。メーカーは本体価格を公表していないため、費用は業者の見積もりで確認してください。
           </p>
         </section>

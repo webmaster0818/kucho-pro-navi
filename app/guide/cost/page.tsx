@@ -156,6 +156,9 @@ export default function CostGuidePage() {
             ※補助金の条件・金額・公募状況は年度ごとに変更され、予算到達で早期終了します。対象要件（空調単体が対象か）と最新情報は各省庁・自治体公式サイトでご確認ください。
             <Link href="/guide/timing/" className="text-[#059669] font-bold hover:underline">2026年の補助金カレンダーと発注タイミング →</Link>
           </p>
+          <p className="text-sm text-gray-600 mt-3 leading-relaxed">
+            導入後の電気代の目安は<Link href="/guide/electricity-cost/" className="text-[#1E40AF] underline">業務用エアコンの電気代</Link>、税務上の耐用年数は<Link href="/guide/useful-life/" className="text-[#1E40AF] underline">業務用エアコンの耐用年数</Link>、「パッケージエアコン」と「業務用エアコン」の呼び名の違いは<Link href="/guide/package-aircon/" className="text-[#1E40AF] underline">パッケージエアコンとは</Link>でご説明しています。
+          </p>
         </section>
 
         {/* Tips */}

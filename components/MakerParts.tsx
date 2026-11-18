@@ -82,10 +82,10 @@ export function Faqs({ faqs }: { faqs: { q: string; a: string }[] }) {
   );
 }
 
-export function Sources({ sources }: { sources: Source[] }) {
+export function Sources({ sources, checked, label }: { sources: Source[]; checked?: string; label?: string }) {
   return (
     <div className="mb-8 text-xs text-gray-500 leading-relaxed">
-      <p className="font-bold mb-1">出典（メーカー公式ページ・{fmtDate(MAKER_CHECKED)}確認）</p>
+      <p className="font-bold mb-1">出典（{label ?? "メーカー公式ページ"}・{fmtDate(checked ?? MAKER_CHECKED)}確認）</p>
       <ul className="space-y-1">
         {sources.map((s) => (
           <li key={s.url}>
@@ -97,7 +97,9 @@ export function Sources({ sources }: { sources: Source[] }) {
         ))}
       </ul>
       <p className="mt-2">
-        仕様・機能は確認日時点のメーカー公式ページの記載です。価格はメーカーが公表していないため掲載していません。機種の仕様は変更されることがあるため、見積もり時に最新のカタログで確認してください。
+        {label
+          ? "内容は確認日時点の各出典の記載です。制度や記載は改正・更新されることがあるため、最新の情報は出典のページでご確認ください。"
+          : "仕様・機能は確認日時点のメーカー公式ページの記載です。価格はメーカーが公表していないため掲載していません。機種の仕様は変更されることがあるため、見積もり時に最新のカタログで確認してください。"}
       </p>
     </div>
   );
@@ -124,10 +126,11 @@ export function Dealers({ makerName }: { makerName: string }) {
   );
 }
 
-export function UpdatedNote() {
+export function UpdatedNote({ checked, label }: { checked?: string; label?: string } = {}) {
+  const d = checked ?? MAKER_CHECKED;
   return (
     <p className="text-xs text-gray-500 mb-6">
-      最終更新：<time dateTime={MAKER_CHECKED}>{fmtDate(MAKER_CHECKED)}</time>（メーカー公式ページで確認）
+      最終更新：<time dateTime={d}>{fmtDate(d)}</time>（{label ?? "メーカー公式ページ"}で確認）
     </p>
   );
 }
