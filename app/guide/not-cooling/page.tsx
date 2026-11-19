@@ -134,7 +134,9 @@ export default function NotCoolingPage() {
             <Link href="/guide/r22/" className="text-[#1E40AF] underline">R22冷媒の業務用エアコン</Link>
             にまとめています。冷えても風が席に直接当たって不快な場合は、
             <Link href="/guide/windbreak/" className="text-[#1E40AF] underline">直接風を避ける機能（風除け）</Link>
-            をご覧ください。
+            をご覧ください。リモコンにエラーコードが表示されている場合の意味は
+            <Link href="/guide/error-code/" className="text-[#1E40AF] underline">業務用エアコンのエラーコード</Link>
+            でご説明しています。
           </p>
         </section>
 

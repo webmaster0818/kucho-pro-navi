@@ -247,6 +247,10 @@ export default function LeaseRankingPage() {
           ))}
         </div>
 
+        <p className="mt-8 text-sm text-gray-600 leading-relaxed">
+          中途解約ができる定額利用サービス（サブスク）とリースの違いは、<Link href="/guide/subscription/" className="text-[#1E40AF] underline">業務用エアコンのサブスク</Link>でご説明しています。
+        </p>
+
         <div className="mt-8 text-center">
           <Link href="/ranking/" className="text-[#1E40AF] hover:underline text-sm">
             ← 総合ランキングに戻る

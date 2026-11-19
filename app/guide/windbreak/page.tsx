@@ -122,7 +122,9 @@ export default function WindbreakPage() {
             <Link href="/maker/mitsubishi-electric/" className="text-[#1E40AF] underline">三菱電機</Link>
             ・
             <Link href="/maker/daikin/" className="text-[#1E40AF] underline">ダイキン</Link>
-            のメーカーページにまとめています。
+            のメーカーページにまとめています。天井ふところが足りない場所で4方向に吹き出す天吊形は
+            <Link href="/guide/wonderful/" className="text-[#1E40AF] underline">ワンダ風流とは</Link>
+            でご説明しています。
           </p>
         </section>
 
