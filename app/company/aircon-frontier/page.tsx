@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/aircon-frontier" },
 };
 
-const UPDATED = "2026年10月27日";
+const UPDATED = "2026年11月19日";
 
 const toc = [
   { id: "summary", label: "エアコンフロンティアとは" },
@@ -110,7 +110,7 @@ const articleJsonLd = {
   headline:
     "エアコンフロンティアの口コミ・評判は？業務用エアコンの料金・対応エリアを解説【2026年10月】",
   datePublished: "2026-06-10",
-  dateModified: "2026-10-27",
+  dateModified: "2026-11-19",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -152,7 +152,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-10-27">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-19">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -172,10 +172,15 @@ export default function Page() {
         {/* Lead */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <p className="text-[1.05rem] leading-8 text-slate-700">
-            店舗やオフィスの空調を入れ替えるとき、「どの業者に依頼すれば安心か」の判断が重要になります。
-            本記事では、業務用エアコンの専門店として知られる
             <strong className="font-semibold text-slate-900">エアコンフロンティア</strong>
-            （運営：アトム冷熱工業株式会社）について、実際に公開されている利用者の口コミ、料金やリースの仕組み、対応エリア、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
+            は、横浜市中区のアトム冷熱工業株式会社（1946年（昭和21年）2月創業・特定建設業許可 第64687号）が2014年（平成26年）に立ち上げた、業務用エアコンの販売と取り付け工事のECサイトです。
+            公式サイトの会社概要では、運営会社の事業内容を冷暖房機・空調機器・冷凍冷蔵装置の卸小売・販売・設計施工・保守メンテナンスとしており、問い合わせは0120-620-500（平日9:00〜17:30）で受け付けています。
+            出典：
+            <a href="https://aircon-f.co.jp/company.php" target="_blank" rel="nofollow noopener" className="text-teal-700 underline underline-offset-2">エアコンフロンティア「会社概要」</a>
+            （2026年11月19日確認）
+          </p>
+          <p className="mt-4 text-[1.05rem] leading-8 text-slate-700">
+            本記事では、エアコンフロンティアについて、実際に公開されている利用者の口コミ、料金やリースの仕組み、対応エリア、メリット・デメリットを、評価されている点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
             ※本記事の口コミは、各掲載サイトで公開されている内容を、出典ページを明記したうえで原文のまま引用したものです。料金や対応内容は時期・地域・契約条件により変わるため、最新の情報は公式サイトや無料見積もりでご確認ください（口コミの出典確認日：2026年10月21日）。
