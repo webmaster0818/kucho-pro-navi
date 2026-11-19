@@ -129,7 +129,7 @@ export default function FronLawPage() {
             ポータルサイトのFAQでは、最初の点検は、簡易点検なら3か月以内、定期点検なら1年または3年以内に行い、次の点検は前回の点検日が属する月の翌月1日から数えて定められた期間内に行うと説明されています。例として、6月3日に簡易点検をした場合、次回は9月中であればいつでもよいとされています。点検の義務は、機器の所有権がユーザーに移ってから発生します。フロン類を抜いて保管している機器は、点検は不要です。
           </p>
           <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-            冷媒漏えいの検知や点検記録の作成を支援するメーカーのサービスは<Link href="/guide/central-control/" className="text-[#1E40AF] underline">空調管理システムとは</Link>、国等の調達で求められる常時監視システムの要件は<Link href="/guide/green-purchasing/" className="text-[#1E40AF] underline">グリーン購入法と業務用エアコン</Link>でご説明しています。
+            冷媒漏えいの検知や点検記録の作成を支援するメーカーのサービスは<Link href="/guide/central-control/" className="text-[#1E40AF] underline">空調管理システムとは</Link>、国等の調達で求められる常時監視システムの要件は<Link href="/guide/green-purchasing/" className="text-[#1E40AF] underline">グリーン購入法と業務用エアコン</Link>、漏えいの見つけ方と漏れたときの対応は<Link href="/guide/gas-leak/" className="text-[#1E40AF] underline">業務用エアコンのガス漏れ</Link>でご説明しています。
           </p>
         </section>
 

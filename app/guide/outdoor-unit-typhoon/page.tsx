@@ -118,6 +118,8 @@ export default function OutdoorUnitTyphoonPage() {
             <Link href="/guide/fron-law/" className="text-[#1E40AF] underline">フロン排出抑制法のガイド</Link>
             、寒冷地・積雪地での機種選びは
             <Link href="/guide/cold-region/" className="text-[#1E40AF] underline">寒冷地の業務用エアコン</Link>
+            、室外機の運転音と置き場所は
+            <Link href="/guide/outdoor-unit-noise/" className="text-[#1E40AF] underline">室外機の騒音</Link>
             にまとめています。
           </p>
         </section>

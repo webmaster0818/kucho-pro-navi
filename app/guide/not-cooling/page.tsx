@@ -136,6 +136,10 @@ export default function NotCoolingPage() {
             <Link href="/guide/windbreak/" className="text-[#1E40AF] underline">直接風を避ける機能（風除け）</Link>
             をご覧ください。リモコンにエラーコードが表示されている場合の意味は
             <Link href="/guide/error-code/" className="text-[#1E40AF] underline">業務用エアコンのエラーコード</Link>
+            、運転自体が始まらない場合は
+            <Link href="/guide/not-starting/" className="text-[#1E40AF] underline">業務用エアコンがつかないときの確認事項</Link>
+            、設定温度の目安は
+            <Link href="/guide/set-temperature/" className="text-[#1E40AF] underline">業務用エアコンの設定温度</Link>
             でご説明しています。
           </p>
         </section>

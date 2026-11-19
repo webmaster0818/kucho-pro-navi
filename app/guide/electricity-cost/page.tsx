@@ -109,6 +109,10 @@ export default function ElectricityCostPage() {
             <Link href="/guide/timing/" className="text-[#1E40AF] underline">発注の時期のガイド</Link>
             、古い冷媒R22の機器は
             <Link href="/guide/r22/" className="text-[#1E40AF] underline">R22冷媒の業務用エアコン</Link>
+            、APFとCOPの見方は
+            <Link href="/guide/apf-cop/" className="text-[#1E40AF] underline">APFとCOPの違い</Link>
+            、設定温度の目安は
+            <Link href="/guide/set-temperature/" className="text-[#1E40AF] underline">業務用エアコンの設定温度</Link>
             にまとめています。
           </p>
         </section>
