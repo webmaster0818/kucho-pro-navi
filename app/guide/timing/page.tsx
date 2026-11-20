@@ -155,7 +155,9 @@ export default function TimingGuidePage() {
           <p className="text-sm text-slate-700 leading-relaxed">
             一般的な流れは <strong>①現地調査 → ②見積もり → ③発注 → ④工事</strong> で、目安は<strong>2〜4週間</strong>です。大型機・特注機は納期によりさらに延び、7〜8月の繁忙期は工事枠の順番待ちによりリードタイムが延びやすくなります。補助金を利用する場合は、<strong>工事前に交付決定が必要な制度が多い</strong>ため、その期間も見込んでください。費用の目安は
             <Link href="/cost-index/" className="text-sky-700 font-bold hover:underline">坪数×馬力×費用 早見インデックス</Link>
-            で確認できます。
+            で確認できます。工事の最後に行う試運転の確認事項は
+            <Link href="/guide/test-run/" className="text-sky-700 underline">業務用エアコンの試運転</Link>
+            をご覧ください。
           </p>
         </section>
 

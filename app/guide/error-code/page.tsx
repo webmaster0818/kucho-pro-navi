@@ -144,6 +144,8 @@ export default function ErrorCodePage() {
             <Link href="/guide/repair/" className="text-[#1E40AF] underline">業務用エアコンの修理業者</Link>
             、冷媒の漏えいが分かったときの義務は
             <Link href="/guide/fron-law/" className="text-[#1E40AF] underline">フロン排出抑制法と業務用エアコン</Link>
+            、工事直後の試運転で出るコードは
+            <Link href="/guide/test-run/" className="text-[#1E40AF] underline">業務用エアコンの試運転</Link>
             でご説明しています。
           </p>
         </section>
