@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/company/mitsumoa" },
 };
 
-const UPDATED = "2026年11月10日";
+const UPDATED = "2026年11月26日";
 
 const toc = [
   { id: "summary", label: "ミツモアとは" },
@@ -104,7 +104,7 @@ const articleJsonLd = {
   headline:
     "ミツモア（みつもあ）とは？業務用エアコンの見積もりの仕組み・手数料と口コミ",
   datePublished: "2026-06-10",
-  dateModified: "2026-11-10",
+  dateModified: "2026-11-26",
   author: { "@type": "Organization", name: "空調プロナビ編集部" },
   publisher: { "@type": "Organization", name: "空調プロナビ" },
 };
@@ -155,7 +155,7 @@ export default function Page() {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>空調プロナビ編集部</span>
             <span className="text-slate-300">|</span>
-            <time dateTime="2026-11-10">最終更新：{UPDATED}</time>
+            <time dateTime="2026-11-26">最終更新：{UPDATED}</time>
           </div>
         </header>
 
@@ -175,9 +175,12 @@ export default function Page() {
         {/* Lead */}
         <div className="max-w-3xl mx-auto px-5 pt-8">
           <p className="text-[1.05rem] leading-8 text-slate-700">
-            店舗やオフィスの業務用エアコンを入れ替える際、適正価格の把握や複数社の比較にかかる手間を軽減する手段として利用されているのが、相見積もりサービス
-            <strong className="font-semibold text-slate-900">ミツモア</strong>
-            （『みつもあ』『mitsumoa』とも表記されます。運営：株式会社ミツモア）です。本記事では、業務用エアコンの一括見積もりの観点から、公開されている利用者の口コミ、料金と手数料の仕組み、メリット・デメリットを、評価点と注意点の両面から中立的にまとめています。
+            <strong className="font-semibold text-slate-900">ミツモア（みつもあ・mitsumoa）とは、株式会社ミツモア（2017年2月8日設立・東京都中央区銀座）が運営する見積もりプラットフォームです。</strong>
+            依頼したいサービスを選んで質問に回答すると見積もり依頼が自動で作成され、最大5社の見積もりが届きます。依頼者は見積無料で利用でき、成約手数料は事業者側の料金です。自社で施工する業者ではなく登録業者と依頼者を結ぶ仕組みで、公式サイトには「エアコン取り付け」のカテゴリがあります（出典：
+            <a href="https://meetsmore.com/" target="_blank" rel="nofollow noopener" className="underline">ミツモア公式サイト</a>、
+            <a href="https://meetsmore.com/company" target="_blank" rel="nofollow noopener" className="underline">会社概要</a>、
+            <a href="https://meetsmore.com/pro" target="_blank" rel="nofollow noopener" className="underline">事業者向けページ</a>
+            、いずれも2026年11月26日確認）。本記事では、業務用エアコンの一括見積もりの観点から、公開されている利用者の口コミ、料金と手数料の仕組み、メリット・デメリットを、評価点と注意点の両面から中立的にまとめています。
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-500">
             ※本記事の口コミは、掲載ページを編集部が確認できたもののみを、原文のまま（要約の場合はその旨を明記して）出典URLとともに掲載しています（2026年10月21日確認）。料金や対応内容は時期・地域・登録業者により変わるため、最新の情報は見積もり依頼やチャットでご確認ください。
